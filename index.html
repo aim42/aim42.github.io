@@ -370,40 +370,41 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#_aim42_short_introduction">1. aim42 - Short Introduction</a></li>
 <li>
 <ul class="sectlevel2">
-<li><a href="#_why_is_software_changed">1.1. Why is Software Changed?</a></li>
-<li><a href="#_why_does_software_need_improvement">1.2. Why does Software Need Improvement?</a></li>
+<li><a href="#_why_is_software_being_changed">1.1. Why is software being changed?</a></li>
+<li><a href="#_why_does_software_need_improvement">1.2. Why does software need improvement?</a></li>
 <li><a href="#_how_does_aim42_work">1.3. How does aim42 work?</a></li>
 <li><a href="#_disclaimer">1.4. Disclaimer</a></li>
 <li><a href="#_the_team">1.5. The Team</a></li>
-<li><a href="#_licence">1.6. Licence</a></li>
+<li><a href="#_license">1.6. License</a></li>
+<li><a href="#_contribute_to_aim42_org">1.7. Contribute to aim42.org</a></li>
 </ul>
 </li>
-<li><a href="#analyze">2. Analyze</a></li>
+<li><a href="#Analyze">2. Analyze</a></li>
 <li>
 <ul class="sectlevel2">
 <li><a href="#_goals">2.1. Goals</a></li>
 <li><a href="#_how_it_works">2.2. How it works</a></li>
 <li><a href="#_where_to_look">2.3. Where to look</a></li>
-<li><a href="#_patterns_overview">2.4. Patterns Overview</a></li>
-<li><a href="#Static-Analysis">2.5. Static Analysis</a></li>
-<li><a href="#pattern-take-what-they-mean">2.6. Take What They Mean, Not What They Say</a></li>
+<li><a href="#_patterns_and_practices_for_analysis">2.4. Patterns and Practices for Analysis</a></li>
+<li><a href="#Software-Archeologie">2.5. Software Archeology</a></li>
+<li><a href="#Static-Code-Analysis">2.6. Static Code Analysis</a></li>
+<li><a href="#pattern-take-what-they-mean">2.7. Take What They Mean, Not What They Say</a></li>
+<li><a href="#View-Based-Understanding">2.8. View-Based Understanding</a></li>
 </ul>
 </li>
-<li><a href="#_evaluate">3. Evaluate</a></li>
+<li><a href="#Evaluate">3. Evaluate</a></li>
 <li>
 <ul class="sectlevel2">
 <li><a href="#_goals_2">3.1. Goals</a></li>
-<li><a href="#_pattern_overview">3.2. Pattern Overview</a></li>
-<li><a href="#Software-Archeologie">3.3. Software Archeology</a></li>
-<li><a href="#pattern-root-cause-analysis">3.4. Root-Cause Analysis</a></li>
-<li><a href="#View-Based-Understanding">3.5. View-Based Understanding</a></li>
+<li><a href="#_pattern_and_practices_for_evaluation">3.2. Pattern and Practices for Evaluation</a></li>
+<li><a href="#pattern-root-cause-analysis">3.3. Root-Cause Analysis</a></li>
 </ul>
 </li>
-<li><a href="#_improve">4. Improve</a></li>
+<li><a href="#Improve">4. Improve</a></li>
 <li>
 <ul class="sectlevel2">
 <li><a href="#_goals_3">4.1. Goals</a></li>
-<li><a href="#_patterns_to_apply">4.2. Patterns to apply</a></li>
+<li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">5. Pattern index</a></li>
@@ -428,7 +429,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div class="sectionbody">
 <div class="paragraph">
 <p>Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.2, last update 2014-02-06</p>
+Version 0.2, last update 2014-02-08</p>
 </div>
 </div>
 </div>
@@ -436,7 +437,7 @@ Version 0.2, last update 2014-02-06</p>
 <h2 id="_aim42_short_introduction"><a class="anchor" href="#_aim42_short_introduction"></a>1. aim42 - Short Introduction</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_why_is_software_changed"><a class="anchor" href="#_why_is_software_changed"></a>1.1. Why is Software Changed?</h3>
+<h3 id="_why_is_software_being_changed"><a class="anchor" href="#_why_is_software_being_changed"></a>1.1. Why is software being changed?</h3>
 <div class="paragraph">
 <p>Software systems, at least most of those that are practically used, are changed all the
 time. Features are added, modified or removed, user interaction is streamlined,
@@ -496,16 +497,15 @@ performance is tuned, changes to external interfaces or systems are reflected.</
 </div>
 </div>
 <div class="sect2">
-<h3 id="_why_does_software_need_improvement"><a class="anchor" href="#_why_does_software_need_improvement"></a>1.2. Why does Software Need Improvement?</h3>
+<h3 id="_why_does_software_need_improvement"><a class="anchor" href="#_why_does_software_need_improvement"></a>1.2. Why does software need improvement?</h3>
 <div class="paragraph">
 <p>The most important reason is depicted in the following diagram: The cost-of-change
-of most software increases heavily over time&#8230; making those people really unhappy, that
-have to pay for those changes (called maintenance, evolution, new-features or else)</p>
+of most software increases heavily over time&#8230; making those people really unhappy that
+have to pay for these changes (called maintenance, evolution, new-features or else)</p>
 </div>
 <div class="paragraph">
-<p>A second effect of long-term maintenanceof software is the strong
-<em>decrease in understandability</em>: After a while, it becomes really difficult to understand the inner
-workings of systems, changes become increasingly risky, consequences of changes become difficult to forsee.</p>
+<p>An additional effect of long-term maintenance of software is the strong
+<em>decrease in understandability</em>: When a system matures it becomes more and more difficult to understand its inner workings, changes become increasingly risky and consequences of changes become difficult to foresee which can render effort estimations quite blurry.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -544,13 +544,13 @@ workings of systems, changes become increasingly risky, consequences of changes 
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="#Analyze">[Analyze]</a>: find problems, risks, deficiencies and technical debt within your system and your development process. Focus on problems, not on possible solution approaches.</p>
+<p><a href="#Analyze">Analyze</a>: note down problems, risks, deficiencies and technical debt within your system and your development process. Solely focus on problems in this phase, not on potential solution approaches.</p>
 </li>
 <li>
-<p><a href="#Evaluate">[Evaluate]</a>: understand root-causes of problems, determine „value“ of problems, issues and their remedies, prioritize</p>
+<p><a href="#Evaluate">Evaluate</a>: understand root-causes of problems, determine the „value“ of problems, issues and their remedies, prioritize them</p>
 </li>
 <li>
-<p><a href="#Improve">[Improve]</a>: systematically improve code and structures, reduce technical debt, remove waste and optimize.</p>
+<p><a href="#Improve">Improve</a>: systematically improve code and structures, reduce technical debt, remove waste and optimize.</p>
 </li>
 </ol>
 </div>
@@ -583,29 +583,31 @@ responsible for any results of applying aim42.</p>
 <li>
 <p>Stefan Tilkov (innoQ), maintenance and evolution patterns</p>
 </li>
+<li>
+<p>Alex Heusingfeld (innoQ)</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_licence"><a class="anchor" href="#_licence"></a>1.6. Licence</h3>
+<h3 id="_license"><a class="anchor" href="#_license"></a>1.6. License</h3>
 <div class="paragraph">
 <p>aim42 is free to use, similar to many open-source software systems.</p>
 </div>
 <div class="paragraph">
-<p>For practical reasons we decided to apply an Apache-style licence.</p>
+<p>For practical reasons we decided to apply the
+<a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attributions Sharealike 4.0 license</a>.</p>
 </div>
 <div class="paragraph">
-<p>Copyright 2012-2013 the original author (Gernot Starke) or authors and contributors.</p>
+<p>Copyright 2012-2014 the original author (Gernot Starke) or authors and contributors.</p>
 </div>
 <div class="paragraph">
-<p>Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">here:</a></p>
+<p>Licensed under the Creative Commons Attributions Sharealike (the "License");
+You may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
-</div>
+<div class="paragraph">
+<p><a href="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</a></p>
 </div>
 <div class="paragraph">
 <p>Unless required by applicable law or agreed to in writing, software and documentation
@@ -615,10 +617,36 @@ See the License for the specific language governing permissions and
 limitations under the License.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_contribute_to_aim42_org"><a class="anchor" href="#_contribute_to_aim42_org"></a>1.7. Contribute to aim42.org</h3>
+<div class="paragraph">
+<p>This content is open source! The source is hosted under the aim42 organization on Bitbucket and GitHub.</p>
+</div>
+<div class="paragraph">
+<p>If you want to help by improving upon it, fork the project, revise the content, then send a pull request.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p>aim42 currently provides a <em>method guide</em>, the asciidoc sources are hosted at
+<a href="https://bitbucket.org/aim42_admin/aim42/overview">Bitbucket</a> (likely to move over to Github later this year - as site generation seems easier with github-pages)</p>
+</dd>
+<dt class="hdlist1">Issues</dt>
+<dd>
+<p>Look over <a href="https://bitbucket.org/aim42_admin/aim42/issues?status=new&amp;status=open">our open issues</a>, pick one, fork the repository and resolve the issue. Send over a pull request!</p>
+</dd>
+<dt class="hdlist1">Twitter</dt>
+<dd>
+<p><a href="https://twitter.com/arc_improve42">@arc_improve42</a></p>
+</dd>
+</dl>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="analyze"><a class="anchor" href="#analyze"></a>2. Analyze</h2>
+<h2 id="Analyze"><a class="anchor" href="#Analyze"></a>2. Analyze</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_goals"><a class="anchor" href="#_goals"></a>2.1. Goals</h3>
@@ -631,6 +659,9 @@ its operation, maintenance or otherwise related processes.</p>
 <h3 id="_how_it_works"><a class="anchor" href="#_how_it_works"></a>2.2. How it works</h3>
 <div class="paragraph">
 <p>Systematically look for such issues at various places and with various people.</p>
+</div>
+<div class="paragraph">
+<p>INFO: To effectively find issues, you need an appropriate amount of <em>understanding</em> of the systems, its technical concepts, code-structure, inner workings, major external interfaces and its development process.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -672,7 +703,7 @@ Never start solving problems until you have a thourough understanding of current
 
 </div>
 <div class="sect2">
-<h3 id="_patterns_overview"><a class="anchor" href="#_patterns_overview"></a>2.4. Patterns Overview</h3>
+<h3 id="_patterns_and_practices_for_analysis"><a class="anchor" href="#_patterns_and_practices_for_analysis"></a>2.4. Patterns and Practices for Analysis</h3>
 <div class="paragraph">
 <p>(given in alphabetical order)</p>
 </div>
@@ -715,7 +746,10 @@ Never start solving problems until you have a thourough understanding of current
 <p><a href="#Requirements-Analysis">[Requirements-Analysis]</a></p>
 </li>
 <li>
-<p><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a></p>
+<p><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a>*</p>
+</li>
+<li>
+<p><a href="#Software-Archaeology">Software Archeology</a></p>
 </li>
 <li>
 <p><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a></p>
@@ -724,192 +758,10 @@ Never start solving problems until you have a thourough understanding of current
 <p><a href="#Stakeholder-Interview">[Stakeholder-Interview]</a></p>
 </li>
 <li>
-<p><a href="#Static-Code-Analysis">[Static-Code-Analysis]</a> (Structural analysis)</p>
+<p><a href="#Static-Code-Analysis">Static Code Analysis</a> (Structural analysis)</p>
 </li>
 <li>
-<p><a href="#View-Based-Understanding">View-Based Understanding</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="Static-Analysis"><a class="anchor" href="#Static-Analysis"></a>2.5. Static Analysis</h3>
-<div class="sect3">
-<h4 id="_intent"><a class="anchor" href="#_intent"></a>2.5.1. Intent</h4>
-<div class="paragraph">
-<p>Analyse source code to identivy building blocks and their dependencies, determine complexity, coupling, cohesion and other structural properties.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description"><a class="anchor" href="#_description"></a>2.5.2. Description</h4>
-<div class="paragraph">
-<p>Use source code analysis tools to analyse static properties of the systems' source code,
-e.g. the following:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Coupling and dependencies</dt>
-<dd>
-<p>Where do the building-blocks (e.g. classes, packages, modules, subsystems) of your system depend upon? What are the intra-system call- and communication relationships?</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_experiences"><a class="anchor" href="#_experiences"></a>2.5.3. Experiences</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Many projects (commercial and open-source) apply automated static code analysis as part of their build processes.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_applicability"><a class="anchor" href="#_applicability"></a>2.5.4. Applicability</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_also_known_as"><a class="anchor" href="#_also_known_as"></a>2.5.5. Also Known As</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Code quality analysis</p>
-</li>
-<li>
-<p>Software measurement and metrics</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_related_patterns"><a class="anchor" href="#_related_patterns"></a>2.5.6. Related Patterns</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#Software-Archeology">[Software-Archeology]</a></p>
-</li>
-<li>
-<p><a href="#Structural-Analysis">[Structural-Analysis]</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_references"><a class="anchor" href="#_references"></a>2.5.7. References</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://sonarqube.org">SonarQube</a>, GPL-licenced open-source platform to analyze code.</p>
-</li>
-<li>
-<p><a href="http://clarkware.com/software/JDepend.html">JDepend</a>, open-source Java dependency checker.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="pattern-take-what-they-mean"><a class="anchor" href="#pattern-take-what-they-mean"></a>2.6. Take What They Mean, Not What They Say</h3>
-<div class="sect3">
-<h4 id="_intent_2"><a class="anchor" href="#_intent_2"></a>2.6.1. Intent</h4>
-<div class="paragraph">
-<p>Find out the real meaning/intention of stakeholders</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description_2"><a class="anchor" href="#_description_2"></a>2.6.2. Description</h4>
-<div class="paragraph">
-<p>What people mean/want/need is sometimes not what they say. This is due either to semantic differences
-on sender and receive sides,  or to other reasons.</p>
-</div>
-<div class="paragraph">
-<p>NLP (neurolingustic programming) practitioners recommend to <em>mirror</em> things you hear to your communication partners
-in your own words. This might facilitate understanding.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_applicability_2"><a class="anchor" href="#_applicability_2"></a>2.6.3. Applicability</h4>
-<div class="paragraph">
-<p>Apply this pattern whenever you communicate to other people (aka stakeholders).</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_consequences"><a class="anchor" href="#_consequences"></a>2.6.4. Consequences</h4>
-<div class="paragraph">
-<p>Improved understanding between stakeholders.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_related_patterns_2"><a class="anchor" href="#_related_patterns_2"></a>2.6.5. Related Patterns</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>In every <a href="#Stakeholder-Interview">[Stakeholder-Interview]</a> you should apply this pattern.</p>
-</li>
-<li>
-<p><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a> to find out, who are the important stakeholders you should apply this pattern to.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_references_2"><a class="anchor" href="#_references_2"></a>2.6.6. References</h4>
-<div class="paragraph">
-<p>Special thanx to Phillip Ghadir (innoQ) for giving this pattern its name.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_evaluate"><a class="anchor" href="#_evaluate"></a>3. Evaluate</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In the evaluation phase we need to understand root causes of the problems found,
-potential interdependencies between issues and their impacts.</p>
-</div>
-<div class="sect2">
-<h3 id="_goals_2"><a class="anchor" href="#_goals_2"></a>3.1. Goals</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Make the issues, problems and risks found during the <strong>analysis</strong> comparable by
-determining their <strong>value</strong> (that&#8217;s why we call this activity <strong>evaluate</strong>).</p>
-</li>
-<li>
-<p>Understand root causes for the issues or symptoms found during analysis</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_pattern_overview"><a class="anchor" href="#_pattern_overview"></a>3.2. Pattern Overview</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Determine Feature Value</p>
-</li>
-<li>
-<p>Determine Problem Cost</p>
-</li>
-<li>
-<p>Estimate Remedy Cost</p>
-</li>
-<li>
-<p>Failure Mode And Effect Analysis</p>
-</li>
-<li>
-<p>Impact Analysis</p>
-</li>
-<li>
-<p><a href="#Root-Cause-Analysis">Root Cause Analysis</a> - finding the root-cause of problems</p>
-</li>
-<li>
-<p>Separate Cause From Effect</p>
-</li>
-<li>
-<p><a href="#Software-Archaeology">Software Archeology</a></p>
+<p><a href="#Use-Case-Cluster">[Use-Case-Cluster]</a></p>
 </li>
 <li>
 <p><a href="#View-Based-Understanding">View Based Understanding</a></p>
@@ -918,15 +770,15 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 </div>
 <div class="sect2">
-<h3 id="Software-Archeologie"><a class="anchor" href="#Software-Archeologie"></a>3.3. Software Archeology</h3>
+<h3 id="Software-Archeologie"><a class="anchor" href="#Software-Archeologie"></a>2.5. Software Archeology</h3>
 <div class="sect3">
-<h4 id="_intent_3"><a class="anchor" href="#_intent_3"></a>3.3.1. Intent</h4>
+<h4 id="_intent"><a class="anchor" href="#_intent"></a>2.5.1. Intent</h4>
 <div class="paragraph">
 <p>Understand software by examining existing source code</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_3"><a class="anchor" href="#_description_3"></a>3.3.2. Description</h4>
+<h4 id="_description"><a class="anchor" href="#_description"></a>2.5.2. Description</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -951,11 +803,11 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_2"><a class="anchor" href="#_experiences_2"></a>3.3.3. Experiences</h4>
+<h4 id="_experiences"><a class="anchor" href="#_experiences"></a>2.5.3. Experiences</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_applicability_3"><a class="anchor" href="#_applicability_3"></a>3.3.4. Applicability</h4>
+<h4 id="_applicability"><a class="anchor" href="#_applicability"></a>2.5.4. Applicability</h4>
 <div class="paragraph">
 <p>You have to understand a system with</p>
 </div>
@@ -971,15 +823,15 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_2"><a class="anchor" href="#_consequences_2"></a>3.3.5. Consequences</h4>
+<h4 id="_consequences"><a class="anchor" href="#_consequences"></a>2.5.5. Consequences</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_also_known_as_2"><a class="anchor" href="#_also_known_as_2"></a>3.3.6. Also Known As</h4>
+<h4 id="_also_known_as"><a class="anchor" href="#_also_known_as"></a>2.5.6. Also Known As</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_3"><a class="anchor" href="#_related_patterns_3"></a>3.3.7. Related Patterns</h4>
+<h4 id="_related_patterns"><a class="anchor" href="#_related_patterns"></a>2.5.7. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -995,7 +847,7 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_3"><a class="anchor" href="#_references_3"></a>3.3.8. References</h4>
+<h4 id="_references"><a class="anchor" href="#_references"></a>2.5.8. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1009,127 +861,144 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 </div>
 <div class="sect2">
-<h3 id="pattern-root-cause-analysis"><a class="anchor" href="#pattern-root-cause-analysis"></a>3.4. Root-Cause Analysis</h3>
-<div class="quoteblock">
-<blockquote>
-To find mistakes is not enough. It is necessary to find the cause behind the mistake
-and build a system that minimises future mistakes.
-</blockquote>
-<div class="attribution">
-&#8212; W. Edwards Deming
+<h3 id="Static-Code-Analysis"><a class="anchor" href="#Static-Code-Analysis"></a>2.6. Static Code Analysis</h3>
+<div class="sect3">
+<h4 id="_intent_2"><a class="anchor" href="#_intent_2"></a>2.6.1. Intent</h4>
+<div class="paragraph">
+<p>Analyse source code to identivy building blocks and their dependencies, determine complexity, coupling, cohesion and other structural properties.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_intent_4"><a class="anchor" href="#_intent_4"></a>3.4.1. Intent</h4>
+<h4 id="_description_2"><a class="anchor" href="#_description_2"></a>2.6.2. Description</h4>
 <div class="paragraph">
-<p>Explicitely differentiate between symptom and cause:</p>
+<p>Use source code analysis tools to analyse static properties of the systems' source code,
+e.g. the following:</p>
 </div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Coupling and dependencies</dt>
+<dd>
+<p>Where do the building-blocks (e.g. classes, packages, modules, subsystems) of your system depend upon? What are the intra-system call- and communication relationships?</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_experiences_2"><a class="anchor" href="#_experiences_2"></a>2.6.3. Experiences</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Identify root causes of symptoms, problems or issues</p>
-</li>
-<li>
-<p>Trace a problem to its origins</p>
+<p>Many projects (commercial and open-source) apply automated static code analysis as part of their build processes.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_4"><a class="anchor" href="#_description_4"></a>3.4.2. Description</h4>
-<div class="paragraph">
-<p>Some people fight problems, not their real cause:</p>
-</div>
+<h4 id="_applicability_2"><a class="anchor" href="#_applicability_2"></a>2.6.4. Applicability</h4>
+
 </div>
 <div class="sect3">
-<h4 id="_experiences_3"><a class="anchor" href="#_experiences_3"></a>3.4.3. Experiences</h4>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Users of a system complained about <em>low performance</em>.</p>
-</div>
-<div class="paragraph">
-<p>Developers started tuning the database,
-tweaking the application server, optimizing inner loops and so on (you pretty well know what I mean).</p>
-</div>
-<div class="paragraph">
-<p>That did not solve the issue.</p>
-</div>
-<div class="paragraph">
-<p>After applying <a href="#Take-What-They-Mean">[Take-What-They-Mean]</a> we found out that users complained about low performance in data entry,
-as they had to switch back-and-forth between different regions on their input-screens.</p>
-</div>
-<div class="paragraph">
-<p>The actual <em>cause</em> of their complaint was the improper field order in their input forms. After adapting this
-order by simply dragging fields/labels around the screen, users were perfectly happy with the systems.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_applicability_4"><a class="anchor" href="#_applicability_4"></a>3.4.4. Applicability</h4>
-<div class="paragraph">
-<p>when-and-where-is-this-pattern-applicable</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_consequences_3"><a class="anchor" href="#_consequences_3"></a>3.4.5. Consequences</h4>
-<div class="paragraph">
-<p>You can eleminate the cause,</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_also_known_as_3"><a class="anchor" href="#_also_known_as_3"></a>3.4.6. Also Known As</h4>
+<h4 id="_also_known_as_2"><a class="anchor" href="#_also_known_as_2"></a>2.6.5. Also Known As</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Inspect-Cause</p>
+<p>Code quality analysis</p>
 </li>
 <li>
-<p>Separate cause from effect</p>
+<p>Software measurement and metrics</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_4"><a class="anchor" href="#_related_patterns_4"></a>3.4.7. Related Patterns</h4>
+<h4 id="_related_patterns_2"><a class="anchor" href="#_related_patterns_2"></a>2.6.6. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Take-What-They-Mean">[Take-What-They-Mean]</a>, maybe what they told you was not the real problem.</p>
+<p><a href="#Software-Archeology">[Software-Archeology]</a></p>
+</li>
+<li>
+<p><a href="#Structural-Analysis">[Structural-Analysis]</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_4"><a class="anchor" href="#_references_4"></a>3.4.8. References</h4>
+<h4 id="_references_2"><a class="anchor" href="#_references_2"></a>2.6.7. References</h4>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://en.wikipedia.org/wiki/Root_cause_analysis">http://en.wikipedia.org/wiki/Root_cause_analysis</a></p>
+<p><a href="http://sonarqube.org">SonarQube</a>, GPL-licenced open-source platform to analyze code.</p>
+</li>
+<li>
+<p><a href="http://clarkware.com/software/JDepend.html">JDepend</a>, open-source Java dependency checker.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>3.5. View-Based Understanding</h3>
+<h3 id="pattern-take-what-they-mean"><a class="anchor" href="#pattern-take-what-they-mean"></a>2.7. Take What They Mean, Not What They Say</h3>
 <div class="sect3">
-<h4 id="_intent_5"><a class="anchor" href="#_intent_5"></a>3.5.1. Intent</h4>
+<h4 id="_intent_3"><a class="anchor" href="#_intent_3"></a>2.7.1. Intent</h4>
+<div class="paragraph">
+<p>Find out the real meaning/intention of stakeholders</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_3"><a class="anchor" href="#_description_3"></a>2.7.2. Description</h4>
+<div class="paragraph">
+<p>What people mean/want/need is sometimes not what they say. This is due either to semantic differences
+on sender and receive sides,  or to other reasons.</p>
+</div>
+<div class="paragraph">
+<p>NLP (neurolingustic programming) practitioners recommend to <em>mirror</em> things you hear to your communication partners
+in your own words. This might facilitate understanding.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_applicability_3"><a class="anchor" href="#_applicability_3"></a>2.7.3. Applicability</h4>
+<div class="paragraph">
+<p>Apply this pattern whenever you communicate to other people (aka stakeholders).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_consequences_2"><a class="anchor" href="#_consequences_2"></a>2.7.4. Consequences</h4>
+<div class="paragraph">
+<p>Improved understanding between stakeholders.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_3"><a class="anchor" href="#_related_patterns_3"></a>2.7.5. Related Patterns</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>In every <a href="#Stakeholder-Interview">[Stakeholder-Interview]</a> you should apply this pattern.</p>
+</li>
+<li>
+<p><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a> to find out, who are the important stakeholders you should apply this pattern to.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_3"><a class="anchor" href="#_references_3"></a>2.7.6. References</h4>
+<div class="paragraph">
+<p>Special thanx to Phillip Ghadir (innoQ) for giving this pattern its name.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>2.8. View-Based Understanding</h3>
+<div class="sect3">
+<h4 id="_intent_4"><a class="anchor" href="#_intent_4"></a>2.8.1. Intent</h4>
 <div class="paragraph">
 <p>Understand the (code-) structure of the systems. Document (and communicate) this via
 architectural views, especially the building-block view.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_5"><a class="anchor" href="#_description_5"></a>3.5.2. Description</h4>
+<h4 id="_description_4"><a class="anchor" href="#_description_4"></a>2.8.2. Description</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1161,7 +1030,7 @@ architectural views, especially the building-block view.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_5"><a class="anchor" href="#_applicability_5"></a>3.5.3. Applicability</h4>
+<h4 id="_applicability_4"><a class="anchor" href="#_applicability_4"></a>2.8.3. Applicability</h4>
 <div class="paragraph">
 <p>Use view-based-understanding when:</p>
 </div>
@@ -1184,7 +1053,7 @@ and reason about the code structure</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_4"><a class="anchor" href="#_consequences_4"></a>3.5.4. Consequences</h4>
+<h4 id="_consequences_3"><a class="anchor" href="#_consequences_3"></a>2.8.4. Consequences</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1196,7 +1065,7 @@ and their relationships.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_also_known_as_4"><a class="anchor" href="#_also_known_as_4"></a>3.5.5. Also Known As</h4>
+<h4 id="_also_known_as_3"><a class="anchor" href="#_also_known_as_3"></a>2.8.5. Also Known As</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1209,13 +1078,13 @@ and their relationships.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_5"><a class="anchor" href="#_related_patterns_5"></a>3.5.6. Related Patterns</h4>
+<h4 id="_related_patterns_4"><a class="anchor" href="#_related_patterns_4"></a>2.8.6. Related Patterns</h4>
 <div class="paragraph">
 <p>?</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_5"><a class="anchor" href="#_references_5"></a>3.5.7. References</h4>
+<h4 id="_references_4"><a class="anchor" href="#_references_4"></a>2.8.7. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1232,7 +1101,169 @@ and their relationships.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_improve"><a class="anchor" href="#_improve"></a>4. Improve</h2>
+<h2 id="Evaluate"><a class="anchor" href="#Evaluate"></a>3. Evaluate</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the evaluation phase we need to understand root causes of the problems found,
+potential interdependencies between issues and their impacts.</p>
+</div>
+<div class="sect2">
+<h3 id="_goals_2"><a class="anchor" href="#_goals_2"></a>3.1. Goals</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Make the issues, problems and risks found during the <strong>analysis</strong> comparable by
+determining their <strong>value</strong> (that&#8217;s why we call this activity <strong>evaluate</strong>).</p>
+</li>
+<li>
+<p>Understand root causes for the issues or symptoms found during analysis</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pattern_and_practices_for_evaluation"><a class="anchor" href="#_pattern_and_practices_for_evaluation"></a>3.2. Pattern and Practices for Evaluation</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Determine Feature Value</p>
+</li>
+<li>
+<p>Determine Problem Cost</p>
+</li>
+<li>
+<p>Estimate Remedy Cost</p>
+</li>
+<li>
+<p>Failure Mode And Effect Analysis</p>
+</li>
+<li>
+<p>Impact Analysis</p>
+</li>
+<li>
+<p><a href="#Root-Cause-Analysis">Root Cause Analysis</a> - finding the root-cause of problems</p>
+</li>
+<li>
+<p>Separate Cause From Effect</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="pattern-root-cause-analysis"><a class="anchor" href="#pattern-root-cause-analysis"></a>3.3. Root-Cause Analysis</h3>
+<div class="quoteblock">
+<blockquote>
+To find mistakes is not enough. It is necessary to find the cause behind the mistake
+and build a system that minimises future mistakes.
+</blockquote>
+<div class="attribution">
+&#8212; W. Edwards Deming
+</div>
+</div>
+<div class="sect3">
+<h4 id="_intent_5"><a class="anchor" href="#_intent_5"></a>3.3.1. Intent</h4>
+<div class="paragraph">
+<p>Explicitely differentiate between symptom and cause:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identify root causes of symptoms, problems or issues</p>
+</li>
+<li>
+<p>Trace a problem to its origins</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_5"><a class="anchor" href="#_description_5"></a>3.3.2. Description</h4>
+<div class="paragraph">
+<p>Some people fight problems, not their real cause:</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_experiences_3"><a class="anchor" href="#_experiences_3"></a>3.3.3. Experiences</h4>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Users of a system complained about <em>low performance</em>.</p>
+</div>
+<div class="paragraph">
+<p>Developers started tuning the database,
+tweaking the application server, optimizing inner loops and so on (you pretty well know what I mean).</p>
+</div>
+<div class="paragraph">
+<p>That did not solve the issue.</p>
+</div>
+<div class="paragraph">
+<p>After applying <a href="#Take-What-They-Mean">[Take-What-They-Mean]</a> we found out that users complained about low performance in data entry,
+as they had to switch back-and-forth between different regions on their input-screens.</p>
+</div>
+<div class="paragraph">
+<p>The actual <em>cause</em> of their complaint was the improper field order in their input forms. After adapting this
+order by simply dragging fields/labels around the screen, users were perfectly happy with the systems.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_applicability_5"><a class="anchor" href="#_applicability_5"></a>3.3.4. Applicability</h4>
+<div class="paragraph">
+<p>when-and-where-is-this-pattern-applicable</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_consequences_4"><a class="anchor" href="#_consequences_4"></a>3.3.5. Consequences</h4>
+<div class="paragraph">
+<p>You can eleminate the cause,</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_also_known_as_4"><a class="anchor" href="#_also_known_as_4"></a>3.3.6. Also Known As</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Inspect-Cause</p>
+</li>
+<li>
+<p>Separate cause from effect</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_5"><a class="anchor" href="#_related_patterns_5"></a>3.3.7. Related Patterns</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Take-What-They-Mean">[Take-What-They-Mean]</a>, maybe what they told you was not the real problem.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_5"><a class="anchor" href="#_references_5"></a>3.3.8. References</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/Root_cause_analysis">http://en.wikipedia.org/wiki/Root_cause_analysis</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Improve"><a class="anchor" href="#Improve"></a>4. Improve</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_goals_3"><a class="anchor" href="#_goals_3"></a>4.1. Goals</h3>
@@ -1273,7 +1304,7 @@ and their relationships.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_patterns_to_apply"><a class="anchor" href="#_patterns_to_apply"></a>4.2. Patterns to apply</h3>
+<h3 id="_patterns_and_practices_for_improvement"><a class="anchor" href="#_patterns_and_practices_for_improvement"></a>4.2. Patterns and Practices for Improvement</h3>
 <div class="paragraph">
 <p>(given in alphabetical order)</p>
 </div>
@@ -1343,7 +1374,7 @@ short description and links to the explanation.</p>
 <dl>
 <dt class="hdlist1">ATAM</dt>
 <dd>
-<p>Architecture Tradeoff Analysis Method. Systematic approach to find architectural risks and tradeoffs (compromises). Category: <a href="#Analyze">[Analyze]</a></p>
+<p>Architecture Tradeoff Analysis Method. Systematic approach to find architectural risks and tradeoffs (compromises). Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1353,7 +1384,7 @@ short description and links to the explanation.</p>
 <dd>
 <p>Keep a prioritized list of improvement tasks (<em>remedies</em>) with their
 as a backlog, parallel to the (regular) feature backlog.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1361,21 +1392,22 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dl>
 <dt class="hdlist1">Architecture Documentation</dt>
 <dd>
-<p>See <a href="#System-Documentation">[System-Documentation]</a></p>
+<p>See <a href="#System-Documentation">[System-Documentation]</a>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
 <div id="Automated-Tests" class="paragraph">
 <p>Automated Tests::Introduce automated tests to verify correctness or runtime behavior. Unit-, integration-,
 acceptance-, load- or database-tests are well-known specialisations of this pattern.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </div>
 <div id="Branch-for-Improvement" class="dlist">
 <dl>
 <dt class="hdlist1">Branch for Improvement</dt>
 <dd>
 <p>Introduce distinct branches in your version control system to reflect improvments.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1384,7 +1416,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Capture Quality Requirements</dt>
 <dd>
 <p>Part of <a id="ATAM"></a>, Capture and document specific quality requirements. See <a href="#Requirements-Analysis">[Requirements-Analysis]</a>.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1393,7 +1425,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Change by Extension</dt>
 <dd>
 <p>Enable efficient change by creating new components instead of modifying existing ones.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1402,7 +1434,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Change by Copy</dt>
 <dd>
 <p>Isolate competing change necessity by copying and allowing the copies to evolve independently.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1411,7 +1443,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Context Analysis</dt>
 <dd>
 <p>Analyse external interfaces for risk, technology, business value and other factors.
-Category: <a href="#Evaluate">[Evaluate]</a></p>
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -1420,7 +1452,7 @@ Category: <a href="#Evaluate">[Evaluate]</a></p>
 <dt class="hdlist1">Data Analysis</dt>
 <dd>
 <p>Analyse and inspect the data created and manipulated by the system for its content, structure, quantity and size.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1429,7 +1461,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Dependency Analysis</dt>
 <dd>
 <p>See <a href="#Structural-Analysis">[Structural-Analysis]</a>.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1438,7 +1470,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Determine Feature Value</dt>
 <dd>
 <p>Determine the (monetary) value of a given feature.
-Category: <a href="#Evaluate">[Evaluate]</a></p>
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -1447,7 +1479,7 @@ Category: <a href="#Evaluate">[Evaluate]</a></p>
 <dt class="hdlist1">Determine Problem Cost</dt>
 <dd>
 <p>Determine how much a given problem costs (in money or effort) in a period of time.
-Category: <a href="#Evaluate">[Evaluate]</a></p>
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -1456,7 +1488,7 @@ Category: <a href="#Evaluate">[Evaluate]</a></p>
 <dt class="hdlist1">Development Process Analysis</dt>
 <dd>
 <p>Analyse and inspect the development process (as documented or described by stakeholders) for appropriateness, problems or problem-areas.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1465,7 +1497,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Documentation Analysis</dt>
 <dd>
 <p>Analyse existing documentation for availability, correctness, actuality, problems or problem-areas.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1474,7 +1506,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Estimate Remedy Cost</dt>
 <dd>
 <p>Determine how much a specific remedy (a set of actions taken to eliminate or reduce a specific problem or issue) is likely to cost (in money and/or effort).
-Category: <a href="#Evaluate">[Evaluate]</a></p>
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -1483,7 +1515,7 @@ Category: <a href="#Evaluate">[Evaluate]</a></p>
 <dt class="hdlist1">Extract Reusable Component</dt>
 <dd>
 <p>Extract code from an existing system to create a reusable component. See <a href="#SERIOUS-Refactoring">[SERIOUS-Refactoring]</a>, page 95.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1492,7 +1524,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Failure Mode and Effects Analysis</dt>
 <dd>
 <p>Systematically analyze postulated failures (problems, issues) and identify the resultant effects on overall system operations.
-Category: <a href="#Evaluate">[Evaluate]</a></p>
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -1501,7 +1533,7 @@ Category: <a href="#Evaluate">[Evaluate]</a></p>
 <dt class="hdlist1">Front-End Switch</dt>
 <dd>
 <p>Route front-end requests to either new or old backend systems, depending on their nature.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1510,7 +1542,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Group Improvement Actions</dt>
 <dd>
 <p>Collect several improvement actions, which can or shall be applied or implemented together.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1519,7 +1551,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Handle If-Else-Chains</dt>
 <dd>
 <p>Refactor nested if-then-else structures for improved understandability.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1528,7 +1560,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Hierarchical Quality Model</dt>
 <dd>
 <p>Decompose the overall goal of "high quality" into more detailed and precise requirements, finally resulting in a tree-like structure. See <a href="#ATAM">[ATAM]</a> and <a href="#Quality-Requirements">[Quality-Requirements]</a>.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1537,7 +1569,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Natural Death</dt>
 <dd>
 <p>Keep old system running and only retire it once all objects contained reach end of life according to their life cycle.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1546,7 +1578,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Impact Analysis</dt>
 <dd>
 <p>Determine what impact (in code, concepts and the organization) a specific action (e.g. refactoring) will or might have.
-Category: <a href="#Evaluate">[Evaluate]</a></p>
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -1555,7 +1587,7 @@ Category: <a href="#Evaluate">[Evaluate]</a></p>
 <dt class="hdlist1">Impact Mapping</dt>
 <dd>
 <p>Adjicz
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1564,7 +1596,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Improve Code Layout</dt>
 <dd>
 <p>Making code easier to read results in better understandability.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1573,7 +1605,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Isolate Changes</dt>
 <dd>
 <p>Introduce interfaces and intra-system borders, so that changes cannot propagate to other areas.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1582,7 +1614,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Issue Tracker Analysis</dt>
 <dd>
 <p>Analyse entries from issue-tracker to identify critical areas, components or stakeholders.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1590,8 +1622,8 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dl>
 <dt class="hdlist1">Keep-Data, Toss-Code</dt>
 <dd>
-<p>A strategy to improve systems, keeping the data created with the (old) systems as foundation for a new one. Also described as <a href="#Keller-Pattern">Bridge-to-the-New-Town</a>. This is the opposite of <a href="#Never-Change-Running-System">[Never-Change-Running-System]</a>
-Category: <a href="#Improve">[Improve]</a></p>
+<p>A strategy to improve systems, keeping the data created with the (old) systems as foundation for a new one. Also described as <a href="#Keller-Migration">Bridge-to-the-New-Town</a> (by Wolfgang Keller). This is the opposite of <a href="#Never-Change-Running-System">[Never-Change-Running-System]</a>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1600,7 +1632,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Limit Feature by Client</dt>
 <dd>
 <p>Support different feature sets for different clients, fade out legacy versions based on usage.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1609,7 +1641,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Migrate Data</dt>
 <dd>
 <p>Transform existing data from one structure or representation into another by keeping its original intent or semantic intact.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1618,7 +1650,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Never Change Running System</dt>
 <dd>
 <p>Joel Spolsky arguments, <a href="#Spolsky-NeverRewrite">never to rewrite a system from scratch</a>.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1627,7 +1659,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Organizational Analysis</dt>
 <dd>
 <p>Analyse and inspect organization(s) responsible for the system.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1636,7 +1668,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Outside-in Interfaces</dt>
 <dd>
 <p>Modularize system in line with external, modular interfaces.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1644,7 +1676,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dl>
 <dt class="hdlist1">Performance Analysis</dt>
 <dd>
-<p>Category: <a href="#Analyze">[Analyze]</a></p>
+<p>Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1653,7 +1685,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Pre-Interview-Questionnaire</dt>
 <dd>
 <p>Prior to interviewing stakeholders, present them with a written questionnaire, so they can reflect in advance. A specialisation of <a href="#Questionnaire">[Questionnaire]</a>.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1662,7 +1694,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Profiling</dt>
 <dd>
 <p>Measure resource consumption of a system during its operation.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1671,7 +1703,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Qualitative Analysis</dt>
 <dd>
 <p>See <a href="#Quality-Requirements">[Quality-Requirements]</a>
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1680,7 +1712,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Quality Driven Software Architecture (QDSA)</dt>
 <dd>
 <p>Derive (technical, structural or process-related) decisions based upon detailed quality requirements. QDSA requires <a href="#Capture-Quality-Requirements">explicit quality requirements</a>. See <a href="#Quality-Function-Deployment">[Quality-Function-Deployment]</a>.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1696,7 +1728,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dl>
 <dt class="hdlist1">Quantitative Analysis</dt>
 <dd>
-<p>Category: <a href="#Analyze">[Analyze]</a></p>
+<p>Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1705,7 +1737,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Questionnaire</dt>
 <dd>
 <p>Written collection of questions presented to stakeholders. Can be addendum, preparation or replacement of <a href="#Stakeholde Interview">[Stakeholde Interview]</a>
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1714,7 +1746,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Refactoring</dt>
 <dd>
 <p>Source code transformation that does not change functionality of system. See <a href="#Fowler-Refactoring">[Fowler-Refactoring]</a>.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1723,7 +1755,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Refactoring Plan</dt>
 <dd>
 <p>The route of refactoring, as discussed within the development team. This plan should always be visible to every team member.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1732,7 +1764,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Runtime Analysis</dt>
 <dd>
 <p>See <a href="#Profiling">[Profiling]</a>, <a href="#Performance-Analysis">[Performance-Analysis]</a>
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1741,7 +1773,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Requirements Analysis</dt>
 <dd>
 <p>Analyze (current) requirements: required features and required constraints
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1750,7 +1782,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Root-Cause Analysis</dt>
 <dd>
 <p><em>Find the evil at the bottom</em>: Explicitely differentiate between symptom and cause: Identify root causes of symptoms, problems or issues. See <a href="#pattern-root-cause-analysis">detailed description</a>
-Category: <a href="#Evaluate">[Evaluate]</a></p>
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -1759,7 +1791,7 @@ Category: <a href="#Evaluate">[Evaluate]</a></p>
 <dt class="hdlist1">Runtime-Artifact Analysis</dt>
 <dd>
 <p>(aka Log-Analysis, Trace-Analysis, Protocol-Analysis) Inspect artifacts created at runtime (e.g. logfiles, protocolls, system-traces) for information about problems, root-causes or system behavior.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1768,7 +1800,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Schedule Work</dt>
 <dd>
 <p>Schedule refactoring or improvement work, so that all (business and technical) stakeholders know about them.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1776,12 +1808,13 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dl>
 <dt class="hdlist1">Separate Cause from Effect</dt>
 <dd>
-<p>See <a href="#Root-Cause-Analysis">[Root-Cause-Analysis]</a></p>
+<p>See <a href="#Root-Cause-Analysis">[Root-Cause-Analysis]</a>
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 <dt class="hdlist1">Software-Archeology</dt>
 <dd>
 <p>Understand software by analysing its source code, usually in absence of other documentation or knowledge sources.
-Category: <a href="#Evaluate">[Evaluate]</a></p>
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -1789,7 +1822,7 @@ Category: <a href="#Evaluate">[Evaluate]</a></p>
 <dl>
 <dt class="hdlist1">Stakeholder Analysis</dt>
 <dd>
-<p>Category: <a href="#Analyze">[Analyze]</a></p>
+<p>Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1797,7 +1830,7 @@ Category: <a href="#Evaluate">[Evaluate]</a></p>
 <dl>
 <dt class="hdlist1">Stakeholder Interview</dt>
 <dd>
-<p>Category: <a href="#Analyze">[Analyze]</a></p>
+<p>Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1810,18 +1843,25 @@ Category: <a href="#Evaluate">[Evaluate]</a></p>
 <dt class="hdlist1">Static Code Analysis</dt>
 <dd>
 <p>Analyse source code to identivy building blocks and their dependencies, determine complexity, coupling, cohesion and other structural properties. See <a href="#Static-Analysis">detailed description</a>.
-Category: <a href="#Analyze">[Analyze]</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Structural-Analysis" class="paragraph">
-<p>Structural (Code) Analysis::Analyze the static structure (aka building block structure) of the code, e.g. package or module dependencies. Part of the more general <a href="#Static-Code-Analysis">[Static-Code-Analysis]</a>.</p>
+<div id="Structural-Analysis" class="dlist">
+<dl>
+<dt class="hdlist1">Structural (Code) Analysis</dt>
+<dd>
+<p>Analyze the static structure (aka building block structure) of the code, e.g. package or module dependencies. Part of the more general <a href="#Static-Code-Analysis">Static Code Analysis</a>.
+Category: <a href="#Analyze">Analyze</a></p>
+</dd>
+</dl>
 </div>
 <div id="System-Documentation" class="dlist">
 <dl>
 <dt class="hdlist1">System Documentation</dt>
 <dd>
-<p>Document relevant structures, concepts, decisions, interfaces etc. of the system to increase. See <a href="#arc42">[arc42]</a></p>
+<p>Document relevant structures, concepts, decisions, interfaces etc. of the system to increase. See <a href="#arc42">[arc42]</a>.
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1829,8 +1869,8 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dl>
 <dt class="hdlist1">Take What They Mean, Not What They Say</dt>
 <dd>
-<p>Natural language has the risk, that semantics on the senders' side differs from semantics of the receiver: People simply misunderstand each other because <em>meaning</em> of words differ between people.
-Category: <a href="#Analyze">[Analyze]</a></p>
+<p>Natural language has the risk, that semantics on the senders' side differs from semantics of the receiver: People simply misunderstand each other because <em>meaning</em> of words differ between people. Pattern provided by Phillip Ghadir (who is too humble to claim this discovery)
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1839,7 +1879,7 @@ Category: <a href="#Analyze">[Analyze]</a></p>
 <dt class="hdlist1">Toggle Feature</dt>
 <dd>
 <p>Simultaneously support evolved, competing or conlicting features at runtime by toggling feature flags.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1848,7 +1888,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Remove Nested Control Structures</dt>
 <dd>
 <p>Re-structure code so that deeply nested or complicated control structures are replaced by semantically identical versions. Special case of <a href="#Refactoring">[Refactoring]</a>, similar to <a href="#Untangle-Code">[Untangle-Code]</a>.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1857,7 +1897,7 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dt class="hdlist1">Untangle Code</dt>
 <dd>
 <p>Remove unneccessary complications in code, e.g. nested structures, dependencies, dead-code, duplicate-code etc. See <a href="#Remove-Nested-Control-Structures">[Remove-Nested-Control-Structures]</a>. Special case of <a href="#Refactoring">[Refactoring]</a>.
-Category: <a href="#Improve">[Improve]</a></p>
+Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
@@ -1865,12 +1905,13 @@ Category: <a href="#Improve">[Improve]</a></p>
 <dl>
 <dt class="hdlist1">Use-Case Cluster</dt>
 <dd>
-<p>Group system functionality into clusters to reduce complexity.</p>
+<p>Understand system functionality by grouping functionality into clusters to reduce complexity.
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 <dt class="hdlist1">View-Based Understanding</dt>
 <dd>
 <p>Create architectural views (mainly building block view) to understand and communicate code structure. See <a href="#Pattern-View-Based-Understanding">detailed description</a>.
-Category: <a href="#Evaluate">[Evaluate]</a></p>
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -2157,7 +2198,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-02-06)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-02-08)</p>
 </li>
 </ul>
 </div>
@@ -2167,7 +2208,7 @@ The result is rendered nicely.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-06 09:08:40 MEZ
+Last updated 2014-02-08 21:52:18 MEZ
 </div>
 </div>
 </body>

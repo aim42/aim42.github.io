@@ -366,14 +366,12 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_evaluate">1. Evaluate</a></li>
+<li><a href="#Evaluate">1. Evaluate</a></li>
 <li>
 <ul class="sectlevel2">
 <li><a href="#_goals">1.1. Goals</a></li>
-<li><a href="#_pattern_overview">1.2. Pattern Overview</a></li>
-<li><a href="#Software-Archeologie">1.3. Software Archeology</a></li>
-<li><a href="#pattern-root-cause-analysis">1.4. Root-Cause Analysis</a></li>
-<li><a href="#View-Based-Understanding">1.5. View-Based Understanding</a></li>
+<li><a href="#_pattern_and_practices_for_evaluation">1.2. Pattern and Practices for Evaluation</a></li>
+<li><a href="#pattern-root-cause-analysis">1.3. Root-Cause Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -381,7 +379,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_evaluate"><a class="anchor" href="#_evaluate"></a>1. Evaluate</h2>
+<h2 id="Evaluate"><a class="anchor" href="#Evaluate"></a>1. Evaluate</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In the evaluation phase we need to understand root causes of the problems found,
@@ -402,7 +400,7 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pattern_overview"><a class="anchor" href="#_pattern_overview"></a>1.2. Pattern Overview</h3>
+<h3 id="_pattern_and_practices_for_evaluation"><a class="anchor" href="#_pattern_and_practices_for_evaluation"></a>1.2. Pattern and Practices for Evaluation</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -426,108 +424,11 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 <li>
 <p>Separate Cause From Effect</p>
 </li>
-<li>
-<p><a href="#Software-Archaeology">Software Archeology</a></p>
-</li>
-<li>
-<p><a href="#View-Based-Understanding">View Based Understanding</a></p>
-</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Software-Archeologie"><a class="anchor" href="#Software-Archeologie"></a>1.3. Software Archeology</h3>
-<div class="sect3">
-<h4 id="_intent"><a class="anchor" href="#_intent"></a>1.3.1. Intent</h4>
-<div class="paragraph">
-<p>Understand software by examining existing source code</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description"><a class="anchor" href="#_description"></a>1.3.2. Description</h4>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Make sure you have the complete code, scripts, frameworks and tools required to build the system.</p>
-</li>
-<li>
-<p>Ensure you have access rights to all required systems, at least to version control, database, participating servers etc.</p>
-</li>
-<li>
-<p>Ensure you can build the system from scratch (compile, load all dependencies, link or whatever steps are neccessary)</p>
-</li>
-<li>
-<p>Practice <a href="#View-Based-Understanding">View-Based Understanding</a> by sketching notes or diagrams. Get an <em>aerial view</em>, a glimpse of the topmost, biggest structures in the code.</p>
-</li>
-<li>
-<p>Try to understand the <em>terminology</em> of the original authors by scanning code and searching for multiple occurances. Start creating a <em>glossary</em></p>
-</li>
-<li>
-<p>Introduce <em>tracing</em> or <em>logging</em> statements. Aspect-oriented tools (like AspectJ) might be helpful.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_experiences"><a class="anchor" href="#_experiences"></a>1.3.3. Experiences</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_applicability"><a class="anchor" href="#_applicability"></a>1.3.4. Applicability</h4>
-<div class="paragraph">
-<p>You have to understand a system with</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>little or no current documentation.</p>
-</li>
-<li>
-<p>no knowledgeable technical stakeholders or development team available</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_consequences"><a class="anchor" href="#_consequences"></a>1.3.5. Consequences</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_also_known_as"><a class="anchor" href="#_also_known_as"></a>1.3.6. Also Known As</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_related_patterns"><a class="anchor" href="#_related_patterns"></a>1.3.7. Related Patterns</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Code Reading</p>
-</li>
-<li>
-<p><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a></p>
-</li>
-<li>
-<p>Structural Analysis</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_references"><a class="anchor" href="#_references"></a>1.3.8. References</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#Hunt-Archeology">[Hunt-Archeology]</a>, pleasant introduction without adherence to any strict pattern template. Recommended reading.</p>
-</li>
-<li>
-<p><a href="#Moyer-Archeology">[Moyer-Archeology]</a>, short report.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="pattern-root-cause-analysis"><a class="anchor" href="#pattern-root-cause-analysis"></a>1.4. Root-Cause Analysis</h3>
+<h3 id="pattern-root-cause-analysis"><a class="anchor" href="#pattern-root-cause-analysis"></a>1.3. Root-Cause Analysis</h3>
 <div class="quoteblock">
 <blockquote>
 To find mistakes is not enough. It is necessary to find the cause behind the mistake
@@ -538,7 +439,7 @@ and build a system that minimises future mistakes.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_intent_2"><a class="anchor" href="#_intent_2"></a>1.4.1. Intent</h4>
+<h4 id="_intent"><a class="anchor" href="#_intent"></a>1.3.1. Intent</h4>
 <div class="paragraph">
 <p>Explicitely differentiate between symptom and cause:</p>
 </div>
@@ -554,13 +455,13 @@ and build a system that minimises future mistakes.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_2"><a class="anchor" href="#_description_2"></a>1.4.2. Description</h4>
+<h4 id="_description"><a class="anchor" href="#_description"></a>1.3.2. Description</h4>
 <div class="paragraph">
 <p>Some people fight problems, not their real cause:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_2"><a class="anchor" href="#_experiences_2"></a>1.4.3. Experiences</h4>
+<h4 id="_experiences"><a class="anchor" href="#_experiences"></a>1.3.3. Experiences</h4>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -592,19 +493,19 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_2"><a class="anchor" href="#_applicability_2"></a>1.4.4. Applicability</h4>
+<h4 id="_applicability"><a class="anchor" href="#_applicability"></a>1.3.4. Applicability</h4>
 <div class="paragraph">
 <p>when-and-where-is-this-pattern-applicable</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_2"><a class="anchor" href="#_consequences_2"></a>1.4.5. Consequences</h4>
+<h4 id="_consequences"><a class="anchor" href="#_consequences"></a>1.3.5. Consequences</h4>
 <div class="paragraph">
 <p>You can eleminate the cause,</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_also_known_as_2"><a class="anchor" href="#_also_known_as_2"></a>1.4.6. Also Known As</h4>
+<h4 id="_also_known_as"><a class="anchor" href="#_also_known_as"></a>1.3.6. Also Known As</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -617,7 +518,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_2"><a class="anchor" href="#_related_patterns_2"></a>1.4.7. Related Patterns</h4>
+<h4 id="_related_patterns"><a class="anchor" href="#_related_patterns"></a>1.3.7. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -627,121 +528,11 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_2"><a class="anchor" href="#_references_2"></a>1.4.8. References</h4>
+<h4 id="_references"><a class="anchor" href="#_references"></a>1.3.8. References</h4>
 <div class="ulist">
 <ul>
 <li>
 <p><a href="http://en.wikipedia.org/wiki/Root_cause_analysis">http://en.wikipedia.org/wiki/Root_cause_analysis</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>1.5. View-Based Understanding</h3>
-<div class="sect3">
-<h4 id="_intent_3"><a class="anchor" href="#_intent_3"></a>1.5.1. Intent</h4>
-<div class="paragraph">
-<p>Understand the (code-) structure of the systems. Document (and communicate) this via
-architectural views, especially the building-block view.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description_3"><a class="anchor" href="#_description_3"></a>1.5.2. Description</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Apply arc42 views.</p>
-</li>
-<li>
-<p>Apply static-code-analysis</p>
-</li>
-<li>
-<p>Interview technical stakeholders</p>
-</li>
-<li>
-<p>Start either from the</p>
-<div class="ulist">
-<ul>
-<li>
-<p>business context, mainly the external business interfaces</p>
-</li>
-<li>
-<p>technical context, the involved hardware and network structure</p>
-</li>
-<li>
-<p>known technology areas, ie. prodcts, programming languages or frameworks used</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_applicability_3"><a class="anchor" href="#_applicability_3"></a>1.5.3. Applicability</h4>
-<div class="paragraph">
-<p>Use view-based-understanding when:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>System has a medium to large codebase</p>
-</li>
-<li>
-<p>Structural understanding of the code is limited: only few stakeholders can explain
-and reason about the code structure</p>
-</li>
-<li>
-<p>Documentation of the code structure is not existing, outdated or wrong</p>
-</li>
-<li>
-<p>Long-term maintenance and evolution of the system is required</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_consequences_3"><a class="anchor" href="#_consequences_3"></a>1.5.4. Consequences</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Structural overview of the larger units of source-code (subsystems, high-level components)
-and their relationships.
-*</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_also_known_as_3"><a class="anchor" href="#_also_known_as_3"></a>1.5.5. Also Known As</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>building block view (formerly known as logical view)</p>
-</li>
-<li>
-<p>high-level overview</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_related_patterns_3"><a class="anchor" href="#_related_patterns_3"></a>1.5.6. Related Patterns</h4>
-<div class="paragraph">
-<p>?</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_references_3"><a class="anchor" href="#_references_3"></a>1.5.7. References</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>arc42</p>
-</li>
-<li>
-<p>Kruchten
-*</p>
 </li>
 </ul>
 </div>
@@ -752,7 +543,7 @@ and their relationships.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-02 19:24:13 MEZ
+Last updated 2014-02-09 13:33:18 MEZ
 </div>
 </div>
 </body>
