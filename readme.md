@@ -1,5 +1,4 @@
 
-
 ## ![](http://aim42.org/rw_common/images/aim42-logo-180x81.png) Architecture Improvement Method Guide
 
 ### Software Evolution, Maintenance and Improvement - Done Right!
@@ -25,6 +24,4 @@ You can freely use it, in commercial or non-commercial situations.
 
 * follow us on [twitter](https://twitter.com/arc_improve42) 
  
-
-
 
