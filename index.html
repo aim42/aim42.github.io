@@ -396,7 +396,8 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <ul class="sectlevel2">
 <li><a href="#_goals_2">3.1. Goals</a></li>
 <li><a href="#_pattern_and_practices_for_evaluation">3.2. Pattern and Practices for Evaluation</a></li>
-<li><a href="#pattern-root-cause-analysis">3.3. Root-Cause Analysis</a></li>
+<li><a href="#Debugging">3.3. Debugging</a></li>
+<li><a href="#pattern-root-cause-analysis">3.4. Root-Cause Analysis</a></li>
 </ul>
 </li>
 <li><a href="#Improve">4. Improve</a></li>
@@ -1135,6 +1136,9 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 <div class="ulist">
 <ul>
 <li>
+<p><a href="#Debugging">Debugging</a></p>
+</li>
+<li>
 <p>Determine Feature Value</p>
 </li>
 <li>
@@ -1159,7 +1163,99 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 </div>
 <div class="sect2">
-<h3 id="pattern-root-cause-analysis"><a class="anchor" href="#pattern-root-cause-analysis"></a>3.3. Root-Cause Analysis</h3>
+<h3 id="Debugging"><a class="anchor" href="#Debugging"></a>3.3. Debugging</h3>
+<div class="sect3">
+<h4 id="_intent_5"><a class="anchor" href="#_intent_5"></a>3.3.1. Intent</h4>
+<div class="paragraph">
+<p>Identify the source of an error ( <em>bug</em>) or misbehavior by observing the flow of execution of a program in detail.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_5"><a class="anchor" href="#_description_5"></a>3.3.2. Description</h4>
+<div class="paragraph">
+<p>Debuggers are well-known and important tools for most software developers. Yet - finding bugs is often more difficult than expected - despite powerful tool support.</p>
+</div>
+<div class="paragraph">
+<p>Approach the search for bugs, errors in the following order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Get a clear and precise <strong>description</strong> of the error, the detailed wording of all error messages, log messages, stacktraces or similar information.</p>
+</li>
+<li>
+<p>Know the <strong>context</strong> of the error: the exact version of the system, the operating system, involved middleware, hardware settings and so on.</p>
+</li>
+<li>
+<p><strong>Minimize external disturbance</strong> while searching for errors, you need to concentrate and observe details. Shut off chat and twitter clients, notifications and your phone.</p>
+</li>
+<li>
+<p><strong>Reproduce</strong> the error in the live system. Don&#8217;t rely on the assumption you can reproduce it - make sure you can reliably <em>really</em> reproduce it.</p>
+</li>
+<li>
+<p><strong>Obtain</strong> the exact version of all required source code and all involved data.</p>
+</li>
+<li>
+<p><strong>Reproduce the error in development environment</strong>: This ensures your development environment is consistent to the live system.</p>
+</li>
+<li>
+<p><strong>Understand the error scenario</strong>: You need to know the business or technical scenario (aka the process or activity flow) of the error: What steps within the system or at its external interfaces precede the error? This step is an example of <a href="#View-Based-Understanding">View-Based Understanding</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_experiences_3"><a class="anchor" href="#_experiences_3"></a>3.3.3. Experiences</h4>
+<div class="paragraph">
+<p>If locating errors takes very long, you&#8217;re propably facing one of the following issues:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You suffer from any assumption that&#8217;s currently not valid</p>
+</li>
+<li>
+<p>You <em>think</em> something instead of <em>observing</em> it - you let your mind deceive your eyes or ears.</p>
+</li>
+<li>
+<p>You ignore the context: you test a wrong version, with wrong data or a wrong operating system.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_applicability_5"><a class="anchor" href="#_applicability_5"></a>3.3.4. Applicability</h4>
+<div class="paragraph">
+<p>Whenever a bug or misbehavior of a program is reported, debugging can help identify its root cause.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_consequences_4"><a class="anchor" href="#_consequences_4"></a>3.3.5. Consequences</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_also_known_as_4"><a class="anchor" href="#_also_known_as_4"></a>3.3.6. Also Known As</h4>
+<div class="paragraph">
+<p>*</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_5"><a class="anchor" href="#_related_patterns_5"></a>3.3.7. Related Patterns</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#root-cause-analysis">[root-cause-analysis]</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_5"><a class="anchor" href="#_references_5"></a>3.3.8. References</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="pattern-root-cause-analysis"><a class="anchor" href="#pattern-root-cause-analysis"></a>3.4. Root-Cause Analysis</h3>
 <div class="quoteblock">
 <blockquote>
 To find mistakes is not enough. It is necessary to find the cause behind the mistake
@@ -1170,7 +1266,7 @@ and build a system that minimises future mistakes.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_intent_5"><a class="anchor" href="#_intent_5"></a>3.3.1. Intent</h4>
+<h4 id="_intent_6"><a class="anchor" href="#_intent_6"></a>3.4.1. Intent</h4>
 <div class="paragraph">
 <p>Explicitely differentiate between symptom and cause:</p>
 </div>
@@ -1186,13 +1282,13 @@ and build a system that minimises future mistakes.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_5"><a class="anchor" href="#_description_5"></a>3.3.2. Description</h4>
+<h4 id="_description_6"><a class="anchor" href="#_description_6"></a>3.4.2. Description</h4>
 <div class="paragraph">
 <p>Some people fight problems, not their real cause:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_3"><a class="anchor" href="#_experiences_3"></a>3.3.3. Experiences</h4>
+<h4 id="_experiences_4"><a class="anchor" href="#_experiences_4"></a>3.4.3. Experiences</h4>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -1224,19 +1320,19 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_5"><a class="anchor" href="#_applicability_5"></a>3.3.4. Applicability</h4>
+<h4 id="_applicability_6"><a class="anchor" href="#_applicability_6"></a>3.4.4. Applicability</h4>
 <div class="paragraph">
 <p>when-and-where-is-this-pattern-applicable</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_4"><a class="anchor" href="#_consequences_4"></a>3.3.5. Consequences</h4>
+<h4 id="_consequences_5"><a class="anchor" href="#_consequences_5"></a>3.4.5. Consequences</h4>
 <div class="paragraph">
 <p>You can eleminate the cause,</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_also_known_as_4"><a class="anchor" href="#_also_known_as_4"></a>3.3.6. Also Known As</h4>
+<h4 id="_also_known_as_5"><a class="anchor" href="#_also_known_as_5"></a>3.4.6. Also Known As</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1249,7 +1345,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_5"><a class="anchor" href="#_related_patterns_5"></a>3.3.7. Related Patterns</h4>
+<h4 id="_related_patterns_6"><a class="anchor" href="#_related_patterns_6"></a>3.4.7. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1259,7 +1355,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_5"><a class="anchor" href="#_references_5"></a>3.3.8. References</h4>
+<h4 id="_references_6"><a class="anchor" href="#_references_6"></a>3.4.8. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1465,6 +1561,12 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 <dd>
 <p>Analyse and inspect the data created and manipulated by the system for its content, structure, quantity and size.
 Category: <a href="#Analyze">Analyze</a></p>
+</dd>
+<dt class="hdlist1">Debugging</dt>
+<dd>
+<p>Identify the source of a bug or misbehavior by observing the
+detailed flow of execution, e.g. stepwise execution of program statements. Usually supported by <em>debugger</em>. Specialisation of <a href="#pattern-root-cause-analysis">root cause analysis</a>.
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -2223,13 +2325,36 @@ The result is rendered nicely.
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Workflow to add a new pattern</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the pattern to the related section in analyze.adoc, evaluate.adoc or
+improve.adoc
+Use the exact writing (e.g. including dashes) you intend to use in the pattern
+description</p>
+</li>
+<li>
+<p>Add the pattern to the pattern catalog in pattern-index.adoc with an entry of
+<em>[[the-exact-name-from-the-previous-step]]</em>  and include a reference to the
+detailed description with a <strong>different</strong> name
+(e.g. by prefixing the name with "pattern-").</p>
+</li>
+<li>
+<p>Add an include statement below the patter overview in analyze.adoc,
+evaluate.adoc or improve.adoc and create the according file unter the pattern subdirectory</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-15 14:12:14 UTC
+Last updated 2014-02-15 14:39:08 UTC
 </div>
 </div>
 </body>
