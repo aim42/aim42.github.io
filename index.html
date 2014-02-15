@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="Asciidoctor 0.1.4">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>aim42 - architecture improvement method</title>
+<title>Method Guide</title>
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
@@ -363,7 +363,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>aim42 - architecture improvement method</h1>
+<h1><span class="image"><img src="images/aim42-logo.png" alt="aim42-logo"></span> Method Guide</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -422,6 +422,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#_attributes">Attributes</a></li>
 </ul>
 </li>
+<li><a href="#_how_to_add_a_new_pattern_or_practice">Appendix C: How to add a new pattern or practice</a></li>
 </ul>
 </div>
 </div>
@@ -429,8 +430,8 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.2, last update 2014-02-15</p>
+<p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
+Version 0.3, last update 2014-02-15</p>
 </div>
 </div>
 </div>
@@ -1170,6 +1171,18 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 <div class="paragraph">
 <p>Identify the source of an error ( <em>bug</em>) or misbehavior by observing the flow of execution of a program in detail.</p>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Many software developers we met violated the basic rules of debugging. They worked in haste, took wrong assumptions, imagined-instead-of-read or simply hunted bugs at the wrong parts of the system.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_description_5"><a class="anchor" href="#_description_5"></a>3.3.2. Description</h4>
@@ -1191,16 +1204,53 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 <p><strong>Minimize external disturbance</strong> while searching for errors, you need to concentrate and observe details. Shut off chat and twitter clients, notifications and your phone.</p>
 </li>
 <li>
-<p><strong>Reproduce</strong> the error in the live system. Don&#8217;t rely on the assumption you can reproduce it - make sure you can reliably <em>really</em> reproduce it.</p>
+<p><strong>Reproduce the error</strong> in the live system. Don&#8217;t rely on the assumption you can reproduce it - make sure you can reliably <em>really</em> reproduce it.</p>
 </li>
 <li>
-<p><strong>Obtain</strong> the exact version of all required source code and all involved data.</p>
+<p><strong>Obtain the exact version</strong> of all required source code and all involved data.</p>
 </li>
 <li>
 <p><strong>Reproduce the error in development environment</strong>: This ensures your development environment is consistent to the live system.</p>
 </li>
 <li>
 <p><strong>Understand the error scenario</strong>: You need to know the business or technical scenario (aka the process or activity flow) of the error: What steps within the system or at its external interfaces precede the error? This step is an example of <a href="#View-Based-Understanding">View-Based Understanding</a>.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Make this scenario <strong>explicit</strong> - draw or scribble a diagram. See the diagram "Divide and conquer" below as an example.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/debugging-divide-and-conquer.jpg" alt="Divide and conqer">
+</div>
+<div class="title">Figure 1. Divide and conquer debugging tactics</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>Plan your debugging strategy</strong>: Think of the expected outcome of every part of
+your scenario.</p>
+</li>
+<li>
+<p>If you know you&#8217;re traveling to Pisa (Italy), you won&#8217;t confuse the Leading Tower with an error.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Look, don&#8217;t imagine</strong>: Sherlock Holmes, the succesful detective has formulated the golden rule of debugging: "<em>It&#8217;s a capital mistake to theorize before one has data</em>". Look <em>exactly</em> what the messages are, read carefully.</p>
+</li>
+<li>
+<p><strong>Change only one thing at a time</strong>: Aim for errors with a pistol, not with a scattergun.</p>
+</li>
+<li>
+<p>Apply the <strong>4-Eye-Principle</strong>: Describe the problem and your state-of-debugging to somebody else. Especially clarify all your assumptions.</p>
+</li>
+</ol>
+</div>
 </li>
 </ol>
 </div>
@@ -1226,22 +1276,19 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 <div class="sect3">
 <h4 id="_applicability_5"><a class="anchor" href="#_applicability_5"></a>3.3.4. Applicability</h4>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Whenever a bug or misbehavior of a program is reported, debugging can help identify its root cause.</p>
+</li>
+<li>
+<p>Debugging can help in understanding a system by make its inner working explicit.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_4"><a class="anchor" href="#_consequences_4"></a>3.3.5. Consequences</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_also_known_as_4"><a class="anchor" href="#_also_known_as_4"></a>3.3.6. Also Known As</h4>
-<div class="paragraph">
-<p>*</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_related_patterns_5"><a class="anchor" href="#_related_patterns_5"></a>3.3.7. Related Patterns</h4>
+<h4 id="_related_patterns_5"><a class="anchor" href="#_related_patterns_5"></a>3.3.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1249,10 +1296,6 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_references_5"><a class="anchor" href="#_references_5"></a>3.3.8. References</h4>
-
 </div>
 </div>
 <div class="sect2">
@@ -1327,13 +1370,13 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_5"><a class="anchor" href="#_consequences_5"></a>3.4.5. Consequences</h4>
+<h4 id="_consequences_4"><a class="anchor" href="#_consequences_4"></a>3.4.5. Consequences</h4>
 <div class="paragraph">
 <p>You can eleminate the cause,</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_also_known_as_5"><a class="anchor" href="#_also_known_as_5"></a>3.4.6. Also Known As</h4>
+<h4 id="_also_known_as_4"><a class="anchor" href="#_also_known_as_4"></a>3.4.6. Also Known As</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1356,7 +1399,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_6"><a class="anchor" href="#_references_6"></a>3.4.8. References</h4>
+<h4 id="_references_5"><a class="anchor" href="#_references_5"></a>3.4.8. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1495,11 +1538,11 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 
 </div>
 <div class="sect3">
-<h4 id="_consequences_6"><a class="anchor" href="#_consequences_6"></a>4.3.5. Consequences</h4>
+<h4 id="_consequences_5"><a class="anchor" href="#_consequences_5"></a>4.3.5. Consequences</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_also_known_as_6"><a class="anchor" href="#_also_known_as_6"></a>4.3.6. Also Known As</h4>
+<h4 id="_also_known_as_5"><a class="anchor" href="#_also_known_as_5"></a>4.3.6. Also Known As</h4>
 
 </div>
 <div class="sect3">
@@ -1513,7 +1556,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_7"><a class="anchor" href="#_references_7"></a>4.3.8. References</h4>
+<h4 id="_references_6"><a class="anchor" href="#_references_6"></a>4.3.8. References</h4>
 
 </div>
 </div>
@@ -2227,7 +2270,19 @@ a variety of programming languages, plugins for different metrics and checks. So
 </div>
 <div class="sect2">
 <h3 id="_images_and_diagrams"><a class="anchor" href="#_images_and_diagrams"></a>Images and Diagrams::</h3>
-
+<div class="paragraph">
+<p>Including images is quite easy:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>image::aim42-logo.png[]</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/aim42-logo.png" alt="aim42 logo">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_lists"><a class="anchor" href="#_lists"></a>Lists</h3>
@@ -2385,36 +2440,60 @@ The result is rendered nicely.
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Workflow to add a new pattern</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_add_a_new_pattern_or_practice"><a class="anchor" href="#_how_to_add_a_new_pattern_or_practice"></a>Appendix C: How to add a new pattern or practice</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Add the pattern to the related section in analyze.adoc, evaluate.adoc or
 improve.adoc
-Use the exact writing (e.g. including dashes) you intend to use in the pattern
+Use the exact spelling (e.g. including dashes) you intend to use in the pattern
 description</p>
 </li>
 <li>
-<p>Add the pattern to the pattern catalog in pattern-index.adoc with an entry of
-<em>[[the-exact-name-from-the-previous-step]]</em>  and include a reference to the
-detailed description with a <strong>different</strong> name
-(e.g. by prefixing the name with "pattern-").</p>
+<p>Add the pattern to the pattern catalog in pattern-index.adoc</p>
 </li>
 <li>
-<p>Add an include statement below the patter overview in analyze.adoc,
-evaluate.adoc or improve.adoc and create the according file unter the pattern subdirectory</p>
+<p>Entries in the pattern-index which currently don&#8217;t have a detailed description in
+their own file are preceded with an anchor, like <em>[[the-exact-name]]</em></p>
+</li>
+<li>
+<p>If you describe a pattern or practice in detail, create a new file with the appropriate name and the .adoc extension under the pattern subdirectory.</p>
+</li>
+<li>
+<p>At the beginning of that new file, include the anchor, like <em>[[the-exact-name]]</em>. See below for an example.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[[the-exact-name]]
+=== The Exact Name
+(write your pattern description here...)</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add an include statement below the pattern overview in analyze.adoc,
+evaluate.adoc or improve.adoc</p>
+<div class="listingblock">
+<div class="content">
+<pre> include::patterns/the-exact-name.adoc[]</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the pattern index, create a reference, like _&lt;&lt;the-exact-name&gt;&gt;</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 </div>
-</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-15 18:03:38 MEZ
+Last updated 2014-02-15 19:22:31 MEZ
 </div>
 </div>
 </body>
