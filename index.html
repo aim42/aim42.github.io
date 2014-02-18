@@ -427,7 +427,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div class="sectionbody">
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3, last update 2014-02-16</p>
+Version 0.3, last update 2014-02-18</p>
 </div>
 </div>
 </div>
@@ -511,27 +511,49 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 </div>
 </div>
 <div class="paragraph">
-<p>These two effects have exactly the same root-causes:</p>
+<p>These negative effects share a few common root-causes:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><em>internal disorder</em> and</p>
+<p>lack of <em>conceptual integrity</em></p>
 </li>
 <li>
-<p>loss of <em>conceptual integrity</em></p>
+<p><em>internal disorder</em></p>
+</li>
+<li>
+<p>overly <em>complex internal structure</em>, either of source code or data</p>
+</li>
+<li>
+<p>overly <em>complex concepts</em> (crosscutting solutions for fine-grained problems)</p>
+</li>
+<li>
+<p>overly complex or inappropriate internal processes</p>
+</li>
+<li>
+<p>inapropriate selection of <em>technology</em> (<em>frameworks, libraries or languages</em>)</p>
+</li>
+<li>
+<p>(you can surely find a few more&#8230;)</p>
 </li>
 </ol>
 </div>
 <div class="sect3">
 <h4 id="_long_term_goal"><a class="anchor" href="#_long_term_goal"></a>1.2.1. Long-Term Goal</h4>
 <div class="paragraph">
-<p>Investment in methodical and systematic software architecture improvement will have the following effect:</p>
+<p>In the beginning, though, everything was fine: nice coupling and cohesion, appropriate technologies, well written code, understandable structures and concepts (see figure <a href="#figure-target-situation">Goal: Maintainable Software</a>)</p>
 </div>
-<div class="imageblock">
+<div class="paragraph">
+<p>But as more and more changes, modifications, tweaks and supposed <em>optimizations</em> were performed under growing time and budget pressure, things got nasty. The maintainers piled up so called <em>technical debt</em> (us software folks call it quick-hack, quick-and-dirty-fix, detours or abbreviations). We&#8217;re quite sure you know what we&#8217;re talking about - we experienced it over and over again, it seems to be the normal situation, not the (bad) exception.</p>
+</div>
+<div class="paragraph">
+<p>Investment in methodical and systematic software architecture improvement will have the following effect.</p>
+</div>
+<div id="figure-target-situation" class="imageblock">
 <div class="content">
 <img src="images/target-situation.jpg" alt="target situation">
 </div>
+<div class="title">Figure 1. Goal: Maintainable Software</div>
 </div>
 </div>
 </div>
@@ -841,7 +863,7 @@ Many software developers we met violated the basic rules of debugging. They work
 <div class="content">
 <img src="images/debugging-divide-and-conquer.jpg" alt="Divide and conqer">
 </div>
-<div class="title">Figure 1. Divide and conquer debugging tactics</div>
+<div class="title">Figure 2. Divide and conquer debugging tactics</div>
 </div>
 </li>
 <li>
@@ -2103,7 +2125,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-02-16)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-02-18)</p>
 </li>
 </ul>
 </div>
@@ -2160,7 +2182,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-16 17:00:26 UTC
+Last updated 2014-02-18 12:32:35 UTC
 </div>
 </div>
 </body>
