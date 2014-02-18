@@ -402,6 +402,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#_goals_3">4.1. Goals</a></li>
 <li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a></li>
 <li><a href="#pattern-introduce-boy-scout-rule">4.3. Introduce "Boy Scout Rule"</a></li>
+<li><a href="#anticorruption-layer">4.4. Introduce "Anticorruption Layer"</a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">5. Pattern index</a></li>
@@ -1153,6 +1154,9 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <div class="ulist">
 <ul>
 <li>
+<p><a href="#Anticorruption-Layer">[Anticorruption-Layer]</a></p>
+</li>
+<li>
 <p><a href="#Automated-Tests">[Automated-Tests]</a></p>
 </li>
 <li>
@@ -1253,6 +1257,63 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 
 </div>
 </div>
+<div class="sect2">
+<h3 id="anticorruption-layer"><a class="anchor" href="#anticorruption-layer"></a>4.4. Introduce "Anticorruption Layer"</h3>
+<div class="sect3">
+<h4 id="_intent_4"><a class="anchor" href="#_intent_4"></a>4.4.1. Intent</h4>
+<div class="paragraph">
+<p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface keeps untouched developers can implement changes or even exchange own or third-party software without affecting the clients.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_4"><a class="anchor" href="#_description_4"></a>4.4.2. Description</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_experiences_4"><a class="anchor" href="#_experiences_4"></a>4.4.3. Experiences</h4>
+<div class="paragraph">
+<p>Here are some real-life experiences
+* Anticorruption layer for a search-index to defer the decission if the best performance can be achieved with Elastic Search, Solr or a self-developed Lucene index.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_applicability_4"><a class="anchor" href="#_applicability_4"></a>4.4.4. Applicability</h4>
+<div class="paragraph">
+<p>Apply this pattern when clients shall be protected from internal changes in a module or subsystem.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_consequences_3"><a class="anchor" href="#_consequences_3"></a>4.4.5. Consequences</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Allows to (ex)change software elements without affecting depending components</p>
+</li>
+<li>
+<p>Introduces one more level of indiraction and thus may increase complexity</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_also_known_as_3"><a class="anchor" href="#_also_known_as_3"></a>4.4.6. Also Known As</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_4"><a class="anchor" href="#_related_patterns_4"></a>4.4.7. Related Patterns</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Isolate-Changes">[Isolate-Changes]</a>, as an alternative or complimenting approach</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_3"><a class="anchor" href="#_references_3"></a>4.4.8. References</h4>
+
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1261,6 +1322,15 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <div class="paragraph">
 <p>This chapter contains an alphabetic list of all patterns, practices and methods with a
 short description and links to the explanation.</p>
+</div>
+<div id="Anticorruption-Layer" class="dlist">
+<dl>
+<dt class="hdlist1">Anticorruption layer</dt>
+<dd>
+<p>Isolate clients from internal changes of suby-systems or modules.
+Category: <a href="#Improve">Improve</a></p>
+</dd>
+</dl>
 </div>
 <div id="ATAM" class="dlist">
 <dl>
@@ -2182,7 +2252,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-18 12:34:11 UTC
+Last updated 2014-02-18 16:21:30 UTC
 </div>
 </div>
 </body>
