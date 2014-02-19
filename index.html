@@ -1596,45 +1596,196 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <div class="sect2">
 <h3 id="pattern-introduce-boy-scout-rule"><a class="anchor" href="#pattern-introduce-boy-scout-rule"></a>4.3. Introduce "Boy Scout Rule"</h3>
 <div class="paragraph">
-<p>Reference to Uncle-Bob <a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule">http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule</a></p>
+<p>The &#8220;Boy Scout Rule&#8221; for software development basically states that we</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+&#8220;Always check a module in cleaner than when you checked it out.&#8221;.
+</blockquote>
+<div class="attribution">
+&#8212; Robert C. Martin
+</div>
+</div>
+<div class="paragraph">
+<p>Uncle Bob (Robert C. Martin) proposed this adoption of the rule from the boy
+scout rulebook which reads &#8220;Try and leave this world a little better than you
+found it.&#8221; for the development world in an Article in Kevlin Henney&#8217;s
+&#8220;97things a programmer should know&#8221; <a href="#Henney">[Henney]</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="_intent_7"><a class="anchor" href="#_intent_7"></a>4.3.1. Intent</h4>
-
+<div class="paragraph">
+<p>Enable crosscutting architectural improvement even if it is not feasible to change the whole codebase.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Oftentimes the introduction of concepts like layering is deemed <em>“impossible”</em> due to the huge codebase that would be affected. In these cases the Boy Scout Rule approach is a lightweight way to enhance the code quality one day at a time.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_description_7"><a class="anchor" href="#_description_7"></a>4.3.2. Description</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_experiences_5"><a class="anchor" href="#_experiences_5"></a>4.3.3. Experiences</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_applicability_7"><a class="anchor" href="#_applicability_7"></a>4.3.4. Applicability</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_consequences_5"><a class="anchor" href="#_consequences_5"></a>4.3.5. Consequences</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_also_known_as_5"><a class="anchor" href="#_also_known_as_5"></a>4.3.6. Also Known As</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_related_patterns_7"><a class="anchor" href="#_related_patterns_7"></a>4.3.7. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Refactoring-Plan">[Refactoring-Plan]</a>, as an alternative or complimenting approach</p>
+<p>Drafting from an <a href="#improvement-backlog">[improvement-backlog]</a>, define a specific rule set
+on how to improve the contents of specific file types.</p>
+</li>
+<li>
+<p>Specify how much effort should be allowed to perform each specific
+clean-up operation</p>
+</li>
+<li>
+<p>Specify how to proceed if the cleanup takes up too much time</p>
+</li>
+<li>
+<p>Revisit the rule set regularly</p>
+</li>
+<li>
+<p>Install a mechanism to ensure that the things that where too big to
+be cleaned up while visiting the file will end up in the
+<a href="#improvement-backlog">[improvement-backlog]</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Example Boy Scout Rule agreement</div>
+<div class="paragraph">
+<p>This is a very concrete agreement from a specific project - yours
+should look rather different.</p>
+</div>
+<div class="paragraph">
+<p><strong>Boy Scout Rule agreement for project X from 2014-02-19 onwards:</strong>
+. Apply defined source code formatting (via IDE) to adhere to coding style<br>
+If the formatting introduces errors and those errors can not be fixed within 10
+Minutes revert changes and add the file to the "redo formatting list" (e.g. add
+an TODO REFORMAT comment, if such a comment already exist add an exclamation mark
+each time you handle the file)</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Move SQL strings to the db-encapsulation layer and replace the former
+direct database calls by appropriate calls to the correct architecture elements<br>
+If this takes longer than 20 minutes revert changes and add file to the list
+"difficulties with database extraction" (e.g. add an TODO DB-EXTRACT comment,
+if such a comment already exist add an exclamation mark each time you handle
+the file)</p>
+</li>
+<li>
+<p>Remove magic numbers from source code and replace them with
+  constants (e.g. replace <code>if (item.id &gt; 99)</code> with <code>if (item.id &gt;
+Item.COMPOUND_ITEMS_THRESHHOLD)</code>.</p>
+</li>
+<li>
+<p>If time allows replace the former "magic number conditionals" with a
+  function on a business logic level (e.g. replace <code>if (item.id &gt;
+Item.COMPOUND_ITEMS_THRESHHOLD)</code>
+  with <code>if (item.is_compound()</code>)</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_experiences_5"><a class="anchor" href="#_experiences_5"></a>4.3.3. Experiences</h4>
+<div class="paragraph">
+<p>Introducing the Boy Scout Rule on a heavily detoriated code base
+induces heavy payback on <a href="#technical-debt">[technical-debt]</a> and often gets challenged
+by team members and senior management. It is important to point out
+that the extended time spent on fixing the artifacts &#8220;as the teams
+goes&#8221; actually is the <em>explicit</em> payment of the <a href="#technical-debt">[technical-debt]</a>
+interest rate.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_risks"><a class="anchor" href="#_risks"></a>4.3.4. Risks</h4>
+<div class="paragraph">
+<p>Sometimes the boy scout rule can be taken as a means by itself. In
+these cases the higher goals tend to be forgotten and thus</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_applicability_7"><a class="anchor" href="#_applicability_7"></a>4.3.5. Applicability</h4>
+<div class="paragraph">
+<p>The pattern &#8220;Introduce Boy Scout Rule&#8221; can always be applied.<br>
+Some of the most effektive uses are</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>unstructured code (no layers, no separation of concerns etc.)</p>
+</li>
+<li>
+<p>systematic weaknesses (unsecure logging, unsecure handling of
+database inserts etc.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_6"><a class="anchor" href="#_references_6"></a>4.3.8. References</h4>
+<h4 id="_consequences_5"><a class="anchor" href="#_consequences_5"></a>4.3.6. Consequences</h4>
+<div class="paragraph">
+<p>The introducion the Boy Scout Rule often proved to enable structural
+improvements as a prerequisite for higher level architectural
+improvements. Also it heightens the team&#8217;s awareness of good practices
+in their code base.</p>
+</div>
+<div class="paragraph">
+<p>The introduction of the Boy Scout Rule leads to a dramatic shift in
+the distribution of the code quality because those parts of the system
+that get changed the most also get the most care. For more stable
+parts of the system other approaches have to be utilized.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_also_known_as_5"><a class="anchor" href="#_also_known_as_5"></a>4.3.7. Also Known As</h4>
 
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_7"><a class="anchor" href="#_related_patterns_7"></a>4.3.8. Related Patterns</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#refactoring-plan">[refactoring-plan]</a>, as an alternative or complimenting approach</p>
+</li>
+<li>
+<p><a href="#introduce-layering">[introduce-layering]</a> can be performed using the Boy Scout Rule</p>
+</li>
+<li>
+<p><a href="#anticorruption-layer">Introduce "Anticorruption Layer"</a> can be performed using the Boy Scout Rule</p>
+</li>
+<li>
+<p>An <a href="#improvement-backlog">[improvement-backlog]</a> should be the basis for the tasks
+performed when applying the Boy Scout Rule</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_6"><a class="anchor" href="#_references_6"></a>4.3.9. References</h4>
+<div class="paragraph">
+<p>The original description of the boy scout rule can be found online at
+the
+<a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule">Boy-Scout-Rule
+article</a></p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -2369,6 +2520,9 @@ the flexible, multi-language code-analysis toolkit.</p>
 <p><a id="Freemann"></a>[Freemann] Steve Freeman, Nat Pryce: Growing Object Oriented Software By Tests. Addison-Wesley, 2010.</p>
 </li>
 <li>
+<p><a id="Henney"></a>[Henney] Kevlin Henney: 97 Things Every Programmer Should Know. O&#8217;Reilly Media, 2010, ISBN 0596809484, also <a href="http://programmer.97things.oreilly.com/wiki/index.php/97_Things_Every_Programmer_Should_Know">available online</a></p>
+</li>
+<li>
 <p><a id="Hunt-Archeology"></a>[Hunt-Archeology] Andy Hunt, Dave Thomas: <a href="http://media.pragprog.com/articles/mar_02_archeology.pdf">Software Archeology</a>, IEEE Software, March/April 2002</p>
 </li>
 <li>
@@ -2666,7 +2820,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-19 20:58:44 UTC
+Last updated 2014-02-19 23:23:26 UTC
 </div>
 </div>
 </body>
