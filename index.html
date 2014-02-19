@@ -373,12 +373,10 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#_why_is_software_being_changed">1.1. Why is software being changed?</a></li>
 <li><a href="#_why_does_software_need_improvement">1.2. Why does software need improvement?</a></li>
 <li><a href="#_how_does_aim42_work">1.3. How does aim42 work?</a></li>
-<li><a href="#_collect_opportunities_for_improvement">1.4. Collect Opportunities for Improvement</a></li>
-<li><a href="#_iterative_approach">1.5. Iterative Approach</a></li>
-<li><a href="#_patterns_and_practices_provide_no_guarantee">1.6. Patterns and Practices Provide No Guarantee</a></li>
-<li><a href="#_the_team">1.7. The Team</a></li>
-<li><a href="#_license">1.8. License</a></li>
-<li><a href="#_contribute_to_aim42_org">1.9. Contribute to aim42.org</a></li>
+<li><a href="#_patterns_and_practices_provide_no_guarantee">1.4. Patterns and Practices Provide No Guarantee</a></li>
+<li><a href="#_the_team">1.5. The Team</a></li>
+<li><a href="#_license">1.6. License</a></li>
+<li><a href="#_contribute_to_aim42_org">1.7. Contribute to aim42.org</a></li>
 </ul>
 </li>
 <li><a href="#Analyze">2. Analyze</a></li>
@@ -409,6 +407,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a></li>
 <li><a href="#pattern-introduce-boy-scout-rule">4.3. Introduce "Boy Scout Rule"</a></li>
 <li><a href="#anticorruption-layer">4.4. Introduce "Anticorruption Layer"</a></li>
+<li><a href="#Crosscutting">4.5. Cross-Cutting Practices and Patterns</a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">5. Pattern index</a></li>
@@ -434,7 +433,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div class="sectionbody">
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3, last update 2014-02-19</p>
+Version 0.3b, last update 2014-02-19</p>
 </div>
 </div>
 </div>
@@ -587,22 +586,12 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 </li>
 </ol>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_collect_opportunities_for_improvement"><a class="anchor" href="#_collect_opportunities_for_improvement"></a>1.4. Collect Opportunities for Improvement</h3>
 <div class="paragraph">
-<p>Look for improvement opportunities, remedies, measures, tactics and strategies in all of these phases.</p>
-</div>
-<div id="figure-collect-remedies" class="imageblock">
-<div class="content">
-<img src="images/collect-remedies.png" alt="collect remedies">
-</div>
-<div class="title">Figure 3. Collect Remedies in All Phases</div>
+<p>Several <a href="#Crosscutting">cross-cutting practices and patterns</a> can or should be applied in all phases, for example documenting results or <a href="#collect-opportunities-for-improvement">Collect Opportunities for Improvement</a>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_iterative_approach"><a class="anchor" href="#_iterative_approach"></a>1.5. Iterative Approach</h3>
+<div class="sect3">
+<h4 id="_iterative_approach"><a class="anchor" href="#_iterative_approach"></a>1.3.2. Iterative Approach</h4>
 <div class="paragraph">
 <p>In compliance with modern agile development methodologies, aim42 fundamentally depends on iteration and feedback between the phases.</p>
 </div>
@@ -610,11 +599,12 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 <div class="content">
 <img src="images/iterate-phases.jpg" alt="iterate phases">
 </div>
-<div class="title">Figure 4. Iterate Between Phases</div>
+<div class="title">Figure 3. Iterate Between Phases</div>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_patterns_and_practices_provide_no_guarantee"><a class="anchor" href="#_patterns_and_practices_provide_no_guarantee"></a>1.6. Patterns and Practices Provide No Guarantee</h3>
+<h3 id="_patterns_and_practices_provide_no_guarantee"><a class="anchor" href="#_patterns_and_practices_provide_no_guarantee"></a>1.4. Patterns and Practices Provide No Guarantee</h3>
 <div class="paragraph">
 <p>We are <strong>very</strong> sure that aim42 can work for your system or your organization.
 But (yes, there&#8217;s always a but) we cannot guarantee: Maybe your software is so
@@ -631,7 +621,7 @@ responsible for any results of applying aim42.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_team"><a class="anchor" href="#_the_team"></a>1.7. The Team</h3>
+<h3 id="_the_team"><a class="anchor" href="#_the_team"></a>1.5. The Team</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -656,7 +646,7 @@ responsible for any results of applying aim42.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_license"><a class="anchor" href="#_license"></a>1.8. License</h3>
+<h3 id="_license"><a class="anchor" href="#_license"></a>1.6. License</h3>
 <div class="paragraph">
 <p>aim42 is free to use, similar to many open-source software systems.</p>
 </div>
@@ -684,7 +674,7 @@ limitations under the License.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_contribute_to_aim42_org"><a class="anchor" href="#_contribute_to_aim42_org"></a>1.9. Contribute to aim42.org</h3>
+<h3 id="_contribute_to_aim42_org"><a class="anchor" href="#_contribute_to_aim42_org"></a>1.7. Contribute to aim42.org</h3>
 <div class="paragraph">
 <p>This content is open source! The source is hosted under the aim42 organization on Bitbucket and GitHub.</p>
 </div>
@@ -903,7 +893,7 @@ Many software developers we met violated the basic rules of debugging. They work
 <div class="content">
 <img src="images/debugging-divide-and-conquer.jpg" alt="Divide and conqer">
 </div>
-<div class="title">Figure 5. Divide and conquer debugging tactics</div>
+<div class="title">Figure 4. Divide and conquer debugging tactics</div>
 </div>
 </li>
 <li>
@@ -1704,6 +1694,21 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 
 </div>
 </div>
+<div class="sect2">
+<h3 id="Crosscutting"><a class="anchor" href="#Crosscutting"></a>4.5. Cross-Cutting Practices and Patterns</h3>
+<div class="sect3">
+<h4 id="collect-opportunities-for-improvement"><a class="anchor" href="#collect-opportunities-for-improvement"></a>4.5.1. Collect Opportunities for Improvement</h4>
+<div class="paragraph">
+<p>You should look for improvement opportunities, remedies, measures, tactics and strategies in all of the aim42-phases.</p>
+</div>
+<div id="figure-collect-remedies" class="imageblock">
+<div class="content">
+<img src="images/collect-remedies.png" alt="collect remedies">
+</div>
+<div class="title">Figure 5. Collect Remedies in All Phases</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1749,10 +1754,15 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Automated-Tests" class="paragraph">
-<p>Automated Tests::Introduce automated tests to verify correctness or runtime behavior. Unit-, integration-,
+<div id="Automated-Tests" class="dlist">
+<dl>
+<dt class="hdlist1">Automated Tests</dt>
+<dd>
+<p>Introduce automated tests to verify correctness or runtime behavior. Unit-, integration-,
 acceptance-, load- or database-tests are well-known specialisations of this pattern.
 Category: <a href="#Improve">Improve</a></p>
+</dd>
+</dl>
 </div>
 <div id="Branch-for-Improvement" class="dlist">
 <dl>
@@ -1788,6 +1798,11 @@ Category: <a href="#Improve">Improve</a></p>
 <p>Isolate competing change necessity by copying and allowing the copies to evolve independently.
 Category: <a href="#Improve">Improve</a></p>
 </dd>
+<dt class="hdlist1"><a href="#collect-opportunities-for-improvement">Collect Opportunities for Improvement</a></dt>
+<dd>
+<p>Look for measures, remedies, tactics, strategies for improvements.
+Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
+</dd>
 </dl>
 </div>
 <div id="Context-Analysis" class="dlist">
@@ -1806,11 +1821,11 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 <p>Analyse and inspect the data created and manipulated by the system for its content, structure, quantity and size.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
-<dt class="hdlist1">Debugging</dt>
+<dt class="hdlist1"><a href="#Debugging">Debugging</a></dt>
 <dd>
 <p>Identify the source of a bug or misbehavior by observing the
 detailed flow of execution, e.g. stepwise execution of program statements. Usually supported by <em>debugger</em>. Specialisation of <a href="#pattern-root-cause-analysis">root cause analysis</a>.
-Category: <a href="#Evaluate">Evaluate</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -1963,6 +1978,11 @@ Category: <a href="#Improve">Improve</a></p>
 <dd>
 <p>Making code easier to read results in better understandability.
 Category: <a href="#Improve">Improve</a></p>
+</dd>
+<dt class="hdlist1"><a href="#improvement-backlog">Improvement-Backlog</a></dt>
+<dd>
+<p>Keep a backlog of possible improvements, remedies, tactics or strategies.
+Category: &lt;&lt;Crosscutting&gt;</p>
 </dd>
 </dl>
 </div>
@@ -2646,7 +2666,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-19 15:24:40 UTC
+Last updated 2014-02-19 20:58:44 UTC
 </div>
 </div>
 </body>
