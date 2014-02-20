@@ -417,6 +417,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#collect-opportunities-for-improvement">5.1. Collect Opportunities for Improvement</a></li>
 <li><a href="#improvement-backlog">5.2. Improvement Backlog</a></li>
 <li><a href="#_explicit_assumption">5.3. Explicit Assumption</a></li>
+<li><a href="#fail-fast">5.4. Fail Fast</a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">6. Pattern index</a></li>
@@ -2035,6 +2036,31 @@ Things that can be handled by a facade:</p>
 <p>Also known as <em>educated guess</em>.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="fail-fast"><a class="anchor" href="#fail-fast"></a>5.4. Fail Fast</h3>
+<div class="paragraph">
+<p>The later a lack of quality is identified the higher are the costs to fix it. Continuously evaluate the quality of work artifacts and immediately take countermeasures or pull the plug as early as possible.</p>
+</div>
+<div class="paragraph">
+<p>Suitable methods to identify such situations are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Code reviews</p>
+</li>
+<li>
+<p>Architecture reviews</p>
+</li>
+<li>
+<p>Peer reviews</p>
+</li>
+<li>
+<p>Testing in early stages</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2295,6 +2321,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
+</li>
+<li>
+<p><a href="#fail-fast">Fail Fast</a>:: Identify quality issues as early as possible and aim to fix them.
+Category: &lt;&lt;Crosscutting&gt;</p>
 </li>
 <li>
 <p><a id="Failure-Mode-and-Effects-Analysis"></a></p>
@@ -3210,7 +3240,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-20 16:36:05 UTC
+Last updated 2014-02-20 20:48:03 UTC
 </div>
 </div>
 </body>
