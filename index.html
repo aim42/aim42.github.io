@@ -409,6 +409,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#anticorruption-layer">4.4. Introduce "Anticorruption Layer"</a></li>
 <li><a href="#Facade">4.5. Manage complex client dependencies with a Facade</a></li>
 <li><a href="#_references_8">4.6. References</a></li>
+<li><a href="#interface-segregation-principle">4.7. Interface Segregation Principle</a></li>
 </ul>
 </li>
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a></li>
@@ -714,6 +715,12 @@ limitations under the License.</p>
 <div class="sect1">
 <h2 id="Analyze"><a class="anchor" href="#Analyze"></a>2. Analyze</h2>
 <div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/analyze.jpg" alt="analyze-phase">
+</div>
+<div class="title">Figure 4. Analyze-Phase</div>
+</div>
 <div class="sect2">
 <h3 id="_goals"><a class="anchor" href="#_goals"></a>2.1. Goals</h3>
 <div class="olist arabic">
@@ -906,7 +913,7 @@ Many software developers we met violated the basic rules of debugging. They work
 <div class="content">
 <img src="images/debugging-divide-and-conquer.jpg" alt="Divide and conqer">
 </div>
-<div class="title">Figure 4. Divide and conquer debugging tactics</div>
+<div class="title">Figure 5. Divide and conquer debugging tactics</div>
 </div>
 </li>
 <li>
@@ -1621,6 +1628,9 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 <p><a href="#Introduce-Boy-Scout-Rule">Introduce Boy Scout Rule</a></p>
 </li>
 <li>
+<p><a href="#interface-segregation-principle">Interface Segregation Principle</a></p>
+</li>
+<li>
 <p><a href="#Isolate-Changes">[Isolate-Changes]</a></p>
 </li>
 <li>
@@ -1988,6 +1998,59 @@ Things that can be handled by a facade:</p>
 <h3 id="_references_8"><a class="anchor" href="#_references_8"></a>4.6. References</h3>
 
 </div>
+<div class="sect2">
+<h3 id="interface-segregation-principle"><a class="anchor" href="#interface-segregation-principle"></a>4.7. Interface Segregation Principle</h3>
+<div class="sect3">
+<h4 id="_intent_10"><a class="anchor" href="#_intent_10"></a>4.7.1. Intent</h4>
+<div class="paragraph">
+<p>Reduce coupling between clients and service providers.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_10"><a class="anchor" href="#_description_10"></a>4.7.2. Description</h4>
+<div class="paragraph">
+<p>Service components may provide more functionality than required by one client.
+To remove the client&#8217;s dependency from functionality not required introduce interfaces that are tailored
+to the client&#8217;s needs.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_applicability_10"><a class="anchor" href="#_applicability_10"></a>4.7.3. Applicability</h4>
+<div class="paragraph">
+<p>Apply when
+* clients only require a restricted functionality from a complex service
+* you have to deal with low cohesion components you cannot change.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_consequences_8"><a class="anchor" href="#_consequences_8"></a>4.7.4. Consequences</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Reduces coupling between client and service providers. Changing the service provider interface will affect fewer clients.</p>
+</li>
+<li>
+<p>Introduces additional interfaces that must be maintained.</p>
+</li>
+<li>
+<p>You have to find a good compromise between "good client fit" and the number of interfaces.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_also_known_as_8"><a class="anchor" href="#_also_known_as_8"></a>4.7.5. Also Known As</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_10"><a class="anchor" href="#_related_patterns_10"></a>4.7.6. Related Patterns</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_references_9"><a class="anchor" href="#_references_9"></a>4.7.7. References</h4>
+
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2002,7 +2065,7 @@ Things that can be handled by a facade:</p>
 <div class="content">
 <img src="images/collect-remedies.png" alt="collect remedies">
 </div>
-<div class="title">Figure 5. Collect Remedies in All Phases</div>
+<div class="title">Figure 6. Collect Remedies in All Phases</div>
 </div>
 </div>
 <div class="sect2">
@@ -2421,6 +2484,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
+</li>
+<li>
+<p><a href="#interface-segregation-principle">Interface Segregation</a>:: Reduce coupling between clients and service provider .
+Category: <a href="#Improve">Improve</a></p>
 </li>
 <li>
 <p><a href="#improvement-backlog">Improvement-Backlog</a>:: Keep a backlog of possible improvements, remedies, tactics or strategies.
@@ -3240,7 +3307,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-20 20:48:03 UTC
+Last updated 2014-02-20 20:58:59 UTC
 </div>
 </div>
 </body>
