@@ -407,10 +407,16 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a></li>
 <li><a href="#pattern-introduce-boy-scout-rule">4.3. Introduce "Boy Scout Rule"</a></li>
 <li><a href="#anticorruption-layer">4.4. Introduce "Anticorruption Layer"</a></li>
-<li><a href="#Crosscutting">4.5. Cross-Cutting Practices and Patterns</a></li>
 </ul>
 </li>
-<li><a href="#_pattern_index">5. Pattern index</a></li>
+<li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#collect-opportunities-for-improvement">5.1. Collect Opportunities for Improvement</a></li>
+<li><a href="#improvement-backlog">5.2. Improvement Backlog</a></li>
+</ul>
+</li>
+<li><a href="#_pattern_index">6. Pattern index</a></li>
 <li><a href="#bibliography">Appendix A: Bibliography</a></li>
 <li><a href="#_asciidoc_help">Appendix B: Asciidoc Help</a></li>
 <li>
@@ -1635,7 +1641,7 @@ Oftentimes the introduction of concepts like layering is deemed <em>“impossibl
 <div class="ulist">
 <ul>
 <li>
-<p>Drafting from an <a href="#improvement-backlog">[improvement-backlog]</a>, define a specific rule set
+<p>Drafting from an <a href="#improvement-backlog">Improvement Backlog</a>, define a specific rule set
 on how to improve the contents of specific file types.</p>
 </li>
 <li>
@@ -1651,7 +1657,7 @@ clean-up operation</p>
 <li>
 <p>Install a mechanism to ensure that the things that where too big to
 be cleaned up while visiting the file will end up in the
-<a href="#improvement-backlog">[improvement-backlog]</a>.</p>
+<a href="#improvement-backlog">Improvement Backlog</a>.</p>
 </li>
 </ul>
 </div>
@@ -1772,7 +1778,7 @@ parts of the system other approaches have to be utilized.</p>
 <p><a href="#anticorruption-layer">Introduce "Anticorruption Layer"</a> can be performed using the Boy Scout Rule</p>
 </li>
 <li>
-<p>An <a href="#improvement-backlog">[improvement-backlog]</a> should be the basis for the tasks
+<p>An <a href="#improvement-backlog">Improvement Backlog</a> should be the basis for the tasks
 performed when applying the Boy Scout Rule</p>
 </li>
 </ul>
@@ -1845,10 +1851,13 @@ article</a></p>
 
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Crosscutting"><a class="anchor" href="#Crosscutting"></a>5. Cross-Cutting Practices and Patterns</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="Crosscutting"><a class="anchor" href="#Crosscutting"></a>4.5. Cross-Cutting Practices and Patterns</h3>
-<div class="sect3">
-<h4 id="collect-opportunities-for-improvement"><a class="anchor" href="#collect-opportunities-for-improvement"></a>4.5.1. Collect Opportunities for Improvement</h4>
+<h3 id="collect-opportunities-for-improvement"><a class="anchor" href="#collect-opportunities-for-improvement"></a>5.1. Collect Opportunities for Improvement</h3>
 <div class="paragraph">
 <p>You should look for improvement opportunities, remedies, measures, tactics and strategies in all of the aim42-phases.</p>
 </div>
@@ -1859,17 +1868,42 @@ article</a></p>
 <div class="title">Figure 5. Collect Remedies in All Phases</div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="improvement-backlog"><a class="anchor" href="#improvement-backlog"></a>5.2. Improvement Backlog</h3>
+<div class="paragraph">
+<p>Keep a public, written backlog of possible improvements, remedies, tactics or strategies.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Revise this backlog in regular intervalls.</p>
+</li>
+<li>
+<p>Define the <em>owner role</em> for this backlog, similar to the <em>product owner</em> in Scrum.</p>
+</li>
+<li>
+<p>Enhance the backlog with information from the <a href="#evaluation">[evaluation]</a> phase, like cost, effort or risk.</p>
+</li>
+</ul>
+</div>
+<div id="figure-improvement-backlog" class="paragraph">
+<p><span class="image"><img src="images/improvement-backlog.jpg" alt="improvement backlog" width="title:"Improvement Backlog""></span></p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_pattern_index"><a class="anchor" href="#_pattern_index"></a>5. Pattern index</h2>
+<h2 id="_pattern_index"><a class="anchor" href="#_pattern_index"></a>6. Pattern index</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter contains an alphabetic list of all patterns, practices and methods with a
 short description and links to the explanation.</p>
 </div>
-<div id="Anticorruption-Layer" class="dlist">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a id="Anticorruption-Layer"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Anticorruption layer</dt>
 <dd>
@@ -1878,7 +1912,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="ATAM" class="dlist">
+</li>
+<li>
+<p><a id="ATAM"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">ATAM</dt>
 <dd>
@@ -1886,7 +1923,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Architecture-Backlog" class="dlist">
+</li>
+<li>
+<p><a id="Architecture-Backlog"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Architecture-Backlog</dt>
 <dd>
@@ -1896,7 +1936,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Architecture-Documentation" class="dlist">
+</li>
+<li>
+<p><a id="Architecture-Documentation"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Architecture Documentation</dt>
 <dd>
@@ -1905,7 +1948,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Automated-Tests" class="dlist">
+</li>
+<li>
+<p><a id="Automated-Tests"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Automated Tests</dt>
 <dd>
@@ -1915,7 +1961,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Branch-for-Improvement" class="dlist">
+</li>
+<li>
+<p><a id="Branch-for-Improvement"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Branch for Improvement</dt>
 <dd>
@@ -1924,7 +1973,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Capture-Quality-Requirements" class="dlist">
+</li>
+<li>
+<p><a id="Capture-Quality-Requirements"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Capture Quality Requirements</dt>
 <dd>
@@ -1933,7 +1985,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Change-by-Extension" class="dlist">
+</li>
+<li>
+<p><a id="Change-by-Extension"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Change by Extension</dt>
 <dd>
@@ -1942,21 +1997,26 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Change-by-Copy" class="dlist">
+</li>
+<li>
+<p><a id="Change-by-Copy"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Change by Copy</dt>
 <dd>
 <p>Isolate competing change necessity by copying and allowing the copies to evolve independently.
 Category: <a href="#Improve">Improve</a></p>
 </dd>
-<dt class="hdlist1"><a href="#collect-opportunities-for-improvement">Collect Opportunities for Improvement</a></dt>
-<dd>
-<p>Look for measures, remedies, tactics, strategies for improvements.
-Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
-</dd>
 </dl>
 </div>
-<div id="Context-Analysis" class="dlist">
+</li>
+<li>
+<p><a href="#collect-opportunities-for-improvement">Collect Opportunities for Improvement</a>:: Look for measures, remedies, tactics, strategies for improvements.
+Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
+</li>
+<li>
+<p><a id="Context-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Context Analysis</dt>
 <dd>
@@ -1965,22 +2025,27 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
-<div id="Data-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Data-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Data Analysis</dt>
 <dd>
 <p>Analyse and inspect the data created and manipulated by the system for its content, structure, quantity and size.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
-<dt class="hdlist1"><a href="#Debugging">Debugging</a></dt>
-<dd>
-<p>Identify the source of a bug or misbehavior by observing the
-detailed flow of execution, e.g. stepwise execution of program statements. Usually supported by <em>debugger</em>. Specialisation of <a href="#pattern-root-cause-analysis">root cause analysis</a>.
-Category: <a href="#Analyze">Analyze</a></p>
-</dd>
 </dl>
 </div>
-<div id="Dependency-Analysis" class="dlist">
+</li>
+<li>
+<p><a href="#Debugging">Debugging</a>:: Identify the source of a bug or misbehavior by observing the
+detailed flow of execution, e.g. stepwise execution of program statements. Usually supported by <em>debugger</em>. Specialisation of <a href="#pattern-root-cause-analysis">root cause analysis</a>.
+Category: <a href="#Analyze">Analyze</a></p>
+</li>
+<li>
+<p><a id="Dependency-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Dependency Analysis</dt>
 <dd>
@@ -1989,7 +2054,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Determine-Feature-Value" class="dlist">
+</li>
+<li>
+<p><a id="Determine-Feature-Value"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Determine Feature Value</dt>
 <dd>
@@ -1998,7 +2066,10 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
-<div id="Determine-Problem-Cost" class="dlist">
+</li>
+<li>
+<p><a id="Determine-Problem-Cost"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Determine Problem Cost</dt>
 <dd>
@@ -2007,7 +2078,10 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
-<div id="Development-Process-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Development-Process-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Development Process Analysis</dt>
 <dd>
@@ -2016,7 +2090,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Documentation-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Documentation-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Documentation Analysis</dt>
 <dd>
@@ -2025,7 +2102,22 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Estimate-Remedy-Cost" class="dlist">
+</li>
+<li>
+<p><a id="Document-Problems"></a></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Document Problems</dt>
+<dd>
+<p>See <a href="#improvement-backlog">Improvement Backlog</a>.
+Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p><a id="Estimate-Remedy-Cost"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Estimate Remedy Cost</dt>
 <dd>
@@ -2034,7 +2126,10 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
-<div id="Extract-Reusable-Component" class="dlist">
+</li>
+<li>
+<p><a id="Extract-Reusable-Component"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Extract Reusable Component</dt>
 <dd>
@@ -2043,7 +2138,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Failure-Mode-and-Effects-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Failure-Mode-and-Effects-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Failure Mode and Effects Analysis</dt>
 <dd>
@@ -2052,7 +2150,10 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
-<div id="Front-End-Switch" class="dlist">
+</li>
+<li>
+<p><a id="Front-End-Switch"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Front-End Switch</dt>
 <dd>
@@ -2061,7 +2162,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Group-Improvement-Actions" class="dlist">
+</li>
+<li>
+<p><a id="Group-Improvement-Actions"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Group Improvement Actions</dt>
 <dd>
@@ -2070,7 +2174,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Handle-If-Else-Chains" class="dlist">
+</li>
+<li>
+<p><a id="Handle-If-Else-Chains"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Handle If-Else-Chains</dt>
 <dd>
@@ -2079,7 +2186,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Hierarchical-Quality-Model" class="dlist">
+</li>
+<li>
+<p><a id="Hierarchical-Quality-Model"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Hierarchical Quality Model</dt>
 <dd>
@@ -2088,16 +2198,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Natural-Death" class="dlist">
-<dl>
-<dt class="hdlist1">Natural Death</dt>
-<dd>
-<p>Keep old system running and only retire it once all objects contained reach end of life according to their life cycle.
-Category: <a href="#Improve">Improve</a></p>
-</dd>
-</dl>
-</div>
-<div id="Impact-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Impact-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Impact Analysis</dt>
 <dd>
@@ -2106,38 +2210,45 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
-<div id="Impact-Mapping" class="dlist">
+</li>
+<li>
+<p><a id="Impact-Mapping"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Impact Mapping</dt>
 <dd>
 <p>Adjicz
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
-<dt class="hdlist1">Introduce Boy Scout Rule</dt>
-<dd>
-<p>Establish a policy to perform certain structural
+</dl>
+</div>
+</li>
+<li>
+<p>Introduce Boy Scout Rule:: Establish a policy to perform certain structural
 implrovements each time an artifact (sourcecode, configuration, documents etc.)
 is changed. Usable in situations where a <a href="#Refactoring-Plan">[Refactoring-Plan]</a> is not feasible or in
 addition to such a plan. See <a href="#pattern-introduce-boy-scout-rule">detailled description</a>.
 Category: <a href="#Improve">Improve</a></p>
-</dd>
-</dl>
-</div>
-<div id="Improve-Code-Layout" class="dlist">
+</li>
+<li>
+<p><a id="Improve-Code-Layout"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Improve Code Layout</dt>
 <dd>
 <p>Making code easier to read results in better understandability.
 Category: <a href="#Improve">Improve</a></p>
 </dd>
-<dt class="hdlist1"><a href="#improvement-backlog">Improvement-Backlog</a></dt>
-<dd>
-<p>Keep a backlog of possible improvements, remedies, tactics or strategies.
-Category: &lt;&lt;Crosscutting&gt;</p>
-</dd>
 </dl>
 </div>
-<div id="Isolate-Changes" class="dlist">
+</li>
+<li>
+<p><a href="#improvement-backlog">Improvement-Backlog</a>:: Keep a backlog of possible improvements, remedies, tactics or strategies.
+Category: &lt;&lt;Crosscutting&gt;</p>
+</li>
+<li>
+<p><a id="Isolate-Changes"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Isolate Changes</dt>
 <dd>
@@ -2146,7 +2257,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Issue-Tracker-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Issue-Tracker-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Issue Tracker Analysis</dt>
 <dd>
@@ -2155,7 +2269,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Keep-Data-Toss-Code" class="dlist">
+</li>
+<li>
+<p><a id="Keep-Data-Toss-Code"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Keep-Data, Toss-Code</dt>
 <dd>
@@ -2164,7 +2281,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Limit-Feature-by-Client" class="dlist">
+</li>
+<li>
+<p><a id="Limit-Feature-by-Client"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Limit Feature by Client</dt>
 <dd>
@@ -2173,7 +2293,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Migrate-Data" class="dlist">
+</li>
+<li>
+<p><a id="Migrate-Data"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Migrate Data</dt>
 <dd>
@@ -2182,7 +2305,11 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Never-Change-Running-System" class="dlist">
+</li>
+<li>
+<p><a id="Never-Change-Running-System"></a>
+<strong>TODO: rename</strong></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Never Change Running System</dt>
 <dd>
@@ -2191,7 +2318,22 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Organizational-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Natural-Death"></a></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Natural Death</dt>
+<dd>
+<p>Keep old system running and only retire it once all objects contained reach end of life according to their life cycle.
+Category: <a href="#Improve">Improve</a></p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p><a id="Organizational-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Organizational Analysis</dt>
 <dd>
@@ -2200,7 +2342,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Outside-in-Interfaces" class="dlist">
+</li>
+<li>
+<p><a id="Outside-in-Interfaces"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Outside-in Interfaces</dt>
 <dd>
@@ -2209,7 +2354,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Performance-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Performance-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Performance Analysis</dt>
 <dd>
@@ -2217,7 +2365,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Pre-Interview-Questionnaire" class="dlist">
+</li>
+<li>
+<p><a id="Pre-Interview-Questionnaire"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Pre-Interview-Questionnaire</dt>
 <dd>
@@ -2226,7 +2377,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Profiling" class="dlist">
+</li>
+<li>
+<p><a id="Profiling"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Profiling</dt>
 <dd>
@@ -2235,7 +2389,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Qualitative-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Qualitative-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Qualitative Analysis</dt>
 <dd>
@@ -2244,7 +2401,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Quality-Driven-Software-Architecture" class="dlist">
+</li>
+<li>
+<p><a id="Quality-Driven-Software-Architecture"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Quality Driven Software Architecture (QDSA)</dt>
 <dd>
@@ -2253,7 +2413,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Quality-Function-Deployment" class="dlist">
+</li>
+<li>
+<p><a id="Quality-Function-Deployment"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Quality Function Deployment</dt>
 <dd>
@@ -2261,15 +2424,22 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Quantitative-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Quantitative-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Quantitative Analysis</dt>
 <dd>
-<p>Category: <a href="#Analyze">Analyze</a></p>
+<p>Measure artifacts or processes within the system, e.g. source code. For example, see <a href="#Static-Analysis">[Static-Analysis]</a>.
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Questionnaire" class="dlist">
+</li>
+<li>
+<p><a id="Questionnaire"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Questionnaire</dt>
 <dd>
@@ -2278,7 +2448,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Refactoring" class="dlist">
+</li>
+<li>
+<p><a id="Refactoring"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Refactoring</dt>
 <dd>
@@ -2287,7 +2460,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Refactoring-Plan" class="dlist">
+</li>
+<li>
+<p><a id="Refactoring-Plan"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Refactoring Plan</dt>
 <dd>
@@ -2296,7 +2472,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Runtime-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Runtime-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Runtime Analysis</dt>
 <dd>
@@ -2305,7 +2484,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Requirements-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Requirements-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Requirements Analysis</dt>
 <dd>
@@ -2314,7 +2496,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Root-Cause-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Root-Cause-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Root-Cause Analysis</dt>
 <dd>
@@ -2323,7 +2508,10 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
-<div id="Runtime-Artifact-Analysis" class="dlist">
+</li>
+<li>
+<p><a id="Runtime-Artifact-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Runtime-Artifact Analysis</dt>
 <dd>
@@ -2332,7 +2520,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Sample-For-Improvement" class="dlist">
+</li>
+<li>
+<p><a id="Sample-For-Improvement"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Sample for Improvement</dt>
 <dd>
@@ -2341,7 +2532,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Schedule-Work" class="dlist">
+</li>
+<li>
+<p><a id="Schedule-Work"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Schedule Work</dt>
 <dd>
@@ -2350,21 +2544,26 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Separate-Cause-From-Effect" class="dlist">
+</li>
+<li>
+<p><a id="Separate-Cause-From-Effect"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Separate Cause from Effect</dt>
 <dd>
 <p>See <a href="#Root-Cause-Analysis">[Root-Cause-Analysis]</a>
 Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
-<dt class="hdlist1">Software-Archeology</dt>
-<dd>
-<p>Understand software by analysing its source code, usually in absence of other documentation or knowledge sources.
-Category: <a href="#Evaluate">Evaluate</a></p>
-</dd>
 </dl>
 </div>
-<div id="Stakeholder-Analysis" class="dlist">
+</li>
+<li>
+<p><a href="#Software-Archeology">[Software-Archeology]</a>:: Understand software by analysing its source code, usually in absence of other documentation or knowledge sources.
+Category: <a href="#Evaluate">Evaluate</a></p>
+</li>
+<li>
+<p><a id="Stakeholder-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Stakeholder Analysis</dt>
 <dd>
@@ -2372,7 +2571,10 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
-<div id="Stakeholder-Interview" class="dlist">
+</li>
+<li>
+<p><a id="Stakeholder-Interview"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Stakeholder Interview</dt>
 <dd>
@@ -2380,20 +2582,26 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
-<div id="Stakeholder-Specific-Communication" class="dlist">
+</li>
+<li>
+<p><a id="Stakeholder-Specific-Communication"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Stakeholder Specific Communication</dt>
 <dd>
 <p>Communicate with stakeholders by actively applying their specific or favored terminology and/or communication channels.</p>
 </dd>
-<dt class="hdlist1">Static Code Analysis</dt>
-<dd>
-<p>Analyse source code to identivy building blocks and their dependencies, determine complexity, coupling, cohesion and other structural properties. See <a href="#Static-Analysis">detailed description</a>.
-Category: <a href="#Analyze">Analyze</a></p>
-</dd>
 </dl>
 </div>
-<div id="Structural-Analysis" class="dlist">
+</li>
+<li>
+<p>Static Code Analysis::
+Analyse source code to identivy building blocks and their dependencies, determine complexity, coupling, cohesion and other structural properties. See <a href="#Static-Analysis">detailed description</a>.
+Category: <a href="#Analyze">Analyze</a></p>
+</li>
+<li>
+<p><a id="Structural-Analysis"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Structural (Code) Analysis</dt>
 <dd>
@@ -2402,7 +2610,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="System-Documentation" class="dlist">
+</li>
+<li>
+<p><a id="System-Documentation"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">System Documentation</dt>
 <dd>
@@ -2411,7 +2622,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Take-What-They-Mean" class="dlist">
+</li>
+<li>
+<p><a id="Take-What-They-Mean"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Take What They Mean, Not What They Say</dt>
 <dd>
@@ -2420,7 +2634,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
-<div id="Toggle-Feature" class="dlist">
+</li>
+<li>
+<p><a id="Toggle-Feature"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Toggle Feature</dt>
 <dd>
@@ -2429,7 +2646,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Remove-Nested-Control-Structures" class="dlist">
+</li>
+<li>
+<p><a id="Remove-Nested-Control-Structures"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Remove Nested Control Structures</dt>
 <dd>
@@ -2438,7 +2658,10 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Untangle-Code" class="dlist">
+</li>
+<li>
+<p><a id="Untangle-Code"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Untangle Code</dt>
 <dd>
@@ -2447,19 +2670,25 @@ Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
-<div id="Use-Case-Cluster" class="dlist">
+</li>
+<li>
+<p><a id="Use-Case-Cluster"></a></p>
+<div class="dlist">
 <dl>
 <dt class="hdlist1">Use-Case Cluster</dt>
 <dd>
 <p>Understand system functionality by grouping functionality into clusters to reduce complexity.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
-<dt class="hdlist1">View-Based Understanding</dt>
-<dd>
-<p>Create architectural views (mainly building block view) to understand and communicate code structure. See <a href="#Pattern-View-Based-Understanding">detailed description</a>.
-Category: <a href="#Evaluate">Evaluate</a></p>
-</dd>
 </dl>
+</div>
+</li>
+<li>
+<p>View-Based Understanding::
+Create architectural views (mainly building block view) to understand and communicate code structure. See <a href="#Pattern-View-Based-Understanding">detailed description</a>.
+Category: <a href="#Analyze">Analyze</a></p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -2820,7 +3049,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-20 00:34:58 UTC
+Last updated 2014-02-20 09:17:16 UTC
 </div>
 </div>
 </body>
