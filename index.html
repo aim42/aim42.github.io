@@ -407,6 +407,8 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a></li>
 <li><a href="#Boy-Scout-Rule">4.3. Boy Scout Rule</a></li>
 <li><a href="#anticorruption-layer">4.4. Introduce "Anticorruption Layer"</a></li>
+<li><a href="#Facade">4.5. Manage complex client dependencies with a Facade</a></li>
+<li><a href="#_references_8">4.6. References</a></li>
 </ul>
 </li>
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a></li>
@@ -1552,6 +1554,9 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <p><a href="#Extract-Reusable-Component">[Extract-Reusable-Component]</a></p>
 </li>
 <li>
+<p><a href="#Facade">Manage complex client dependencies with a Facade</a></p>
+</li>
+<li>
 <p><a href="#Group-Improvement-Actions">[Group-Improvement-Actions]</a></p>
 </li>
 <li>
@@ -1850,6 +1855,89 @@ article</a></p>
 <h4 id="_references_7"><a class="anchor" href="#_references_7"></a>4.4.8. References</h4>
 
 </div>
+</div>
+<div class="sect2">
+<h3 id="Facade"><a class="anchor" href="#Facade"></a>4.5. Manage complex client dependencies with a Facade</h3>
+<div class="sect3">
+<h4 id="_intent_9"><a class="anchor" href="#_intent_9"></a>4.5.1. Intent</h4>
+<div class="paragraph">
+<p>Simplify the interaction of a client with a set of service components.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_9"><a class="anchor" href="#_description_9"></a>4.5.2. Description</h4>
+<div class="paragraph">
+<p>When clients use a set of components with repeating patterns these
+interaction patterns are implemented in a Facade component.</p>
+</div>
+<div class="paragraph">
+<p>The interface the Facade provides to the client is tailored to the client&#8217;s
+need. Technical details that are specific for the service component implementations
+are handled inside the facade.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_experiences_7"><a class="anchor" href="#_experiences_7"></a>4.5.3. Experiences</h4>
+<div class="paragraph">
+<p>Consider a Facade if you must use generic frameworks or systems you cannot modify
+e.g. legacy systems.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_applicability_9"><a class="anchor" href="#_applicability_9"></a>4.5.4. Applicability</h4>
+<div class="paragraph">
+<p>Apply this pattern when clients use a set of components in stereotypcial fashion.
+Things that can be handled by a facade:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>recurring control flows</p>
+</li>
+<li>
+<p>technical details</p>
+<div class="ulist">
+<ul>
+<li>
+<p>configuration of components</p>
+</li>
+<li>
+<p>resource lookup</p>
+</li>
+<li>
+<p>error handling</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>4.5.5. Consequences</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Enhances Information Hiding. Clients do not need information about the components' technical detail.</p>
+</li>
+<li>
+<p>Supports DRY principle: complex interactions are implemented in one place. No need to reimplement this in different clients.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_also_known_as_7"><a class="anchor" href="#_also_known_as_7"></a>4.5.6. Also Known As</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_9"><a class="anchor" href="#_related_patterns_9"></a>4.5.7. Related Patterns</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_references_8"><a class="anchor" href="#_references_8"></a>4.6. References</h3>
+
 </div>
 </div>
 </div>
@@ -3060,7 +3148,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-20 10:23:47 UTC
+Last updated 2014-02-20 10:53:04 UTC
 </div>
 </div>
 </body>
