@@ -427,8 +427,8 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li>
 <ul class="sectlevel2">
 <li><a href="#_headings">Headings</a></li>
-<li><a href="#_cross_references_and_links">Cross-References and Links::</a></li>
-<li><a href="#_images_and_diagrams">Images and Diagrams::</a></li>
+<li><a href="#_cross_references_and_links">Cross-References and Links</a></li>
+<li><a href="#_images_and_diagrams">Images and Diagrams</a></li>
 <li><a href="#_lists">Lists</a></li>
 <li><a href="#_admonitions">Admonitions</a></li>
 <li><a href="#_files_and_directories">Files and Directories</a></li>
@@ -2251,7 +2251,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><a href="#collect-opportunities-for-improvement">Collect Opportunities for Improvement</a>:: Look for measures, remedies, tactics, strategies for improvements.
+<p><a href="#collect-opportunities-for-improvement">Collect Opportunities for Improvement</a> :: Look for measures, remedies, tactics, strategies for improvements.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </li>
 <li>
@@ -3086,11 +3086,43 @@ a variety of programming languages, plugins for different metrics and checks. So
 
 </div>
 <div class="sect2">
-<h3 id="_cross_references_and_links"><a class="anchor" href="#_cross_references_and_links"></a>Cross-References and Links::</h3>
+<h3 id="_cross_references_and_links"><a class="anchor" href="#_cross_references_and_links"></a>Cross-References and Links</h3>
+<div class="paragraph">
+<p><a href="#some-anchor">explanation</a> creates a link to the explanation of some-anchor.</p>
+</div>
+<div class="paragraph">
+<p>can use the cross-reference in a list, but not with labelled-list:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#some-anchor">pattern name</a>  labelled-list with cross-reference does not work</p>
+</li>
+<li>
+<p><strong><a href="#some-anchor">cross-references</a></strong> need to be boldface-formatted manualy</p>
+</li>
+</ol>
+</div>
+<div id="some-anchor" class="paragraph">
+<p>here we explain <em>some-anchor</em> topic&#8230;</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;&lt;some-anchor,explanation&gt;&gt; creates a link to the explanation of some-anchor.
 
+can use the cross-reference in a list, but not with labelled-list:
+
+. &lt;&lt;some-anchor, pattern name&gt;&gt;  labelled-list with cross-reference does not work
+. *&lt;&lt;some-anchor, cross-references&gt;&gt;* need to be boldface-formatted manualy
+
+
+[[some-anchor]]
+here we explain 'some-anchor' topic...</pre>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_images_and_diagrams"><a class="anchor" href="#_images_and_diagrams"></a>Images and Diagrams::</h3>
+<h3 id="_images_and_diagrams"><a class="anchor" href="#_images_and_diagrams"></a>Images and Diagrams</h3>
 <div class="paragraph">
 <p>Including images is quite easy:</p>
 </div>
@@ -3314,7 +3346,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-22 13:42:05 UTC
+Last updated 2014-02-22 13:53:42 UTC
 </div>
 </div>
 </body>
