@@ -421,9 +421,9 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <ul class="sectlevel2">
 <li><a href="#collect-problems">5.1. Collect Problems</a></li>
 <li><a href="#collect-opportunities-for-improvement">5.2. Collect Opportunities for Improvement</a></li>
-<li><a href="#improvement-backlog">5.3. Improvement Backlog</a></li>
-<li><a href="#_explicit_assumption">5.4. Explicit Assumption</a></li>
-<li><a href="#fail-fast">5.5. Fail Fast</a></li>
+<li><a href="#Explicit-Assumption">5.3. Explicit Assumption</a></li>
+<li><a href="#fail-fast">5.4. Fail Fast</a></li>
+<li><a href="#improvement-backlog">5.5. Improvement Backlog</a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">6. Pattern index</a></li>
@@ -1103,7 +1103,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <p><a href="#ATAM">[ATAM]</a></p>
 </li>
 <li>
-<p><a href="#Explicit-Assumption">[Explicit-Assumption]</a></p>
+<p><a href="#Explicit-Assumption">Explicit Assumption</a></p>
 </li>
 <li>
 <p><a href="#Qualitative-Analysis">Qualitative Analysis</a></p>
@@ -1897,7 +1897,22 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 </div>
 <div class="sect3">
-<h4 id="Estimage-Problem-Cost"><a class="anchor" href="#Estimage-Problem-Cost"></a>3.2.2. Estimate Problem Cost</h4>
+<h4 id="Estimate-In-Interval"><a class="anchor" href="#Estimate-In-Interval"></a>3.2.2. Estimate in Interval</h4>
+<div class="paragraph">
+<p>Estimation is a guess, not a <strong>measurement</strong>. Estimates are uncertain, otherwise they would be observations (or measurements!).</p>
+</div>
+<div class="paragraph">
+<p>Therefore, estimate in intervals, giving a lower and upper bound to your estimate. The difference between the two shows your confidence in the estimate. If this difference is relatively small, it shows high confidence.</p>
+</div>
+<div class="paragraph">
+<p>Good estimates ensure that the estimated value will be contained in the interval with a very high probability.</p>
+</div>
+<div class="paragraph">
+<p>Estimates often rely on assumptions - which you should <a href="#Explicit-Assumption">name and describe explicitely</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Estimage-Problem-Cost"><a class="anchor" href="#Estimage-Problem-Cost"></a>3.2.3. Estimate Problem Cost</h4>
 <div class="paragraph">
 <p>Estimate how much a given problem costs (in money or effort) in a period of time.</p>
 </div>
@@ -1919,7 +1934,7 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 </div>
 <div class="sect3">
-<h4 id="_estimate_remedy_cost"><a class="anchor" href="#_estimate_remedy_cost"></a>3.2.3. Estimate Remedy Cost</h4>
+<h4 id="_estimate_remedy_cost"><a class="anchor" href="#_estimate_remedy_cost"></a>3.2.4. Estimate Remedy Cost</h4>
 <div class="paragraph">
 <p>See: "Software Estimation. The Black Art Demystified (Steve McConnell)"</p>
 </div>
@@ -2387,7 +2402,7 @@ context of architecture improvement.</p>
 </li>
 <li>
 <p>Introducing invariants to verify that the code is really dead is a specific
-way to make <a href="#Explicit-Assumption">[Explicit-Assumption]</a>s</p>
+way to make <a href="#Explicit-Assumption">Explicit Assumption</a>s</p>
 </li>
 </ul>
 </div>
@@ -2654,29 +2669,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="improvement-backlog"><a class="anchor" href="#improvement-backlog"></a>5.3. Improvement Backlog</h3>
-<div class="paragraph">
-<p>Keep a public, written backlog of possible improvements, remedies, tactics or strategies.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Revise this backlog in regular intervalls.</p>
-</li>
-<li>
-<p>Define the <em>owner role</em> for this backlog, similar to the <em>product owner</em> in Scrum.</p>
-</li>
-<li>
-<p>Enhance the backlog with information from the <a href="#evaluation">[evaluation]</a> phase, like cost, effort or risk.</p>
-</li>
-</ul>
-</div>
-<div id="figure-improvement-backlog" class="paragraph">
-<p><span class="image"><img src="images/improvement-backlog.jpg" alt="improvement backlog" width="title:"Improvement Backlog""></span></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_explicit_assumption"><a class="anchor" href="#_explicit_assumption"></a>5.4. Explicit Assumption</h3>
+<h3 id="Explicit-Assumption"><a class="anchor" href="#Explicit-Assumption"></a>5.3. Explicit Assumption</h3>
 <div class="paragraph">
 <p>TODO</p>
 </div>
@@ -2685,7 +2678,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="fail-fast"><a class="anchor" href="#fail-fast"></a>5.5. Fail Fast</h3>
+<h3 id="fail-fast"><a class="anchor" href="#fail-fast"></a>5.4. Fail Fast</h3>
 <div class="paragraph">
 <p>The later a lack of quality is identified the higher are the costs to fix it. Continuously evaluate the quality of work artifacts and immediately take countermeasures or pull the plug as early as possible.</p>
 </div>
@@ -2707,6 +2700,28 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 <p>Testing in early stages</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="improvement-backlog"><a class="anchor" href="#improvement-backlog"></a>5.5. Improvement Backlog</h3>
+<div class="paragraph">
+<p>Keep a public, written backlog of possible improvements, remedies, tactics or strategies.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Revise this backlog in regular intervalls.</p>
+</li>
+<li>
+<p>Define the <em>owner role</em> for this backlog, similar to the <em>product owner</em> in Scrum.</p>
+</li>
+<li>
+<p>Enhance the backlog with information from the <a href="#evaluation">[evaluation]</a> phase, like cost, effort or risk.</p>
+</li>
+</ul>
+</div>
+<div id="figure-improvement-backlog" class="paragraph">
+<p><span class="image"><img src="images/improvement-backlog.jpg" alt="improvement backlog" width="title:"Improvement Backlog""></span></p>
 </div>
 </div>
 </div>
@@ -2891,13 +2906,6 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Determine-Feature-Value">Determine Feature Value</a></strong></p>
-<div class="paragraph">
-<p>Determine the (monetary) value of a given feature.
-Category: <a href="#Evaluate">Evaluate</a></p>
-</div>
-</li>
-<li>
 <p><a id="Development-Process-Analysis"></a></p>
 <div class="dlist">
 <dl>
@@ -2934,20 +2942,17 @@ Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </div>
 </li>
 <li>
-<p><a id="Estimate-Feature-Value"></a>
-Estimate the (monetary) value of a given feature, so you can compare features of the system with each other.
+<p><strong><a href="#Estimate-Feature-Value">Estimate Feature Value</a></strong></p>
+<div class="paragraph">
+<p>Estimate the (monetary) value of a given feature, so you can compare features of the system with each other.
 Category: <a href="#Evaluate">Evaluate</a></p>
+</div>
 </li>
 <li>
-<p><a id="Estimate-in-Interval"></a></p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Estimate in Interval</dt>
-<dd>
+<p><strong><a href="#Estimate-In-Interval">Estimate in Interval</a></strong></p>
+<div class="paragraph">
 <p>Estimation differs from <strong>measurement</strong> in its inherent uncertainty. Therefore, estimate in intervals, giving lower and upper bounds. The difference between the two shows your confidence in the estimate. Low (relative) difference means high confidence.
 Category: <a href="#Evaluate">Evaluate</a></p>
-</dd>
-</dl>
 </div>
 </li>
 <li>
@@ -4032,7 +4037,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-04-03 06:46:12 UTC
+Last updated 2014-04-03 10:46:28 UTC
 </div>
 </div>
 </body>
