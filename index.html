@@ -866,8 +866,17 @@ limitations under the License.</p>
 <div class="paragraph">
 <p>Systematically look for such issues at various places and with various people.</p>
 </div>
-<div class="paragraph">
-<p>INFO: To effectively find issues, you need an appropriate amount of <em>understanding</em> of the system under design (<a href="#SuD">[SuD]</a>), its technical concepts, code-structure, inner workings, major external interfaces and its development process.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To effectively find issues, you need an appropriate amount of <em>understanding</em> of the system under design (<a href="#SuD">[SuD]</a>), its technical concepts, code-structure, inner workings, major external interfaces and its development process.
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1015,11 +1024,23 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 </ul>
 </div>
 <div class="paragraph">
-<p>TODO:
-* explain scenarios, use diagram
-* example scenarios
-* explain quality tree
-* explain brainstorming session, moderated workshop</p>
+<p>TODO:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>explain scenarios, use diagram</p>
+</li>
+<li>
+<p>example scenarios</p>
+</li>
+<li>
+<p>explain quality tree</p>
+</li>
+<li>
+<p>explain brainstorming session, moderated workshop</p>
+</li>
+</ul>
 </div>
 <div class="sect4">
 <h5 id="_scenario_based_quality_description"><a class="anchor" href="#_scenario_based_quality_description"></a>Scenario-based Quality Description</h5>
@@ -1141,7 +1162,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <div class="sect3">
 <h4 id="_intent_2"><a class="anchor" href="#_intent_2"></a>2.5.1. Intent</h4>
 <div class="paragraph">
-<p>Identify the source of an error ( <em>bug</em>) or misbehavior by observing the flow of execution of a program in detail.</p>
+<p>Identify the source of an error (<em>bug</em>) or misbehavior by observing the flow of execution of a program in detail.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1202,7 +1223,7 @@ Many software developers we met violated the basic rules of debugging. They work
 your scenario.</p>
 </li>
 <li>
-<p>If you know you&#8217;re traveling to Pisa (Italy), you won&#8217;t confuse the Leading Tower with an error.</p>
+<p>If you know you&#8217;re traveling to Pisa (Italy), you won&#8217;t confuse the Leaning Tower with an error.</p>
 </li>
 </ol>
 </div>
@@ -1227,7 +1248,7 @@ your scenario.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>You suffer from any assumption that&#8217;s currently not valid</p>
+<p>You suffer from any assumption that&#8217;s currently not valid.</p>
 </li>
 <li>
 <p>You <em>think</em> something instead of <em>observing</em> it - you let your mind deceive your eyes or ears.</p>
@@ -1361,8 +1382,7 @@ your scenario.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>ATAM - Architecture Tradeoff Analysis Method. Published by the Software Engineering Institute in numerous whitepapers and books, especially <a href="#Clements-ATAM">[Clements-ATAM]</a>.
-*</p>
+<p>ATAM - Architecture Tradeoff Analysis Method. Published by the Software Engineering Institute in numerous whitepapers and books, especially <a href="#Clements-ATAM">[Clements-ATAM]</a>.</p>
 </li>
 </ul>
 </div>
@@ -1373,7 +1393,7 @@ your scenario.</p>
 <div class="quoteblock">
 <blockquote>
 To find mistakes is not enough. It is necessary to find the cause behind the mistake
-and build a system that minimises future mistakes.
+and build a system that minimizes future mistakes.
 </blockquote>
 <div class="attribution">
 &#8212; W. Edwards Deming
@@ -1382,7 +1402,7 @@ and build a system that minimises future mistakes.
 <div class="sect3">
 <h4 id="_intent_4"><a class="anchor" href="#_intent_4"></a>2.7.1. Intent</h4>
 <div class="paragraph">
-<p>Explicitely differentiate between symptom and cause:</p>
+<p>Explicitly differentiate between symptom and cause:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1398,7 +1418,7 @@ and build a system that minimises future mistakes.
 <div class="sect3">
 <h4 id="_description_4"><a class="anchor" href="#_description_4"></a>2.7.2. Description</h4>
 <div class="paragraph">
-<p>Some people fight problems, not their real cause: When faced with a problem our brains tend to start immediatly to search for proper solutions for exactly this problem. E.g., if our application regularly crashes with Out-Of-Memory-Errors it might be a reflex to increase the memory settings. Instead we should ask if this is really the problem or only a sympton of the real problem, e.g. a programming failure in memory releasing. With an iterative process of asking "Why?" the causal chain must be traced down to the root cause.</p>
+<p>Some people fight problems, not their real cause: When faced with a problem our brains tend to start immediately to search for proper solutions for exactly this problem. For instance, if our application regularly crashes with Out-Of-Memory-Errors it might be a reflex to increase the memory settings. Instead we should ask if this is really the problem or only a symptom of the real problem, e.g. a programming failure in memory releasing. With an iterative process of asking "Why?" the causal chain must be traced down to the root cause.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1442,7 +1462,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <div class="sect3">
 <h4 id="_consequences_3"><a class="anchor" href="#_consequences_3"></a>2.7.5. Consequences</h4>
 <div class="paragraph">
-<p>You can eleminate the cause,</p>
+<p>You can eliminate the cause.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1680,10 +1700,10 @@ e.g. the following:</p>
 <div class="sect3">
 <h4 id="_description_7"><a class="anchor" href="#_description_7"></a>2.10.2. Description</h4>
 <div class="paragraph">
-<p>Natural language has the risk that semantics on the senders' side differs from semantics of the receiver: People simply misunderstand each other because <em>meaning</em> of words differ between people.</p>
+<p>Natural language has the risk that semantics on the senders' side differs from semantics of the receiver: People simply misunderstand each other because <em>meaning</em> of words differs between people.</p>
 </div>
 <div class="paragraph">
-<p>Therefore: what people mean/want/need is sometimes not what they say. This is due either to semantic differences on sender and receive sides,  or to other reasons.</p>
+<p>Therefore: what people mean/want/need is sometimes not what they say. This is due either to semantic differences on sender and receive sides, or to other reasons.</p>
 </div>
 <div class="paragraph">
 <p>NLP (neurolingustic programming) practitioners recommend to <em>mirror</em> things you hear to your communication partners in your own words. This might facilitate understanding.</p>
@@ -1742,7 +1762,7 @@ architectural views, especially the building-block view.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Apply arc42 views.</p>
+<p>Apply arc42 views</p>
 </li>
 <li>
 <p>Apply static-code-analysis</p>
@@ -1761,7 +1781,7 @@ architectural views, especially the building-block view.</p>
 <p>technical context, the involved hardware and network structure</p>
 </li>
 <li>
-<p>known technology areas, ie. prodcts, programming languages or frameworks used</p>
+<p>known technology areas, i.e. products, programming languages or frameworks used</p>
 </li>
 </ul>
 </div>
@@ -1838,8 +1858,7 @@ and reason about the code structure</p>
 <p>arc42</p>
 </li>
 <li>
-<p>Kruchten
-*</p>
+<p>Kruchten</p>
 </li>
 </ul>
 </div>
@@ -1911,7 +1930,7 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 <p>If you cannot determine real numbers available, use <a href="#Explicit-Assumption">explicit assumptions</a></p>
 </li>
 <li>
-<p>Instead of numbers, you might use categories or orders-of-magnitude (like small, medium, large). Youo should prefer numbers, though!</p>
+<p>Instead of numbers, you might use categories or orders-of-magnitude (like small, medium, large). You should prefer numbers, though!</p>
 </li>
 </ul>
 </div>
@@ -1924,15 +1943,27 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 <div class="paragraph">
 <p>Therefore, estimate in intervals, giving a lower and upper bound to your estimate. The difference between the two shows your confidence in the estimate. If this difference is relatively small, it shows high confidence.</p>
 </div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring">http://en.wikipedia.org/wiki/Anchoring</a>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Good estimates ensure that the estimated value will be contained in the interval with a very high probability.</p>
 </div>
 <div class="paragraph">
-<p>Estimates often rely on assumptions - which you should <a href="#Explicit-Assumption">name and describe explicitely</a>.</p>
+<p>Estimates often rely on assumptions - which you should <a href="#Explicit-Assumption">name and describe explicitly</a>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Estimage-Problem-Cost"><a class="anchor" href="#Estimage-Problem-Cost"></a>3.2.3. Estimate Problem Cost</h4>
+<h4 id="Estimate-Problem-Cost"><a class="anchor" href="#Estimate-Problem-Cost"></a>3.2.3. Estimate Problem Cost</h4>
 <div class="paragraph">
 <p>Estimate how much a given problem costs (in money or effort) in a period of time.</p>
 </div>
@@ -1986,7 +2017,7 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 <p>Change code, structures, concepts or processes to achieve better software,</p>
 </li>
 <li>
-<p>reduce costs and/or technical debt,</p>
+<p>Reduce costs and/or technical debt,</p>
 </li>
 <li>
 <p>Eliminate issues found during analysis phase,</p>
@@ -2115,7 +2146,7 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 <p>Uncle Bob (Robert C. Martin) proposed this adoption of the rule from the boy
 scout rulebook which reads &#8220;Try and leave this world a little better than you
 found it.&#8221; for the software development world in an article in Kevlin Henney&#8217;s
-&#8220;97things a programmer should know&#8221; <a href="#Henney">[Henney]</a>.</p>
+&#8220;97 Things a Programmer Should Know&#8221; <a href="#Henney">[Henney]</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="_intent_9"><a class="anchor" href="#_intent_9"></a>4.3.1. Intent</h4>
@@ -2211,7 +2242,7 @@ Item.COMPOUND_ITEMS_THRESHHOLD)</code>
 <div class="sect3">
 <h4 id="_experiences_7"><a class="anchor" href="#_experiences_7"></a>4.3.3. Experiences</h4>
 <div class="paragraph">
-<p>Introducing the Boy Scout Rule on a heavily detoriated code base
+<p>Introducing the Boy Scout Rule on a heavily deteriorated code base
 induces heavy payback on <a href="#technical-debt">[technical-debt]</a> and often gets challenged
 by team members and senior management. It is important to point out
 that the extended time spent on fixing the artifacts &#8220;as the teams
@@ -2222,7 +2253,7 @@ interest rate.</p>
 <div class="sect3">
 <h4 id="_risks"><a class="anchor" href="#_risks"></a>4.3.4. Risks</h4>
 <div class="paragraph">
-<p>Sometimes the boy scout rule can be taken as a means by itself. In
+<p>Sometimes the Boy Scout Rule can be taken as a means by itself. In
 these cases the higher goals tend to be forgotten and thus</p>
 </div>
 </div>
@@ -2230,7 +2261,7 @@ these cases the higher goals tend to be forgotten and thus</p>
 <h4 id="_applicability_9"><a class="anchor" href="#_applicability_9"></a>4.3.5. Applicability</h4>
 <div class="paragraph">
 <p>The pattern &#8220;Introduce Boy Scout Rule&#8221; can always be applied.<br>
-Some of the most effektive uses are</p>
+Some of the most effective uses are</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2238,7 +2269,7 @@ Some of the most effektive uses are</p>
 <p>unstructured code (no layers, no separation of concerns etc.)</p>
 </li>
 <li>
-<p>systematic weaknesses (unsecure logging, unsecure handling of
+<p>systematic weaknesses (insecure logging, insecure handling of
 database inserts etc.</p>
 </li>
 </ul>
@@ -2247,7 +2278,7 @@ database inserts etc.</p>
 <div class="sect3">
 <h4 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>4.3.6. Consequences</h4>
 <div class="paragraph">
-<p>The introducion the Boy Scout Rule often proved to enable structural
+<p>The introduction the Boy Scout Rule often proved to enable structural
 improvements as a prerequisite for higher level architectural
 improvements. Also it heightens the team&#8217;s awareness of good practices
 in their code base.</p>
@@ -2451,7 +2482,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="sect3">
 <h4 id="_intent_11"><a class="anchor" href="#_intent_11"></a>4.5.1. Intent</h4>
 <div class="paragraph">
-<p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface keeps untouched developers can implement changes or even exchange own or third-party software without affecting the clients.</p>
+<p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface remains untouched developers can implement changes or even exchange own or third-party software without affecting the clients.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2462,7 +2493,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <h4 id="_experiences_9"><a class="anchor" href="#_experiences_9"></a>4.5.3. Experiences</h4>
 <div class="paragraph">
 <p>Here are some real-life experiences
-* Anticorruption layer for a search-index to defer the decission if the best performance can be achieved with Elastic Search, Solr or a self-developed Lucene index.</p>
+* Anticorruption layer for a search-index to defer the decision if the best performance can be achieved with Elastic Search, Solr or a self-developed Lucene index.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2479,7 +2510,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <p>Allows to (ex)change software elements without affecting depending components</p>
 </li>
 <li>
-<p>Introduces one more level of indiraction and thus may increase complexity</p>
+<p>Introduces one more level of indirection and thus may increase complexity</p>
 </li>
 </ul>
 </div>
@@ -2605,9 +2636,17 @@ to the client&#8217;s needs.</p>
 <div class="sect3">
 <h4 id="_applicability_13"><a class="anchor" href="#_applicability_13"></a>4.8.3. Applicability</h4>
 <div class="paragraph">
-<p>Apply when
-* clients only require a restricted functionality from a complex service
-* you have to deal with low cohesion components you cannot change.</p>
+<p>Apply when</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>clients only require a restricted functionality from a complex service,</p>
+</li>
+<li>
+<p>you have to deal with low cohesion components you cannot change</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -4092,7 +4131,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-04-09 18:13:19 UTC
+Last updated 2014-04-09 18:18:13 UTC
 </div>
 </div>
 </body>
