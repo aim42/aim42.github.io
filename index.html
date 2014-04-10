@@ -392,7 +392,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#pattern-root-cause-analysis">2.7. Root-Cause Analysis</a></li>
 <li><a href="#Software-Archeology">2.8. Software Archeology</a></li>
 <li><a href="#Static-Code-Analysis">2.9. Static Code Analysis</a></li>
-<li><a href="#pattern-take-what-they-mean">2.10. Take What They Mean, Not What They Say</a></li>
+<li><a href="#Take-What-They-Mean">2.10. Take What They Mean, Not What They Say</a></li>
 <li><a href="#View-Based-Understanding">2.11. View-Based Understanding</a></li>
 </ul>
 </li>
@@ -421,9 +421,10 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <ul class="sectlevel2">
 <li><a href="#collect-problems">5.1. Collect Problems</a></li>
 <li><a href="#collect-opportunities-for-improvement">5.2. Collect Opportunities for Improvement</a></li>
-<li><a href="#improvement-backlog">5.3. Improvement Backlog</a></li>
-<li><a href="#_explicit_assumption">5.4. Explicit Assumption</a></li>
-<li><a href="#fail-fast">5.5. Fail Fast</a></li>
+<li><a href="#Explicit-Assumption">5.3. Explicit Assumption</a></li>
+<li><a href="#fail-fast">5.4. Fail Fast</a></li>
+<li><a href="#_fast_feedback">5.5. Fast Feedback</a></li>
+<li><a href="#improvement-backlog">5.6. Improvement Backlog</a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">6. Pattern index</a></li>
@@ -459,7 +460,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </td>
 <td class="content">
 <div class="paragraph">
-<p><a href="http://aim42.org">aim42</a> is collection of practices and patterns to support software evolution, maintenance, evolution and improvement of software systems:</p>
+<p><a href="http://aim42.org">aim42</a> is a collection of practices and patterns to support software evolution, maintenance, evolution and improvement of software systems:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -486,7 +487,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3c, last update 2014-04-10</p>
+Version 0.3d, last update 2014-04-10</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -690,6 +691,30 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 <div class="title">Figure 3. Iterate Between Phases</div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_fundamental_concepts"><a class="anchor" href="#_fundamental_concepts"></a>1.3.3. Fundamental Concepts</h4>
+<div class="paragraph">
+<p>aim42 relies on a common terminology, a small set of fundamental concepts. You may even
+call it the <em>software improvement domain</em>.</p>
+</div>
+<div id="figure-fundamental-concepts" class="imageblock">
+<div class="content">
+<img src="images/aim42-concepts-overview.jpeg" alt="aim42 fundamental concepts">
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Problem, issue</dt>
+<dt class="hdlist1">Cause</dt>
+<dt class="hdlist1">Cost</dt>
+<dt class="hdlist1">Remedy</dt>
+<dt class="hdlist1">Risk</dt>
+<dd>
+<p><br></p>
+</dd>
+</dl>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_patterns_and_practices_provide_no_guarantee"><a class="anchor" href="#_patterns_and_practices_provide_no_guarantee"></a>1.4. Patterns and Practices Provide No Guarantee</h3>
@@ -785,8 +810,7 @@ limitations under the License.</p>
 <dl>
 <dt class="hdlist1">Source</dt>
 <dd>
-<p>aim42 currently provides a <em>method guide</em>, the asciidoc sources are hosted at
-<a href="https://github.com/aim42/aim42">GitHub under the aim42 organization</a>.</p>
+<p>aim42 currently provides a <em>method guide</em>, the asciidoc sources are hosted at <a href="https://github.com/aim42/aim42">GitHub under the aim42 organization</a>.</p>
 </dd>
 <dt class="hdlist1">Issues</dt>
 <dd>
@@ -798,7 +822,11 @@ limitations under the License.</p>
 </dd>
 <dt class="hdlist1">Mailing list</dt>
 <dd>
-<p>There&#8217;s even a (human-managed) mailing list: If you like to participate, send your subscribe-request to (TODO: <a href="mailto:aim42-discus@mail.innoq.com">subscribe-me</a>)</p>
+<p>There&#8217;s even a (human-managed) mailing list: If you like to participate, send your subscribe-request to <a href="mailto:aim42@mail.innoq.com">subscribe-me</a>.</p>
+</dd>
+<dt class="hdlist1">Suggestions</dt>
+<dd>
+<p>In case you have ideas, critique or proposals - just <a href="mailto:aim42@mail.innoq.com">let us know</a>.</p>
 </dd>
 </dl>
 </div>
@@ -819,10 +847,13 @@ limitations under the License.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Find all problems, issues, symptoms, risks or technical debt within the system, its operation, maintenance or otherwise related processes.</p>
+<p>Obtain overview of intent, purpose and quality requirements of the system (<a href="#SuD">[SuD]</a>).</p>
 </li>
 <li>
 <p>Develop and document an understanding of internal structures, concepts and architectural approaches.</p>
+</li>
+<li>
+<p>Find all problems, issues, symptoms, risks or technical debt within the system (<a href="#SuD">[SuD]</a>), its operation, maintenance or otherwise related processes.</p>
 </li>
 <li>
 <p>Understand root causes of the problems found, potential interdependencies between issues</p>
@@ -835,8 +866,17 @@ limitations under the License.</p>
 <div class="paragraph">
 <p>Systematically look for such issues at various places and with various people.</p>
 </div>
-<div class="paragraph">
-<p>INFO: To effectively find issues, you need an appropriate amount of <em>understanding</em> of the systems, its technical concepts, code-structure, inner workings, major external interfaces and its development process.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To effectively find issues, you need an appropriate amount of <em>understanding</em> of the system under design (<a href="#SuD">[SuD]</a>), its technical concepts, code-structure, inner workings, major external interfaces and its development process.
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -888,6 +928,9 @@ Never start solving problems until you have a thourough understanding of current
 <p>Architecture Analysis, see <a href="#Qualitative-Analysis">Qualitative Analysis</a> and <a href="#ATAM">[ATAM]</a></p>
 </li>
 <li>
+<p><a href="#ATAM">[ATAM]</a></p>
+</li>
+<li>
 <p><a href="#Capture-Quality-Requirements">Capture Quality Requirements</a></p>
 </li>
 <li>
@@ -927,7 +970,10 @@ Never start solving problems until you have a thourough understanding of current
 <p><a href="#Root-Cause-Analysis">Root Cause Analysis</a> - finding the root-cause of problems</p>
 </li>
 <li>
-<p><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a>*</p>
+<p><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a></p>
+</li>
+<li>
+<p><a href="#Separate-Cause-From-Effect">Separate Cause From Effect</a></p>
 </li>
 <li>
 <p><a href="#Software-Archaeology">Software Archeology</a></p>
@@ -940,6 +986,9 @@ Never start solving problems until you have a thourough understanding of current
 </li>
 <li>
 <p><a href="#Static-Code-Analysis">Static Code Analysis</a> (Structural analysis)</p>
+</li>
+<li>
+<p><a href="#Take-What-They-Mean">Take What They Mean</a> (not what they say, as it may differ).</p>
 </li>
 <li>
 <p><a href="#Use-Case-Cluster">[Use-Case-Cluster]</a></p>
@@ -975,11 +1024,23 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 </ul>
 </div>
 <div class="paragraph">
-<p>TODO:
-* explain scenarios, use diagram
-* example scenarios
-* explain quality tree
-* explain brainstorming session, moderated workshop</p>
+<p>TODO:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>explain scenarios, use diagram</p>
+</li>
+<li>
+<p>example scenarios</p>
+</li>
+<li>
+<p>explain quality tree</p>
+</li>
+<li>
+<p>explain brainstorming session, moderated workshop</p>
+</li>
+</ul>
 </div>
 <div class="sect4">
 <h5 id="_scenario_based_quality_description"><a class="anchor" href="#_scenario_based_quality_description"></a>Scenario-based Quality Description</h5>
@@ -1068,7 +1129,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <p><a href="#ATAM">[ATAM]</a></p>
 </li>
 <li>
-<p><a href="#Explicit-Assumption">[Explicit-Assumption]</a></p>
+<p><a href="#Explicit-Assumption">Explicit Assumption</a></p>
 </li>
 <li>
 <p><a href="#Qualitative-Analysis">Qualitative Analysis</a></p>
@@ -1101,7 +1162,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <div class="sect3">
 <h4 id="_intent_2"><a class="anchor" href="#_intent_2"></a>2.5.1. Intent</h4>
 <div class="paragraph">
-<p>Identify the source of an error ( <em>bug</em>) or misbehavior by observing the flow of execution of a program in detail.</p>
+<p>Identify the source of an error (<em>bug</em>) or misbehavior by observing the flow of execution of a program in detail.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1162,7 +1223,7 @@ Many software developers we met violated the basic rules of debugging. They work
 your scenario.</p>
 </li>
 <li>
-<p>If you know you&#8217;re traveling to Pisa (Italy), you won&#8217;t confuse the Leading Tower with an error.</p>
+<p>If you know you&#8217;re traveling to Pisa (Italy), you won&#8217;t confuse the Leaning Tower with an error.</p>
 </li>
 </ol>
 </div>
@@ -1187,7 +1248,7 @@ your scenario.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>You suffer from any assumption that&#8217;s currently not valid</p>
+<p>You suffer from any assumption that&#8217;s currently not valid.</p>
 </li>
 <li>
 <p>You <em>think</em> something instead of <em>observing</em> it - you let your mind deceive your eyes or ears.</p>
@@ -1232,7 +1293,7 @@ your scenario.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>wether quality requirements can be met by the syste,</p>
+<p>wether quality requirements can be met by the system,</p>
 </li>
 <li>
 <p>which specific quality requirements are risks with respect to the current architecture,</p>
@@ -1321,8 +1382,7 @@ your scenario.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>ATAM - Architecture Tradeoff Analysis Method. Published by the Software Engineering Institute in numerous whitepapers and books, especially <a href="#Clements-ATAM">[Clements-ATAM]</a>.
-*</p>
+<p>ATAM - Architecture Tradeoff Analysis Method. Published by the Software Engineering Institute in numerous whitepapers and books, especially <a href="#Clements-ATAM">[Clements-ATAM]</a>.</p>
 </li>
 </ul>
 </div>
@@ -1333,7 +1393,7 @@ your scenario.</p>
 <div class="quoteblock">
 <blockquote>
 To find mistakes is not enough. It is necessary to find the cause behind the mistake
-and build a system that minimises future mistakes.
+and build a system that minimizes future mistakes.
 </blockquote>
 <div class="attribution">
 &#8212; W. Edwards Deming
@@ -1342,7 +1402,7 @@ and build a system that minimises future mistakes.
 <div class="sect3">
 <h4 id="_intent_4"><a class="anchor" href="#_intent_4"></a>2.7.1. Intent</h4>
 <div class="paragraph">
-<p>Explicitely differentiate between symptom and cause:</p>
+<p>Explicitly differentiate between symptom and cause:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1358,7 +1418,7 @@ and build a system that minimises future mistakes.
 <div class="sect3">
 <h4 id="_description_4"><a class="anchor" href="#_description_4"></a>2.7.2. Description</h4>
 <div class="paragraph">
-<p>Some people fight problems, not their real cause:</p>
+<p>Some people fight problems, not their real cause: When faced with a problem our brains tend to start immediately to search for proper solutions for exactly this problem. For instance, if our application regularly crashes with Out-Of-Memory-Errors it might be a reflex to increase the memory settings. Instead we should ask if this is really the problem or only a symptom of the real problem, e.g. a programming failure in memory releasing. With an iterative process of asking "Why?" the causal chain must be traced down to the root cause.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1381,7 +1441,7 @@ tweaking the application server, optimizing inner loops and so on (you pretty we
 <p>That did not solve the issue.</p>
 </div>
 <div class="paragraph">
-<p>After applying <a href="#Take-What-They-Mean">[Take-What-They-Mean]</a> we found out that users complained about low performance in data entry,
+<p>After applying <a href="#Take-What-They-Mean">Take What They Mean, Not What They Say</a> we found out that users complained about low performance in data entry,
 as they had to switch back-and-forth between different regions on their input-screens.</p>
 </div>
 <div class="paragraph">
@@ -1396,13 +1456,13 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <div class="sect3">
 <h4 id="_applicability_4"><a class="anchor" href="#_applicability_4"></a>2.7.4. Applicability</h4>
 <div class="paragraph">
-<p>when-and-where-is-this-pattern-applicable</p>
+<p>This pattern should always be considered when faced with a problem.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_consequences_3"><a class="anchor" href="#_consequences_3"></a>2.7.5. Consequences</h4>
 <div class="paragraph">
-<p>You can eleminate the cause,</p>
+<p>You can eliminate the cause.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1423,7 +1483,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Take-What-They-Mean">[Take-What-They-Mean]</a>, maybe what they told you was not the real problem.</p>
+<p><a href="#Take-What-They-Mean">Take What They Mean, Not What They Say</a>, maybe what they told you was not the real problem.</p>
 </li>
 </ul>
 </div>
@@ -1620,7 +1680,7 @@ e.g. the following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://sonarqube.org">SonarQube</a>, GPL-licenced open-source platform to analyze code.</p>
+<p><a href="http://sonarqube.org">SonarQube</a>, LGPL-licenced open-source platform to analyze code.</p>
 </li>
 <li>
 <p><a href="http://clarkware.com/software/JDepend.html">JDepend</a>, open-source Java dependency checker.</p>
@@ -1630,7 +1690,7 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="pattern-take-what-they-mean"><a class="anchor" href="#pattern-take-what-they-mean"></a>2.10. Take What They Mean, Not What They Say</h3>
+<h3 id="Take-What-They-Mean"><a class="anchor" href="#Take-What-They-Mean"></a>2.10. Take What They Mean, Not What They Say</h3>
 <div class="sect3">
 <h4 id="_intent_7"><a class="anchor" href="#_intent_7"></a>2.10.1. Intent</h4>
 <div class="paragraph">
@@ -1640,12 +1700,13 @@ e.g. the following:</p>
 <div class="sect3">
 <h4 id="_description_7"><a class="anchor" href="#_description_7"></a>2.10.2. Description</h4>
 <div class="paragraph">
-<p>What people mean/want/need is sometimes not what they say. This is due either to semantic differences
-on sender and receive sides,  or to other reasons.</p>
+<p>Natural language has the risk that semantics on the senders' side differs from semantics of the receiver: People simply misunderstand each other because <em>meaning</em> of words differs between people.</p>
 </div>
 <div class="paragraph">
-<p>NLP (neurolingustic programming) practitioners recommend to <em>mirror</em> things you hear to your communication partners
-in your own words. This might facilitate understanding.</p>
+<p>Therefore: what people mean/want/need is sometimes not what they say. This is due either to semantic differences on sender and receive sides, or to other reasons.</p>
+</div>
+<div class="paragraph">
+<p>NLP (neurolingustic programming) practitioners recommend to <em>mirror</em> things you hear to your communication partners in your own words. This might facilitate understanding.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1656,8 +1717,15 @@ in your own words. This might facilitate understanding.</p>
 </div>
 <div class="sect3">
 <h4 id="_consequences_5"><a class="anchor" href="#_consequences_5"></a>2.10.4. Consequences</h4>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Improved understanding between stakeholders.</p>
+</li>
+<li>
+<p><a href="#Explicit-Assumption">Explicit assumptions</a>, instead of implicit ones.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -1676,7 +1744,7 @@ in your own words. This might facilitate understanding.</p>
 <div class="sect3">
 <h4 id="_references_6"><a class="anchor" href="#_references_6"></a>2.10.6. References</h4>
 <div class="paragraph">
-<p>Special thanx to Phillip Ghadir (innoQ) for giving this pattern its name.</p>
+<p>Special thanx to Phillip Ghadir (who is too humble to claim this discovery) for giving this pattern its name.</p>
 </div>
 </div>
 </div>
@@ -1685,7 +1753,7 @@ in your own words. This might facilitate understanding.</p>
 <div class="sect3">
 <h4 id="_intent_8"><a class="anchor" href="#_intent_8"></a>2.11.1. Intent</h4>
 <div class="paragraph">
-<p>Understand the (code-) structure of the systems. Document (and communicate) this via
+<p>Understand the inner workings and internal (code) structure of of the systems. Document (and communicate) this via
 architectural views, especially the building-block view.</p>
 </div>
 </div>
@@ -1694,7 +1762,7 @@ architectural views, especially the building-block view.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Apply arc42 views.</p>
+<p>Apply arc42 views</p>
 </li>
 <li>
 <p>Apply static-code-analysis</p>
@@ -1713,12 +1781,18 @@ architectural views, especially the building-block view.</p>
 <p>technical context, the involved hardware and network structure</p>
 </li>
 <li>
-<p>known technology areas, ie. prodcts, programming languages or frameworks used</p>
+<p>known technology areas, i.e. products, programming languages or frameworks used</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
+</div>
+<div id="figure-view-based-understanding" class="imageblock">
+<div class="content">
+<img src="images/view-based-understanding.jpg" alt="View based understanding">
+</div>
+<div class="title">Figure 7. Three main views (building block, runtime and deployment view)</div>
 </div>
 </div>
 <div class="sect3">
@@ -1749,9 +1823,10 @@ and reason about the code structure</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Structural overview of the larger units of source-code (subsystems, high-level components)
-and their relationships.
-*</p>
+<p>Explicit overview of the system context with the external interfaces.</p>
+</li>
+<li>
+<p>Overview of the larger units of source-code (subsystems, high-level components) and their relationships.</p>
 </li>
 </ul>
 </div>
@@ -1783,8 +1858,7 @@ and their relationships.
 <p>arc42</p>
 </li>
 <li>
-<p>Kruchten
-*</p>
+<p>Kruchten</p>
 </li>
 </ul>
 </div>
@@ -1799,18 +1873,18 @@ and their relationships.
 <div class="content">
 <img src="images/evaluate.jpg" alt="evaluate-phase">
 </div>
-<div class="title">Figure 7. Evaluate-Phase</div>
+<div class="title">Figure 8. Evaluate-Phase</div>
 </div>
 <div class="sect2">
 <h3 id="_goals_2"><a class="anchor" href="#_goals_2"></a>3.1. Goals</h3>
 <div class="paragraph">
 <p>Make the issues, problems and risks found during the <a href="#Analyze">analysis</a> comparable by
-determining their <strong>value</strong> (that&#8217;s why we call this activity <strong>evaluate</strong>):</p>
+estimating their <strong>value</strong> (that&#8217;s why we call this activity <strong>evaluate</strong>):</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>determine <em>value</em> of problems, issues, risks and their remedies</p>
+<p>estimate <em>value</em> of problems, issues, risks and their remedies</p>
 </li>
 <li>
 <p>prioritize issues, their remedies and improvement measures</p>
@@ -1823,10 +1897,10 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 <div class="ulist">
 <ul>
 <li>
-<p>Determine Feature Value</p>
+<p>Estimate in Interval</p>
 </li>
 <li>
-<p>Determine Problem Cost</p>
+<p>Estimate Problem Cost</p>
 </li>
 <li>
 <p>Estimate Remedy Cost</p>
@@ -1843,9 +1917,9 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </ul>
 </div>
 <div class="sect3">
-<h4 id="Determine-Feature-Value"><a class="anchor" href="#Determine-Feature-Value"></a>3.2.1. Determine Feature Value</h4>
+<h4 id="Estimate-Feature-Value"><a class="anchor" href="#Estimate-Feature-Value"></a>3.2.1. Estimate Feature Value</h4>
 <div class="paragraph">
-<p>Determine the (monetary) value of a given feature, so you can compare features of the system with each other.</p>
+<p>Estimate the (monetary) value of a given feature, so you can compare features of the system with each other.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1856,15 +1930,42 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 <p>If you cannot determine real numbers available, use <a href="#Explicit-Assumption">explicit assumptions</a></p>
 </li>
 <li>
-<p>Instead of numbers, you might use categories or orders-of-magnitude (like small, medium, large). Youo should prefer numbers, though!</p>
+<p>Instead of numbers, you might use categories or orders-of-magnitude (like small, medium, large). You should prefer numbers, though!</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Determine-Problem-Cost"><a class="anchor" href="#Determine-Problem-Cost"></a>3.2.2. Determine Problem Cost</h4>
+<h4 id="Estimate-In-Interval"><a class="anchor" href="#Estimate-In-Interval"></a>3.2.2. Estimate in Interval</h4>
 <div class="paragraph">
-<p>Determine how much a given problem costs (in money or effort) in a period of time.</p>
+<p>Estimation is a guess, not a <strong>measurement</strong>. Estimates are uncertain, otherwise they would be observations (or measurements!).</p>
+</div>
+<div class="paragraph">
+<p>Therefore, estimate in intervals, giving a lower and upper bound to your estimate. The difference between the two shows your confidence in the estimate. If this difference is relatively small, it shows high confidence.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring">http://en.wikipedia.org/wiki/Anchoring</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Good estimates ensure that the estimated value will be contained in the interval with a very high probability.</p>
+</div>
+<div class="paragraph">
+<p>Estimates often rely on assumptions - which you should <a href="#Explicit-Assumption">name and describe explicitly</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Estimate-Problem-Cost"><a class="anchor" href="#Estimate-Problem-Cost"></a>3.2.3. Estimate Problem Cost</h4>
+<div class="paragraph">
+<p>Estimate how much a given problem costs (in money or effort) in a period of time.</p>
 </div>
 <div class="paragraph">
 <p>For example, if a server needs to be rebooted once every 24hrs and an operator needs 30 minutes to perform this reboot (and corresponding activities) - then you can approximate the cost of this problem for, let&#8217;s say, a month:</p>
@@ -1884,7 +1985,7 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 </div>
 </div>
 <div class="sect3">
-<h4 id="_estimate_remedy_cost"><a class="anchor" href="#_estimate_remedy_cost"></a>3.2.3. Estimate Remedy Cost</h4>
+<h4 id="_estimate_remedy_cost"><a class="anchor" href="#_estimate_remedy_cost"></a>3.2.4. Estimate Remedy Cost</h4>
 <div class="paragraph">
 <p>See: "Software Estimation. The Black Art Demystified (Steve McConnell)"</p>
 </div>
@@ -1899,7 +2000,7 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 <div class="content">
 <img src="images/improve.jpg" alt="improve-phase">
 </div>
-<div class="title">Figure 8. Improve-Phase</div>
+<div class="title">Figure 9. Improve-Phase</div>
 </div>
 <div class="sect2">
 <h3 id="_goals_3"><a class="anchor" href="#_goals_3"></a>4.1. Goals</h3>
@@ -1916,7 +2017,7 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 <p>Change code, structures, concepts or processes to achieve better software,</p>
 </li>
 <li>
-<p>reduce costs and/or technical debt,</p>
+<p>Reduce costs and/or technical debt,</p>
 </li>
 <li>
 <p>Eliminate issues found during analysis phase,</p>
@@ -2045,7 +2146,7 @@ determining their <strong>value</strong> (that&#8217;s why we call this activity
 <p>Uncle Bob (Robert C. Martin) proposed this adoption of the rule from the boy
 scout rulebook which reads &#8220;Try and leave this world a little better than you
 found it.&#8221; for the software development world in an article in Kevlin Henney&#8217;s
-&#8220;97things a programmer should know&#8221; <a href="#Henney">[Henney]</a>.</p>
+&#8220;97 Things a Programmer Should Know&#8221; <a href="#Henney">[Henney]</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="_intent_9"><a class="anchor" href="#_intent_9"></a>4.3.1. Intent</h4>
@@ -2141,7 +2242,7 @@ Item.COMPOUND_ITEMS_THRESHHOLD)</code>
 <div class="sect3">
 <h4 id="_experiences_7"><a class="anchor" href="#_experiences_7"></a>4.3.3. Experiences</h4>
 <div class="paragraph">
-<p>Introducing the Boy Scout Rule on a heavily detoriated code base
+<p>Introducing the Boy Scout Rule on a heavily deteriorated code base
 induces heavy payback on <a href="#technical-debt">[technical-debt]</a> and often gets challenged
 by team members and senior management. It is important to point out
 that the extended time spent on fixing the artifacts &#8220;as the teams
@@ -2152,7 +2253,7 @@ interest rate.</p>
 <div class="sect3">
 <h4 id="_risks"><a class="anchor" href="#_risks"></a>4.3.4. Risks</h4>
 <div class="paragraph">
-<p>Sometimes the boy scout rule can be taken as a means by itself. In
+<p>Sometimes the Boy Scout Rule can be taken as a means by itself. In
 these cases the higher goals tend to be forgotten and thus</p>
 </div>
 </div>
@@ -2160,7 +2261,7 @@ these cases the higher goals tend to be forgotten and thus</p>
 <h4 id="_applicability_9"><a class="anchor" href="#_applicability_9"></a>4.3.5. Applicability</h4>
 <div class="paragraph">
 <p>The pattern &#8220;Introduce Boy Scout Rule&#8221; can always be applied.<br>
-Some of the most effektive uses are</p>
+Some of the most effective uses are</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2168,7 +2269,7 @@ Some of the most effektive uses are</p>
 <p>unstructured code (no layers, no separation of concerns etc.)</p>
 </li>
 <li>
-<p>systematic weaknesses (unsecure logging, unsecure handling of
+<p>systematic weaknesses (insecure logging, insecure handling of
 database inserts etc.</p>
 </li>
 </ul>
@@ -2177,7 +2278,7 @@ database inserts etc.</p>
 <div class="sect3">
 <h4 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>4.3.6. Consequences</h4>
 <div class="paragraph">
-<p>The introducion the Boy Scout Rule often proved to enable structural
+<p>The introduction the Boy Scout Rule often proved to enable structural
 improvements as a prerequisite for higher level architectural
 improvements. Also it heightens the team&#8217;s awareness of good practices
 in their code base.</p>
@@ -2352,7 +2453,7 @@ context of architecture improvement.</p>
 </li>
 <li>
 <p>Introducing invariants to verify that the code is really dead is a specific
-way to make <a href="#Explicit-Assumption">[Explicit-Assumption]</a>s</p>
+way to make <a href="#Explicit-Assumption">Explicit Assumption</a>s</p>
 </li>
 </ul>
 </div>
@@ -2381,7 +2482,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="sect3">
 <h4 id="_intent_11"><a class="anchor" href="#_intent_11"></a>4.5.1. Intent</h4>
 <div class="paragraph">
-<p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface keeps untouched developers can implement changes or even exchange own or third-party software without affecting the clients.</p>
+<p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface remains untouched developers can implement changes or even exchange own or third-party software without affecting the clients.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2392,7 +2493,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <h4 id="_experiences_9"><a class="anchor" href="#_experiences_9"></a>4.5.3. Experiences</h4>
 <div class="paragraph">
 <p>Here are some real-life experiences
-* Anticorruption layer for a search-index to defer the decission if the best performance can be achieved with Elastic Search, Solr or a self-developed Lucene index.</p>
+* Anticorruption layer for a search-index to defer the decision if the best performance can be achieved with Elastic Search, Solr or a self-developed Lucene index.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2409,7 +2510,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <p>Allows to (ex)change software elements without affecting depending components</p>
 </li>
 <li>
-<p>Introduces one more level of indiraction and thus may increase complexity</p>
+<p>Introduces one more level of indirection and thus may increase complexity</p>
 </li>
 </ul>
 </div>
@@ -2535,9 +2636,17 @@ to the client&#8217;s needs.</p>
 <div class="sect3">
 <h4 id="_applicability_13"><a class="anchor" href="#_applicability_13"></a>4.8.3. Applicability</h4>
 <div class="paragraph">
-<p>Apply when
-* clients only require a restricted functionality from a complex service
-* you have to deal with low cohesion components you cannot change.</p>
+<p>Apply when</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>clients only require a restricted functionality from a complex service,</p>
+</li>
+<li>
+<p>you have to deal with low cohesion components you cannot change</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -2591,7 +2700,7 @@ to the client&#8217;s needs.</p>
 <div class="content">
 <img src="images/from-problem-to-improvement.jpg" alt="from problem to improvement">
 </div>
-<div class="title">Figure 9. From problem to solutions</div>
+<div class="title">Figure 10. From problem to solutions</div>
 </div>
 <div class="sect2">
 <h3 id="collect-problems"><a class="anchor" href="#collect-problems"></a>5.1. Collect Problems</h3>
@@ -2615,33 +2724,11 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 <div class="content">
 <img src="images/collect-remedies.png" alt="collect remedies">
 </div>
-<div class="title">Figure 10. Collect Remedies in All Phases</div>
+<div class="title">Figure 11. Collect Remedies in All Phases</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="improvement-backlog"><a class="anchor" href="#improvement-backlog"></a>5.3. Improvement Backlog</h3>
-<div class="paragraph">
-<p>Keep a public, written backlog of possible improvements, remedies, tactics or strategies.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Revise this backlog in regular intervalls.</p>
-</li>
-<li>
-<p>Define the <em>owner role</em> for this backlog, similar to the <em>product owner</em> in Scrum.</p>
-</li>
-<li>
-<p>Enhance the backlog with information from the <a href="#evaluation">[evaluation]</a> phase, like cost, effort or risk.</p>
-</li>
-</ul>
-</div>
-<div id="figure-improvement-backlog" class="paragraph">
-<p><span class="image"><img src="images/improvement-backlog.jpg" alt="improvement backlog" width="title:"Improvement Backlog""></span></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_explicit_assumption"><a class="anchor" href="#_explicit_assumption"></a>5.4. Explicit Assumption</h3>
+<h3 id="Explicit-Assumption"><a class="anchor" href="#Explicit-Assumption"></a>5.3. Explicit Assumption</h3>
 <div class="paragraph">
 <p>TODO</p>
 </div>
@@ -2650,9 +2737,9 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="fail-fast"><a class="anchor" href="#fail-fast"></a>5.5. Fail Fast</h3>
+<h3 id="fail-fast"><a class="anchor" href="#fail-fast"></a>5.4. Fail Fast</h3>
 <div class="paragraph">
-<p>The later a lack of quality is identified the higher are the costs to fix it. Continuously evaluate the quality of work artifacts and immediately take countermeasures or pull the plug as early as possible.</p>
+<p>The later a lack of quality is identified the higher are the costs to fix it. Continuously evaluate the quality of work artifacts and immediately take countermeasures or pull the plug as early as possible. Similar to <a href="#Fast-Feedback">fast feedback</a>.</p>
 </div>
 <div class="paragraph">
 <p>Suitable methods to identify such situations are:</p>
@@ -2674,6 +2761,37 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_fast_feedback"><a class="anchor" href="#_fast_feedback"></a>5.5. Fast Feedback</h3>
+<div class="paragraph">
+<p>TODO</p>
+</div>
+<div class="paragraph">
+<p>See also <a href="#fail-fast">fail fast</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="improvement-backlog"><a class="anchor" href="#improvement-backlog"></a>5.6. Improvement Backlog</h3>
+<div class="paragraph">
+<p>Keep a public, written backlog of possible improvements, remedies, tactics or strategies.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Revise this backlog in regular intervalls.</p>
+</li>
+<li>
+<p>Define the <em>owner role</em> for this backlog, similar to the <em>product owner</em> in Scrum.</p>
+</li>
+<li>
+<p>Enhance the backlog with information from the <a href="#evaluation">[evaluation]</a> phase, like cost, effort or risk.</p>
+</li>
+</ul>
+</div>
+<div id="figure-improvement-backlog" class="paragraph">
+<p><span class="image"><img src="images/improvement-backlog.jpg" alt="improvement backlog" width="title:"Improvement Backlog""></span></p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2691,8 +2809,20 @@ short description and links to the explanation.</p>
 <dl>
 <dt class="hdlist1">Anticorruption layer</dt>
 <dd>
-<p>Isolate clients from internal changes of suby-systems or modules.
-Category: <a href="#Improve">Improve</a></p>
+<p>Isolate clients from internal changes of suby-systems or modules. The original definition:</p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Create an isolating layer to provide clients with functionality in terms of their own domain model. The layer talks to the other system through its existing interface, requiring little or no modification to the other system. Internally, the layer translates in both directions as necessary between the two models. (Domain Driven Design, page 365)</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Eric Evans
+</div>
+</div>
+<div class="paragraph">
+<p>Category: <a href="#Improve">Improve</a></p>
+</div>
 </dd>
 </dl>
 </div>
@@ -2727,7 +2857,7 @@ Category: <a href="#Improve">Improve</a></p>
 <dl>
 <dt class="hdlist1">Architecture Documentation</dt>
 <dd>
-<p>See <a href="#System-Documentation">[System-Documentation]</a>
+<p>See <a href="#System-Documentation">[System-Documentation]</a> and <a href="#View-Based-Understanding">View Based Understanding</a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
@@ -2762,16 +2892,18 @@ Category: <a href="#Improve">Improve</a></p>
 <dl>
 <dt class="hdlist1">Branch for Improvement</dt>
 <dd>
-<p>Introduce distinct branches in your version control system to reflect improvments.
+<p>Introduce distinct branches in your version control system to reflect improvements.
 Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
 </div>
 </li>
 <li>
-<p><strong><a href="#Capture-Quality-Requirements">Capture Quality Requirements</a></strong>
-Part of <a id="ATAM"></a>, Capture and document specific quality requirements. Specialisation of <a href="#Requirements-Analysis">[Requirements-Analysis]</a>.
+<p><strong><a href="#Capture-Quality-Requirements">Capture Quality Requirements</a></strong></p>
+<div class="paragraph">
+<p>Part of <a href="#ATAM">[ATAM]</a>, Capture and document specific quality requirements. Specialisation of <a href="#Requirements-Analysis">[Requirements-Analysis]</a>.
 Category: <a href="#Analyze">Analyze</a></p>
+</div>
 </li>
 <li>
 <p><a id="Change-by-Extension"></a></p>
@@ -2856,25 +2988,6 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Determine-Feature-Value">Determine Feature Value</a></strong></p>
-<div class="paragraph">
-<p>Determine the (monetary) value of a given feature.
-Category: <a href="#Evaluate">Evaluate</a></p>
-</div>
-</li>
-<li>
-<p><a id="Determine-Problem-Cost"></a></p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Determine Problem Cost</dt>
-<dd>
-<p>Determine how much a given problem costs (in money or effort) in a period of time.
-Category: <a href="#Evaluate">Evaluate</a></p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
 <p><a id="Development-Process-Analysis"></a></p>
 <div class="dlist">
 <dl>
@@ -2906,6 +3019,32 @@ Category: <a href="#Analyze">Analyze</a></p>
 <dd>
 <p>See <a href="#improvement-backlog">Improvement Backlog</a>.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p><strong><a href="#Estimate-Feature-Value">Estimate Feature Value</a></strong></p>
+<div class="paragraph">
+<p>Estimate the (monetary) value of a given feature, so you can compare features of the system with each other.
+Category: <a href="#Evaluate">Evaluate</a></p>
+</div>
+</li>
+<li>
+<p><strong><a href="#Estimate-In-Interval">Estimate in Interval</a></strong></p>
+<div class="paragraph">
+<p>Estimation differs from <strong>measurement</strong> in its inherent uncertainty. Therefore, estimate in intervals, giving lower and upper bounds. The difference between the two shows your confidence in the estimate. Low (relative) difference means high confidence.
+Category: <a href="#Evaluate">Evaluate</a></p>
+</div>
+</li>
+<li>
+<p><a id="Estimate-Problem-Cost"></a></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Estimate Problem Cost</dt>
+<dd>
+<p>Estimate how much a given problem costs (in money or effort) in a period of time or a frequency.
+Category: <a href="#Evaluate">Evaluate</a></p>
 </dd>
 </dl>
 </div>
@@ -2961,6 +3100,18 @@ Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 <dd>
 <p>Systematically analyze postulated failures (problems, issues) and identify the resultant effects on overall system operations.
 Category: <a href="#Evaluate">Evaluate</a></p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p><a id="Fast-Feedback"></a></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Fast-Feedback</dt>
+<dd>
+<p>Evaluate the quality of work artifacts and processes as early as possible. Enables teams to apply corrective actions or take countermeasures as early as possible.
+Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </dd>
 </dl>
 </div>
@@ -3054,6 +3205,20 @@ Category: <a href="#Improve">Improve</a></p>
 <div class="paragraph">
 <p>Keep a backlog of possible improvements, remedies, tactics or strategies.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
+</div>
+</li>
+<li>
+<p><a id="Instrument-System"></a></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Instrument-System</dt>
+<dd>
+<p>Instrument either the executable or the source code to make
+<a href="#Explicit-Assumption">assumtions explicit</a> and expand on <a href="#runtime analysis">[runtime analysis]</a> and
+<a href="#runtime artifact analysis">[runtime artifact analysis]</a>.
+Category: <a href="#Analyze">Analyze</a></p>
+</dd>
+</dl>
 </div>
 </li>
 <li>
@@ -3342,7 +3507,7 @@ Category: <a href="#Improve">Improve</a></p>
 <dt class="hdlist1">Root-Cause Analysis</dt>
 <dd>
 <p><em>Find the evil at the bottom</em>: Explicitely differentiate between symptom and cause: Identify root causes of symptoms, problems or issues. See <a href="#pattern-root-cause-analysis">detailed description</a>
-Category: <a href="#Evaluate">Evaluate</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -3402,7 +3567,7 @@ Category: <a href="#Improve">Improve</a></p>
 <dt class="hdlist1">Separate Cause from Effect</dt>
 <dd>
 <p>See <a href="#Root-Cause-Analysis">[Root-Cause-Analysis]</a>
-Category: <a href="#Evaluate">Evaluate</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -3479,7 +3644,7 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><a id="Take-What-They-Mean"></a></p>
+<p><strong><a href="#Take-What-They-Mean">Take What They Mean, Not What They Say</a></strong></p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Take What They Mean, Not What They Say</dt>
@@ -3496,7 +3661,7 @@ Category: <a href="#Analyze">Analyze</a></p>
 <dl>
 <dt class="hdlist1">Toggle Feature</dt>
 <dd>
-<p>Simultaneously support evolved, competing or conlicting features at runtime by toggling feature flags.
+<p>Simultaneously support evolved, competing or conflicting features at runtime by toggling feature flags.
 Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
@@ -3593,7 +3758,7 @@ Software Engineering Institute, Carnegie Mellon University.</p>
 (in German) dpunkt Verlag, 2008. Interesting treatment of categories of software systems and their respective need for maintenance and evolution. Authors quote studies from Lehman and Belady from the 1970&#8217;s.</p>
 </li>
 <li>
-<p><a id="Brodie-Stonebraker"></a> Migrating Legacy Systems: Gateway, Interfaces &amp; the Incremental Approach; Morgan Kaufmann 1995.</p>
+<p><a id="Brodie-Stonebraker"></a> Brodie, M. and Stonebraker, M: Migrating Legacy Systems: Gateway, Interfaces &amp; the Incremental Approach; Morgan Kaufmann 1995.</p>
 </li>
 <li>
 <p><a id="Clements-ATAM"></a>[Clements-ATAM] Paul Clements et.al.: Evaluating Software Architecture - Methods and Case Studies.
@@ -3628,6 +3793,9 @@ the flexible, multi-language code-analysis toolkit.</p>
 <p><a id="ISO-14764"></a>[ISO-14764] ISO/IEC 14764 Standard on Software Maintenance:2006. For a brief overview, see <a href="http://en.wikipedia.org/wiki/Software_maintenance">Wikepedia-entry on ISO-14764</a>.</p>
 </li>
 <li>
+<p><a id="ISO-25010"></a>[ISO-25010] ISO/IEC 25010 Systems and software Quality Requirements and Evaluation (SQuaRE)&#8201;&#8212;&#8201;System and software quality models. ISO-Standard model for software quality. Superseeds <a href="#ISO-9126">[ISO-9126]</a> and categorizes software quality into 8 <em>characteristics</em>: functional suitability, reliability, efficiency, operability, security, compatibility, maintainability, transferability. See <a href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=35733">ISO-25010 website</a>.</p>
+</li>
+<li>
 <p><a id="Keller-Migration"></a>[Keller-Migration] Wolfgang Keller: <a href="http://www.objectarchitects.de/ObjectArchitects/papers/WhitePapers/ZippedPapers/pacman03.pdf">The Bridge to the New Town</a> - A Legacy System Migration Pattern. EuroPLoP 2000, ISBN 3-87940-775-4</p>
 </li>
 <li>
@@ -3646,7 +3814,7 @@ A detailed writeup of how (object-oriented) code should look like. Lots of thing
 <p><a id="Moyer-Archeology"></a>[Moyer-Archeology] Brian Moyer: <a href="http://adm.omg.org/docs/Software_Archeology_4-Mar-2009.pdf">Software Archeology</a></p>
 </li>
 <li>
-<p><a id="Object-Oriented-Software-Construction"></a>[Object-Oriented-Software-Construction] Bertrand Meyer,
+<p><a id="Object-Oriented-Software-Construction"></a>[Object-Oriented-Software-Construction] Bertrand Meyer:
 Object-Oriented Software Construction, Prentice Hall (September
 1994), ISBN-13: 978-0136290490<br>
 One of those old books which is has influenced many a software but
@@ -3751,7 +3919,7 @@ here we explain 'some-anchor' topic...</pre>
 <div class="content">
 <img src="images/aim42-logo.png" alt="alternate-text">
 </div>
-<div class="title">Figure 11. caption</div>
+<div class="title">Figure 12. caption</div>
 </div>
 </div>
 <div class="sect2">
@@ -3963,7 +4131,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-04-10 05:03:02 UTC
+Last updated 2014-04-10 05:03:17 UTC
 </div>
 </div>
 </body>
