@@ -491,7 +491,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3d, last update 2014-05-01</p>
+Version 0.3d, last update 2014-05-03</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -705,19 +705,48 @@ call it the <em>software improvement domain</em>.</p>
 <div class="content">
 <img src="images/aim42-concepts-overview.jpeg" alt="aim42 fundamental concepts">
 </div>
+<div class="title">Figure 4. Software Architecture Improvement Domain Model</div>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Problem, issue</dt>
-<dt class="hdlist1">Cause</dt>
-<dt class="hdlist1">Cost</dt>
-<dt class="hdlist1">Remedy</dt>
-<dt class="hdlist1">Risk</dt>
-<dd>
-<p><br></p>
-</dd>
-</dl>
-</div>
+<table class="tableblock frame-all grid-all" style="width:80%; ">
+<colgroup>
+<col style="width:23%;">
+<col style="width:76%;"> 
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Problem, Issue</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Might be problem, issue or fault within system or processes related to system
+(e.g. management, development, administrative or organizational process)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cause</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fundamental reason for one or several problems.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Remedy</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Solution or cure for one or several problems or causes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of problem)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The cost (in monetary units, e.g. Euro or $) of the problem, related to a
+frequency or period of time. For example – cost of every occurrence of problem,
+or recurring cost per week.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of remedy)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The cost (in monetary units) of the remedy, tactic or strategy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Prio(rity)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The relative or absolute priority of the problem or remedy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Risk</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Potential problem or issue. Remedies can have associated risks.</p></td>
+</tr>
+</tbody>
+</table>
+
 </div>
 </div>
 <div class="sect2">
@@ -844,7 +873,7 @@ limitations under the License.</p>
 <div class="content">
 <img src="images/analyze.jpg" alt="analyze-phase">
 </div>
-<div class="title">Figure 4. Analyze-Phase</div>
+<div class="title">Figure 5. Analyze-Phase</div>
 </div>
 <div class="sect2">
 <h3 id="_goals"><a class="anchor" href="#_goals"></a>2.1. Goals</h3>
@@ -1060,7 +1089,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <div class="content">
 <img src="images/quality-scenario.png" alt="quality scenario">
 </div>
-<div class="title">Figure 5. Structure of Quality Scenarios</div>
+<div class="title">Figure 6. Structure of Quality Scenarios</div>
 </div>
 <div class="paragraph">
 <p>Although this definition is concise, it needs some explanation to become understandable. See figure <a href="#quality-scenario-diagram">Structure of Quality Scenarios</a>:</p>
@@ -1219,7 +1248,7 @@ Many software developers we met violated the basic rules of debugging. They work
 <div class="content">
 <img src="images/debugging-divide-and-conquer.jpg" alt="Divide and conqer">
 </div>
-<div class="title">Figure 6. Divide and conquer debugging tactics</div>
+<div class="title">Figure 7. Divide and conquer debugging tactics</div>
 </div>
 </li>
 <li>
@@ -1973,7 +2002,7 @@ architectural views, especially the building-block view.</p>
 <div class="content">
 <img src="images/view-based-understanding.jpg" alt="View based understanding">
 </div>
-<div class="title">Figure 7. Three main views (building block, runtime and deployment view)</div>
+<div class="title">Figure 8. Three main views (building block, runtime and deployment view)</div>
 </div>
 </div>
 <div class="sect3">
@@ -2054,7 +2083,7 @@ and reason about the code structure</p>
 <div class="content">
 <img src="images/evaluate.jpg" alt="evaluate-phase">
 </div>
-<div class="title">Figure 8. Evaluate-Phase</div>
+<div class="title">Figure 9. Evaluate-Phase</div>
 </div>
 <div class="sect2">
 <h3 id="_goals_2"><a class="anchor" href="#_goals_2"></a>3.1. Goals</h3>
@@ -2181,7 +2210,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <div class="content">
 <img src="images/improve.jpg" alt="improve-phase">
 </div>
-<div class="title">Figure 9. Improve-Phase</div>
+<div class="title">Figure 10. Improve-Phase</div>
 </div>
 <div class="sect2">
 <h3 id="_goals_3"><a class="anchor" href="#_goals_3"></a>4.1. Goals</h3>
@@ -2881,7 +2910,7 @@ to the client&#8217;s needs.</p>
 <div class="content">
 <img src="images/from-problem-to-improvement.jpg" alt="from problem to improvement">
 </div>
-<div class="title">Figure 10. From problem to solutions</div>
+<div class="title">Figure 11. From problem to solutions</div>
 </div>
 <div class="sect2">
 <h3 id="collect-problems"><a class="anchor" href="#collect-problems"></a>5.1. Collect Problems</h3>
@@ -2905,7 +2934,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 <div class="content">
 <img src="images/collect-remedies.png" alt="collect remedies">
 </div>
-<div class="title">Figure 11. Collect Remedies in All Phases</div>
+<div class="title">Figure 12. Collect Remedies in All Phases</div>
 </div>
 </div>
 <div class="sect2">
@@ -4110,7 +4139,7 @@ here we explain 'some-anchor' topic...</pre>
 <div class="content">
 <img src="images/aim42-logo.png" alt="alternate-text">
 </div>
-<div class="title">Figure 12. caption</div>
+<div class="title">Figure 13. caption</div>
 </div>
 </div>
 <div class="sect2">
@@ -4265,7 +4294,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-05-01)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-05-03)</p>
 </li>
 </ul>
 </div>
@@ -4322,7 +4351,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-05-01 04:58:01 UTC
+Last updated 2014-05-03 14:44:58 UTC
 </div>
 </div>
 </body>
