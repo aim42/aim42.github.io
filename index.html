@@ -389,7 +389,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#Capture-Quality-Requirements">2.4. Capture Quality Requirements</a></li>
 <li><a href="#Debugging">2.5. Debugging</a></li>
 <li><a href="#Qualitative-Analysis">2.6. Qualitative Analysis</a></li>
-<li><a href="#Pre-Interview-Questionnaire">2.7. Pre-Interview Questionnaire</a></li>
+<li><a href="#Pre-Interview-Questionnaire">2.7. Pre Interview Questionnaire</a></li>
 <li><a href="#Questionnaire">2.8. Questionnaire</a></li>
 <li><a href="#pattern-root-cause-analysis">2.9. Root-Cause Analysis</a></li>
 <li><a href="#Software-Archeology">2.10. Software Archeology</a></li>
@@ -491,7 +491,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3e, last update 2014-05-05</p>
+Version 0.3e, last update 2014-05-07</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -914,7 +914,7 @@ To effectively find issues, you need an appropriate amount of <em>understanding<
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Start <a href="#capture-quality-requirements">capturing current quality requirements</a> from the <em>authoritative</em> stakeholders of the systems.</p>
+<p>Start <a href="#Capture-Quality-Requirements">capturing current quality requirements</a> from the <em>authoritative</em> stakeholders of the systems.</p>
 </li>
 <li>
 <p>Conduct a <a href="#Qualitative-Analysis">qualitative analysis</a> of the system, its architecture and surrounding organization, based upon the specific quality requirements</p>
@@ -923,7 +923,7 @@ To effectively find issues, you need an appropriate amount of <em>understanding<
 <p>Perform <a href="#Static-Code-Analysis">static code analysis</a></p>
 </li>
 <li>
-<p>Conduct <a href="#Stakeholder-Interviews">stakeholder interviews</a></p>
+<p>Conduct <a href="#Stakeholder-Interview">stakeholder interviews</a></p>
 </li>
 <li>
 <p>Perform a number of <strong>runtime analysis</strong>, e.g. performance and load monitoring, process and thread analysis</p>
@@ -958,73 +958,76 @@ Never start solving problems until you have a thourough understanding of current
 <div class="ulist">
 <ul>
 <li>
-<p>Architecture Analysis, see <a href="#Qualitative-Analysis">Qualitative Analysis</a> and <a href="#ATAM">[ATAM]</a></p>
+<p>Architecture Analysis, see <a href="#Qualitative-Analysis">Qualitative Analysis</a> and <a href="#ATAM">ATAM</a></p>
 </li>
 <li>
-<p><a href="#ATAM">[ATAM]</a></p>
+<p><a href="#ATAM">ATAM</a></p>
 </li>
 <li>
 <p><a href="#Capture-Quality-Requirements">Capture Quality Requirements</a></p>
 </li>
 <li>
-<p><a href="#Context-Analysis">[Context-Analysis]</a></p>
+<p><a href="#Context-Analysis">Context Analysis</a></p>
 </li>
 <li>
-<p><a href="#Data-Analysis">[Data-Analysis]</a></p>
+<p><a href="#Data-Analysis">Data Analysis</a></p>
 </li>
 <li>
 <p><a href="#Debugging">Debugging</a></p>
 </li>
 <li>
-<p><a href="#Development-Process-Analysis">[Development-Process-Analysis]</a></p>
+<p><a href="#Development-Process-Analysis">Development Process Analysis</a></p>
 </li>
 <li>
-<p><a href="#Documentation-Analysis">[Documentation-Analysis]</a></p>
+<p><a href="#Documentation-Analysis">Documentation Analysis</a></p>
 </li>
 <li>
-<p><a href="#Issue-Tracker-Analysis">[Issue-Tracker-Analysis]</a></p>
+<p><a href="#Issue-Tracker-Analysis">Issue Tracker Analysis</a></p>
 </li>
 <li>
-<p><a href="#Profiling">[Profiling]</a></p>
+<p><a href="#Profiling">Profiling</a></p>
 </li>
 <li>
 <p><a href="#Qualitative-Analysis">Qualitative Analysis</a></p>
 </li>
 <li>
-<p><a href="#Quantitative-Analysis">[Quantitative-Analysis]</a></p>
+<p><a href="#Quantitative-Analysis">Quantitative Analysis</a></p>
 </li>
 <li>
-<p><a href="#Questionnaire">Questionnaire</a>, especially <a href="#Pre-Interview-Questionnaire">Pre-Interview Questionnaire</a></p>
+<p><a href="#Questionnaire">Questionnaire</a>, especially <a href="#Pre-Interview-Questionnaire">Pre Interview Questionnaire</a></p>
 </li>
 <li>
-<p><a href="#Requirements-Analysis">[Requirements-Analysis]</a></p>
+<p><a href="#Requirements-Analysis">Requirements Analysis</a></p>
 </li>
 <li>
 <p><a href="#Root-Cause-Analysis">Root Cause Analysis</a> - finding the root-cause of problems</p>
 </li>
 <li>
-<p><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a></p>
+<p><a href="#Runtime-Artifact-Analysis">Runtime Artifact Analysis</a></p>
 </li>
 <li>
 <p><a href="#Separate-Cause-From-Effect">Separate Cause From Effect</a></p>
 </li>
 <li>
-<p><a href="#Software-Archaeology">Software Archeology</a></p>
+<p><a href="#Software-Archeology">Software Archeology</a></p>
 </li>
 <li>
-<p><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a></p>
+<p><a href="#Stakeholder-Analysis">Stakeholder Analysis</a></p>
 </li>
 <li>
-<p><a href="#Stakeholder-Interview">[Stakeholder-Interview]</a>, see also <a href="#pre-interview-questionnaire">pre-interview questionnaire</a>.</p>
+<p><a href="#Stakeholder-Interview">Stakeholder Interview</a>, see also <a href="#Pre-Interview-Questionnaire">Pre Interview Questionnaire</a>.</p>
 </li>
 <li>
-<p><a href="#Static-Code-Analysis">Static Code Analysis</a> (Structural analysis)</p>
+<p><a href="#Static-Code-Analysis">Static Code Analysis</a></p>
+</li>
+<li>
+<p><a href="#Structural-Analysis">Structural (Code) Analysis</a></p>
 </li>
 <li>
 <p><a href="#Take-What-They-Mean">Take What They Mean</a> (not what they say, as it may differ).</p>
 </li>
 <li>
-<p><a href="#Use-Case-Cluster">[Use-Case-Cluster]</a></p>
+<p><a href="#Use-Case-Cluster">Use Case Cluster</a></p>
 </li>
 <li>
 <p><a href="#View-Based-Understanding">View Based Understanding</a></p>
@@ -1168,7 +1171,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <p><a href="#Qualitative-Analysis">Qualitative Analysis</a></p>
 </li>
 <li>
-<p><a href="#Requirements-Analysis">[Requirements-Analysis]</a></p>
+<p><a href="#Requirements-Analysis">Requirements Analysis</a></p>
 </li>
 </ul>
 </div>
@@ -1422,7 +1425,7 @@ your scenario.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Pre-Interview-Questionnaire"><a class="anchor" href="#Pre-Interview-Questionnaire"></a>2.7. Pre-Interview Questionnaire</h3>
+<h3 id="Pre-Interview-Questionnaire"><a class="anchor" href="#Pre-Interview-Questionnaire"></a>2.7. Pre Interview Questionnaire</h3>
 <div class="sect3">
 <h4 id="_intent_4"><a class="anchor" href="#_intent_4"></a>2.7.1. Intent</h4>
 <div class="paragraph">
@@ -1457,7 +1460,7 @@ your scenario.</p>
 <p>Include a "Comments/Remarks" section at the end of the questionnaire, so stakeholders can comment on topics you did not consider in advance.</p>
 </div>
 <div class="paragraph">
-<p>The pre-interview questionnaire shall be handed over to the appropriate stakeholders in advance, a few days before the interview.</p>
+<p>The <a href="#Pre-Interview-Questionnaire">Pre Interview Questionnaire</a> shall be handed over to the appropriate stakeholders in advance, a few days before the interview.</p>
 </div>
 <div class="paragraph">
 <p>As these documents will be read and processed by external and potentially critical stakeholders, you need to care for several details:</p>
@@ -1510,7 +1513,7 @@ your scenario.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#stakeholder-interview">Stakeholder interview</a></p>
+<p><a href="#Stakeholder-Interview">Stakeholder Interview</a></p>
 </li>
 <li>
 <p><a href="#Questionnaire">Questionnaire</a></p>
@@ -1778,10 +1781,10 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <p>Code Reading</p>
 </li>
 <li>
-<p><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a></p>
+<p><a href="#Runtime-Artifact-Analysis">Runtime Artifact Analysis</a></p>
 </li>
 <li>
-<p>Structural Analysis</p>
+<p><a href="#Structural-Analysis">Structural (Code) Analysis</a></p>
 </li>
 </ul>
 </div>
@@ -1880,7 +1883,7 @@ e.g. the following:</p>
 <p><a href="#Software-Archeology">Software Archeology</a></p>
 </li>
 <li>
-<p><a href="#Structural-Analysis">[Structural-Analysis]</a></p>
+<p><a href="#Structural-Analysis">Structural (Code) Analysis</a></p>
 </li>
 </ul>
 </div>
@@ -1943,10 +1946,10 @@ e.g. the following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>In every <a href="#Stakeholder-Interview">[Stakeholder-Interview]</a> you should apply this pattern.</p>
+<p>In every <a href="#Stakeholder-Interview">Stakeholder Interview</a> you should apply this pattern.</p>
 </li>
 <li>
-<p><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a> to find out, who are the important stakeholders you should apply this pattern to.</p>
+<p><a href="#Stakeholder-Analysis">Stakeholder Analysis</a> to find out, who are the important stakeholders you should apply this pattern to.</p>
 </li>
 </ul>
 </div>
@@ -3114,7 +3117,7 @@ Category: <a href="#Improve">Improve</a></p>
 <li>
 <p><strong><a href="#Capture-Quality-Requirements">Capture Quality Requirements</a></strong></p>
 <div class="paragraph">
-<p>Part of <a href="#ATAM">[ATAM]</a>, Capture and document specific quality requirements. Specialisation of <a href="#Requirements-Analysis">[Requirements-Analysis]</a>.
+<p>Part of <a href="#ATAM">[ATAM]</a>, Capture and document specific quality requirements. Specialisation of <a href="#Requirements-Analysis">Requirements Analysis</a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
@@ -3163,7 +3166,7 @@ Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 <dt class="hdlist1">Context Analysis</dt>
 <dd>
 <p>Analyse external interfaces for risk, technology, business value and other factors.
-Category: <a href="#Evaluate">Evaluate</a></p>
+Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
@@ -3428,7 +3431,7 @@ Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 <dd>
 <p>Instrument either the executable or the source code to make
 <a href="#Explicit-Assumption">assumtions explicit</a> and expand on <a href="#runtime analysis">[runtime analysis]</a> and
-<a href="#runtime artifact analysis">[runtime artifact analysis]</a>.
+<a href="#Runtime-Artifact-Analysis">Runtime Artifact Analysis</a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
@@ -3583,7 +3586,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Pre-Interview-Questionnaire">Pre-Interview Questionnaire</a></strong></p>
+<p><strong><a href="#Pre-Interview-Questionnaire">Pre Interview Questionnaire</a></strong></p>
 <div class="paragraph">
 <p>Prior to interviewing stakeholders, present them with a written questionnaire, so they can reflect in advance. A specialisation of <a href="#Questionnaire">Questionnaire</a>.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -3731,7 +3734,7 @@ Category: <a href="#Analyze">Analyze</a></p>
 <p><a id="Runtime-Artifact-Analysis"></a></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Runtime-Artifact Analysis</dt>
+<dt class="hdlist1">Runtime Artifact Analysis</dt>
 <dd>
 <p>(aka Log-Analysis, Trace-Analysis, Protocol-Analysis) Inspect artifacts created at runtime (e.g. logfiles, protocolls, system-traces) for information about problems, root-causes or system behavior.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -3881,7 +3884,7 @@ Category: <a href="#Improve">Improve</a></p>
 <p><a id="Use-Case-Cluster"></a></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Use-Case Cluster</dt>
+<dt class="hdlist1">Use Case Cluster</dt>
 <dd>
 <p>Understand system functionality by grouping functionality into clusters to reduce complexity.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -4297,7 +4300,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-05-05)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-05-07)</p>
 </li>
 </ul>
 </div>
@@ -4354,7 +4357,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-05-05 07:26:13 UTC
+Last updated 2014-05-07 05:00:27 UTC
 </div>
 </div>
 </body>
