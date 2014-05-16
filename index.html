@@ -388,7 +388,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#_patterns_and_practices_for_analysis">2.3. Patterns and Practices for Analysis</a></li>
 <li><a href="#Capture-Quality-Requirements">2.4. Capture Quality Requirements</a></li>
 <li><a href="#Debugging">2.5. Debugging</a></li>
-<li><a href="#instrument-system">2.6. Instrument System</a></li>
+<li><a href="#Instrument-System">2.6. Instrument System</a></li>
 <li><a href="#Qualitative-Analysis">2.7. Qualitative Analysis</a></li>
 <li><a href="#Pre-Interview-Questionnaire">2.8. Pre Interview Questionnaire</a></li>
 <li><a href="#Questionnaire">2.9. Questionnaire</a></li>
@@ -476,7 +476,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p>Control risks, issues and technical debt</p>
 </li>
 <li>
-<p>Organizes patterns and practices in three phases (<a href="#analyze">[analyze]</a>, <a href="#evaluate">[evaluate]</a> and <a href="#improve">[improve]</a>)</p>
+<p>Organizes patterns and practices in three phases (<a href="#Analyze">analyze</a>, <a href="#Evaluate">evaluate</a> and <a href="#Improve">improve</a>)</p>
 </li>
 <li>
 <p>Free and open-source, <a href="#contributions">Contribute to aim42.org</a> welcome.</p>
@@ -492,7 +492,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3e, last update 2014-05-13</p>
+Version 0.3e, last update 2014-05-16</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -881,13 +881,13 @@ limitations under the License.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Obtain overview of intent, purpose and quality requirements of the system (<a href="#SuD">[SuD]</a>).</p>
+<p>Obtain overview of intent, purpose and quality requirements of the system (<strong>SuD</strong>).</p>
 </li>
 <li>
 <p>Develop and document an understanding of internal structures, concepts and architectural approaches.</p>
 </li>
 <li>
-<p>Find all problems, issues, symptoms, risks or technical debt within the system (<a href="#SuD">[SuD]</a>), its operation, maintenance or otherwise related processes.</p>
+<p>Find all problems, issues, symptoms, risks or technical debt within the system (<strong>SuD</strong>), its operation, maintenance or otherwise related processes.</p>
 </li>
 <li>
 <p>Understand root causes of the problems found, potential interdependencies between issues</p>
@@ -907,7 +907,7 @@ limitations under the License.</p>
 <i class="icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-To effectively find issues, you need an appropriate amount of <em>understanding</em> of the system under design (<a href="#SuD">[SuD]</a>), its technical concepts, code-structure, inner workings, major external interfaces and its development process.
+To effectively find issues, you need an appropriate amount of <em>understanding</em> of the system under design (<strong>SuD</strong>), its technical concepts, code-structure, inner workings, major external interfaces and its development process.
 </td>
 </tr>
 </table>
@@ -984,6 +984,9 @@ Never start solving problems until you have a thourough understanding of current
 </li>
 <li>
 <p><a href="#Documentation-Analysis">Documentation Analysis</a></p>
+</li>
+<li>
+<p><a href="#Instrument-System">Instrument System</a></p>
 </li>
 <li>
 <p><a href="#Issue-Tracker-Analysis">Issue Tracker Analysis</a></p>
@@ -1166,7 +1169,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ATAM">[ATAM]</a></p>
+<p><a href="#ATAM">ATAM</a></p>
 </li>
 <li>
 <p><a href="#Explicit-Assumption">Explicit Assumption</a></p>
@@ -1183,7 +1186,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <div class="sect3">
 <h4 id="_references"><a class="anchor" href="#_references"></a>2.4.8. References</h4>
 <div class="paragraph">
-<p>The workshop-based collection of quality requirements has been described within the <a href="#Clements-ATAM">ATAM</a> literature.</p>
+<p>The workshop-based collection of quality requirements has been described within the <a href="#Clements-ATAM">[Clements-ATAM]</a> literature.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1191,7 +1194,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <p>Real-world examples of software quality requirements. Currently available only in German language on <a href="https://bitbucket.org/arc42/quality-requirements">https://bitbucket.org/arc42/quality-requirements</a> (TODO: likely to move to github)</p>
 </li>
 <li>
-<p><a href="#Clements-ATAM">ATAM</a>, contains a brief description of scenario-based quality description and details how to setup such workshops.</p>
+<p><a href="#Clements-ATAM">[Clements-ATAM]</a>, contains a brief description of scenario-based quality description and details how to setup such workshops.</p>
 </li>
 </ul>
 </div>
@@ -1317,14 +1320,14 @@ your scenario.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#root-cause-analysis">[root-cause-analysis]</a></p>
+<p><a href="#Root-Cause-Analysis">Root Cause Analysis</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="instrument-system"><a class="anchor" href="#instrument-system"></a>2.6. Instrument System</h3>
+<h3 id="Instrument-System"><a class="anchor" href="#Instrument-System"></a>2.6. Instrument System</h3>
 <div class="paragraph">
 <p>Use retroactive modification of the executables which target
 cross-cutting concerns to make the existing software-base tell about it&#8217;s
@@ -1429,7 +1432,7 @@ real fast.</p>
 <p><a href="#Static-Code-Analysis">Static Code Analysis</a></p>
 </li>
 <li>
-<p><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a></p>
+<p><a href="#Runtime-Artifact-Analysis">Runtime Artifact Analysis</a></p>
 </li>
 <li>
 <p><a href="#Software-Archeology">Software Archeology</a></p>
@@ -1467,7 +1470,7 @@ real fast.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="#capture-quality-requirements">Capture quality requirements</a> to ensure you have explicit, specific, valid and current <em>quality requirements</em> available - preferably in form of <em>scenarios</em>.</p>
+<p><a href="#Capture-Quality-Requirements">Capture quality requirements</a> to ensure you have explicit, specific, valid and current <em>quality requirements</em> available - preferably in form of <em>scenarios</em>.</p>
 </li>
 <li>
 <p>Prioritize these scenarios with respect to business value or importance for the authoritative stakeholders.</p>
@@ -1655,7 +1658,7 @@ real fast.</p>
 <div class="sect3">
 <h4 id="_description_6"><a class="anchor" href="#_description_6"></a>2.9.2. Description</h4>
 <div class="paragraph">
-<p>Prior to taking <a href="#stakeholder-interview">interviews with stakeholders</a>,
+<p>Prior to taking <a href="#Stakeholder-Interview">interviews with stakeholders</a>,
 formulate questions covering the topics or areas of information that:</p>
 </div>
 <div class="ulist">
@@ -1713,7 +1716,7 @@ formulate questions covering the topics or areas of information that:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#stakeholder-interview">Stakeholder interview</a></p>
+<p><a href="#Stakeholder-Interview">Stakeholder interview</a></p>
 </li>
 </ul>
 </div>
@@ -2097,7 +2100,7 @@ architectural views, especially the building-block view.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Apply <a href="#arc42">arc42</a> views</p>
+<p>Apply <a href="#arc42">[arc42]</a> views</p>
 </li>
 <li>
 <p>Apply static-code-analysis</p>
@@ -2190,7 +2193,7 @@ and reason about the code structure</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#arc42">arc42</a></p>
+<p><a href="#arc42">[arc42]</a></p>
 </li>
 <li>
 <p>Kruchten</p>
@@ -2382,7 +2385,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Handle If-Else-Chains">[Handle If-Else-Chains]</a>: eliminate nested if-then-else blocks, so that code becomes more understandable.</p>
+<p><a href="#Handle-If-Else-Chains">Handle If Else Chains</a>: eliminate nested if-then-else blocks, so that code becomes more understandable.</p>
 </li>
 </ul>
 </div>
@@ -2423,10 +2426,13 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <p><a href="#Improve-Code-Layout">Improve Code Layout</a></p>
 </li>
 <li>
+<p><a href="#Interface-Segregation-Principle">Interface Segregation Principle</a></p>
+</li>
+<li>
 <p><a href="#Introduce-Boy-Scout-Rule">Introduce Boy Scout Rule</a></p>
 </li>
 <li>
-<p><a href="#Interface-Segregation-Principle">Interface Segregation Principle</a></p>
+<p><a href="#Introduce-Layering">Introduce Layering</a></p>
 </li>
 <li>
 <p><a href="#Isolate-Changes">Isolate Changes</a></p>
@@ -2523,7 +2529,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Isolate-Changes">[Isolate-Changes]</a>, as an alternative or complimenting approach</p>
+<p><a href="#Isolate-Changes">Isolate Changes</a>, as an alternative or complimenting approach</p>
 </li>
 </ul>
 </div>
@@ -2708,10 +2714,10 @@ Item.COMPOUND_ITEMS_THRESHHOLD)</code>
 <h4 id="_experiences_10"><a class="anchor" href="#_experiences_10"></a>4.5.3. Experiences</h4>
 <div class="paragraph">
 <p>Introducing the Boy Scout Rule on a heavily deteriorated code base
-induces heavy payback on <a href="#technical-debt">[technical-debt]</a> and often gets challenged
+induces heavy payback on <strong>Technical Debt</strong> and often gets challenged
 by team members and senior management. It is important to point out
 that the extended time spent on fixing the artifacts &#8220;as the teams
-goes&#8221; actually is the <em>explicit</em> payment of the <a href="#technical-debt">[technical-debt]</a>
+goes&#8221; actually is the <em>explicit</em> payment of the <strong>Technical Debt</strong>
 interest rate.</p>
 </div>
 </div>
@@ -2767,7 +2773,7 @@ parts of the system other approaches have to be utilized.</p>
 <p><a href="#Refactoring-Plan">Refactoring Plan</a>, as an alternative or complimenting approach</p>
 </li>
 <li>
-<p><a href="#introduce-layering">[introduce-layering]</a> can be performed using the Boy Scout Rule</p>
+<p><a href="#Introduce-Layering">Introduce Layering</a> can be performed using the Boy Scout Rule</p>
 </li>
 <li>
 <p><a href="#Anticorruption-Layer">Anticorruption Layer</a> can be performed using the Boy Scout Rule</p>
@@ -2782,10 +2788,7 @@ performed when applying the Boy Scout Rule</p>
 <div class="sect3">
 <h4 id="_references_11"><a class="anchor" href="#_references_11"></a>4.5.9. References</h4>
 <div class="paragraph">
-<p>The original description of the boy scout rule can be found online at
-the
-<a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule">Boy-Scout-Rule
-article</a></p>
+<p>The original description of the boy scout rule can be found online at <a href="#Boy-Scout-Rule-article">[Boy-Scout-Rule-article]</a>.</p>
 </div>
 </div>
 </div>
@@ -2878,7 +2881,7 @@ Things that can be handled by a facade:</p>
 <h4 id="_intent_16"><a class="anchor" href="#_intent_16"></a>4.8.1. Intent</h4>
 <div class="paragraph">
 <p>Provide a safe approach in situations where  it seems to dangerous to delete
-code or whole modules from a huge system because <a href="#Static-Analysis">[Static-Analysis]</a> can&#8217;t
+code or whole modules from a huge system because <a href="#Static-Code-Analysis">Static Code Analysis</a> can&#8217;t
 recognize whether the code is still in use or not.</p>
 </div>
 </div>
@@ -2996,7 +2999,7 @@ weight of the system.</p>
 <p>Use <a href="#Static-Code-Analysis">Static Code Analysis</a> to find candidates, entry points and exit points.</p>
 </li>
 <li>
-<p>Using invariants to kill zombies is a special case of <a href="#Assertions">[Assertions]</a> in the
+<p>Using invariants to kill zombies is a special case of <a href="#Assertions">Assertions</a> in the
 context of architecture improvement.</p>
 </li>
 <li>
@@ -3011,15 +3014,15 @@ way to make <a href="#Explicit-Assumption">Explicit Assumption</a>s</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Invariants (and other <a href="#Assertions">[Assertions]</a>) have been made popular by Bertrand Meyer
+<p>Invariants (and other <a href="#Assertions">Assertions</a>) have been made popular by Bertrand Meyer
 in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Oriented-Software-Construction]</a></p>
 </li>
 <li>
-<p>Brian Foote references Zombie code in <a href="#Big-Ball-Of-Mud">[Big-Ball-Of-Mud]</a></p>
+<p>Brian Foote references Zombie code in <a href="#Big-Ball-Of-Mud">Big Ball Of Mud</a></p>
 </li>
 <li>
 <p>Dead code is an alternate name for the lava-flow anti pattern in
-<a href="#Anti-Patterns">[Anti-Patterns]</a>.</p>
+<a href="#AntiPatterns">AntiPatterns</a>.</p>
 </li>
 </ul>
 </div>
@@ -3247,7 +3250,7 @@ Category: <a href="#Improve">Improve</a></p>
 <li>
 <p><strong><a href="#Capture-Quality-Requirements">Capture Quality Requirements</a></strong></p>
 <div class="paragraph">
-<p>Part of <a href="#ATAM">[ATAM]</a>, Capture and document specific quality requirements. Specialisation of <a href="#Requirements-Analysis">Requirements Analysis</a>.
+<p>Part of <a href="#ATAM">ATAM</a>, Capture and document specific quality requirements. Specialisation of <a href="#Requirements-Analysis">Requirements Analysis</a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
@@ -3563,11 +3566,13 @@ Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#instrument-system">Instrument System</a></strong>
-Instrument either the executable or the source code to make
-<a href="#Explicit-Assumption">assumtions explicit</a> and expand on <a href="#runtime analysis">[runtime analysis]</a> and
+<p><strong><a href="#Instrument-System">Instrument System</a></strong></p>
+<div class="paragraph">
+<p>Instrument either the executable or the source code to make
+<a href="#Explicit-Assumption">assumtions explicit</a> and expand on <a href="#Runtime-Analysis">Runtime Analysis</a> and
 <a href="#Runtime-Artifact-Analysis">Runtime Artifact Analysis</a>.
 Category: <a href="#Analyze">Analyze</a></p>
+</div>
 </li>
 <li>
 <p><strong><a href="#Interface-Segregation-Principle">Interface Segregation Principle</a></strong></p>
@@ -3584,6 +3589,18 @@ implrovements each time an artifact (sourcecode, configuration, documents etc.)
 is changed. Usable in situations where a <a href="#Refactoring-Plan">Refactoring Plan</a> is not feasible or in
 addition to such a plan.
 Category: <a href="#Improve">Improve</a></p>
+</div>
+</li>
+<li>
+<p><a id="Introduce-Layering"></a></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Introduce Layering</dt>
+<dd>
+<p>TODO: Add description here.
+Category: <a href="#Improve">Improve</a></p>
+</dd>
+</dl>
 </div>
 </li>
 <li>
@@ -4096,11 +4113,14 @@ Software Engineering Institute, Carnegie Mellon University.</p>
 <p><a id="Big-Ball-Of-Mud"></a>[Big-Ball-Of-Mud] Brian Foote and Joseph Yoder, <a href="http://laputan.org/mud/">Big Ball of Mud</a> - very influentual paper from the <a href="http://st-www.cs.uiuc.edu/~hanmer/PLoP-97/">fourth conference on Patterns languages of Program Design, PLoP97</a></p>
 </li>
 <li>
-<p><a id="Bommer-Wartung"></a> Christoph Bommer, M. Spindler, V. Barr: Softwarewartung: Grundlagen, Management und Wartungstechniken.
+<p><a id="Bommer-Wartung"></a>[Bommer-Wartung] Christoph Bommer, M. Spindler, V. Barr: Softwarewartung: Grundlagen, Management und Wartungstechniken.
 (in German) dpunkt Verlag, 2008. Interesting treatment of categories of software systems and their respective need for maintenance and evolution. Authors quote studies from Lehman and Belady from the 1970&#8217;s.</p>
 </li>
 <li>
-<p><a id="Brodie-Stonebraker"></a> Brodie, M. and Stonebraker, M: Migrating Legacy Systems: Gateway, Interfaces &amp; the Incremental Approach; Morgan Kaufmann 1995.</p>
+<p><a id="Boy-Scout-Rule-article"></a>[Boy-Scout-Rule-article] The Boy Scout Rule, see <a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule">http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule</a></p>
+</li>
+<li>
+<p><a id="Brodie-Stonebraker"></a>[Brodie-Stonebraker] Brodie, M. and Stonebraker, M: Migrating Legacy Systems: Gateway, Interfaces &amp; the Incremental Approach; Morgan Kaufmann 1995.</p>
 </li>
 <li>
 <p><a id="Clements-ATAM"></a>[Clements-ATAM] Paul Clements et.al.: Evaluating Software Architecture - Methods and Case Studies.
@@ -4149,7 +4169,7 @@ Performing Complex Restructurings Successfully, Wiley 2006</p>
 A detailed writeup of how (object-oriented) code should look like. Lots of things we like.</p>
 </li>
 <li>
-<p><a id="Mikado"></a> Ola Elnestam, Daniel Brolund: The Mikado Method. Manning, 2014. Describes a method to <em>morphing</em> software from bad to better state. Quote from the book:
+<p><a id="Mikado"></a>[Mikado] Ola Elnestam, Daniel Brolund: The Mikado Method. Manning, 2014. Describes a method to <em>morphing</em> software from bad to better state. Quote from the book:
 &#8220;It helps us visualize, plan, and perform business-value-focused improvements over several iterations and increments of work, without ever having a broken codebase&#8221;</p>
 </li>
 <li>
@@ -4441,7 +4461,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-05-13)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-05-16)</p>
 </li>
 </ul>
 </div>
@@ -4498,7 +4518,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-05-13 08:43:32 UTC
+Last updated 2014-05-16 16:12:58 UTC
 </div>
 </div>
 </body>
