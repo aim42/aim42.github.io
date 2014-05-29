@@ -494,7 +494,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3f, last update 2014-05-25</p>
+Version 0.3f, last update 2014-05-29</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -1236,10 +1236,10 @@ Many software developers we met violated the basic rules of debugging. They work
 <p>Get a clear and precise <strong>description</strong> of the error, the detailed wording of all error messages, log messages, stacktraces or similar information.</p>
 </li>
 <li>
-<p>Know the <strong>context</strong> of the error: the exact version of the system, the operating system, involved middleware, hardware settings and so on.</p>
+<p>Know the <strong>context</strong> of the error: the exact version of the system, the operating system, involved middleware, hardware settings and so on. Have knowledge of the input data which leads to the error.</p>
 </li>
 <li>
-<p><strong>Minimize external disturbance</strong> while searching for errors, you need to concentrate and observe details. Shut off chat and twitter clients, notifications and your phone.</p>
+<p><strong>Minimize external disturbance</strong> while searching for errors, you need to concentrate and observe details. Shut off chat and twitter clients, notifications and your phone. Send away your boss to an important management mission and lean back to reflect the error. Perhaps a colleague can support you.</p>
 </li>
 <li>
 <p><strong>Reproduce the error</strong> in the live system. Don&#8217;t rely on the assumption you can reproduce it - make sure you can reliably <em>really</em> reproduce it.</p>
@@ -1251,11 +1251,17 @@ Many software developers we met violated the basic rules of debugging. They work
 <p><strong>Reproduce the error in development environment</strong>: This ensures your development environment is consistent to the live system.</p>
 </li>
 <li>
+<p><strong>Call your error assumption into question</strong>. Realize what is symptom and what is cause of the error.</p>
+</li>
+<li>
+<p><strong>Identify the building blocks</strong> which are involved in the error path.</p>
+</li>
+<li>
 <p><strong>Understand the error scenario</strong>: You need to know the business or technical scenario (aka the process or activity flow) of the error: What steps within the system or at its external interfaces precede the error? This step is an example of <a href="#View-Based-Understanding">View Based Understanding</a>.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Make this scenario <strong>explicit</strong> - draw or scribble a diagram. See the diagram "Divide and conquer" below as an example.</p>
+<p>Make this scenario <strong>explicit</strong> - draw or scribble a diagram. See the diagram "Divide and conquer" below as an example. Here the error arises in building block 1. You suppose the processing within the system is spaned by the blue marked data path in which the building blocks 2 to 6 are involved. Cut the path in half and check your assumption at the transition of one half to the other (here beetween building block 4 and 3). If no error is observable here then the error occures after the considered transiton. Otherwise you have to look for the error before the transition.</p>
 <div class="imageblock">
 <div class="content">
 <img src="images/debugging-divide-and-conquer.jpg" alt="Divide and conqer">
@@ -1274,10 +1280,10 @@ your scenario.</p>
 </div>
 </li>
 <li>
-<p><strong>Look, don&#8217;t imagine</strong>: Sherlock Holmes, the succesful detective has formulated the golden rule of debugging: "<em>It&#8217;s a capital mistake to theorize before one has data</em>". Look <em>exactly</em> what the messages are, read carefully.</p>
+<p><strong>Look, don&#8217;t imagine</strong>: Sherlock Holmes, the succesful detective has formulated the golden rule of debugging: "<em>It&#8217;s a capital mistake to theorize before one has data</em>". Instrument the system or use step debugging. Look <em>exactly</em> what the messages are, read carefully.</p>
 </li>
 <li>
-<p><strong>Change only one thing at a time</strong>: Aim for errors with a pistol, not with a scattergun.</p>
+<p><strong>Change only one thing at a time</strong> and test if the error disappears: Aim for errors with a pistol, not with a scattergun.</p>
 </li>
 <li>
 <p>Apply the <strong>4-Eye-Principle</strong>: Describe the problem and your state-of-debugging to somebody else. Especially clarify all your assumptions.</p>
@@ -4608,7 +4614,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-05-25)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-05-29)</p>
 </li>
 </ul>
 </div>
@@ -4665,7 +4671,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-05-25 15:31:06 UTC
+Last updated 2014-05-29 19:22:54 UTC
 </div>
 </div>
 </body>
