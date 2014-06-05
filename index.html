@@ -663,6 +663,8 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 #toc.toc2 { background: white; }
 
 .literalblock > .content > pre, .listingblock > .content > pre { -webkit-border-radius: 0; border-radius: 0; }
+
+.pattern { font-variant: small-caps; }
 </style>
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
 </head>
@@ -727,13 +729,13 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a></li>
 <li>
 <ul class="sectlevel2">
-<li><a href="#collect-problems">5.1. Collect Problems</a></li>
-<li><a href="#collect-opportunities-for-improvement">5.2. Collect Opportunities for Improvement</a></li>
-<li><a href="#Expect-Denial">5.3. Expect Denial</a></li>
-<li><a href="#Explicit-Assumption">5.4. Explicit Assumption</a></li>
-<li><a href="#Fail-Fast">5.5. Fail Fast</a></li>
-<li><a href="#Fast-Feedback">5.6. Fast Feedback</a></li>
-<li><a href="#improvement-backlog">5.7. Improvement Backlog</a></li>
+<li><a href="#collect-problems">5.1. <span class="pattern">Collect Problems</span></a></li>
+<li><a href="#collect-opportunities-for-improvement">5.2. <span class="pattern">Collect Opportunities for Improvement</span></a></li>
+<li><a href="#Expect-Denial">5.3. <span class="pattern">Expect Denial</span></a></li>
+<li><a href="#Explicit-Assumption">5.4. <span class="pattern">Explicit Assumption</span></a></li>
+<li><a href="#Fail-Fast">5.5. <span class="pattern">Fail Fast</span></a></li>
+<li><a href="#Fast-Feedback">5.6. <span class="pattern">Fast Feedback</span></a></li>
+<li><a href="#improvement-backlog">5.7. <span class="pattern">Improvement Backlog</span></a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">6. Pattern index</a></li>
@@ -799,7 +801,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3f, last update 2014-06-04</p>
+Version 0.3f, last update 2014-06-05</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -988,7 +990,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 </ol>
 </div>
 <div class="paragraph">
-<p>Several <a href="#Crosscutting">cross-cutting practices and patterns</a> can or should be applied in all phases, for example documenting results or <a href="#collect-opportunities-for-improvement">Collect Opportunities for Improvement</a>.</p>
+<p>Several <a href="#Crosscutting">cross-cutting practices and patterns</a> can or should be applied in all phases, for example documenting results or <a href="#collect-opportunities-for-improvement"><span class="pattern">Collect Opportunities for Improvement</span></a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1431,7 +1433,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <p><strong>Uncovers problems and risks</strong>: Scenarios collected within brainstorming sessions often contain <em>hidden</em> problem descriptions, risks or problems with the current systems.</p>
 </li>
 <li>
-<p><strong>Covers organization and process</strong>: Scenarios sometimes cover process or organizational aspects (like: release cycles should be faster than they are now). Move those to your <a href="#improvement-backlog">Improvement Backlog</a>.</p>
+<p><strong>Covers organization and process</strong>: Scenarios sometimes cover process or organizational aspects (like: release cycles should be faster than they are now). Move those to your <a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a>.</p>
 </li>
 <li>
 <p><strong>Improves human communication</strong>: Different stakeholders often start communicating about the systeme or their requirements during such workshops. This kind of interaction <em>should</em> have happened long before&#8230;</p>
@@ -1479,7 +1481,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <p><a href="#ATAM">[ATAM]</a></p>
 </li>
 <li>
-<p><a href="#Explicit-Assumption">Explicit Assumption</a></p>
+<p><a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a></p>
 </li>
 <li>
 <p><a href="#Qualitative-Analysis">Qualitative Analysis</a></p>
@@ -2958,7 +2960,7 @@ Often the introduction of concepts like layering is deemed <em>“impossible”<
 <div class="ulist">
 <ul>
 <li>
-<p>Drafting from an <a href="#improvement-backlog">Improvement Backlog</a>, define a specific rule set
+<p>Drafting from an <a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a>, define a specific rule set
 on how to improve the contents of specific file types.</p>
 </li>
 <li>
@@ -2974,7 +2976,7 @@ clean-up operation</p>
 <li>
 <p>Install a mechanism to ensure that the things that where too big to
 be cleaned up while visiting the file will end up in the
-<a href="#improvement-backlog">Improvement Backlog</a>.</p>
+<a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a>.</p>
 </li>
 </ul>
 </div>
@@ -3095,7 +3097,7 @@ parts of the system other approaches have to be utilized.</p>
 <p><a href="#Anticorruption-Layer">Anticorruption Layer</a> can be performed using the Boy Scout Rule</p>
 </li>
 <li>
-<p>An <a href="#improvement-backlog">Improvement Backlog</a> should be the basis for the tasks
+<p>An <a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a> should be the basis for the tasks
 performed when applying the Boy Scout Rule</p>
 </li>
 </ul>
@@ -3320,7 +3322,7 @@ context of architecture improvement.</p>
 </li>
 <li>
 <p>Introducing invariants to verify that the code is really dead is a specific
-way to make <a href="#Explicit-Assumption">Explicit Assumption</a>s</p>
+way to make <a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a>s</p>
 </li>
 </ul>
 </div>
@@ -3369,7 +3371,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="title">Figure 11. From problem to solutions</div>
 </div>
 <div class="sect2">
-<h3 id="collect-problems"><a class="anchor" href="#collect-problems"></a>5.1. Collect Problems</h3>
+<h3 id="collect-problems"><a class="anchor" href="#collect-problems"></a>5.1. <span class="pattern">Collect Problems</span></h3>
 <div class="paragraph">
 <p>You should constantly watch out for problems, issues and risks.
 Keep a list of those problems. Regularly match those to your <a href="#collect-opportunities-for-improvement">collection of possible remedies</a>.</p>
@@ -3382,7 +3384,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="collect-opportunities-for-improvement"><a class="anchor" href="#collect-opportunities-for-improvement"></a>5.2. Collect Opportunities for Improvement</h3>
+<h3 id="collect-opportunities-for-improvement"><a class="anchor" href="#collect-opportunities-for-improvement"></a>5.2. <span class="pattern">Collect Opportunities for Improvement</span></h3>
 <div class="paragraph">
 <p>You should look for improvement opportunities, remedies, measures, tactics and strategies in all of the aim42-phases.</p>
 </div>
@@ -3394,7 +3396,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="Expect-Denial"><a class="anchor" href="#Expect-Denial"></a>5.3. Expect Denial</h3>
+<h3 id="Expect-Denial"><a class="anchor" href="#Expect-Denial"></a>5.3. <span class="pattern">Expect Denial</span></h3>
 <div class="paragraph">
 <p>Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish, attack or dispute your findings.</p>
 </div>
@@ -3465,7 +3467,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="Explicit-Assumption"><a class="anchor" href="#Explicit-Assumption"></a>5.4. Explicit Assumption</h3>
+<h3 id="Explicit-Assumption"><a class="anchor" href="#Explicit-Assumption"></a>5.4. <span class="pattern">Explicit Assumption</span></h3>
 <div class="paragraph">
 <p>TODO</p>
 </div>
@@ -3474,9 +3476,9 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="Fail-Fast"><a class="anchor" href="#Fail-Fast"></a>5.5. Fail Fast</h3>
+<h3 id="Fail-Fast"><a class="anchor" href="#Fail-Fast"></a>5.5. <span class="pattern">Fail Fast</span></h3>
 <div class="paragraph">
-<p>The later a lack of quality is identified the higher are the costs to fix it. Continuously evaluate the quality of work artifacts and immediately take countermeasures or pull the plug as early as possible. Similar to <a href="#Fast-Feedback">Fast Feedback</a>.</p>
+<p>The later a lack of quality is identified the higher are the costs to fix it. Continuously evaluate the quality of work artifacts and immediately take countermeasures or pull the plug as early as possible. Similar to <a href="#Fast-Feedback"><span class="pattern">Fast Feedback</span></a>.</p>
 </div>
 <div class="paragraph">
 <p>Suitable methods to identify such situations are:</p>
@@ -3499,16 +3501,16 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="Fast-Feedback"><a class="anchor" href="#Fast-Feedback"></a>5.6. Fast Feedback</h3>
+<h3 id="Fast-Feedback"><a class="anchor" href="#Fast-Feedback"></a>5.6. <span class="pattern">Fast Feedback</span></h3>
 <div class="paragraph">
 <p>TODO</p>
 </div>
 <div class="paragraph">
-<p>See also <a href="#Fail-Fast">Fail Fast</a>.</p>
+<p>See also <a href="#Fail-Fast"><span class="pattern">Fail Fast</span></a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="improvement-backlog"><a class="anchor" href="#improvement-backlog"></a>5.7. Improvement Backlog</h3>
+<h3 id="improvement-backlog"><a class="anchor" href="#improvement-backlog"></a>5.7. <span class="pattern">Improvement Backlog</span></h3>
 <div class="paragraph">
 <p>Keep a public, written backlog of possible improvements, remedies, tactics or strategies.</p>
 </div>
@@ -3666,14 +3668,14 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#collect-opportunities-for-improvement">Collect Opportunities for Improvement</a></strong></p>
+<p><strong><a href="#collect-opportunities-for-improvement"><span class="pattern">Collect Opportunities for Improvement</span></a></strong></p>
 <div class="paragraph">
 <p>Keep a list of possible and potential measures, remedies, tactics, strategies for improvements. Regularly match those to your <a href="#collect-problems">collection of problems</a>.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#collect-problems">Collect Problems</a></strong></p>
+<p><strong><a href="#collect-problems"><span class="pattern">Collect Problems</span></a></strong></p>
 <div class="paragraph">
 <p>Keep a list of problems, issues and risks. Regularly match those to your <a href="#collect-opportunities-for-improvement">collection of possible remedies</a>.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
@@ -3800,7 +3802,7 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Expect-Denial">Expect Denial</a></strong>
+<p><strong><a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a></strong>
 Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish or attack your findings. Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </li>
 <li>
@@ -3835,7 +3837,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Fail-Fast">Fail Fast</a></strong></p>
+<p><strong><a href="#Fail-Fast"><span class="pattern">Fail Fast</span></a></strong></p>
 <div class="paragraph">
 <p>Identify quality issues as early as possible and aim to fix them.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
@@ -3854,7 +3856,7 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Fast-Feedback">Fast Feedback</a></strong></p>
+<p><strong><a href="#Fast-Feedback"><span class="pattern">Fast Feedback</span></a></strong></p>
 <div class="paragraph">
 <p>Evaluate the quality of work artifacts and processes as early as possible. Enables teams to apply corrective actions or take countermeasures as early as possible.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
@@ -3945,7 +3947,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#improvement-backlog">Improvement Backlog</a></strong></p>
+<p><strong><a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a></strong></p>
 <div class="paragraph">
 <p>Keep a backlog of possible improvements, remedies, tactics or strategies.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
@@ -4508,7 +4510,7 @@ Software Engineering Institute, Carnegie Mellon University.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a id="Big-Ball-Of-Mud"></a>[Big-Ball-Of-Mud] Brian Foote and Joseph Yoder, <a href="http://laputan.org/mud/">Big Ball of Mud</a> - very influentual paper from the <a href="http://hillside.net/plop/plop97/">fourth conference on Patterns languages of Program Design, PLoP97</a></p>
+<p><a id="Big-Ball-Of-Mud"></a>[Big-Ball-Of-Mud] Brian Foote and Joseph Yoder, <a href="http://laputan.org/mud/">Big Ball of Mud</a> - very influentual paper from the <a href="http://hillside.net/plop/plop97/">fourth conference on Patterns languages of Program Design</a></p>
 </li>
 <li>
 <p><a id="Bommer-Wartung"></a>[Bommer-Wartung] Christoph Bommer, M. Spindler, V. Barr: Softwarewartung: Grundlagen, Management und Wartungstechniken.
@@ -4616,7 +4618,7 @@ Completed in 2008, holds a fairly large number of deliverables.</p>
 a variety of programming languages, plugins for different metrics and checks. SonarQube can track results over time - showing the history of code quality for software systems.</p>
 </li>
 <li>
-<p><a id="Spolsky-NeverRewrite"></a>[Spolsky-NeverRewrite] Joel Spolsky: <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">Things You Should Never Do, Part-I</a></p>
+<p><a id="Spolsky-NeverRewrite"></a>[Spolsky-NeverRewrite] Joel Spolsky: <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">Things You Should Never Do</a></p>
 </li>
 </ul>
 </div>
@@ -4919,7 +4921,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-06-04)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-06-05)</p>
 </li>
 </ul>
 </div>
@@ -4976,7 +4978,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-06-04 21:19:55 UTC
+Last updated 2014-06-05 05:18:52 UTC
 </div>
 </div>
 </body>
