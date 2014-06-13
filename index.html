@@ -693,17 +693,17 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#_goals">2.1. Goals</a></li>
 <li><a href="#_how_it_works">2.2. How it works</a></li>
 <li><a href="#_patterns_and_practices_for_analysis">2.3. Patterns and Practices for Analysis</a></li>
-<li><a href="#Capture-Quality-Requirements">2.4. Capture Quality Requirements</a></li>
-<li><a href="#Debugging">2.5. Debugging</a></li>
-<li><a href="#Instrument-System">2.6. Instrument System</a></li>
-<li><a href="#Qualitative-Analysis">2.7. Qualitative Analysis</a></li>
-<li><a href="#Pre-Interview-Questionnaire">2.8. Pre Interview Questionnaire</a></li>
-<li><a href="#Questionnaire">2.9. Questionnaire</a></li>
-<li><a href="#Root-Cause-Analysis">2.10. Root Cause Analysis</a></li>
-<li><a href="#Software-Archeology">2.11. Software Archeology</a></li>
-<li><a href="#Static-Code-Analysis">2.12. Static Code Analysis</a></li>
-<li><a href="#Take-What-They-Mean">2.13. Take What They Mean, Not What They Say</a></li>
-<li><a href="#View-Based-Understanding">2.14. View Based Understanding</a></li>
+<li><a href="#Capture-Quality-Requirements">2.4. <span class="pattern">Capture Quality Requirements</span></a></li>
+<li><a href="#Debugging">2.5. <span class="pattern">Debugging</span></a></li>
+<li><a href="#Instrument-System">2.6. <span class="pattern">Instrument System</span></a></li>
+<li><a href="#Qualitative-Analysis">2.7. <span class="pattern">Qualitative Analysis</span></a></li>
+<li><a href="#Pre-Interview-Questionnaire">2.8. <span class="pattern">Pre Interview Questionnaire</span></a></li>
+<li><a href="#Questionnaire">2.9. <span class="pattern">Questionnaire</span></a></li>
+<li><a href="#Root-Cause-Analysis">2.10. <span class="pattern">Root Cause Analysis</span></a></li>
+<li><a href="#Software-Archeology">2.11. <span class="pattern">Software Archeology</span></a></li>
+<li><a href="#Static-Code-Analysis">2.12. <span class="pattern">Static Code Analysis</span></a></li>
+<li><a href="#Take-What-They-Mean">2.13. <span class="pattern">Take What They Mean, Not What They Say</span></a></li>
+<li><a href="#View-Based-Understanding">2.14. <span class="pattern">View Based Understanding</span></a></li>
 </ul>
 </li>
 <li><a href="#Evaluate">3. Evaluate</a></li>
@@ -718,12 +718,12 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <ul class="sectlevel2">
 <li><a href="#_goals_3">4.1. Goals</a></li>
 <li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a></li>
-<li><a href="#Anticorruption-Layer">4.3. Anticorruption Layer</a></li>
-<li><a href="#Interface-Segregation-Principle">4.4. Interface Segregation Principle</a></li>
-<li><a href="#Introduce-Boy-Scout-Rule">4.5. Introduce Boy Scout Rule</a></li>
-<li><a href="#Manage-Complex-Client-Dependencies-With-Facade">4.6. Manage Complex Client Dependencies With Facade</a></li>
+<li><a href="#Anticorruption-Layer">4.3. <span class="pattern">Anticorruption Layer</span></a></li>
+<li><a href="#Interface-Segregation-Principle">4.4. <span class="pattern">Interface Segregation Principle</span></a></li>
+<li><a href="#Introduce-Boy-Scout-Rule">4.5. <span class="pattern">Introduce Boy Scout Rule</span></a></li>
+<li><a href="#Manage-Complex-Client-Dependencies-With-Facade">4.6. <span class="pattern">Manage Complex Client Dependencies With Facade</span></a></li>
 <li><a href="#_references_12">4.7. References</a></li>
-<li><a href="#Use-Invariants-To-Kill-Zombies">4.8. Use Invariants To Kill Zombies</a></li>
+<li><a href="#Use-Invariants-To-Kill-Zombies">4.8. <span class="pattern">Use Invariants To Kill Zombies</span></a></li>
 </ul>
 </li>
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a></li>
@@ -801,7 +801,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3f, last update 2014-06-07</p>
+Version 0.3f, last update 2014-06-13</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -1269,7 +1269,7 @@ Never start solving problems until you have a thourough understanding of current
 <div class="ulist">
 <ul>
 <li>
-<p>Architecture Analysis, see <span class="pattern"><a href="#Qualitative-Analysis">Qualitative Analysis</a></span> and
+<p>Architecture Analysis, see <a href="#Qualitative-Analysis"><span class="pattern">Qualitative Analysis</span></a> and
 <span class="pattern"><a href="#ATAM">[ATAM]</a></span>.</p>
 </li>
 <li>
@@ -1279,7 +1279,7 @@ Never start solving problems until you have a thourough understanding of current
 <p><span class="pattern"><a href="#ATAM">[ATAM]</a></span></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Capture-Quality-Requirements">Capture Quality Requirements</a></span></p>
+<p><a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a></p>
 </li>
 <li>
 <p><span class="pattern"><a href="#Context-Analysis">[Context-Analysis]</a></span></p>
@@ -1288,7 +1288,7 @@ Never start solving problems until you have a thourough understanding of current
 <p><span class="pattern"><a href="#Data-Analysis">[Data-Analysis]</a></span></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Debugging">Debugging</a></span></p>
+<p><a href="#Debugging"><span class="pattern">Debugging</span></a></p>
 </li>
 <li>
 <p><span class="pattern"><a href="#Development-Process-Analysis">[Development-Process-Analysis]</a></span></p>
@@ -1297,7 +1297,7 @@ Never start solving problems until you have a thourough understanding of current
 <p><span class="pattern"><a href="#Documentation-Analysis">[Documentation-Analysis]</a></span></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Instrument-System">Instrument System</a></span></p>
+<p><a href="#Instrument-System"><span class="pattern">Instrument System</span></a></p>
 </li>
 <li>
 <p><span class="pattern"><a href="#Issue-Tracker-Analysis">[Issue-Tracker-Analysis]</a></span></p>
@@ -1306,55 +1306,55 @@ Never start solving problems until you have a thourough understanding of current
 <p><span class="pattern"><a href="#Profiling">[Profiling]</a></span></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Qualitative-Analysis">Qualitative Analysis</a></span></p>
+<p><a href="#Qualitative-Analysis"><span class="pattern">Qualitative Analysis</span></a></p>
 </li>
 <li>
 <p><span class="pattern"><a href="#Quantitative-Analysis">[Quantitative-Analysis]</a></span></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Questionnaire">Questionnaire</a></span>, especially <span class="pattern"><a href="#Pre-Interview-Questionnaire">Pre Interview Questionnaire</a></span></p>
+<p><a href="#Questionnaire"><span class="pattern">Questionnaire</span></a>, especially <a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a></p>
 </li>
 <li>
 <p><span class="pattern"><a href="#Requirements-Analysis">[Requirements-Analysis]</a></span></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Root-Cause-Analysis">Root Cause Analysis</a></span> - finding the root cause of problems</p>
+<p><a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a> - finding the root cause of problems</p>
 </li>
 <li>
 <p><span class="pattern"><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a></span></p>
 </li>
 <li>
-<p>[pattern]#<a href="#Separate-Cause-From-Effect">[Separate-Cause-From-Effect]</a></p>
+<p><span class="pattern"><a href="#Separate-Cause-From-Effect">[Separate-Cause-From-Effect]</a></span></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Software-Archeology">Software Archeology</a></span></p>
+<p><a href="#Software-Archeology"><span class="pattern">Software Archeology</span></a></p>
 </li>
 <li>
 <p><span class="pattern"><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a></span></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Stakeholder-Interview">[Stakeholder-Interview]</a></span>, see also <span class="pattern"><a href="#Pre-Interview-Questionnaire">Pre Interview Questionnaire</a></span>.</p>
+<p><span class="pattern"><a href="#Stakeholder-Interview">[Stakeholder-Interview]</a></span>, see also <span class="pattern"><a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a></span>.</p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Static-Code-Analysis">Static Code Analysis</a></span> (Structural analysis)</p>
+<p><a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> (Structural analysis)</p>
 </li>
 <li>
 <p><span class="pattern"><a href="#Structural-Analysis">[Structural-Analysis]</a></span></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Take-What-They-Mean">Take What They Mean, Not What They Say</a></span> (not what they say, as it may differ).</p>
+<p><a href="#Take-What-They-Mean"><span class="pattern">Take What They Mean, Not What They Say</span></a> (not what they say, as it may differ).</p>
 </li>
 <li>
 <p><span class="pattern"><a href="#Use-Case-Cluster">[Use-Case-Cluster]</a></span></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#View-Based-Understanding">View Based Understanding</a></span></p>
+<p><a href="#View-Based-Understanding"><span class="pattern">View Based Understanding</span></a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Capture-Quality-Requirements"><a class="anchor" href="#Capture-Quality-Requirements"></a>2.4. Capture Quality Requirements</h3>
+<h3 id="Capture-Quality-Requirements"><a class="anchor" href="#Capture-Quality-Requirements"></a>2.4. <span class="pattern">Capture Quality Requirements</span></h3>
 <div class="sect3">
 <h4 id="_intent"><a class="anchor" href="#_intent"></a>2.4.1. Intent</h4>
 <div class="paragraph">
@@ -1486,7 +1486,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <p><a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a></p>
 </li>
 <li>
-<p><a href="#Qualitative-Analysis">Qualitative Analysis</a></p>
+<p><a href="#Qualitative-Analysis"><span class="pattern">Qualitative Analysis</span></a></p>
 </li>
 <li>
 <p><a href="#Requirements-Analysis">[Requirements-Analysis]</a></p>
@@ -1512,7 +1512,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 </div>
 </div>
 <div class="sect2">
-<h3 id="Debugging"><a class="anchor" href="#Debugging"></a>2.5. Debugging</h3>
+<h3 id="Debugging"><a class="anchor" href="#Debugging"></a>2.5. <span class="pattern">Debugging</span></h3>
 <div class="sect3">
 <h4 id="_intent_2"><a class="anchor" href="#_intent_2"></a>2.5.1. Intent</h4>
 <div class="paragraph">
@@ -1566,7 +1566,7 @@ Many software developers we met violated the basic rules of debugging. They work
 <p><strong>Identify the building blocks</strong> which are involved in the error path.</p>
 </li>
 <li>
-<p><strong>Understand the error scenario</strong>: You need to know the business or technical scenario (aka the process or activity flow) of the error: What steps within the system or at its external interfaces precede the error? This step is an example of <a href="#View-Based-Understanding">View Based Understanding</a>.</p>
+<p><strong>Understand the error scenario</strong>: You need to know the business or technical scenario (aka the process or activity flow) of the error: What steps within the system or at its external interfaces precede the error? This step is an example of <a href="#View-Based-Understanding"><span class="pattern">View Based Understanding</span></a>.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -1637,14 +1637,14 @@ your scenario.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Root-Cause-Analysis">Root Cause Analysis</a></p>
+<p><a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Instrument-System"><a class="anchor" href="#Instrument-System"></a>2.6. Instrument System</h3>
+<h3 id="Instrument-System"><a class="anchor" href="#Instrument-System"></a>2.6. <span class="pattern">Instrument System</span></h3>
 <div class="paragraph">
 <p>Use retroactive modification of the executables which target
 cross-cutting concerns to make the existing software-base tell about it&#8217;s
@@ -1656,7 +1656,7 @@ other <a href="#meta-programming">meta programming</a> techniques.</p>
 <div class="paragraph">
 <p>Find out how the system is really used and what the runtime relationships are,
 as well as other facts that can not be easily determined by
-<a href="#Static-Code-Analysis">Static Code Analysis</a> even in situation where the system under design is
+<a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> even in situation where the system under design is
 largely undocumented and the architecture work thus mostly relies on
 assumptions, interviews and lore.</p>
 </div>
@@ -1746,23 +1746,23 @@ real fast.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Static-Code-Analysis">Static Code Analysis</a></p>
+<p><a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a></p>
 </li>
 <li>
 <p><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a></p>
 </li>
 <li>
-<p><a href="#Software-Archeology">Software Archeology</a></p>
+<p><a href="#Software-Archeology"><span class="pattern">Software Archeology</span></a></p>
 </li>
 <li>
-<p><a href="#Use-Invariants-To-Kill-Zombies">Use Invariants To Kill Zombies</a></p>
+<p><a href="#Use-Invariants-To-Kill-Zombies"><span class="pattern">Use Invariants To Kill Zombies</span></a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Qualitative-Analysis"><a class="anchor" href="#Qualitative-Analysis"></a>2.7. Qualitative Analysis</h3>
+<h3 id="Qualitative-Analysis"><a class="anchor" href="#Qualitative-Analysis"></a>2.7. <span class="pattern">Qualitative Analysis</span></h3>
 <div class="sect3">
 <h4 id="_intent_4"><a class="anchor" href="#_intent_4"></a>2.7.1. Intent</h4>
 <div class="paragraph">
@@ -1867,7 +1867,7 @@ real fast.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Pre-Interview-Questionnaire"><a class="anchor" href="#Pre-Interview-Questionnaire"></a>2.8. Pre Interview Questionnaire</h3>
+<h3 id="Pre-Interview-Questionnaire"><a class="anchor" href="#Pre-Interview-Questionnaire"></a>2.8. <span class="pattern">Pre Interview Questionnaire</span></h3>
 <div class="sect3">
 <h4 id="_intent_5"><a class="anchor" href="#_intent_5"></a>2.8.1. Intent</h4>
 <div class="paragraph">
@@ -1902,7 +1902,7 @@ real fast.</p>
 <p>Include a "Comments/Remarks" section at the end of the questionnaire, so stakeholders can comment on topics you did not consider in advance.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="#Pre-Interview-Questionnaire">Pre Interview Questionnaire</a> shall be handed over to the appropriate stakeholders in advance, a few days before the interview.</p>
+<p>The <a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a> shall be handed over to the appropriate stakeholders in advance, a few days before the interview.</p>
 </div>
 <div class="paragraph">
 <p>As these documents will be read and processed by external and potentially critical stakeholders, you need to care for several details:</p>
@@ -1958,14 +1958,14 @@ real fast.</p>
 <p><a href="#Stakeholder-Interview">[Stakeholder-Interview]</a></p>
 </li>
 <li>
-<p><a href="#Questionnaire">Questionnaire</a></p>
+<p><a href="#Questionnaire"><span class="pattern">Questionnaire</span></a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Questionnaire"><a class="anchor" href="#Questionnaire"></a>2.9. Questionnaire</h3>
+<h3 id="Questionnaire"><a class="anchor" href="#Questionnaire"></a>2.9. <span class="pattern">Questionnaire</span></h3>
 <div class="sect3">
 <h4 id="_intent_6"><a class="anchor" href="#_intent_6"></a>2.9.1. Intent</h4>
 <div class="paragraph">
@@ -2044,7 +2044,7 @@ formulate questions covering the topics or areas of information that:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Root-Cause-Analysis"><a class="anchor" href="#Root-Cause-Analysis"></a>2.10. Root Cause Analysis</h3>
+<h3 id="Root-Cause-Analysis"><a class="anchor" href="#Root-Cause-Analysis"></a>2.10. <span class="pattern">Root Cause Analysis</span></h3>
 <div class="quoteblock">
 <blockquote>
 To find mistakes is not enough. It is necessary to find the cause behind the mistake
@@ -2096,7 +2096,7 @@ tweaking the application server, optimizing inner loops and so on (you pretty we
 <p>That did not solve the issue.</p>
 </div>
 <div class="paragraph">
-<p>After applying <a href="#Take-What-They-Mean">Take What They Mean, Not What They Say</a> we found out that users complained about low performance in data entry,
+<p>After applying <a href="#Take-What-They-Mean"><span class="pattern">Take What They Mean, Not What They Say</span></a> we found out that users complained about low performance in data entry,
 as they had to switch back-and-forth between different regions on their input-screens.</p>
 </div>
 <div class="paragraph">
@@ -2138,7 +2138,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Take-What-They-Mean">Take What They Mean, Not What They Say</a>, maybe what they told you was not the real problem.</p>
+<p><a href="#Take-What-They-Mean"><span class="pattern">Take What They Mean, Not What They Say</span></a>, maybe what they told you was not the real problem.</p>
 </li>
 </ul>
 </div>
@@ -2155,7 +2155,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect2">
-<h3 id="Software-Archeology"><a class="anchor" href="#Software-Archeology"></a>2.11. Software Archeology</h3>
+<h3 id="Software-Archeology"><a class="anchor" href="#Software-Archeology"></a>2.11. <span class="pattern">Software Archeology</span></h3>
 <div class="sect3">
 <h4 id="_intent_8"><a class="anchor" href="#_intent_8"></a>2.11.1. Intent</h4>
 <div class="paragraph">
@@ -2246,7 +2246,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect2">
-<h3 id="Static-Code-Analysis"><a class="anchor" href="#Static-Code-Analysis"></a>2.12. Static Code Analysis</h3>
+<h3 id="Static-Code-Analysis"><a class="anchor" href="#Static-Code-Analysis"></a>2.12. <span class="pattern">Static Code Analysis</span></h3>
 <div class="sect3">
 <h4 id="_intent_9"><a class="anchor" href="#_intent_9"></a>2.12.1. Intent</h4>
 <div class="paragraph">
@@ -2322,7 +2322,7 @@ e.g. the following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Software-Archeology">Software Archeology</a></p>
+<p><a href="#Software-Archeology"><span class="pattern">Software Archeology</span></a></p>
 </li>
 <li>
 <p><a href="#Structural-Analysis">[Structural-Analysis]</a></p>
@@ -2348,7 +2348,7 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Take-What-They-Mean"><a class="anchor" href="#Take-What-They-Mean"></a>2.13. Take What They Mean, Not What They Say</h3>
+<h3 id="Take-What-They-Mean"><a class="anchor" href="#Take-What-They-Mean"></a>2.13. <span class="pattern">Take What They Mean, Not What They Say</span></h3>
 <div class="sect3">
 <h4 id="_intent_10"><a class="anchor" href="#_intent_10"></a>2.13.1. Intent</h4>
 <div class="paragraph">
@@ -2407,7 +2407,7 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>2.14. View Based Understanding</h3>
+<h3 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>2.14. <span class="pattern">View Based Understanding</span></h3>
 <div class="sect3">
 <h4 id="_intent_11"><a class="anchor" href="#_intent_11"></a>2.14.1. Intent</h4>
 <div class="paragraph">
@@ -2423,7 +2423,7 @@ architectural views, especially the building-block view.</p>
 <p>Apply <a href="#arc42">[arc42]</a> views</p>
 </li>
 <li>
-<p>Apply <a href="#Static-Code-Analysis">Static Code Analysis</a></p>
+<p>Apply <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a></p>
 </li>
 <li>
 <p>Interview technical stakeholders</p>
@@ -2561,13 +2561,13 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 <p><a href="#Determine-Feature-Value">[Determine-Feature-Value]</a></p>
 </li>
 <li>
-<p><a href="#Estimate-In-Interval">Estimate in Interval</a></p>
+<p><a href="#Estimate-In-Interval"><span class="pattern">Estimate in Interval</span></a></p>
 </li>
 <li>
-<p><a href="#Estimate-Problem-Cost">Estimate Problem Cost</a></p>
+<p><a href="#Estimate-Problem-Cost"><span class="pattern">Estimate Problem Cost</span></a></p>
 </li>
 <li>
-<p><a href="#Estimate-Remedy-Cost">Estimate Remedy Cost</a></p>
+<p><a href="#Estimate-Remedy-Cost"><span class="pattern">Estimate Remedy Cost</span></a></p>
 </li>
 <li>
 <p><a href="#Failure-Mode-And-Effect-Analysis">[Failure-Mode-And-Effect-Analysis]</a></p>
@@ -2578,7 +2578,7 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 </ul>
 </div>
 <div class="sect3">
-<h4 id="Estimate-Feature-Value"><a class="anchor" href="#Estimate-Feature-Value"></a>3.2.1. Estimate Feature Value</h4>
+<h4 id="Estimate-Feature-Value"><a class="anchor" href="#Estimate-Feature-Value"></a>3.2.1. <span class="pattern">Estimate Feature Value</span></h4>
 <div class="paragraph">
 <p>Estimate the (monetary) value of a given feature, so you can compare features of the system with each other.</p>
 </div>
@@ -2597,7 +2597,7 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 </div>
 </div>
 <div class="sect3">
-<h4 id="Estimate-In-Interval"><a class="anchor" href="#Estimate-In-Interval"></a>3.2.2. Estimate in Interval</h4>
+<h4 id="Estimate-In-Interval"><a class="anchor" href="#Estimate-In-Interval"></a>3.2.2. <span class="pattern">Estimate in Interval</span></h4>
 <div class="paragraph">
 <p>Estimation is a guess, not a <strong>measurement</strong>. Estimates are uncertain, otherwise they would be observations (or measurements!).</p>
 </div>
@@ -2624,7 +2624,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 </div>
 </div>
 <div class="sect3">
-<h4 id="Estimate-Problem-Cost"><a class="anchor" href="#Estimate-Problem-Cost"></a>3.2.3. Estimate Problem Cost</h4>
+<h4 id="Estimate-Problem-Cost"><a class="anchor" href="#Estimate-Problem-Cost"></a>3.2.3. <span class="pattern">Estimate Problem Cost</span></h4>
 <div class="paragraph">
 <p>Estimate how much a given problem costs (in money or effort) in a period of time.</p>
 </div>
@@ -2646,7 +2646,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 </div>
 </div>
 <div class="sect3">
-<h4 id="Estimate-Remedy-Cost"><a class="anchor" href="#Estimate-Remedy-Cost"></a>3.2.4. Estimate Remedy Cost</h4>
+<h4 id="Estimate-Remedy-Cost"><a class="anchor" href="#Estimate-Remedy-Cost"></a>3.2.4. <span class="pattern">Estimate Remedy Cost</span></h4>
 <div class="paragraph">
 <p>See: "Software Estimation. The Black Art Demystified (Steve McConnell)"</p>
 </div>
@@ -2719,7 +2719,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Anticorruption-Layer">Anticorruption Layer</a></p>
+<p><a href="#Anticorruption-Layer"><span class="pattern">Anticorruption Layer</span></a></p>
 </li>
 <li>
 <p><a href="#Assertions">[Assertions]</a></p>
@@ -2746,10 +2746,10 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <p><a href="#Improve-Code-Layout">[Improve-Code-Layout]</a></p>
 </li>
 <li>
-<p><a href="#Interface-Segregation-Principle">Interface Segregation Principle</a></p>
+<p><a href="#Interface-Segregation-Principle"><span class="pattern">Interface Segregation Principle</span></a></p>
 </li>
 <li>
-<p><a href="#Introduce-Boy-Scout-Rule">Introduce Boy Scout Rule</a></p>
+<p><a href="#Introduce-Boy-Scout-Rule"><span class="pattern">Introduce Boy Scout Rule</span></a></p>
 </li>
 <li>
 <p><a href="#Introduce-Layering">[Introduce-Layering]</a></p>
@@ -2761,7 +2761,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <p><a href="#Keep-Data-Toss-Code">[Keep-Data-Toss-Code]</a></p>
 </li>
 <li>
-<p><a href="#Manage-Complex-Client-Dependencies-With-Facade">Manage Complex Client Dependencies With Facade</a></p>
+<p><a href="#Manage-Complex-Client-Dependencies-With-Facade"><span class="pattern">Manage Complex Client Dependencies With Facade</span></a></p>
 </li>
 <li>
 <p><a href="#Never-Change-Running-System">[Never-Change-Running-System]</a></p>
@@ -2791,13 +2791,13 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <p><a href="#Untangle-Code">[Untangle-Code]</a></p>
 </li>
 <li>
-<p><a href="#Use-Invariants-To-Kill-Zombies">Use Invariants To Kill Zombies</a></p>
+<p><a href="#Use-Invariants-To-Kill-Zombies"><span class="pattern">Use Invariants To Kill Zombies</span></a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.3. Anticorruption Layer</h3>
+<h3 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.3. <span class="pattern">Anticorruption Layer</span></h3>
 <div class="sect3">
 <h4 id="_intent_12"><a class="anchor" href="#_intent_12"></a>4.3.1. Intent</h4>
 <div class="paragraph">
@@ -2860,7 +2860,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 </div>
 </div>
 <div class="sect2">
-<h3 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.4. Interface Segregation Principle</h3>
+<h3 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.4. <span class="pattern">Interface Segregation Principle</span></h3>
 <div class="sect3">
 <h4 id="_intent_13"><a class="anchor" href="#_intent_13"></a>4.4.1. Intent</h4>
 <div class="paragraph">
@@ -2921,7 +2921,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Introduce-Boy-Scout-Rule"><a class="anchor" href="#Introduce-Boy-Scout-Rule"></a>4.5. Introduce Boy Scout Rule</h3>
+<h3 id="Introduce-Boy-Scout-Rule"><a class="anchor" href="#Introduce-Boy-Scout-Rule"></a>4.5. <span class="pattern">Introduce Boy Scout Rule</span></h3>
 <div class="paragraph">
 <p>The &#8220;Boy Scout Rule&#8221; for software development basically states that we</p>
 </div>
@@ -3096,7 +3096,7 @@ parts of the system other approaches have to be utilized.</p>
 <p><a href="#Introduce-Layering">[Introduce-Layering]</a> can be performed using the Boy Scout Rule</p>
 </li>
 <li>
-<p><a href="#Anticorruption-Layer">Anticorruption Layer</a> can be performed using the Boy Scout Rule</p>
+<p><a href="#Anticorruption-Layer"><span class="pattern">Anticorruption Layer</span></a> can be performed using the Boy Scout Rule</p>
 </li>
 <li>
 <p>An <a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a> should be the basis for the tasks
@@ -3113,7 +3113,7 @@ performed when applying the Boy Scout Rule</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.6. Manage Complex Client Dependencies With Facade</h3>
+<h3 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.6. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h3>
 <div class="sect3">
 <h4 id="_intent_15"><a class="anchor" href="#_intent_15"></a>4.6.1. Intent</h4>
 <div class="paragraph">
@@ -3196,12 +3196,12 @@ Things that can be handled by a facade:</p>
 
 </div>
 <div class="sect2">
-<h3 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.8. Use Invariants To Kill Zombies</h3>
+<h3 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.8. <span class="pattern">Use Invariants To Kill Zombies</span></h3>
 <div class="sect3">
 <h4 id="_intent_16"><a class="anchor" href="#_intent_16"></a>4.8.1. Intent</h4>
 <div class="paragraph">
 <p>Provide a safe approach in situations where  it seems to dangerous to delete
-code or whole modules from a huge system because <a href="#Static-Code-Analysis">Static Code Analysis</a> can&#8217;t
+code or whole modules from a huge system because <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> can&#8217;t
 recognize whether the code is still in use or not.</p>
 </div>
 </div>
@@ -3316,7 +3316,7 @@ weight of the system.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Use <a href="#Static-Code-Analysis">Static Code Analysis</a> to find candidates, entry points and exit points.</p>
+<p>Use <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> to find candidates, entry points and exit points.</p>
 </li>
 <li>
 <p>Using invariants to kill zombies is a special case of <a href="#Assertions">[Assertions]</a> in the
@@ -3548,7 +3548,7 @@ short description and links to the explanation.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong><a href="#Anticorruption-Layer">Anticorruption Layer</a></strong></p>
+<p><strong><a href="#Anticorruption-Layer"><span class="pattern">Anticorruption Layer</span></a></strong></p>
 <div class="paragraph">
 <p>Isolate clients from internal changes of suby-systems or modules. The original definition:</p>
 </div>
@@ -3596,7 +3596,7 @@ Category: <a href="#Improve">Improve</a></p>
 <dl>
 <dt class="hdlist1">Architecture Documentation</dt>
 <dd>
-<p>See <a href="#System-Documentation">[System-Documentation]</a> and <a href="#View-Based-Understanding">View Based Understanding</a>.
+<p>See <a href="#System-Documentation">[System-Documentation]</a> and <a href="#View-Based-Understanding"><span class="pattern">View Based Understanding</span></a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
@@ -3639,7 +3639,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Capture-Quality-Requirements">Capture Quality Requirements</a></strong></p>
+<p><strong><a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a></strong></p>
 <div class="paragraph">
 <p>Part of <a href="#ATAM">[ATAM]</a>, Capture and document specific quality requirements. Specialisation of <a href="#Requirements-Analysis">[Requirements-Analysis]</a>.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -3708,10 +3708,10 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Debugging">Debugging</a></strong></p>
+<p><strong><a href="#Debugging"><span class="pattern">Debugging</span></a></strong></p>
 <div class="paragraph">
 <p>Identify the source of a bug or misbehavior by observing the
-detailed flow of execution, e.g. stepwise execution of program statements. Usually supported by <em>debugger</em>. Specialisation of <a href="#Root-Cause-Analysis">Root Cause Analysis</a>.
+detailed flow of execution, e.g. stepwise execution of program statements. Usually supported by <em>debugger</em>. Specialisation of <a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
@@ -3776,28 +3776,28 @@ Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Estimate-Feature-Value">Estimate Feature Value</a></strong></p>
+<p><strong><a href="#Estimate-Feature-Value"><span class="pattern">Estimate Feature Value</span></a></strong></p>
 <div class="paragraph">
 <p>Estimate the (monetary) value of a given feature, so you can compare features of the system with each other.
 Category: <a href="#Evaluate">Evaluate</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Estimate-In-Interval">Estimate in Interval</a></strong></p>
+<p><strong><a href="#Estimate-In-Interval"><span class="pattern">Estimate in Interval</span></a></strong></p>
 <div class="paragraph">
 <p>Estimation differs from <strong>measurement</strong> in its inherent uncertainty. Therefore, estimate in intervals, giving lower and upper bounds. The difference between the two shows your confidence in the estimate. Low (relative) difference means high confidence.
 Category: <a href="#Evaluate">Evaluate</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Estimate-Problem-Cost">Estimate Problem Cost</a></strong></p>
+<p><strong><a href="#Estimate-Problem-Cost"><span class="pattern">Estimate Problem Cost</span></a></strong></p>
 <div class="paragraph">
 <p>Estimate how much a given problem costs (in money or effort) in a period of time or a frequency.
 Category: <a href="#Evaluate">Evaluate</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Estimate-Remedy-Cost">Estimate Remedy Cost</a></strong></p>
+<p><strong><a href="#Estimate-Remedy-Cost"><span class="pattern">Estimate Remedy Cost</span></a></strong></p>
 <div class="paragraph">
 <p>Determine how much a specific remedy (a set of actions taken to eliminate or reduce a specific problem or issue) is likely to cost (in money and/or effort).
 Category: <a href="#Evaluate">Evaluate</a></p>
@@ -3832,7 +3832,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Manage-Complex-Client-Dependencies-With-Facade">Manage Complex Client Dependencies With Facade</a></strong></p>
+<p><strong><a href="#Manage-Complex-Client-Dependencies-With-Facade"><span class="pattern">Manage Complex Client Dependencies With Facade</span></a></strong></p>
 <div class="paragraph">
 <p>Simplify the interaction of a client with a set of service components.
 Category: <a href="#Improve">Improve</a></p>
@@ -3956,7 +3956,7 @@ Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Instrument-System">Instrument System</a></strong></p>
+<p><strong><a href="#Instrument-System"><span class="pattern">Instrument System</span></a></strong></p>
 <div class="paragraph">
 <p>Instrument either the executable or the source code to make
 <a href="#Explicit-Assumption">assumtions explicit</a> and expand on <a href="#Runtime-Analysis">[Runtime-Analysis]</a> and
@@ -3965,14 +3965,14 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Interface-Segregation-Principle">Interface Segregation Principle</a></strong></p>
+<p><strong><a href="#Interface-Segregation-Principle"><span class="pattern">Interface Segregation Principle</span></a></strong></p>
 <div class="paragraph">
 <p>Reduce coupling between clients and service provider.
 Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Introduce-Boy-Scout-Rule">Introduce Boy Scout Rule</a></strong></p>
+<p><strong><a href="#Introduce-Boy-Scout-Rule"><span class="pattern">Introduce Boy Scout Rule</span></a></strong></p>
 <div class="paragraph">
 <p>Establish a policy to perform certain structural
 implrovements each time an artifact (sourcecode, configuration, documents etc.)
@@ -4137,9 +4137,9 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Pre-Interview-Questionnaire">Pre Interview Questionnaire</a></strong></p>
+<p><strong><a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a></strong></p>
 <div class="paragraph">
-<p>Prior to interviewing stakeholders, present them with a written questionnaire, so they can reflect in advance. A specialisation of <a href="#Questionnaire">Questionnaire</a>.
+<p>Prior to interviewing stakeholders, present them with a written questionnaire, so they can reflect in advance. A specialisation of <a href="#Questionnaire"><span class="pattern">Questionnaire</span></a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
@@ -4156,7 +4156,7 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Qualitative-Analysis">Qualitative Analysis</a></strong></p>
+<p><strong><a href="#Qualitative-Analysis"><span class="pattern">Qualitative Analysis</span></a></strong></p>
 <div class="paragraph">
 <p>See <a href="#Quality-Requirements">[Quality-Requirements]</a>.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -4191,7 +4191,7 @@ Category: <a href="#Improve">Improve</a></p>
 <dl>
 <dt class="hdlist1">Quantitative Analysis</dt>
 <dd>
-<p>Measure artifacts or processes within the system, e.g. source code. For example, see <a href="#Static-Code-Analysis">Static Code Analysis</a>.
+<p>Measure artifacts or processes within the system, e.g. source code. For example, see <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
@@ -4258,7 +4258,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Root-Cause-Analysis">Root Cause Analysis</a></strong></p>
+<p><strong><a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a></strong></p>
 <div class="paragraph">
 <p><em>Find the evil at the bottom</em>: Explicitely differentiate between symptom and cause: Identify root causes of symptoms, problems or issues.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -4318,14 +4318,14 @@ Category: <a href="#Improve">Improve</a></p>
 <dl>
 <dt class="hdlist1">Separate Cause From Effect</dt>
 <dd>
-<p>See <a href="#Root-Cause-Analysis">Root Cause Analysis</a>.
+<p>See <a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
 </div>
 </li>
 <li>
-<p><strong><a href="#Software-Archeology">Software Archeology</a></strong></p>
+<p><strong><a href="#Software-Archeology"><span class="pattern">Software Archeology</span></a></strong></p>
 <div class="paragraph">
 <p>Understand software by analysing its source code, usually in absence of other documentation or knowledge sources.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -4367,7 +4367,7 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Static-Code-Analysis">Static Code Analysis</a></strong></p>
+<p><strong><a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a></strong></p>
 <div class="paragraph">
 <p>Analyse source code to identify building blocks and their dependencies, determine complexity, coupling, cohesion and other structural properties.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -4379,7 +4379,7 @@ Category: <a href="#Analyze">Analyze</a></p>
 <dl>
 <dt class="hdlist1">Structural (Code) Analysis</dt>
 <dd>
-<p>Analyze the static structure (aka building block structure) of the code, e.g. package or module dependencies. Part of the more general <a href="#Static-Code-Analysis">Static Code Analysis</a>.
+<p>Analyze the static structure (aka building block structure) of the code, e.g. package or module dependencies. Part of the more general <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
@@ -4405,7 +4405,7 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Take-What-They-Mean">Take What They Mean, Not What They Say</a></strong></p>
+<p><strong><a href="#Take-What-They-Mean"><span class="pattern">Take What They Mean, Not What They Say</span></a></strong></p>
 <div class="paragraph">
 <p>Natural language has the risk, that semantics on the senders' side differs from semantics of the receiver: People simply misunderstand each other because <em>meaning</em> of words differ between people. Pattern provided by Phillip Ghadir (who is too humble to claim this discovery)
 Category: <a href="#Analyze">Analyze</a></p>
@@ -4448,7 +4448,7 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Use-Invariants-To-Kill-Zombies">Use Invariants To Kill Zombies</a></strong></p>
+<p><strong><a href="#Use-Invariants-To-Kill-Zombies"><span class="pattern">Use Invariants To Kill Zombies</span></a></strong></p>
 <div class="paragraph">
 <p>Use Invariants to make sure that you can
 kill Zombies safely. If code seems to be &#8220;dead&#8221;&#8201;&#8212;&#8201;meaning that it
@@ -4459,7 +4459,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#View-Based-Understanding">View Based Understanding</a></strong></p>
+<p><strong><a href="#View-Based-Understanding"><span class="pattern">View Based Understanding</span></a></strong></p>
 <div class="paragraph">
 <p>Create architectural views (mainly building block view) to understand and communicate code structure.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -4923,7 +4923,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-06-07)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-06-13)</p>
 </li>
 </ul>
 </div>
@@ -4980,7 +4980,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-06-07 11:00:14 UTC
+Last updated 2014-06-13 11:37:08 UTC
 </div>
 </div>
 </body>
