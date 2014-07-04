@@ -736,7 +736,8 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#Fail-Fast">5.5. <span class="pattern">Fail Fast</span></a></li>
 <li><a href="#Fast-Feedback">5.6. <span class="pattern">Fast Feedback</span></a></li>
 <li><a href="#improvement-backlog">5.7. <span class="pattern">Improvement Backlog</span></a></li>
-<li><a href="#Traceability">5.8. <span class="pattern">Traceability</span></a></li>
+<li><a href="#Slide-Or-Write">5.8. <span class="pattern">Slide or Write</span></a></li>
+<li><a href="#Traceability">5.9. <span class="pattern">Traceability</span></a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">6. Pattern index</a></li>
@@ -802,7 +803,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3f, last update 2014-06-18</p>
+Version 0.3f, last update 2014-07-04</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -3538,25 +3539,95 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="Traceability"><a class="anchor" href="#Traceability"></a>5.8. <span class="pattern">Traceability</span></h3>
+<h3 id="Slide-Or-Write"><a class="anchor" href="#Slide-Or-Write"></a>5.8. <span class="pattern">Slide or Write</span></h3>
+<div class="paragraph">
+<p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
+</div>
+<div class="sect3">
+<h4 id="_intent_18"><a class="anchor" href="#_intent_18"></a>5.8.1. Intent</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Consider format and structure of the review report early.</p>
+</li>
+<li>
+<p>Ensure that you share a common vision with your customer about the preparation of results .</p>
+</li>
+<li>
+<p>Remind contractual agreements and formal requirements, especially if someone might take offence by your report.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_18"><a class="anchor" href="#_description_18"></a>5.8.2. Description</h4>
+<div class="paragraph">
+<p>There are two common ways to deliver review results:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>As a formal document (Word, PDF, etc.)</p>
+</li>
+<li>
+<p>As a collection of slides (Powerpoint, Keynote, etc.) and a presentation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In general it is recommended to write the review results down in a well structured document. This form is suitable to contain a lot of details and background information, so that it is easy e.g. to trace back a recommendation to a stakeholder interview. A written document can (and should) contain all information needed to understand the review starting position, targets, approach and findings, without spoken words and additional explanations. If the results shall supplementary be presented to some audiences it is easy to create purposeful slides from this document.</p>
+</div>
+<div class="paragraph">
+<p>A set of Powerpoint slides as only result is adequate if the customer has been closely involved in the review process and is mainly interested in the outcome and if there will definitely be a presentation given to all relevant stakeholders. In this case the creation of slides with the most important bullet points might be quicker than the writing of detailed, well formulated text.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>5.8.3. Experiences</h4>
+<div class="paragraph">
+<p>In a review for a financial broker we agreed initially to deliver a detailed document with the results. When we were later asked to present the outcomes to two different audiences (engineers and management) it was quite easy to create specific slides for both of them from the ~ 40 pages of documentation.</p>
+</div>
+<div class="paragraph">
+<p>In another case we planned to present out review finding in one big meeting and so we wrapped all findings into briefly and concise slides. Later some executives who missed the meeting complained that they  needed some spoken explanations to understand the presentation document. We spent much more time in subsequently writing out the background information as if we had worked on a result document from beginning on.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_applicability_16"><a class="anchor" href="#_applicability_16"></a>5.8.4. Applicability</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_17"><a class="anchor" href="#_related_patterns_17"></a>5.8.5. Related Patterns</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Report-Structure">[Report-Structure]</a></p>
+</li>
+<li>
+<p><a href="#Traceability"><span class="pattern">Traceability</span></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Traceability"><a class="anchor" href="#Traceability"></a>5.9. <span class="pattern">Traceability</span></h3>
 <div class="paragraph">
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_18"><a class="anchor" href="#_intent_18"></a>5.8.1. Intent</h4>
+<h4 id="_intent_19"><a class="anchor" href="#_intent_19"></a>5.9.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
 findings keeps eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_18"><a class="anchor" href="#_description_18"></a>5.8.2. Description</h4>
+<h4 id="_description_19"><a class="anchor" href="#_description_19"></a>5.9.2. Description</h4>
 <div class="paragraph">
 <p>(To be done)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>5.8.3. Experiences</h4>
+<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.9.3. Experiences</h4>
 <div class="paragraph">
 <p>Some anti-experiences that happened when we neglected traceability:</p>
 </div>
@@ -3574,7 +3645,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_16"><a class="anchor" href="#_applicability_16"></a>5.8.4. Applicability</h4>
+<h4 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>5.9.4. Applicability</h4>
 <div class="paragraph">
 <p>Apply traceability whenever you identify problems or issues</p>
 </div>
@@ -3596,7 +3667,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_17"><a class="anchor" href="#_related_patterns_17"></a>5.8.5. Related Patterns</h4>
+<h4 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>5.9.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4996,7 +5067,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-06-18)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-07-04)</p>
 </li>
 </ul>
 </div>
@@ -5053,7 +5124,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-06-18 19:55:57 UTC
+Last updated 2014-07-04 05:48:05 UTC
 </div>
 </div>
 </body>
