@@ -1916,18 +1916,34 @@ PHP and some other languages there are built in mechanisms to (re-) define the
 behavior of system classes or libraries.</p>
 </div>
 <div class="paragraph">
-<p>In theory instrumenting the system therefore is a straightforward process
-* Identify and describe the concern that shall be explored (e.g.
-  obectect-creation, function entries and exits, code execution or somethings
-  else that can be described in the terms of the mechanism used).
-* Write the code that collects the data about the system behavior (e.g. sends it
-  to a syslog, writes it to a file, sends it to a dedicated server, creates an
-  SNMP Trap etc.)
-* Use the (language specific) mechanism to create the instrumented version of
-  the system
-* Replace (part of) the currently operational system with the instrumented version
-* Collect the data
-* Replace the instrumented version with the previously operational version</p>
+<p>In theory instrumenting the system therefore is a straightforward process:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identify and describe the concern that shall be explored (e.g.
+obectect-creation, function entries and exits, code execution or somethings
+else that can be described in the terms of the mechanism used).</p>
+</li>
+<li>
+<p>Write the code that collects the data about the system behavior (e.g. sends it
+to a syslog, writes it to a file, sends it to a dedicated server, creates an
+SNMP Trap etc.)</p>
+</li>
+<li>
+<p>Use the (language specific) mechanism to create the instrumented version of
+the system</p>
+</li>
+<li>
+<p>Replace (part of) the currently operational system with the instrumented version</p>
+</li>
+<li>
+<p>Collect the data</p>
+</li>
+<li>
+<p>Replace the instrumented version with the previously operational version</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>In real life, since the mechanisms of instrumentation vary widely, specific ways
@@ -5363,7 +5379,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-04 22:38:28 UTC
+Last updated 2014-08-04 22:43:17 UTC
 </div>
 </div>
 </body>
