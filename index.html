@@ -722,8 +722,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#Interface-Segregation-Principle">4.4. <span class="pattern">Interface Segregation Principle</span></a></li>
 <li><a href="#Introduce-Boy-Scout-Rule">4.5. <span class="pattern">Introduce Boy Scout Rule</span></a></li>
 <li><a href="#Manage-Complex-Client-Dependencies-With-Facade">4.6. <span class="pattern">Manage Complex Client Dependencies With Facade</span></a></li>
-<li><a href="#_references_12">4.7. References</a></li>
-<li><a href="#Use-Invariants-To-Kill-Zombies">4.8. <span class="pattern">Use Invariants To Kill Zombies</span></a></li>
+<li><a href="#Use-Invariants-To-Kill-Zombies">4.7. <span class="pattern">Use Invariants To Kill Zombies</span></a></li>
 </ul>
 </li>
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a></li>
@@ -803,7 +802,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3f, last update 2014-08-03</p>
+Version 0.3f, last update 2014-08-04</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -3192,15 +3191,15 @@ Things that can be handled by a facade:</p>
 <h4 id="_related_patterns_15"><a class="anchor" href="#_related_patterns_15"></a>4.6.7. Related Patterns</h4>
 
 </div>
-</div>
-<div class="sect2">
-<h3 id="_references_12"><a class="anchor" href="#_references_12"></a>4.7. References</h3>
+<div class="sect3">
+<h4 id="_references_12"><a class="anchor" href="#_references_12"></a>4.6.8. References</h4>
 
 </div>
+</div>
 <div class="sect2">
-<h3 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.8. <span class="pattern">Use Invariants To Kill Zombies</span></h3>
+<h3 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.7. <span class="pattern">Use Invariants To Kill Zombies</span></h3>
 <div class="sect3">
-<h4 id="_intent_16"><a class="anchor" href="#_intent_16"></a>4.8.1. Intent</h4>
+<h4 id="_intent_16"><a class="anchor" href="#_intent_16"></a>4.7.1. Intent</h4>
 <div class="paragraph">
 <p>Provide a safe approach in situations where  it seems to dangerous to delete
 code or whole modules from a huge system because <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> can&#8217;t
@@ -3208,7 +3207,7 @@ recognize whether the code is still in use or not.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_16"><a class="anchor" href="#_description_16"></a>4.8.2. Description</h4>
+<h4 id="_description_16"><a class="anchor" href="#_description_16"></a>4.7.2. Description</h4>
 <div class="paragraph">
 <p>Oftentimes old systems contain lots of code that probably is no longer in use
 but still has to be tended to. Such code puts a burden on every cross-cutting
@@ -3269,13 +3268,13 @@ hurt to keep the logging turned on).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_12"><a class="anchor" href="#_experiences_12"></a>4.8.3. Experiences</h4>
+<h4 id="_experiences_12"><a class="anchor" href="#_experiences_12"></a>4.7.3. Experiences</h4>
 <div class="paragraph">
 <p>In several cases this approach helped to delete up to 50% of the code base.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_risks_2"><a class="anchor" href="#_risks_2"></a>4.8.4. Risks</h4>
+<h4 id="_risks_2"><a class="anchor" href="#_risks_2"></a>4.7.4. Risks</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3292,7 +3291,7 @@ side-effects that are close to a denial-of-service attack.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_15"><a class="anchor" href="#_applicability_15"></a>4.8.5. Applicability</h4>
+<h4 id="_applicability_15"><a class="anchor" href="#_applicability_15"></a>4.7.5. Applicability</h4>
 <div class="paragraph">
 <p>This pattern can be applied whenever the code-base has gotten too big and there
 are parts of the system that are perhaps unused (e.g. dead) but still add to the
@@ -3300,7 +3299,7 @@ weight of the system.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>4.8.6. Consequences</h4>
+<h4 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>4.7.6. Consequences</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3310,11 +3309,11 @@ weight of the system.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_also_known_as_13"><a class="anchor" href="#_also_known_as_13"></a>4.8.7. Also Known As</h4>
+<h4 id="_also_known_as_13"><a class="anchor" href="#_also_known_as_13"></a>4.7.7. Also Known As</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_16"><a class="anchor" href="#_related_patterns_16"></a>4.8.8. Related Patterns</h4>
+<h4 id="_related_patterns_16"><a class="anchor" href="#_related_patterns_16"></a>4.7.8. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3332,7 +3331,7 @@ way to make <a href="#Explicit-Assumption"><span class="pattern">Explicit Assump
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_13"><a class="anchor" href="#_references_13"></a>4.8.9. References</h4>
+<h4 id="_references_13"><a class="anchor" href="#_references_13"></a>4.7.9. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5067,7 +5066,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-03)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-04)</p>
 </li>
 </ul>
 </div>
@@ -5124,7 +5123,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-03 21:45:56 UTC
+Last updated 2014-08-04 21:05:38 UTC
 </div>
 </div>
 </body>
