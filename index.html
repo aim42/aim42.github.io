@@ -729,15 +729,16 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a></li>
 <li>
 <ul class="sectlevel2">
-<li><a href="#collect-problems">5.1. <span class="pattern">Collect Problems</span></a></li>
+<li><a href="#_pattern_and_practices_for_cross_cutting_concerns">5.1. Pattern and Practices for Cross-Cutting Concerns</a></li>
 <li><a href="#collect-opportunities-for-improvement">5.2. <span class="pattern">Collect Opportunities for Improvement</span></a></li>
-<li><a href="#Expect-Denial">5.3. <span class="pattern">Expect Denial</span></a></li>
-<li><a href="#Explicit-Assumption">5.4. <span class="pattern">Explicit Assumption</span></a></li>
-<li><a href="#Fail-Fast">5.5. <span class="pattern">Fail Fast</span></a></li>
-<li><a href="#Fast-Feedback">5.6. <span class="pattern">Fast Feedback</span></a></li>
-<li><a href="#improvement-backlog">5.7. <span class="pattern">Improvement Backlog</span></a></li>
-<li><a href="#Slide-Or-Write">5.8. <span class="pattern">Slide or Write</span></a></li>
-<li><a href="#Traceability">5.9. <span class="pattern">Traceability</span></a></li>
+<li><a href="#collect-problems">5.3. <span class="pattern">Collect Problems</span></a></li>
+<li><a href="#Expect-Denial">5.4. <span class="pattern">Expect Denial</span></a></li>
+<li><a href="#Explicit-Assumption">5.5. <span class="pattern">Explicit Assumption</span></a></li>
+<li><a href="#Fail-Fast">5.6. <span class="pattern">Fail Fast</span></a></li>
+<li><a href="#Fast-Feedback">5.7. <span class="pattern">Fast Feedback</span></a></li>
+<li><a href="#improvement-backlog">5.8. <span class="pattern">Improvement Backlog</span></a></li>
+<li><a href="#Slide-Or-Write">5.9. <span class="pattern">Slide or Write</span></a></li>
+<li><a href="#Traceability">5.10. <span class="pattern">Traceability</span></a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">6. Pattern index</a></li>
@@ -803,7 +804,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div class="paragraph">
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.3f, last update 2014-08-06</p>
+Version 0.3f, last update 2014-08-09</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -3642,16 +3643,40 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="title">Figure 12. From problem to solutions</div>
 </div>
 <div class="sect2">
-<h3 id="collect-problems"><a class="anchor" href="#collect-problems"></a>5.1. <span class="pattern">Collect Problems</span></h3>
+<h3 id="_pattern_and_practices_for_cross_cutting_concerns"><a class="anchor" href="#_pattern_and_practices_for_cross_cutting_concerns"></a>5.1. Pattern and Practices for Cross-Cutting Concerns</h3>
 <div class="paragraph">
-<p>You should constantly watch out for problems, issues and risks.
-Keep a list of those problems. Regularly match those to your <a href="#collect-opportunities-for-improvement">collection of possible remedies</a>.</p>
+<p>(given in alphabetical order)</p>
 </div>
-<div class="paragraph">
-<p>It&#8217;s difficult to decide how much formalism to apply in collecting problems: Sometimes a wiki-page might suffice, for other systems a full-blown issue-tracker can be useful.</p>
-</div>
-<div class="paragraph">
-<p>As always: documentation is only valuable if it can be found and searched - which makes electronic approaches more viable.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#collect-opportunities-for-improvement"><span class="pattern">Collect Opportunities for Improvement</span></a></p>
+</li>
+<li>
+<p><a href="#collect-problems"><span class="pattern">Collect Problems</span></a></p>
+</li>
+<li>
+<p><a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a></p>
+</li>
+<li>
+<p><a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a></p>
+</li>
+<li>
+<p><a href="#Fail-Fast"><span class="pattern">Fail Fast</span></a></p>
+</li>
+<li>
+<p><a href="#Fast-Feedback"><span class="pattern">Fast Feedback</span></a></p>
+</li>
+<li>
+<p><a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a></p>
+</li>
+<li>
+<p><a href="#Slide-Or-Write"><span class="pattern">Slide or Write</span></a></p>
+</li>
+<li>
+<p><a href="#Traceability"><span class="pattern">Traceability</span></a></p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -3667,12 +3692,25 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="Expect-Denial"><a class="anchor" href="#Expect-Denial"></a>5.3. <span class="pattern">Expect Denial</span></h3>
+<h3 id="collect-problems"><a class="anchor" href="#collect-problems"></a>5.3. <span class="pattern">Collect Problems</span></h3>
+<div class="paragraph">
+<p>You should constantly watch out for problems, issues and risks.
+Keep a list of those problems. Regularly match those to your <a href="#collect-opportunities-for-improvement">collection of possible remedies</a>.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s difficult to decide how much formalism to apply in collecting problems: Sometimes a wiki-page might suffice, for other systems a full-blown issue-tracker can be useful.</p>
+</div>
+<div class="paragraph">
+<p>As always: documentation is only valuable if it can be found and searched - which makes electronic approaches more viable.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Expect-Denial"><a class="anchor" href="#Expect-Denial"></a>5.4. <span class="pattern">Expect Denial</span></h3>
 <div class="paragraph">
 <p>Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish, attack or dispute your findings.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_18"><a class="anchor" href="#_intent_18"></a>5.3.1. Intent</h4>
+<h4 id="_intent_18"><a class="anchor" href="#_intent_18"></a>5.4.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3688,7 +3726,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_18"><a class="anchor" href="#_description_18"></a>5.3.2. Description</h4>
+<h4 id="_description_18"><a class="anchor" href="#_description_18"></a>5.4.2. Description</h4>
 <div id="figure-reaction-pyramid" class="imageblock">
 <div class="content">
 <img src="images/expect-denial-reaction-levels.png" alt="Reaction levels">
@@ -3725,20 +3763,20 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>5.3.3. Experiences</h4>
+<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>5.4.3. Experiences</h4>
 <div class="paragraph">
 <p>TBD</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_13"><a class="anchor" href="#_consequences_13"></a>5.3.4. Consequences</h4>
+<h4 id="_consequences_13"><a class="anchor" href="#_consequences_13"></a>5.4.4. Consequences</h4>
 <div class="paragraph">
 <p>Especially when presenting results to (opposing) management stakeholders, you should be able to <strong>verify</strong> all your claims. In critical cases you should keep written protocols and note who-said-what in your <a href="#Stakeholder-Interview">stakeholder interviews</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Explicit-Assumption"><a class="anchor" href="#Explicit-Assumption"></a>5.4. <span class="pattern">Explicit Assumption</span></h3>
+<h3 id="Explicit-Assumption"><a class="anchor" href="#Explicit-Assumption"></a>5.5. <span class="pattern">Explicit Assumption</span></h3>
 <div class="paragraph">
 <p>TODO</p>
 </div>
@@ -3747,7 +3785,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="Fail-Fast"><a class="anchor" href="#Fail-Fast"></a>5.5. <span class="pattern">Fail Fast</span></h3>
+<h3 id="Fail-Fast"><a class="anchor" href="#Fail-Fast"></a>5.6. <span class="pattern">Fail Fast</span></h3>
 <div class="paragraph">
 <p>The later a lack of quality is identified the higher are the costs to fix it. Continuously evaluate the quality of work artifacts and immediately take countermeasures or pull the plug as early as possible. Similar to <a href="#Fast-Feedback"><span class="pattern">Fast Feedback</span></a>.</p>
 </div>
@@ -3772,7 +3810,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="Fast-Feedback"><a class="anchor" href="#Fast-Feedback"></a>5.6. <span class="pattern">Fast Feedback</span></h3>
+<h3 id="Fast-Feedback"><a class="anchor" href="#Fast-Feedback"></a>5.7. <span class="pattern">Fast Feedback</span></h3>
 <div class="paragraph">
 <p>TODO</p>
 </div>
@@ -3781,7 +3819,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="improvement-backlog"><a class="anchor" href="#improvement-backlog"></a>5.7. <span class="pattern">Improvement Backlog</span></h3>
+<h3 id="improvement-backlog"><a class="anchor" href="#improvement-backlog"></a>5.8. <span class="pattern">Improvement Backlog</span></h3>
 <div class="paragraph">
 <p>Keep a public, written backlog of possible improvements, remedies, tactics or strategies.</p>
 </div>
@@ -3806,12 +3844,12 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="Slide-Or-Write"><a class="anchor" href="#Slide-Or-Write"></a>5.8. <span class="pattern">Slide or Write</span></h3>
+<h3 id="Slide-Or-Write"><a class="anchor" href="#Slide-Or-Write"></a>5.9. <span class="pattern">Slide or Write</span></h3>
 <div class="paragraph">
 <p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_19"><a class="anchor" href="#_intent_19"></a>5.8.1. Intent</h4>
+<h4 id="_intent_19"><a class="anchor" href="#_intent_19"></a>5.9.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3827,7 +3865,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_19"><a class="anchor" href="#_description_19"></a>5.8.2. Description</h4>
+<h4 id="_description_19"><a class="anchor" href="#_description_19"></a>5.9.2. Description</h4>
 <div class="paragraph">
 <p>There are two common ways to deliver review results:</p>
 </div>
@@ -3849,7 +3887,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.8.3. Experiences</h4>
+<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.9.3. Experiences</h4>
 <div class="paragraph">
 <p>In a review for a financial broker we agreed initially to deliver a detailed document with the results. When we were later asked to present the outcomes to two different audiences (engineers and management) it was quite easy to create specific slides for both of them from the ~ 40 pages of documentation.</p>
 </div>
@@ -3858,11 +3896,11 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>5.8.4. Applicability</h4>
+<h4 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>5.9.4. Applicability</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>5.8.5. Related Patterns</h4>
+<h4 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>5.9.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3876,25 +3914,25 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect2">
-<h3 id="Traceability"><a class="anchor" href="#Traceability"></a>5.9. <span class="pattern">Traceability</span></h3>
+<h3 id="Traceability"><a class="anchor" href="#Traceability"></a>5.10. <span class="pattern">Traceability</span></h3>
 <div class="paragraph">
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_20"><a class="anchor" href="#_intent_20"></a>5.9.1. Intent</h4>
+<h4 id="_intent_20"><a class="anchor" href="#_intent_20"></a>5.10.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
 findings keeps eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_20"><a class="anchor" href="#_description_20"></a>5.9.2. Description</h4>
+<h4 id="_description_20"><a class="anchor" href="#_description_20"></a>5.10.2. Description</h4>
 <div class="paragraph">
 <p>(To be done)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.9.3. Experiences</h4>
+<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.10.3. Experiences</h4>
 <div class="paragraph">
 <p>Some anti-experiences that happened when we neglected traceability:</p>
 </div>
@@ -3912,7 +3950,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.9.4. Applicability</h4>
+<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.10.4. Applicability</h4>
 <div class="paragraph">
 <p>Apply traceability whenever you identify problems or issues</p>
 </div>
@@ -3934,7 +3972,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>5.9.5. Related Patterns</h4>
+<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>5.10.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5330,7 +5368,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-06)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-09)</p>
 </li>
 </ul>
 </div>
@@ -5387,7 +5425,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-06 21:56:43 UTC
+Last updated 2014-08-09 14:11:04 UTC
 </div>
 </div>
 </body>
