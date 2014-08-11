@@ -2014,7 +2014,7 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <li><a href="#_goals">2.1. Goals</a></li>
 <li><a href="#_how_it_works">2.2. How it works</a></li>
 <li><a href="#_patterns_and_practices_for_analysis">2.3. Patterns and Practices for Analysis</a></li>
-<li><a href="#ATAM">2.4. <span class="pattern">ATAM</span></a></li>
+<li><a href="#ATAM">2.4. <span class="pattern">Atam</span></a></li>
 <li><a href="#Capture-Quality-Requirements">2.5. <span class="pattern">Capture Quality Requirements</span></a></li>
 <li><a href="#Debugging">2.6. <span class="pattern">Debugging</span></a></li>
 <li><a href="#Instrument-System">2.7. <span class="pattern">Instrument System</span></a></li>
@@ -2033,6 +2033,10 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <ul class="sectlevel2">
 <li><a href="#_goals_2">3.1. Goals</a></li>
 <li><a href="#_pattern_and_practices_for_evaluation">3.2. Pattern and Practices for Evaluation</a></li>
+<li><a href="#Estimate-Feature-Value">3.3. <span class="pattern">Estimate Feature Value</span></a></li>
+<li><a href="#Estimate-In-Interval">3.4. <span class="pattern">Estimate in Interval</span></a></li>
+<li><a href="#Estimate-Problem-Cost">3.5. <span class="pattern">Estimate Problem Cost</span></a></li>
+<li><a href="#Estimate-Remedy-Cost">3.6. <span class="pattern">Estimate Remedy Cost</span></a></li>
 </ul>
 </li>
 <li><a href="#Improve">4. Improve</a></li>
@@ -2594,83 +2598,82 @@ Never start solving problems until you have a thorough understanding of current 
 <div class="ulist">
 <ul>
 <li>
-<p>Architecture Analysis, see <a href="#Qualitative-Analysis"><span class="pattern">Qualitative Analysis</span></a> and
-<span class="pattern"><a href="#ATAM"><span class="pattern">ATAM</span></a></span>.</p>
+<p>Architecture Analysis, see <a href="#Qualitative-Analysis"><span class="pattern">Qualitative Analysis</span></a> and <a href="#ATAM"><span class="pattern">Atam</span></a>.</p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Architecture-Documentation">[Architecture-Documentation]</a></span></p>
+<p><a href="#Architecture-Documentation">[Architecture-Documentation]</a></p>
 </li>
 <li>
-<p><a href="#ATAM"><span class="pattern">ATAM</span></a></p>
+<p><a href="#ATAM"><span class="pattern">Atam</span></a></p>
 </li>
 <li>
 <p><a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Context-Analysis">[Context-Analysis]</a></span></p>
+<p><a href="#Context-Analysis">[Context-Analysis]</a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Data-Analysis">[Data-Analysis]</a></span></p>
+<p><a href="#Data-Analysis">[Data-Analysis]</a></p>
 </li>
 <li>
 <p><a href="#Debugging"><span class="pattern">Debugging</span></a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Development-Process-Analysis">[Development-Process-Analysis]</a></span></p>
+<p><a href="#Development-Process-Analysis">[Development-Process-Analysis]</a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Documentation-Analysis">[Documentation-Analysis]</a></span></p>
+<p><a href="#Documentation-Analysis">[Documentation-Analysis]</a></p>
 </li>
 <li>
 <p><a href="#Instrument-System"><span class="pattern">Instrument System</span></a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Issue-Tracker-Analysis">[Issue-Tracker-Analysis]</a></span></p>
+<p><a href="#Issue-Tracker-Analysis">[Issue-Tracker-Analysis]</a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Profiling">[Profiling]</a></span></p>
+<p><a href="#Profiling">[Profiling]</a></p>
 </li>
 <li>
 <p><a href="#Qualitative-Analysis"><span class="pattern">Qualitative Analysis</span></a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Quantitative-Analysis">[Quantitative-Analysis]</a></span></p>
+<p><a href="#Quantitative-Analysis">[Quantitative-Analysis]</a></p>
 </li>
 <li>
 <p><a href="#Questionnaire"><span class="pattern">Questionnaire</span></a>, especially <a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Requirements-Analysis">[Requirements-Analysis]</a></span></p>
+<p><a href="#Requirements-Analysis">[Requirements-Analysis]</a></p>
 </li>
 <li>
 <p><a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a> - finding the root cause of problems</p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a></span></p>
+<p><a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Separate-Cause-From-Effect">[Separate-Cause-From-Effect]</a></span></p>
+<p><a href="#Separate-Cause-From-Effect">[Separate-Cause-From-Effect]</a></p>
 </li>
 <li>
 <p><a href="#Software-Archeology"><span class="pattern">Software Archeology</span></a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a></span></p>
+<p><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a></p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Stakeholder-Interview">[Stakeholder-Interview]</a></span>, see also <span class="pattern"><a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a></span>.</p>
+<p><a href="#Stakeholder-Interview">[Stakeholder-Interview]</a>, see also <span class="pattern"><a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a></span>.</p>
 </li>
 <li>
 <p><a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> (Structural analysis)</p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Structural-Analysis">[Structural-Analysis]</a></span></p>
+<p><a href="#Structural-Analysis">[Structural-Analysis]</a></p>
 </li>
 <li>
 <p><a href="#Take-What-They-Mean"><span class="pattern">Take What They Mean, Not What They Say</span></a> (not what they say, as it may differ).</p>
 </li>
 <li>
-<p><span class="pattern"><a href="#Use-Case-Cluster">[Use-Case-Cluster]</a></span></p>
+<p><a href="#Use-Case-Cluster">[Use-Case-Cluster]</a></p>
 </li>
 <li>
 <p><a href="#View-Based-Understanding"><span class="pattern">View Based Understanding</span></a></p>
@@ -2679,7 +2682,7 @@ Never start solving problems until you have a thorough understanding of current 
 </div>
 </div>
 <div class="sect2">
-<h3 id="ATAM"><a class="anchor" href="#ATAM"></a>2.4. <span class="pattern">ATAM</span></h3>
+<h3 id="ATAM"><a class="anchor" href="#ATAM"></a>2.4. <span class="pattern">Atam</span></h3>
 <div class="paragraph">
 <p>Architecture Tradeoff Analysis Method. Systematic approach to find architectural
 risks, tradeoffs and sensitivity points.</p>
@@ -2713,9 +2716,9 @@ compliance with quality goals.</p>
 <ol class="loweralpha" type="a">
 <li>
 <p><em>Identify the relevant stakeholders</em>:
-The specific goals of the relevant stakeholders define the precise
-goals of the architecture. The stakeholders are chosen by the client or
-customer.</p>
+The specific goals of the relevant stakeholders define the primary
+goals of the architecture. Who belongs to these <em>relevant</em> stakeholders
+has to be determined by a <a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a>.</p>
 </li>
 </ol>
 </div>
@@ -2726,35 +2729,34 @@ customer.</p>
 <ol class="loweralpha" type="a">
 <li>
 <p><em>Present the ATAM method</em>:
-Try to convince the relevant stakeholders of the significance of
-comprehensible and concrete architecture and quality goals.
-The ATAM method applied to the architecture evaluation deals with the
-identification of risks, non-risks, tradeoffs and sensitivity points.
-The calculation of quantitative attributes is not subject of this method.</p>
+Convince the relevant stakeholders of the significance of
+comprehensible and specific architecture and quality goals.
+ATAM helps identify risks, non-risks, tradeoffs and sensitivity points.
+Calculation of quantitative attributes is not subject of this method.</p>
 </li>
 <li>
 <p><em>Present the business objectives and architecture goals</em>:
-Presentation of the business context. Reasons for the development of
-the system. Classification of the system into business processes.
-Clarification of specific requirements that the architecture should meet
+Present the business context to the relevant stakeholders, especially the
+<em>business motivation and reasons</em> for the development of the system.
+Clarify specific requirements that the architecture should meet,
 for instance flexibility, modifiability and performance.</p>
 </li>
 <li>
 <p><em>Present the architecture of the system</em>:
-The architect presents the complete context of the system. This includes:</p>
+The architect presents the <em>architecture</em> of the system. This includes:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>All other systems with which the system interacts,</p>
+<p>All other systems with interactions to the <a href="#SuD">[SuD]</a>,</p>
 </li>
 <li>
-<p>Building blocks of the main abstraction level,</p>
+<p>building blocks of the top abstraction level,</p>
 </li>
 <li>
-<p>Runtime views of some important use cases,</p>
+<p>runtime views of some important use cases,</p>
 </li>
 <li>
-<p>Change scenarios.</p>
+<p>change or modification scenarios.</p>
 </li>
 </ul>
 </div>
@@ -2864,13 +2866,13 @@ Creation of a report with:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>provides precise quality requirements,</p>
+<p>provides operational, specific quality requirements,</p>
 </li>
 <li>
-<p>discloses the design decisions of the architecture,</p>
+<p>discloses important architectural decisions of the <a href="#SuD">[SuD]</a>,</p>
 </li>
 <li>
-<p>promotes the communication between the project members.</p>
+<p>promotes the communication between relevant stakeholders.</p>
 </li>
 </ul>
 </div>
@@ -2886,6 +2888,10 @@ tactics against the found risks.
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>ATAM has been successfully applied by many organizations to a variety of systems. It is widely regarded as the most important
+systematic approach to qualitative system/architecture analysis<span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -3029,7 +3035,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ATAM"><span class="pattern">ATAM</span></a></p>
+<p><a href="#ATAM"><span class="pattern">Atam</span></a></p>
 </li>
 <li>
 <p><a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a></p>
@@ -3411,7 +3417,7 @@ real fast.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ATAM"><span class="pattern">ATAM</span></a></p>
+<p><a href="#ATAM"><span class="pattern">Atam</span></a></p>
 </li>
 </ul>
 </div>
@@ -3425,7 +3431,7 @@ real fast.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ATAM"><span class="pattern">ATAM</span></a>. Published by the Software Engineering Institute in numerous whitepapers and books, especially <a href="#Clements-ATAM">[Clements-ATAM]</a>.</p>
+<p><a href="#ATAM"><span class="pattern">Atam</span></a>. Published by the Software Engineering Institute in numerous whitepapers and books, especially <a href="#Clements-ATAM">[Clements-ATAM]</a>.</p>
 </li>
 </ul>
 </div>
@@ -4163,8 +4169,9 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="Estimate-Feature-Value"><a class="anchor" href="#Estimate-Feature-Value"></a>3.2.1. <span class="pattern">Estimate Feature Value</span></h4>
+</div>
+<div class="sect2">
+<h3 id="Estimate-Feature-Value"><a class="anchor" href="#Estimate-Feature-Value"></a>3.3. <span class="pattern">Estimate Feature Value</span></h3>
 <div class="paragraph">
 <p>Estimate the (monetary) value of a given feature, so you can compare features of the system with each other.</p>
 </div>
@@ -4182,8 +4189,8 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="Estimate-In-Interval"><a class="anchor" href="#Estimate-In-Interval"></a>3.2.2. <span class="pattern">Estimate in Interval</span></h4>
+<div class="sect2">
+<h3 id="Estimate-In-Interval"><a class="anchor" href="#Estimate-In-Interval"></a>3.4. <span class="pattern">Estimate in Interval</span></h3>
 <div class="paragraph">
 <p>Estimation is a guess, not a <strong>measurement</strong>. Estimates are uncertain, otherwise they would be observations (or measurements!).</p>
 </div>
@@ -4209,8 +4216,8 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <p>Estimates often rely on assumptions - which you should <a href="#Explicit-Assumption">name and describe explicitly</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="Estimate-Problem-Cost"><a class="anchor" href="#Estimate-Problem-Cost"></a>3.2.3. <span class="pattern">Estimate Problem Cost</span></h4>
+<div class="sect2">
+<h3 id="Estimate-Problem-Cost"><a class="anchor" href="#Estimate-Problem-Cost"></a>3.5. <span class="pattern">Estimate Problem Cost</span></h3>
 <div class="paragraph">
 <p>Estimate how much a given problem costs (in money or effort) in a period of time.</p>
 </div>
@@ -4231,11 +4238,10 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="Estimate-Remedy-Cost"><a class="anchor" href="#Estimate-Remedy-Cost"></a>3.2.4. <span class="pattern">Estimate Remedy Cost</span></h4>
+<div class="sect2">
+<h3 id="Estimate-Remedy-Cost"><a class="anchor" href="#Estimate-Remedy-Cost"></a>3.6. <span class="pattern">Estimate Remedy Cost</span></h3>
 <div class="paragraph">
 <p>See: "Software Estimation. The Black Art Demystified (Steve McConnell)"</p>
-</div>
 </div>
 </div>
 </div>
@@ -5337,7 +5343,7 @@ short description and links to the explanation.</p>
 </div>
 </li>
 <li>
-<p><strong><a href="#ATAM"><span class="pattern">ATAM</span></a></strong></p>
+<p><strong><a href="#ATAM"><span class="pattern">Atam</span></a></strong></p>
 <div class="paragraph">
 <p>Systematic approach to find architectural risks, tradeoffs (compromises) and sensitivity points.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -5407,7 +5413,7 @@ Category: <a href="#Improve">Improve</a></p>
 <li>
 <p><strong><a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a></strong></p>
 <div class="paragraph">
-<p>Part of <a href="#ATAM"><span class="pattern">ATAM</span></a>, Capture and document specific quality requirements. Specialisation of <a href="#Requirements-Analysis">[Requirements-Analysis]</a>.
+<p>Part of <a href="#ATAM"><span class="pattern">Atam</span></a>, Capture and document specific quality requirements. Specialisation of <a href="#Requirements-Analysis">[Requirements-Analysis]</a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
@@ -5648,7 +5654,7 @@ Category: <a href="#Improve">Improve</a></p>
 <dl>
 <dt class="hdlist1"><span class="pattern">Hierarchical Quality Model</span></dt>
 <dd>
-<p>Decompose the overall goal of "high quality" into more detailed and precise requirements, finally resulting in a tree-like structure. See <a href="#ATAM"><span class="pattern">ATAM</span></a> and <a href="#Quality-Requirements">[Quality-Requirements]</a>.
+<p>Decompose the overall goal of "high quality" into more detailed and precise requirements, finally resulting in a tree-like structure. See <a href="#ATAM"><span class="pattern">Atam</span></a> and <a href="#Quality-Requirements">[Quality-Requirements]</a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
@@ -6731,9 +6737,15 @@ evaluate.adoc or improve.adoc</p>
 </div>
 </div>
 </div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. The original authors of ATAM call it an <em>evaluation</em> method, whereas aim42 classifies ATAM to belong to the category of analysis practices.
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-11 16:59:40 UTC
+Last updated 2014-08-11 19:55:09 UTC
 </div>
 </div>
 </body>
