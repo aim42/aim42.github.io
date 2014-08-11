@@ -3050,7 +3050,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <div class="ulist">
 <ul>
 <li>
-<p>Real-world examples of software quality requirements. Currently available only in German language on <a href="https://bitbucket.org/arc42/quality-requirements">https://bitbucket.org/arc42/quality-requirements</a> (TODO: likely to move to github)</p>
+<p>Real-world examples of software quality requirements. Currently available only in German language on <a href="https://bitbucket.org/arc42/quality-requirements">https://bitbucket.org/arc42/quality-requirements</a> (this document is likely to be moved to github under the arc42 organization).</p>
 </li>
 <li>
 <p><a href="#Clements-ATAM">[Clements-ATAM]</a>, contains a brief description of scenario-based quality description and details how to setup such workshops.</p>
@@ -4127,7 +4127,7 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Determine-Feature-Value">[Determine-Feature-Value]</a></p>
+<p><a href="#Estimate-Feature-Value"><span class="pattern">Estimate Feature Value</span></a></p>
 </li>
 <li>
 <p><a href="#Estimate-In-Interval"><span class="pattern">Estimate in Interval</span></a></p>
@@ -5077,7 +5077,15 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 <div class="sect2">
 <h3 id="Explicit-Assumption"><a class="anchor" href="#Explicit-Assumption"></a>5.5. <span class="pattern">Explicit Assumption</span></h3>
 <div class="paragraph">
-<p>TODO</p>
+<p>Compensate missing facts (especially requirements, goals, estimates, opinions) by explicit (usually written) assumptions about those facts.</p>
+</div>
+<div class="paragraph">
+<p>Making assumptions <em>explicit</em> is fundamentally important to <a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a>, so that development teams don&#8217;t need to rely on implicit
+assumptions or requirements.</p>
+</div>
+<div class="paragraph">
+<p>When evaluating problems, risks or remedies, we often need to estimate or assume stuff like duration, cost, workload or others. These estimates or assumptions need to be made <em>explicit</em>, so that others can reproduce or understand our evaluation. In case of numerical estimation, it helps to apply
+<a href="#Estimate-In-Interval"><span class="pattern">Estimate in Interval</span></a></p>
 </div>
 <div class="paragraph">
 <p>Also known as <em>educated guess</em>.</p>
@@ -5469,18 +5477,6 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><a id="Determine-Feature-Value"></a></p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Determine Feature Value</dt>
-<dd>
-<p>TODO: Add description here.
-Category: <a href="#Evaluate">Evaluate</a></p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
 <p><a id="Development-Process-Analysis"></a></p>
 <div class="dlist">
 <dl>
@@ -5549,15 +5545,10 @@ Category: <a href="#Evaluate">Evaluate</a></p>
 Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish or attack your findings. Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </li>
 <li>
-<p><a id="Explicit-Assumption"></a></p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Explicit Assumption</dt>
-<dd>
+<p><strong><a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a></strong></p>
+<div class="paragraph">
 <p>Compensate missing facts (especially requirements, goals, estimates, opinions) by explicit (usually written) assumptions about those facts.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
-</dd>
-</dl>
 </div>
 </li>
 <li>
@@ -5570,13 +5561,6 @@ Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
-</div>
-</li>
-<li>
-<p><strong><a href="#Manage-Complex-Client-Dependencies-With-Facade"><span class="pattern">Manage Complex Client Dependencies With Facade</span></a></strong></p>
-<div class="paragraph">
-<p>Simplify the interaction of a client with a set of service components.
-Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
@@ -5780,6 +5764,13 @@ Category: <a href="#Improve">Improve</a></p>
 Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
+</div>
+</li>
+<li>
+<p><strong><a href="#Manage-Complex-Client-Dependencies-With-Facade"><span class="pattern">Manage Complex Client Dependencies With Facade</span></a></strong></p>
+<div class="paragraph">
+<p>Simplify the interaction of a client with a set of service components.
+Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
@@ -6724,7 +6715,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-11 10:19:10 UTC
+Last updated 2014-08-11 12:39:50 UTC
 </div>
 </div>
 </body>
