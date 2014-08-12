@@ -2051,6 +2051,7 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <li><a href="#Introduce-Boy-Scout-Rule">4.5. <span class="pattern">Introduce Boy Scout Rule</span></a></li>
 <li><a href="#Manage-Complex-Client-Dependencies-With-Facade">4.6. <span class="pattern">Manage Complex Client Dependencies With Facade</span></a></li>
 <li><a href="#Use-Invariants-To-Kill-Zombies">4.7. <span class="pattern">Use Invariants To Kill Zombies</span></a></li>
+<li><a href="#Improve-Logging">4.8. <span class="pattern">Improve Logging</span></a></li>
 </ul>
 </li>
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a></li>
@@ -4610,6 +4611,12 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <li>
 <p><a href="#Use-Invariants-To-Kill-Zombies"><span class="pattern">Use Invariants To Kill Zombies</span></a></p>
 </li>
+<li>
+<p><a href="#Improve-Logging"><span class="pattern">Improve Logging</span></a></p>
+</li>
+<li>
+<p><a href="#Measure-Everything">[Measure-Everything]</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -5165,6 +5172,171 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.8. <span class="pattern">Improve Logging</span></h3>
+<div class="sect3">
+<h4 id="_intent_20"><a class="anchor" href="#_intent_20"></a>4.8.1. Intent</h4>
+<div class="paragraph">
+<p>Employ sophisticated logging mechanisms such as modern logging frameworks,
+distributed log collection and visualization tools in order to gain more
+detailed information about the system during runtime with a minimal or
+predictable performance impact.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_20"><a class="anchor" href="#_description_20"></a>4.8.2. Description</h4>
+<div class="paragraph">
+<p>While some time ago it was quite common to output log statements to standard out,
+people usually use logging frameworks nowadays that give more control about what should
+be logged and where the log entries should go.</p>
+</div>
+<div class="paragraph">
+<p>However, it turns out that such logging frameworks have some feature gems
+that are not widely known or used. To name a few:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Diagnostics Contexts (also known as Mapped Diagnistics Context (MDC) or Nested Diagnostics Context (NDC)) help to store additional context information for all succeeding log statements. Usage examples for such contexts are the login name of the current user, correlation IDs in order to enable cross-application log tracing or transaction IDs to have the possibility to filter all log entries that belong together.</p>
+</li>
+<li>
+<p>Additional log levels or markers help to make it easier to filter the log stream. It is a good advice to think about the marker and log design at the beginning of the project and try to agree on a common way to phrase log statements.</p>
+</li>
+<li>
+<p>Asynchronous appenders (i.e. log emitter) allow high-throughput logging, which lower impact on the application&#8217;s performance.</p>
+</li>
+<li>
+<p>Structured log formats produce a machine-readable output. Usually, log files are written using a more or less standardized text output. Log files in XML or JSON can be parsed and digested easily and allow for better filtering since more information, like diagnostics contexts, is always available in these formats.</p>
+</li>
+<li>
+<p>Filters enable context-based logging and can dispatch log entries to different log appenders. For instance it is possible to log warnings only but switch to debug logging for a specific user.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In some environments it turns out to be problematic to rely on a single logging API. This could be the case if the application runs within a container or container-like framework that already employs a configured logging framework. In order to be independent of conrete logging frameworks, logging facades like <a href="http://slf4j.org">SLF4J</a> should be preferred over using the framework&#8217;s API directly.</p>
+</div>
+<div class="paragraph">
+<p>Despite the focus on the software development, logging is also an operations topic. Often it turns out to be difficult to get recent log files from the operations team. Another pain point is that useful log information is scattered across multiple log files, stored at different locations on different systems. Log aggregation tool such as Splunk, <a href="http://www.logstash.net">Logstash</a>, Apache Flume or fluentd can consume and unify log data from different sources (e.g. files, syslog, network), can trigger alerts or index the log stream in order to make them searchable. Now, with tools like Kibana, log data of a system of systems can be easily analyzed and vizualiated. Correlation IDs contained in the logs can be used to trace certain business-related requests across multiple distributed systems easily.</p>
+</div>
+<div class="paragraph">
+<p>Using such features makes the problem analysis easier and more data is available in a standardized fashion.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>4.8.3. Experiences</h4>
+<div class="paragraph">
+<p>Most projects write log files in a more or less sophisticated fashion, in many
+cases log messages are phrased in a rather unstructured way. It turns out that
+a well-designed logging concept helps to make the log stream easier to understand.
+This concept should provide some guidelines regarding which log level should be
+used in which situation, how the wording of log messages could be unified and
+which additional log levels or markers shall be used for what purpose.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In a customer project we used an object-relational-mapping (ORM) tool for a
+database independent access layer. The data access was inherently transactional
+and created a lot of database traffic so that deadlock situations on the database
+were expected and properly handled with a delayed retry mechanism.</p>
+</div>
+<div class="paragraph">
+<p>While this approach worked quite well, we got frequently complaints from the
+operations team, which reported a number of <code>ERROR</code> log messages along with longish
+stacktraces that set their alarm bells off. These log messages were written by
+the ORM tool whenever a DB deadlock was experienced. Since the application could
+perfectly deal with this situation this was not an error anymore and should have
+been logged as <code>WARN</code> or <code>INFO</code> at best. The problem was that a third-party
+framework used the wrong log level and was thus causing a lot of confusion.
+Bear this in mind when working on a framework-like codebase and thinking about
+log levels.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_risks_3"><a class="anchor" href="#_risks_3"></a>4.8.4. Risks</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>An excessive amount of log statements is likely to have negative impact on the
+application&#8217;s performance. The impact is however manageable by using</p>
+<div class="ulist">
+<ul>
+<li>
+<p>guarded log statements that will only be constructed if a certain log level
+is enabled,</p>
+</li>
+<li>
+<p>asynchronous appenders (like the disruptor-based approach used by <a href="http://logging.apache.org/log4j/2.x/">Log4J 2</a>),</p>
+</li>
+<li>
+<p>context-sensitive logging (e.g. to enable debug logs only for a certain scenario or user).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Collecting and indexing a huge amount of log data requires additional storage,
+approx. by factor 10. Think of retention policies in order to make the data
+stream manageable.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>4.8.5. Applicability</h4>
+<div class="paragraph">
+<p>This pattern should always be considered.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_consequences_13"><a class="anchor" href="#_consequences_13"></a>4.8.6. Consequences</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Improved understanding of the runtime behavior of an application or a
+system of systems.</p>
+</li>
+<li>
+<p>Log messages are well-structured and more meaningful as they carry more
+context information (in case MDCs are used).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_also_known_as_14"><a class="anchor" href="#_also_known_as_14"></a>4.8.7. Also Known As</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>4.8.8. Related Patterns</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>This pattern is an important enabler for a successful <a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a>.</p>
+</li>
+<li>
+<p><a href="#Instrument-System"><span class="pattern">Instrument System</span></a> is very similar to this pattern, however it is limited to
+a temporary instrumentation that is needed during the Analysis phase to identify or scope a certain problem
+that cannot be isolated without modifying the code.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_16"><a class="anchor" href="#_references_16"></a>4.8.9. References</h4>
+
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -5257,7 +5429,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 <p>Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish, attack or dispute your findings.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_20"><a class="anchor" href="#_intent_20"></a>5.4.1. Intent</h4>
+<h4 id="_intent_21"><a class="anchor" href="#_intent_21"></a>5.4.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5273,7 +5445,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_20"><a class="anchor" href="#_description_20"></a>5.4.2. Description</h4>
+<h4 id="_description_21"><a class="anchor" href="#_description_21"></a>5.4.2. Description</h4>
 <div id="figure-reaction-pyramid" class="imageblock">
 <div class="content">
 <img src="images/expect-denial-reaction-levels.png" alt="Reaction levels">
@@ -5310,13 +5482,13 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>5.4.3. Experiences</h4>
+<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.4.3. Experiences</h4>
 <div class="paragraph">
 <p>TBD</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_13"><a class="anchor" href="#_consequences_13"></a>5.4.4. Consequences</h4>
+<h4 id="_consequences_14"><a class="anchor" href="#_consequences_14"></a>5.4.4. Consequences</h4>
 <div class="paragraph">
 <p>Especially when presenting results to (opposing) management stakeholders, you should be able to <strong>verify</strong> all your claims. In critical cases you should keep written protocols and note who-said-what in your <a href="#Stakeholder-Interview">stakeholder interviews</a>.</p>
 </div>
@@ -5404,7 +5576,7 @@ assumptions or requirements.</p>
 <p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_21"><a class="anchor" href="#_intent_21"></a>5.9.1. Intent</h4>
+<h4 id="_intent_22"><a class="anchor" href="#_intent_22"></a>5.9.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5420,7 +5592,7 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_21"><a class="anchor" href="#_description_21"></a>5.9.2. Description</h4>
+<h4 id="_description_22"><a class="anchor" href="#_description_22"></a>5.9.2. Description</h4>
 <div class="paragraph">
 <p>There are two common ways to deliver review results:</p>
 </div>
@@ -5442,7 +5614,7 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.9.3. Experiences</h4>
+<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.9.3. Experiences</h4>
 <div class="paragraph">
 <p>In a review for a financial broker we agreed initially to deliver a detailed document with the results. When we were later asked to present the outcomes to two different audiences (engineers and management) it was quite easy to create specific slides for both of them from the ~ 40 pages of documentation.</p>
 </div>
@@ -5451,11 +5623,11 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>5.9.4. Applicability</h4>
+<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.9.4. Applicability</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.9.5. Related Patterns</h4>
+<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.9.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5474,20 +5646,20 @@ assumptions or requirements.</p>
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_22"><a class="anchor" href="#_intent_22"></a>5.10.1. Intent</h4>
+<h4 id="_intent_23"><a class="anchor" href="#_intent_23"></a>5.10.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
 findings keeps eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_22"><a class="anchor" href="#_description_22"></a>5.10.2. Description</h4>
+<h4 id="_description_23"><a class="anchor" href="#_description_23"></a>5.10.2. Description</h4>
 <div class="paragraph">
 <p>(To be done)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.10.3. Experiences</h4>
+<h4 id="_experiences_17"><a class="anchor" href="#_experiences_17"></a>5.10.3. Experiences</h4>
 <div class="paragraph">
 <p>Some anti-experiences that happened when we neglected traceability:</p>
 </div>
@@ -5505,7 +5677,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.10.4. Applicability</h4>
+<h4 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>5.10.4. Applicability</h4>
 <div class="paragraph">
 <p>Apply traceability whenever you identify problems or issues</p>
 </div>
@@ -5527,7 +5699,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.10.5. Related Patterns</h4>
+<h4 id="_related_patterns_22"><a class="anchor" href="#_related_patterns_22"></a>5.10.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5910,6 +6082,13 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
+<p><strong><a href="#Improve-Logging"><span class="pattern">Improve Logging</span></a></strong></p>
+<div class="paragraph">
+<p>Making runtime analysis easier with meaningful logs. This includes decentralized log analysis as well as well-structured log levels, markers and log message phrasing.
+Category: <a href="#Improve">Improve</a></p>
+</div>
+</li>
+<li>
 <p><strong><a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a></strong></p>
 <div class="paragraph">
 <p>Keep a backlog of possible improvements, remedies, tactics or strategies.
@@ -6007,6 +6186,18 @@ Category: <a href="#Improve">Improve</a></p>
 <div class="paragraph">
 <p>Simplify the interaction of a client with a set of service components.
 Category: <a href="#Improve">Improve</a></p>
+</div>
+</li>
+<li>
+<p><a id="Measure-Everything"></a></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Measure Everything</dt>
+<dd>
+<p>Gather runtime metrics and make them visual on dashboards in order to make your system behavior more predictable and assumed coincidences explainable. Examples of such metrics are thread pool saturation, number of failed logins, requests per second but also number of successful orders today.
+Category: <a href="#Improve">Improve</a></p>
+</dd>
+</dl>
 </div>
 </li>
 <li>
@@ -6961,7 +7152,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-12 09:59:46 UTC
+Last updated 2014-08-12 13:33:32 UTC
 </div>
 </div>
 </body>
