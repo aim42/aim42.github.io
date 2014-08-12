@@ -2558,27 +2558,50 @@ To effectively find issues, you need an appropriate amount of <em>understanding<
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Begin with <a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a>, then conduct <a href="#Stakeholder-Interview"><span class="pattern">Stakeholder Interview</span></a></p>
+<p>Begin with <a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a>, then conduct <a href="#Stakeholder-Interview"><span class="pattern">Stakeholder Interview</span></a> with important stakeholders.</p>
 </li>
 <li>
-<p>Start <a href="#Capture-Quality-Requirements">capturing current quality requirements</a> from the <em>authoritative</em> stakeholders of the systems.</p>
+<p>Get an initial understanding of the <a href="#SuD">[SuD]</a> by</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><a href="#Context-Analysis">[Context-Analysis]</a></p>
+</li>
+<li>
+<p><a href="#Documentation-Analysis">[Documentation-Analysis]</a>, read especially the architecture documentation, focus on <a href="#View-Based-Understanding"><span class="pattern">View Based Understanding</span></a>.</p>
+</li>
+<li>
+<p><a href="#Development-Process-Analysis">[Development-Process-Analysis]</a></p>
+</li>
+<li>
+<p>Perform <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> to learn about code structure <em>in-the-large</em>. This also helps to identify risky code.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a> from the <em>authoritative</em> stakeholders of the systems.</p>
 </li>
 <li>
 <p>Conduct a <a href="#Qualitative-Analysis"><span class="pattern">Qualitative Analysis</span></a> of the system, its architecture and associated organization,
 based upon the specific quality requirements</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Inspect and analyze all involved organizational processes -
+(development, project-management, operations, requirements-analysis)</p>
+</li>
+</ol>
+</div>
 </li>
 <li>
-<p>Perform <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a></p>
-</li>
-<li>
-<p>Perform <a href="#Runtime-Analysis">[Runtime-Analysis]</a>, e.g. performance and load monitoring, process and thread analysis</p>
+<p>Perform <a href="#Runtime-Analysis">[Runtime-Analysis]</a> or <a href="#Quantitative-Analysis">[Quantitative-Analysis]</a>, e.g. performance and load monitoring, process and thread analysis</p>
 </li>
 <li>
 <p>Inspect the data created, modified and queried by the system, for structure, size, volume or specialities</p>
 </li>
 <li>
-<p>Inspect and analyze all involved organizational processes
-(development, project-management, operations, requirements-analysis)</p>
+<p>Together with appropriate stakeholders, do <a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a> of major issues found - as symptoms and causes may differ.</p>
 </li>
 </ol>
 </div>
@@ -5765,7 +5788,7 @@ Category: <a href="#Improve">Improve</a></p>
 <dl>
 <dt class="hdlist1"><span class="pattern">Architecture Documentation</span></dt>
 <dd>
-<p>See <a href="#System-Documentation">[System-Documentation]</a> and <a href="#View-Based-Understanding"><span class="pattern">View Based Understanding</span></a>.
+<p>Document relevant structures, concepts, decisions, interfaces etc. of the system to increase. See <a href="#arc42">[arc42]</a> and <a href="#View-Based-Understanding"><span class="pattern">View Based Understanding</span></a>.
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
@@ -6545,18 +6568,6 @@ Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </div>
 </li>
 <li>
-<p><a id="System-Documentation"></a></p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><span class="pattern">System Documentation</span></dt>
-<dd>
-<p>Document relevant structures, concepts, decisions, interfaces etc. of the system to increase. See <a href="#arc42">[arc42]</a>.
-Category: <a href="#Analyze">Analyze</a></p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
 <p><strong><a href="#Take-What-They-Mean"><span class="pattern">Take What They Mean, Not What They Say</span></a></strong></p>
 <div class="paragraph">
 <p>Natural language has the risk, that semantics on the senders' side differs from semantics of the receiver: People simply misunderstand each other because <em>meaning</em> of words differ between people. Pattern provided by Phillip Ghadir (who is too humble to claim this discovery)
@@ -7152,7 +7163,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-12 13:33:32 UTC
+Last updated 2014-08-12 19:18:44 UTC
 </div>
 </div>
 </body>
