@@ -2023,10 +2023,11 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <li><a href="#Questionnaire">2.10. <span class="pattern">Questionnaire</span></a></li>
 <li><a href="#Root-Cause-Analysis">2.11. <span class="pattern">Root Cause Analysis</span></a></li>
 <li><a href="#Software-Archeology">2.12. <span class="pattern">Software Archeology</span></a></li>
-<li><a href="#Stakeholder-Interview">2.13. <span class="pattern">Stakeholder Interview</span></a></li>
-<li><a href="#Static-Code-Analysis">2.14. <span class="pattern">Static Code Analysis</span></a></li>
-<li><a href="#Take-What-They-Mean">2.15. <span class="pattern">Take What They Mean, Not What They Say</span></a></li>
-<li><a href="#View-Based-Understanding">2.16. <span class="pattern">View Based Understanding</span></a></li>
+<li><a href="#Stakeholder-Analysis">2.13. <span class="pattern">Stakeholder Analysis</span></a></li>
+<li><a href="#Stakeholder-Interview">2.14. <span class="pattern">Stakeholder Interview</span></a></li>
+<li><a href="#Static-Code-Analysis">2.15. <span class="pattern">Static Code Analysis</span></a></li>
+<li><a href="#Take-What-They-Mean">2.16. <span class="pattern">Take What They Mean, Not What They Say</span></a></li>
+<li><a href="#View-Based-Understanding">2.17. <span class="pattern">View Based Understanding</span></a></li>
 </ul>
 </li>
 <li><a href="#Evaluate">3. Evaluate</a></li>
@@ -2130,8 +2131,10 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 </table>
 </div>
 <div class="paragraph">
-<p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;
-Version 0.4, last update 2014-08-12</p>
+<p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;</p>
+</div>
+<div class="paragraph">
+<p>Version 0.4, last update 2014-08-12</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -2554,7 +2557,7 @@ To effectively find issues, you need an appropriate amount of <em>understanding<
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Begin with <a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a>, then conduct <a href="#Stakeholder-Interview"><span class="pattern">Stakeholder Interview</span></a></p>
+<p>Begin with <a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a>, then conduct <a href="#Stakeholder-Interview"><span class="pattern">Stakeholder Interview</span></a></p>
 </li>
 <li>
 <p>Start <a href="#Capture-Quality-Requirements">capturing current quality requirements</a> from the <em>authoritative</em> stakeholders of the systems.</p>
@@ -2659,7 +2662,7 @@ Never start solving problems until you have a thorough understanding of current 
 <p><a href="#Software-Archeology"><span class="pattern">Software Archeology</span></a></p>
 </li>
 <li>
-<p><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a></p>
+<p><a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a></p>
 </li>
 <li>
 <p><a href="#Stakeholder-Interview"><span class="pattern">Stakeholder Interview</span></a>, see also <a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a>.</p>
@@ -2719,7 +2722,7 @@ compliance with quality goals.</p>
 <p><em>Identify the relevant stakeholders</em>:
 The specific goals of the relevant stakeholders define the primary
 goals of the architecture. Who belongs to these <em>relevant</em> stakeholders
-has to be determined by a <a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a>.</p>
+has to be determined by a <a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a>.</p>
 </li>
 </ol>
 </div>
@@ -3823,20 +3826,105 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect2">
-<h3 id="Stakeholder-Interview"><a class="anchor" href="#Stakeholder-Interview"></a>2.13. <span class="pattern">Stakeholder Interview</span></h3>
+<h3 id="Stakeholder-Analysis"><a class="anchor" href="#Stakeholder-Analysis"></a>2.13. <span class="pattern">Stakeholder Analysis</span></h3>
 <div class="paragraph">
-<p>Conduct personal interviews with key persons of the <a href="#SuD">[SuD]</a> or associated processes to identify, clarify or discuss potential issues and remedies.</p>
+<p>Find out which people, roles, organizational units or organizations have interests in the <a href="#SuD">[SuD]</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="_intent_10"><a class="anchor" href="#_intent_10"></a>2.13.1. Intent</h4>
 <div class="paragraph">
-<p>Learn from the people who know or care about the <a href="#SuD">[SuD]</a> and everything around it.</p>
+<p>Ensure that all concerned parties are adressed.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_description_10"><a class="anchor" href="#_description_10"></a>2.13.2. Description</h4>
 <div class="paragraph">
-<p>Conduct a <a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a> first to find out whom to interview.</p>
+<p>Get an initial list of stakeholders from project management.</p>
+</div>
+<div class="paragraph">
+<p>Distinguish between <em>roles</em> and <em>individuals</em>. Some stakeholders need to be adressed individually, for <em>roles</em> it might be sufficient
+to identify any of several possible representatives.</p>
+</div>
+<div class="paragraph">
+<p>Take the following list as examples of <em>roles</em>:</p>
+</div>
+<div class="paragraph">
+<p>[small]#
+top-management, business-management, project-management, product-management, process-management, client, subject-matter-expert,
+business-experts, business-development, enterprise-architect, IT-strategy, lead-architect, developer, tester, qa-representative,
+configuration-manager, release-manager, maintenance-team, external service provider, hardware-designer, rollout-manager, infrastructure-planner, infrastructure-provider, IT-administrator, DB-administrator, system-administrator, security- or safety-representative, end-user, hotline, service-technician, scrum-master, product-owner, business-controller, marketing, related-projects, public or government agency, authorities, standard-bodies, external service- or interface providers, industry- or business associations, trade-groups, competitors#</p>
+</div>
+<div class="paragraph">
+<p>Include those stakeholders in a simple table:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<caption class="title">Table 1. Stakeholder Table</caption>
+<colgroup>
+<col style="width:20%;">
+<col style="width:20%;">
+<col style="width:20%;">
+<col style="width:20%;">
+<col style="width:20%;"> 
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Role/Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Intention</th>
+<th class="tableblock halign-left valign-top">Contribution</th>
+<th class="tableblock halign-left valign-top">Contact
+&#8230;</th>
+</tr>
+</thead>
+</table>
+
+</div>
+<div class="sect3">
+<h4 id="_experience"><a class="anchor" href="#_experience"></a>2.13.3. Experience</h4>
+<div class="paragraph">
+<p>There are often more stakeholder roles involved than it is obvious. Especially those people not directly involved in project- or development work sometimes are forgotten, e.g. standard bodies, external organizations, competitors, press or media, legal department,
+employee organization.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_10"><a class="anchor" href="#_related_patterns_10"></a>2.13.4. Related Patterns</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Stakeholder-Interview"><span class="pattern">Stakeholder Interview</span></a></p>
+</li>
+<li>
+<p><a href="#Stakeholder-Specific-Communication">[Stakeholder-Specific-Communication]</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_6"><a class="anchor" href="#_references_6"></a>2.13.5. References</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>arc42 example stakeholder table: <a href="https://github.com/arc42/arc42-template/blob/master/src/DE/asciidoc/plain/src/kap01.adoc">https://github.com/arc42/arc42-template/blob/master/src/DE/asciidoc/plain/src/kap01.adoc</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Stakeholder-Interview"><a class="anchor" href="#Stakeholder-Interview"></a>2.14. <span class="pattern">Stakeholder Interview</span></h3>
+<div class="paragraph">
+<p>Conduct personal interviews with key persons of the <a href="#SuD">[SuD]</a> or associated processes to identify, clarify or discuss potential issues and remedies.</p>
+</div>
+<div class="sect3">
+<h4 id="_intent_11"><a class="anchor" href="#_intent_11"></a>2.14.1. Intent</h4>
+<div class="paragraph">
+<p>Learn from the people who know or care about the <a href="#SuD">[SuD]</a> and everything around it.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_11"><a class="anchor" href="#_description_11"></a>2.14.2. Description</h4>
+<div class="paragraph">
+<p>Conduct a <a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a> first to find out whom to interview.</p>
 </div>
 <div class="paragraph">
 <p>Apply a breadth-first strategy, speak with people from
@@ -3913,7 +4001,7 @@ At the end of the interview, give a short feedback and summarize important resul
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experience"><a class="anchor" href="#_experience"></a>2.13.3. Experience</h4>
+<h4 id="_experience_2"><a class="anchor" href="#_experience_2"></a>2.14.3. Experience</h4>
 <div class="paragraph">
 <p>Expect the usual difficulties in human communication: people will love or dislike your work, the interview or the intent of your endeavour.</p>
 </div>
@@ -3932,11 +4020,11 @@ At the end of the interview, give a short feedback and summarize important resul
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_10"><a class="anchor" href="#_related_patterns_10"></a>2.13.4. Related Patterns</h4>
+<h4 id="_related_patterns_11"><a class="anchor" href="#_related_patterns_11"></a>2.14.4. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a>, to identify important and authorative stakeholders.</p>
+<p><a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a>, to identify important and authorative stakeholders.</p>
 </li>
 <li>
 <p><a href="#Stakeholder-Specific-Communication">[Stakeholder-Specific-Communication]</a></p>
@@ -3948,7 +4036,7 @@ At the end of the interview, give a short feedback and summarize important resul
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_6"><a class="anchor" href="#_references_6"></a>2.13.5. References</h4>
+<h4 id="_references_7"><a class="anchor" href="#_references_7"></a>2.14.5. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3959,9 +4047,9 @@ At the end of the interview, give a short feedback and summarize important resul
 </div>
 </div>
 <div class="sect2">
-<h3 id="Static-Code-Analysis"><a class="anchor" href="#Static-Code-Analysis"></a>2.14. <span class="pattern">Static Code Analysis</span></h3>
+<h3 id="Static-Code-Analysis"><a class="anchor" href="#Static-Code-Analysis"></a>2.15. <span class="pattern">Static Code Analysis</span></h3>
 <div class="sect3">
-<h4 id="_intent_11"><a class="anchor" href="#_intent_11"></a>2.14.1. Intent</h4>
+<h4 id="_intent_12"><a class="anchor" href="#_intent_12"></a>2.15.1. Intent</h4>
 <div class="paragraph">
 <p>Static Analysis can serve two purposes:</p>
 </div>
@@ -3977,7 +4065,7 @@ At the end of the interview, give a short feedback and summarize important resul
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_11"><a class="anchor" href="#_description_11"></a>2.14.2. Description</h4>
+<h4 id="_description_12"><a class="anchor" href="#_description_12"></a>2.15.2. Description</h4>
 <div class="paragraph">
 <p>Use source code analysis tools to analyse static properties of the systems' source code,
 e.g. the following:</p>
@@ -3992,7 +4080,7 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_9"><a class="anchor" href="#_experiences_9"></a>2.14.3. Experiences</h4>
+<h4 id="_experiences_9"><a class="anchor" href="#_experiences_9"></a>2.15.3. Experiences</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4002,7 +4090,7 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_9"><a class="anchor" href="#_applicability_9"></a>2.14.4. Applicability</h4>
+<h4 id="_applicability_9"><a class="anchor" href="#_applicability_9"></a>2.15.4. Applicability</h4>
 <div class="paragraph">
 <p>Apply static code analysis when the code base is medium sized or large and the appropriate tools are available.</p>
 </div>
@@ -4018,7 +4106,7 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_also_known_as_7"><a class="anchor" href="#_also_known_as_7"></a>2.14.5. Also Known As</h4>
+<h4 id="_also_known_as_7"><a class="anchor" href="#_also_known_as_7"></a>2.15.5. Also Known As</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4031,7 +4119,7 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_11"><a class="anchor" href="#_related_patterns_11"></a>2.14.6. Related Patterns</h4>
+<h4 id="_related_patterns_12"><a class="anchor" href="#_related_patterns_12"></a>2.15.6. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4044,7 +4132,7 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_7"><a class="anchor" href="#_references_7"></a>2.14.7. References</h4>
+<h4 id="_references_8"><a class="anchor" href="#_references_8"></a>2.15.7. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4061,15 +4149,15 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Take-What-They-Mean"><a class="anchor" href="#Take-What-They-Mean"></a>2.15. <span class="pattern">Take What They Mean, Not What They Say</span></h3>
+<h3 id="Take-What-They-Mean"><a class="anchor" href="#Take-What-They-Mean"></a>2.16. <span class="pattern">Take What They Mean, Not What They Say</span></h3>
 <div class="sect3">
-<h4 id="_intent_12"><a class="anchor" href="#_intent_12"></a>2.15.1. Intent</h4>
+<h4 id="_intent_13"><a class="anchor" href="#_intent_13"></a>2.16.1. Intent</h4>
 <div class="paragraph">
 <p>Find out the real meaning/intention of stakeholders</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_12"><a class="anchor" href="#_description_12"></a>2.15.2. Description</h4>
+<h4 id="_description_13"><a class="anchor" href="#_description_13"></a>2.16.2. Description</h4>
 <div class="paragraph">
 <p>Natural language has the risk that semantics on the senders' side differs from semantics of the receiver: People simply misunderstand each other because <em>meaning</em> of words differs between people.</p>
 </div>
@@ -4091,7 +4179,7 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_10"><a class="anchor" href="#_applicability_10"></a>2.15.3. Applicability</h4>
+<h4 id="_applicability_10"><a class="anchor" href="#_applicability_10"></a>2.16.3. Applicability</h4>
 <div class="paragraph">
 <p>Apply this pattern whenever you communicate verbally to other people (aka stakeholders), e.g. in meetings, conferences, phone calls etc.</p>
 </div>
@@ -4100,7 +4188,7 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_6"><a class="anchor" href="#_consequences_6"></a>2.15.4. Consequences</h4>
+<h4 id="_consequences_6"><a class="anchor" href="#_consequences_6"></a>2.16.4. Consequences</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4113,7 +4201,7 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_12"><a class="anchor" href="#_related_patterns_12"></a>2.15.5. Related Patterns</h4>
+<h4 id="_related_patterns_13"><a class="anchor" href="#_related_patterns_13"></a>2.16.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4123,29 +4211,29 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 <p>In every <a href="#Stakeholder-Interview"><span class="pattern">Stakeholder Interview</span></a> you should apply this pattern.</p>
 </li>
 <li>
-<p><a href="#Stakeholder-Analysis">[Stakeholder-Analysis]</a> to find out, who are the important stakeholders you should apply this pattern to.</p>
+<p><a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a> to find out, who are the important stakeholders you should apply this pattern to.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_8"><a class="anchor" href="#_references_8"></a>2.15.6. References</h4>
+<h4 id="_references_9"><a class="anchor" href="#_references_9"></a>2.16.6. References</h4>
 <div class="paragraph">
 <p>Special thanx to Phillip Ghadir (who is too humble to claim this discovery) for giving this pattern its name.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>2.16. <span class="pattern">View Based Understanding</span></h3>
+<h3 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>2.17. <span class="pattern">View Based Understanding</span></h3>
 <div class="sect3">
-<h4 id="_intent_13"><a class="anchor" href="#_intent_13"></a>2.16.1. Intent</h4>
+<h4 id="_intent_14"><a class="anchor" href="#_intent_14"></a>2.17.1. Intent</h4>
 <div class="paragraph">
 <p>Understand the inner workings and internal (code) structure of of the systems. Document (and communicate) this via
 architectural views, especially the building-block view.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_13"><a class="anchor" href="#_description_13"></a>2.16.2. Description</h4>
+<h4 id="_description_14"><a class="anchor" href="#_description_14"></a>2.17.2. Description</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4183,7 +4271,7 @@ architectural views, especially the building-block view.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_11"><a class="anchor" href="#_applicability_11"></a>2.16.3. Applicability</h4>
+<h4 id="_applicability_11"><a class="anchor" href="#_applicability_11"></a>2.17.3. Applicability</h4>
 <div class="paragraph">
 <p>Use view-based-understanding when:</p>
 </div>
@@ -4206,7 +4294,7 @@ and reason about the code structure</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>2.16.4. Consequences</h4>
+<h4 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>2.17.4. Consequences</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4219,7 +4307,7 @@ and reason about the code structure</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_also_known_as_8"><a class="anchor" href="#_also_known_as_8"></a>2.16.5. Also Known As</h4>
+<h4 id="_also_known_as_8"><a class="anchor" href="#_also_known_as_8"></a>2.17.5. Also Known As</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4232,13 +4320,13 @@ and reason about the code structure</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_13"><a class="anchor" href="#_related_patterns_13"></a>2.16.6. Related Patterns</h4>
+<h4 id="_related_patterns_14"><a class="anchor" href="#_related_patterns_14"></a>2.17.6. Related Patterns</h4>
 <div class="paragraph">
 <p>?</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_9"><a class="anchor" href="#_references_9"></a>2.16.7. References</h4>
+<h4 id="_references_10"><a class="anchor" href="#_references_10"></a>2.17.7. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4528,13 +4616,13 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <div class="sect2">
 <h3 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.3. <span class="pattern">Anticorruption Layer</span></h3>
 <div class="sect3">
-<h4 id="_intent_14"><a class="anchor" href="#_intent_14"></a>4.3.1. Intent</h4>
+<h4 id="_intent_15"><a class="anchor" href="#_intent_15"></a>4.3.1. Intent</h4>
 <div class="paragraph">
 <p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface remains untouched developers can implement changes or even exchange own or third-party software without affecting the clients.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_14"><a class="anchor" href="#_description_14"></a>4.3.2. Description</h4>
+<h4 id="_description_15"><a class="anchor" href="#_description_15"></a>4.3.2. Description</h4>
 
 </div>
 <div class="sect3">
@@ -4574,7 +4662,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_14"><a class="anchor" href="#_related_patterns_14"></a>4.3.7. Related Patterns</h4>
+<h4 id="_related_patterns_15"><a class="anchor" href="#_related_patterns_15"></a>4.3.7. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4584,20 +4672,20 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_10"><a class="anchor" href="#_references_10"></a>4.3.8. References</h4>
+<h4 id="_references_11"><a class="anchor" href="#_references_11"></a>4.3.8. References</h4>
 
 </div>
 </div>
 <div class="sect2">
 <h3 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.4. <span class="pattern">Interface Segregation Principle</span></h3>
 <div class="sect3">
-<h4 id="_intent_15"><a class="anchor" href="#_intent_15"></a>4.4.1. Intent</h4>
+<h4 id="_intent_16"><a class="anchor" href="#_intent_16"></a>4.4.1. Intent</h4>
 <div class="paragraph">
 <p>Reduce coupling between clients and service providers.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_15"><a class="anchor" href="#_description_15"></a>4.4.2. Description</h4>
+<h4 id="_description_16"><a class="anchor" href="#_description_16"></a>4.4.2. Description</h4>
 <div class="paragraph">
 <p>Service components may provide more functionality than required by one client.
 To remove the client&#8217;s dependency from functionality not required introduce interfaces that are tailored
@@ -4641,11 +4729,11 @@ to the client&#8217;s needs.</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_15"><a class="anchor" href="#_related_patterns_15"></a>4.4.6. Related Patterns</h4>
+<h4 id="_related_patterns_16"><a class="anchor" href="#_related_patterns_16"></a>4.4.6. Related Patterns</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_references_11"><a class="anchor" href="#_references_11"></a>4.4.7. References</h4>
+<h4 id="_references_12"><a class="anchor" href="#_references_12"></a>4.4.7. References</h4>
 
 </div>
 </div>
@@ -4669,7 +4757,7 @@ found it.&#8221; for the software development world in an article in Kevlin Henn
 &#8220;97 Things a Programmer Should Know&#8221; <a href="#Henney">[Henney]</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_16"><a class="anchor" href="#_intent_16"></a>4.5.1. Intent</h4>
+<h4 id="_intent_17"><a class="anchor" href="#_intent_17"></a>4.5.1. Intent</h4>
 <div class="paragraph">
 <p>Enable crosscutting architectural improvement even if it is not feasible to change the whole codebase.</p>
 </div>
@@ -4687,7 +4775,7 @@ Often the introduction of concepts like layering is deemed <em>“impossible”<
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_16"><a class="anchor" href="#_description_16"></a>4.5.2. Description</h4>
+<h4 id="_description_17"><a class="anchor" href="#_description_17"></a>4.5.2. Description</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4815,7 +4903,7 @@ parts of the system other approaches have to be utilized.</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_16"><a class="anchor" href="#_related_patterns_16"></a>4.5.8. Related Patterns</h4>
+<h4 id="_related_patterns_17"><a class="anchor" href="#_related_patterns_17"></a>4.5.8. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4835,7 +4923,7 @@ performed when applying the Boy Scout Rule</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_12"><a class="anchor" href="#_references_12"></a>4.5.9. References</h4>
+<h4 id="_references_13"><a class="anchor" href="#_references_13"></a>4.5.9. References</h4>
 <div class="paragraph">
 <p>The original description of the boy scout rule can be found online at <a href="#Boy-Scout-Rule-article">[Boy-Scout-Rule-article]</a>.</p>
 </div>
@@ -4844,13 +4932,13 @@ performed when applying the Boy Scout Rule</p>
 <div class="sect2">
 <h3 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.6. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h3>
 <div class="sect3">
-<h4 id="_intent_17"><a class="anchor" href="#_intent_17"></a>4.6.1. Intent</h4>
+<h4 id="_intent_18"><a class="anchor" href="#_intent_18"></a>4.6.1. Intent</h4>
 <div class="paragraph">
 <p>Simplify the interaction of a client with a set of service components.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_17"><a class="anchor" href="#_description_17"></a>4.6.2. Description</h4>
+<h4 id="_description_18"><a class="anchor" href="#_description_18"></a>4.6.2. Description</h4>
 <div class="paragraph">
 <p>When clients use a set of components with repeating patterns these
 interaction patterns are implemented in a Facade component.</p>
@@ -4916,18 +5004,18 @@ Things that can be handled by a facade:</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_17"><a class="anchor" href="#_related_patterns_17"></a>4.6.7. Related Patterns</h4>
+<h4 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>4.6.7. Related Patterns</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_references_13"><a class="anchor" href="#_references_13"></a>4.6.8. References</h4>
+<h4 id="_references_14"><a class="anchor" href="#_references_14"></a>4.6.8. References</h4>
 
 </div>
 </div>
 <div class="sect2">
 <h3 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.7. <span class="pattern">Use Invariants To Kill Zombies</span></h3>
 <div class="sect3">
-<h4 id="_intent_18"><a class="anchor" href="#_intent_18"></a>4.7.1. Intent</h4>
+<h4 id="_intent_19"><a class="anchor" href="#_intent_19"></a>4.7.1. Intent</h4>
 <div class="paragraph">
 <p>Provide a safe approach in situations where  it seems to dangerous to delete
 code or whole modules from a huge system because <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> can&#8217;t
@@ -4935,7 +5023,7 @@ recognize whether the code is still in use or not.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_18"><a class="anchor" href="#_description_18"></a>4.7.2. Description</h4>
+<h4 id="_description_19"><a class="anchor" href="#_description_19"></a>4.7.2. Description</h4>
 <div class="paragraph">
 <p>Oftentimes old systems contain lots of code that probably is no longer in use
 but still has to be tended to. Such code puts a burden on every cross-cutting
@@ -5041,7 +5129,7 @@ weight of the system.</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>4.7.8. Related Patterns</h4>
+<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>4.7.8. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5059,7 +5147,7 @@ way to make <a href="#Explicit-Assumption"><span class="pattern">Explicit Assump
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_14"><a class="anchor" href="#_references_14"></a>4.7.9. References</h4>
+<h4 id="_references_15"><a class="anchor" href="#_references_15"></a>4.7.9. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5169,7 +5257,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 <p>Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish, attack or dispute your findings.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_19"><a class="anchor" href="#_intent_19"></a>5.4.1. Intent</h4>
+<h4 id="_intent_20"><a class="anchor" href="#_intent_20"></a>5.4.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5185,7 +5273,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_19"><a class="anchor" href="#_description_19"></a>5.4.2. Description</h4>
+<h4 id="_description_20"><a class="anchor" href="#_description_20"></a>5.4.2. Description</h4>
 <div id="figure-reaction-pyramid" class="imageblock">
 <div class="content">
 <img src="images/expect-denial-reaction-levels.png" alt="Reaction levels">
@@ -5316,7 +5404,7 @@ assumptions or requirements.</p>
 <p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_20"><a class="anchor" href="#_intent_20"></a>5.9.1. Intent</h4>
+<h4 id="_intent_21"><a class="anchor" href="#_intent_21"></a>5.9.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5332,7 +5420,7 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_20"><a class="anchor" href="#_description_20"></a>5.9.2. Description</h4>
+<h4 id="_description_21"><a class="anchor" href="#_description_21"></a>5.9.2. Description</h4>
 <div class="paragraph">
 <p>There are two common ways to deliver review results:</p>
 </div>
@@ -5367,7 +5455,7 @@ assumptions or requirements.</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>5.9.5. Related Patterns</h4>
+<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.9.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5386,14 +5474,14 @@ assumptions or requirements.</p>
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_21"><a class="anchor" href="#_intent_21"></a>5.10.1. Intent</h4>
+<h4 id="_intent_22"><a class="anchor" href="#_intent_22"></a>5.10.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
 findings keeps eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_21"><a class="anchor" href="#_description_21"></a>5.10.2. Description</h4>
+<h4 id="_description_22"><a class="anchor" href="#_description_22"></a>5.10.2. Description</h4>
 <div class="paragraph">
 <p>(To be done)</p>
 </div>
@@ -5439,7 +5527,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.10.5. Related Patterns</h4>
+<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.10.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6214,18 +6302,14 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><a id="Stakeholder-Analysis"></a></p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><span class="pattern">Stakeholder Analysis</span></dt>
-<dd>
-<p>Category: <a href="#Analyze">Analyze</a></p>
-</dd>
-</dl>
+<p><strong><a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a></strong></p>
+<div class="paragraph">
+<p>Find out which people, roles, organizational units or organizations have interests in the <a href="#SuD">[SuD]</a>.
+Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#Stakeholder Interview">[Stakeholder Interview]</a></strong></p>
+<p><strong><a href="#Stakeholder-Interview"><span class="pattern">Stakeholder Interview</span></a></strong></p>
 <div class="paragraph">
 <p>Conduct personal interviews with key persons of the <a href="#SuD">[SuD]</a> or associated processes to identify, clarify or discuss potential issues and remedies.
 Category: <a href="#Analyze">Analyze</a></p>
@@ -6877,7 +6961,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-12 09:04:21 UTC
+Last updated 2014-08-12 09:59:46 UTC
 </div>
 </div>
 </body>
