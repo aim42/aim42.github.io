@@ -2447,15 +2447,26 @@ To effectively find issues, you need an appropriate amount of <em>understanding<
 </tr>
 </table>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Begin with <a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a>, then conduct <a href="#Stakeholder-Interview"><span class="pattern">Stakeholder Interview</span></a> with important stakeholders.</p>
-</li>
-<li>
-<p>Get an initial understanding of the <a href="#SuD">[SuD]</a> by</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<img border=0 src="images/analyze-patterns-overview.png" usemap="#AnalysisOverview">
+<map name="AnalysisOverview">
+	<area shape=rect coords="274,293,378,353" href="#Development-Process-Analysis">
+	<area shape=rect coords="16,314,138,362" href="#Quantitative-Analysis">
+	<area shape=rect coords="275,154,394,202" href="#Stakeholder-Interview">
+	<area shape=rect coords="15,176,134,225" href="#Stakeholder-Analysis">
+	<area shape=rect coords="70,15,163,63" href="#Context-Analysis">
+	<area shape=rect coords="476,284,588,333" href="#Qualitative-Analysis">
+</map>
+<div class="paragraph">
+<p>Figure: Overview of Most Important Analysis Pracices</p>
+</div>
+<div class="paragraph">
+<p>Always begin with <a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a>, then conduct <a href="#Stakeholder-Interview"><span class="pattern">Stakeholder Interview</span></a> with important stakeholders.</p>
+</div>
+<div class="paragraph">
+<p>Next get an initial understanding of the <a href="#SuD">[SuD]</a> by</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><a href="#Context-Analysis"><span class="pattern">Context-Analysis</span></a></p>
 </li>
@@ -2467,35 +2478,36 @@ To effectively find issues, you need an appropriate amount of <em>understanding<
 </li>
 <li>
 <p>Perform <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> to learn about code structure <em>in-the-large</em>. This also helps to identify risky code.</p>
-</li>
-</ol>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p><a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a> from the <em>authoritative</em> stakeholders of the systems.</p>
 </li>
 <li>
 <p>Conduct a <a href="#Qualitative-Analysis"><span class="pattern">Qualitative Analysis</span></a> of the system, its architecture and associated organization,
 based upon the specific quality requirements</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Inspect and analyze all involved organizational processes -
-(development, project-management, operations, requirements-analysis)</p>
 </li>
-</ol>
+</ul>
 </div>
 </li>
 <li>
+<p>Inspect and analyze all involved organizational processes -
+(development, project-management, operations, requirements-analysis)</p>
+<div class="ulist">
+<ul>
+<li>
 <p>Perform <a href="#Runtime-Analysis"><span class="pattern">Runtime-Analysis</span></a> or <a href="#Quantitative-Analysis"><span class="pattern">Quantitative-Analysis</span></a>, e.g. performance and load monitoring, process and thread analysis</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Inspect the data created, modified and queried by the system, for structure, size, volume or specialities</p>
 </li>
-<li>
-<p>Together with appropriate stakeholders, do <a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a> of major issues found - as symptoms and causes may differ.</p>
-</li>
-</ol>
+</ul>
+</div>
+<div class="paragraph">
+<p>Finally, do <a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a> of major issues found together with appropriate stakeholders.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -2515,22 +2527,28 @@ Never start solving problems until you have a thorough understanding of current 
 
 <img border=0 src="images/analyze-patterns-conceptmap.png" usemap="#AnalysisPatterns">
 <map name="AnalysisPatterns">
-<area shape=rect coords="149,453,230,488" href="#Static-Code-Analysis">
-	<area shape=rect coords="269,529,356,564" href="#Software-Archeology">
-	<area shape=rect coords="290,26,390,61" href="#Questionnaire">
-	<area shape=rect coords="16,367,104,402" href="#Qualitative-Analysis">
-	<area shape=rect coords="122,250,219,285" href="#Requirements-Analysis">
-	<area shape=rect coords="268,141,356,176" href="#Stakeholder-Interview">
-	<area shape=rect coords="25,138,113,173" href="#Stakeholde-Analysis">
-	<area shape=rect coords="25,490,106,525" href="#Runtime-Analysis">
-	<area shape=rect coords="11,608,92,643" href="#Instrument-System">
-	<area shape=rect coords="398,242,505,277" href="#Documentation-Analysis">
-	<area shape=rect coords="180,573,247,608" href="#Data-Analysis">
-	<area shape=rect coords="60,11,127,46" href="#Context-Analysis">
-	<area shape=rect coords="395,333,462,368" href="#ATAM">
-	<area shape=rect coords="212,333,293,368" href="#Qualitative-Analysis">
+	<area shape=rect coords="105,702,187,742" href="#Instrument-System">
+	<area shape=rect coords="209,603,311,642" href="#Infrastructure-Analysis">
+	<area shape=rect coords="306,332,411,391" href="#Development-Process-Analysis">
+	<area shape=rect coords="40,815,138,864" href="#Static-Code-Analysis">
+	<area shape=rect coords="371,702,461,751" href="#Software-Archeology">
+	<area shape=rect coords="462,38,566,77" href="#Questionnaire">
+	<area shape=rect coords="28,307,163,355" href="#Quantitative-Analysis">
+	<area shape=rect coords="662,345,769,393" href="#Requirements-Analysis">
+	<area shape=rect coords="342,154,461,202" href="#Stakeholder-Interview">
+	<area shape=rect coords="53,179,172,228" href="#Stakeholder-Analysis">
+	<area shape=rect coords="78,506,163,552" href="#Runtime-Analysis">
+	<area shape=rect coords="556,265,677,314" href="#Documentation-Analysis">
+	<area shape=rect coords="157,446,223,485" href="#Data-Analysis">
+	<area shape=rect coords="467,575,580,624" href="#Issue-Tracker-Analysis">
+	<area shape=rect coords="137,15,230,63" href="#Context-Analysis">
+	<area shape=rect coords="667,539,742,578" href="#ATAM">
+	<area shape=rect coords="497,399,609,447" href="#Qualitative-Analysis">
 </map>
 
+<div class="paragraph">
+<p>Figure: Detailed overview of Analysis Practices and Patterns</p>
+</div>
 <div class="sect3">
 <h4 id="Architecture-Documentation"><a class="anchor" href="#Architecture-Documentation"></a>2.3.1. <span class="pattern">Architecture Documentation</span></h4>
 <div class="sect4">
@@ -3471,10 +3489,6 @@ real fast.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_consequences_2"><a class="anchor" href="#_consequences_2"></a>Consequences</h5>
-
-</div>
 </div>
 <div class="sect3">
 <h4 id="_also_known_as_2"><a class="anchor" href="#_also_known_as_2"></a>2.3.14. Also Known As</h4>
@@ -3484,10 +3498,6 @@ real fast.</p>
 <p><a href="#ATAM"><span class="pattern">Atam</span></a></p>
 </li>
 </ul>
-</div>
-<div class="sect4">
-<h5 id="_related_patterns_5"><a class="anchor" href="#_related_patterns_5"></a>Related Patterns</h5>
-
 </div>
 <div class="sect4">
 <h5 id="_references_2"><a class="anchor" href="#_references_2"></a>References</h5>
@@ -3610,7 +3620,7 @@ real fast.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_6"><a class="anchor" href="#_related_patterns_6"></a>Related Patterns</h5>
+<h5 id="_related_patterns_5"><a class="anchor" href="#_related_patterns_5"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3667,7 +3677,7 @@ formulate questions covering the topics or areas of information that:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_3"><a class="anchor" href="#_consequences_3"></a>Consequences</h5>
+<h5 id="_consequences_2"><a class="anchor" href="#_consequences_2"></a>Consequences</h5>
 <div class="paragraph">
 <p>Questionnaires can</p>
 </div>
@@ -3696,7 +3706,7 @@ formulate questions covering the topics or areas of information that:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_7"><a class="anchor" href="#_related_patterns_7"></a>Related Patterns</h5>
+<h5 id="_related_patterns_6"><a class="anchor" href="#_related_patterns_6"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3818,7 +3828,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_4"><a class="anchor" href="#_consequences_4"></a>Consequences</h5>
+<h5 id="_consequences_3"><a class="anchor" href="#_consequences_3"></a>Consequences</h5>
 <div class="paragraph">
 <p>You can eliminate the cause.</p>
 </div>
@@ -3837,7 +3847,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_8"><a class="anchor" href="#_related_patterns_8"></a>Related Patterns</h5>
+<h5 id="_related_patterns_7"><a class="anchor" href="#_related_patterns_7"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3959,7 +3969,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_9"><a class="anchor" href="#_related_patterns_9"></a>Related Patterns</h5>
+<h5 id="_related_patterns_8"><a class="anchor" href="#_related_patterns_8"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -4057,7 +4067,7 @@ employee organization.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_10"><a class="anchor" href="#_related_patterns_10"></a>Related Patterns</h5>
+<h5 id="_related_patterns_9"><a class="anchor" href="#_related_patterns_9"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -4190,7 +4200,7 @@ At the end of the interview, give a short feedback and summarize important resul
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_11"><a class="anchor" href="#_related_patterns_11"></a>Related Patterns</h5>
+<h5 id="_related_patterns_10"><a class="anchor" href="#_related_patterns_10"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -4289,7 +4299,7 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_12"><a class="anchor" href="#_related_patterns_12"></a>Related Patterns</h5>
+<h5 id="_related_patterns_11"><a class="anchor" href="#_related_patterns_11"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -4358,7 +4368,7 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_5"><a class="anchor" href="#_consequences_5"></a>Consequences</h5>
+<h5 id="_consequences_4"><a class="anchor" href="#_consequences_4"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -4371,7 +4381,7 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_13"><a class="anchor" href="#_related_patterns_13"></a>Related Patterns</h5>
+<h5 id="_related_patterns_12"><a class="anchor" href="#_related_patterns_12"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -4464,7 +4474,7 @@ and reason about the code structure</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_6"><a class="anchor" href="#_consequences_6"></a>Consequences</h5>
+<h5 id="_consequences_5"><a class="anchor" href="#_consequences_5"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -4490,7 +4500,7 @@ and reason about the code structure</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_14"><a class="anchor" href="#_related_patterns_14"></a>Related Patterns</h5>
+<h5 id="_related_patterns_13"><a class="anchor" href="#_related_patterns_13"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -4855,7 +4865,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>4.3.5. Consequences</h4>
+<h4 id="_consequences_6"><a class="anchor" href="#_consequences_6"></a>4.3.5. Consequences</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4872,7 +4882,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_15"><a class="anchor" href="#_related_patterns_15"></a>4.3.7. Related Patterns</h4>
+<h4 id="_related_patterns_14"><a class="anchor" href="#_related_patterns_14"></a>4.3.7. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4919,7 +4929,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_8"><a class="anchor" href="#_consequences_8"></a>4.4.4. Consequences</h4>
+<h4 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>4.4.4. Consequences</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4939,7 +4949,7 @@ to the client&#8217;s needs.</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_16"><a class="anchor" href="#_related_patterns_16"></a>4.4.6. Related Patterns</h4>
+<h4 id="_related_patterns_15"><a class="anchor" href="#_related_patterns_15"></a>4.4.6. Related Patterns</h4>
 
 </div>
 <div class="sect3">
@@ -5094,7 +5104,7 @@ database inserts etc.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_9"><a class="anchor" href="#_consequences_9"></a>4.5.6. Consequences</h4>
+<h4 id="_consequences_8"><a class="anchor" href="#_consequences_8"></a>4.5.6. Consequences</h4>
 <div class="paragraph">
 <p>The introduction the Boy Scout Rule often proved to enable structural
 improvements as a prerequisite for higher level architectural
@@ -5113,7 +5123,7 @@ parts of the system other approaches have to be utilized.</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_17"><a class="anchor" href="#_related_patterns_17"></a>4.5.8. Related Patterns</h4>
+<h4 id="_related_patterns_16"><a class="anchor" href="#_related_patterns_16"></a>4.5.8. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5197,7 +5207,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_10"><a class="anchor" href="#_consequences_10"></a>4.6.5. Consequences</h4>
+<h4 id="_consequences_9"><a class="anchor" href="#_consequences_9"></a>4.6.5. Consequences</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5214,7 +5224,7 @@ Things that can be handled by a facade:</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>4.6.7. Related Patterns</h4>
+<h4 id="_related_patterns_17"><a class="anchor" href="#_related_patterns_17"></a>4.6.7. Related Patterns</h4>
 
 </div>
 <div class="sect3">
@@ -5325,7 +5335,7 @@ weight of the system.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_11"><a class="anchor" href="#_consequences_11"></a>4.7.6. Consequences</h4>
+<h4 id="_consequences_10"><a class="anchor" href="#_consequences_10"></a>4.7.6. Consequences</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5339,7 +5349,7 @@ weight of the system.</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>4.7.8. Related Patterns</h4>
+<h4 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>4.7.8. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5502,7 +5512,7 @@ stream manageable.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>4.8.6. Consequences</h4>
+<h4 id="_consequences_11"><a class="anchor" href="#_consequences_11"></a>4.8.6. Consequences</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5521,7 +5531,7 @@ context information (in case MDCs are used).</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>4.8.8. Related Patterns</h4>
+<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>4.8.8. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5691,7 +5701,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_13"><a class="anchor" href="#_consequences_13"></a>5.4.4. Consequences</h4>
+<h4 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>5.4.4. Consequences</h4>
 <div class="paragraph">
 <p>Especially when presenting results to (opposing) management stakeholders, you should be able to <strong>verify</strong> all your claims. In critical cases you should keep written protocols and note who-said-what in your <a href="#Stakeholder-Interview">stakeholder interviews</a>.</p>
 </div>
@@ -5865,7 +5875,7 @@ assumptions or requirements.</p>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.10.5. Related Patterns</h4>
+<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.10.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5937,7 +5947,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_22"><a class="anchor" href="#_related_patterns_22"></a>5.11.5. Related Patterns</h4>
+<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.11.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -7388,7 +7398,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-18 10:22:47 UTC
+Last updated 2014-08-18 12:23:41 UTC
 </div>
 </div>
 </body>
