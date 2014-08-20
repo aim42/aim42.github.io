@@ -2044,10 +2044,11 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <li><a href="#Explicit-Assumption">5.5. <span class="pattern">Explicit Assumption</span></a></li>
 <li><a href="#Fail-Fast">5.6. <span class="pattern">Fail Fast</span></a></li>
 <li><a href="#Fast-Feedback">5.7. <span class="pattern">Fast Feedback</span></a></li>
-<li><a href="#improvement-backlog">5.8. <span class="pattern">Improvement Backlog</span></a></li>
-<li><a href="#Separate-Cause-From-Effect">5.9. <span class="pattern">Separate-Cause-From-Effect</span></a></li>
-<li><a href="#Slide-Or-Write">5.10. <span class="pattern">Slide or Write</span></a></li>
-<li><a href="#Traceability">5.11. <span class="pattern">Traceability</span></a></li>
+<li><a href="#Impact-Analysis">5.8. <span class="pattern">Impact Analysis</span></a></li>
+<li><a href="#Improvement-Backlog">5.9. <span class="pattern">Improvement Backlog</span></a></li>
+<li><a href="#Separate-Cause-From-Effect">5.10. <span class="pattern">Separate-Cause-From-Effect</span></a></li>
+<li><a href="#Slide-Or-Write">5.11. <span class="pattern">Slide or Write</span></a></li>
+<li><a href="#Traceability">5.12. <span class="pattern">Traceability</span></a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">6. Pattern index</a></li>
@@ -2124,7 +2125,7 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;</p>
 </div>
 <div class="paragraph">
-<p>Version 0.4, last update 2014-08-18</p>
+<p>Version 0.4, last update 2014-08-20</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -2886,7 +2887,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <p><strong>Uncovers problems and risks</strong>: Scenarios collected within brainstorming sessions often contain <em>hidden</em> problem descriptions, risks or problems with the current systems.</p>
 </li>
 <li>
-<p><strong>Covers organization and process</strong>: Scenarios sometimes cover process or organizational aspects (like: release cycles should be faster than they are now). Move those to your <a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a>.</p>
+<p><strong>Covers organization and process</strong>: Scenarios sometimes cover process or organizational aspects (like: release cycles should be faster than they are now). Move those to your <a href="#improvement-backlog">[improvement-backlog]</a>.</p>
 </li>
 <li>
 <p><strong>Improves human communication</strong>: Different stakeholders often start communicating about the systeme or their requirements during such workshops. This kind of interaction <em>should</em> have happened long before&#8230;</p>
@@ -4600,7 +4601,8 @@ estimating their <strong>value</strong> (that&#8217;s why we call this activity 
 <div class="sect4">
 <h5 id="_intent_27"><a class="anchor" href="#_intent_27"></a>Intent</h5>
 <div class="paragraph">
-<p>Estimation is a guess, not a <strong>measurement</strong>. Estimates are uncertain, otherwise they would be observations (or measurements!).</p>
+<p>Estimation is a guess, not a <strong>measurement</strong>.
+Estimates are uncertain, otherwise they would be observations (or measurements!).</p>
 </div>
 </div>
 <div class="sect4">
@@ -4633,11 +4635,15 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <div class="sect4">
 <h5 id="_intent_28"><a class="anchor" href="#_intent_28"></a>Intent</h5>
 <div class="paragraph">
-<p>Estimate how much a given problem costs (in money or effort) in a period of time.</p>
+<p>Find out how much a given problem costs (in money or effort) in a period of time.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_description_27"><a class="anchor" href="#_description_27"></a>Description</h5>
+<div class="paragraph">
+<p><em>Finding out</em> the cost of a problem usually requires estimation or guessing, so there is
+uncertainty and propability involved.</p>
+</div>
 <div class="paragraph">
 <p>For example, if a server needs to be rebooted once every 24hrs and an operator needs 30 minutes to perform this reboot (and corresponding activities) - then you can approximate the cost of this problem for, let&#8217;s say, a month:</p>
 </div>
@@ -4647,10 +4653,29 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <div class="paragraph">
 <p>If you multiply with (approximate or average) wage, you get <em>problem cost</em>.</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If possible, try to <em>measure</em> or observe instead of guessing or estimating.</p>
+</li>
+<li>
+<p>If you cannot determine real numbers, use <a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a>.</p>
+</li>
+<li>
+<p>If you need to guess, estimate or approximate</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_related_practices_5"><a class="anchor" href="#_related_practices_5"></a>Related Practices</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>If you cannot determine real numbers available, use <a href="#Explicit-Assumption">explicit assumptions</a></p>
+<p><a href="#Estimate-In-Intervall">[Estimate-In-Intervall]</a></p>
+</li>
+<li>
+<p><a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a></p>
 </li>
 </ul>
 </div>
@@ -4660,25 +4685,6 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <h4 id="Estimate-Remedy-Cost"><a class="anchor" href="#Estimate-Remedy-Cost"></a>3.3.4. <span class="pattern">Estimate Remedy Cost</span></h4>
 <div class="paragraph">
 <p>See: "Software Estimation. The Black Art Demystified (Steve McConnell)"</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="Impact-Analysis"><a class="anchor" href="#Impact-Analysis"></a>3.3.5. <span class="pattern">Impact Analysis</span></h4>
-<div class="sect4">
-<h5 id="_intent_29"><a class="anchor" href="#_intent_29"></a>Intent</h5>
-<div class="paragraph">
-<p>Determine what impact (in code, concepts, data and the organization) a specific action or issue (e.g. refactoring, recurring problem) will or might have. Identify the resultant effects on system development and operations.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_related_practices_5"><a class="anchor" href="#_related_practices_5"></a>Related Practices</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>Failure-Mode-and-Effect-Analysis (<a href="http://en.wikipedia.org/wiki/Failure_mode_and_effects_analysis">FMEA</a>), a method for failure analysis, widely used in various industries</p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 </div>
@@ -4835,7 +4841,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <div class="sect2">
 <h3 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.3. <span class="pattern">Anticorruption Layer</span></h3>
 <div class="sect3">
-<h4 id="_intent_30"><a class="anchor" href="#_intent_30"></a>4.3.1. Intent</h4>
+<h4 id="_intent_29"><a class="anchor" href="#_intent_29"></a>4.3.1. Intent</h4>
 <div class="paragraph">
 <p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface remains untouched developers can implement changes or even exchange own or third-party software without affecting the clients.</p>
 </div>
@@ -4898,7 +4904,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <div class="sect2">
 <h3 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.4. <span class="pattern">Interface Segregation Principle</span></h3>
 <div class="sect3">
-<h4 id="_intent_31"><a class="anchor" href="#_intent_31"></a>4.4.1. Intent</h4>
+<h4 id="_intent_30"><a class="anchor" href="#_intent_30"></a>4.4.1. Intent</h4>
 <div class="paragraph">
 <p>Reduce coupling between clients and service providers.</p>
 </div>
@@ -4976,7 +4982,7 @@ found it.&#8221; for the software development world in an article in Kevlin Henn
 &#8220;97 Things a Programmer Should Know&#8221; <a href="#Henney">[Henney]</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_32"><a class="anchor" href="#_intent_32"></a>4.5.1. Intent</h4>
+<h4 id="_intent_31"><a class="anchor" href="#_intent_31"></a>4.5.1. Intent</h4>
 <div class="paragraph">
 <p>Enable crosscutting architectural improvement even if it is not feasible to change the whole codebase.</p>
 </div>
@@ -4998,7 +5004,7 @@ Often the introduction of concepts like layering is deemed <em>“impossible”<
 <div class="ulist">
 <ul>
 <li>
-<p>Drafting from an <a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a>, define a specific rule set
+<p>Drafting from an <a href="#improvement-backlog">[improvement-backlog]</a>, define a specific rule set
 on how to improve the contents of specific file types.</p>
 </li>
 <li>
@@ -5014,7 +5020,7 @@ clean-up operation</p>
 <li>
 <p>Install a mechanism to ensure that the things that where too big to
 be cleaned up while visiting the file will end up in the
-<a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a>.</p>
+<a href="#improvement-backlog">[improvement-backlog]</a>.</p>
 </li>
 </ul>
 </div>
@@ -5135,7 +5141,7 @@ parts of the system other approaches have to be utilized.</p>
 <p><a href="#Anticorruption-Layer"><span class="pattern">Anticorruption Layer</span></a> can be performed using the Boy Scout Rule</p>
 </li>
 <li>
-<p>An <a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a> should be the basis for the tasks
+<p>An <a href="#improvement-backlog">[improvement-backlog]</a> should be the basis for the tasks
 performed when applying the Boy Scout Rule</p>
 </li>
 </ul>
@@ -5151,7 +5157,7 @@ performed when applying the Boy Scout Rule</p>
 <div class="sect2">
 <h3 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.6. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h3>
 <div class="sect3">
-<h4 id="_intent_33"><a class="anchor" href="#_intent_33"></a>4.6.1. Intent</h4>
+<h4 id="_intent_32"><a class="anchor" href="#_intent_32"></a>4.6.1. Intent</h4>
 <div class="paragraph">
 <p>Simplify the interaction of a client with a set of service components.</p>
 </div>
@@ -5234,7 +5240,7 @@ Things that can be handled by a facade:</p>
 <div class="sect2">
 <h3 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.7. <span class="pattern">Use Invariants To Kill Zombies</span></h3>
 <div class="sect3">
-<h4 id="_intent_34"><a class="anchor" href="#_intent_34"></a>4.7.1. Intent</h4>
+<h4 id="_intent_33"><a class="anchor" href="#_intent_33"></a>4.7.1. Intent</h4>
 <div class="paragraph">
 <p>Provide a safe approach in situations where  it seems to dangerous to delete
 code or whole modules from a huge system because <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> can&#8217;t
@@ -5387,7 +5393,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="sect2">
 <h3 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.8. <span class="pattern">Improve Logging</span></h3>
 <div class="sect3">
-<h4 id="_intent_35"><a class="anchor" href="#_intent_35"></a>4.8.1. Intent</h4>
+<h4 id="_intent_34"><a class="anchor" href="#_intent_34"></a>4.8.1. Intent</h4>
 <div class="paragraph">
 <p>Employ sophisticated logging mechanisms such as modern logging frameworks,
 distributed log collection and visualization tools in order to gain more
@@ -5599,7 +5605,10 @@ that cannot be isolated without modifying the code.</p>
 <p><a href="#Fast-Feedback"><span class="pattern">Fast Feedback</span></a></p>
 </li>
 <li>
-<p><a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a></p>
+<p><a href="#Impact-Analysis"><span class="pattern">Impact Analysis</span></a></p>
+</li>
+<li>
+<p><a href="#Improvement-Backlog"><span class="pattern">Improvement Backlog</span></a></p>
 </li>
 <li>
 <p><a href="#Slide-Or-Write"><span class="pattern">Slide or Write</span></a></p>
@@ -5609,11 +5618,27 @@ that cannot be isolated without modifying the code.</p>
 </li>
 </ul>
 </div>
+<map name="CrosscuttingConcepts">
+<area shape=rect coords="378,23,489,70" href="#Traceability">
+<area shape=rect coords="3,418,100,468" href="#Slide-Or-Write">
+<area shape=rect coords="338,405,465,482" href="#Separate-Cause-From-Effect">
+<area shape=rect coords="129,513,232,564" href="#Impact-Analysis">
+<area shape=rect coords="293,513,393,564" href="#Impact-Analysis">
+<area shape=rect coords="545,369,674,424" href="#Improvement-Backlog">
+<area shape=rect coords="12,260,139,307" href="#Explicit-Assumption">
+<area shape=rect coords="62,23,173,77" href="#Expect-Denial">
+<area shape=rect coords="365,310,463,357" href="#Impact-Analysis">
+<area shape=rect coords="505,160,673,228" href="#collect-opportunities-for-improvement">
+<area shape=rect coords="199,174,302,228" href="#Collect-Problems">
+</map>
+
+<img border=0 src="images/crosscutting-patterns-conceptmap.png" usemap="#CrosscuttingConcepts">
 </div>
 <div class="sect2">
 <h3 id="collect-opportunities-for-improvement"><a class="anchor" href="#collect-opportunities-for-improvement"></a>5.2. <span class="pattern">Collect Opportunities for Improvement</span></h3>
 <div class="paragraph">
-<p>You should look for improvement opportunities, remedies, measures, tactics and strategies in all of the aim42-phases.</p>
+<p>You should look for improvement opportunities, remedies, measures,
+tactics and strategies in all of the aim42-phases.</p>
 </div>
 <div id="figure-collect-remedies" class="imageblock">
 <div class="content">
@@ -5626,13 +5651,17 @@ that cannot be isolated without modifying the code.</p>
 <h3 id="collect-problems"><a class="anchor" href="#collect-problems"></a>5.3. <span class="pattern">Collect Problems</span></h3>
 <div class="paragraph">
 <p>You should constantly watch out for problems, issues and risks.
-Keep a list of those problems. Regularly match those to your <a href="#collect-opportunities-for-improvement">collection of possible remedies</a>.</p>
+Keep a list of those problems. Regularly match those to your
+<a href="#collect-opportunities-for-improvement">collection of possible remedies</a>.</p>
 </div>
 <div class="paragraph">
-<p>It&#8217;s difficult to decide how much formalism to apply in collecting problems: Sometimes a wiki-page might suffice, for other systems a full-blown issue-tracker can be useful.</p>
+<p>It&#8217;s difficult to decide how much formalism to apply in collecting problems:
+Sometimes a wiki-page might suffice, for other systems a full-blown
+issue-tracker can be useful.</p>
 </div>
 <div class="paragraph">
-<p>As always: documentation is only valuable if it can be found and searched - which makes electronic approaches more viable.</p>
+<p>As always: documentation is only valuable if it can be found and searched -
+which makes electronic approaches more viable.</p>
 </div>
 </div>
 <div class="sect2">
@@ -5641,7 +5670,7 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 <p>Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish, attack or dispute your findings.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_36"><a class="anchor" href="#_intent_36"></a>5.4.1. Intent</h4>
+<h4 id="_intent_35"><a class="anchor" href="#_intent_35"></a>5.4.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5709,24 +5738,35 @@ Keep a list of those problems. Regularly match those to your <a href="#collect-o
 <div class="sect2">
 <h3 id="Explicit-Assumption"><a class="anchor" href="#Explicit-Assumption"></a>5.5. <span class="pattern">Explicit Assumption</span></h3>
 <div class="paragraph">
-<p>Compensate missing facts (especially requirements, goals, estimates, opinions) by explicit (usually written) assumptions about those facts.</p>
+<p>Compensate missing facts (especially requirements, goals, estimates,
+opinions) by explicit (usually written) assumptions about those facts.</p>
+</div>
+<div class="sect3">
+<h4 id="_description_35"><a class="anchor" href="#_description_35"></a>5.5.1. Description</h4>
+<div class="paragraph">
+<p>Making assumptions <em>explicit</em> is fundamentally important to
+<a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a>, so that development teams don&#8217;t
+need to rely on implicit assumptions or requirements.</p>
 </div>
 <div class="paragraph">
-<p>Making assumptions <em>explicit</em> is fundamentally important to <a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a>, so that development teams don&#8217;t need to rely on implicit
-assumptions or requirements.</p>
-</div>
-<div class="paragraph">
-<p>When evaluating problems, risks or remedies, we often need to estimate or assume stuff like duration, cost, workload or others. These estimates or assumptions need to be made <em>explicit</em>, so that others can reproduce or understand our evaluation. In case of numerical estimation, it helps to apply
+<p>When evaluating problems, risks or remedies, we often need to
+estimate or assume stuff like duration, cost, workload or others.
+These estimates or assumptions need to be made <em>explicit</em>,
+so that others can reproduce or understand our evaluation.
+In case of numerical estimation, it helps to apply
 <a href="#Estimate-In-Interval"><span class="pattern">Estimate in Interval</span></a></p>
 </div>
 <div class="paragraph">
 <p>Also known as <em>educated guess</em>.</p>
 </div>
 </div>
+</div>
 <div class="sect2">
 <h3 id="Fail-Fast"><a class="anchor" href="#Fail-Fast"></a>5.6. <span class="pattern">Fail Fast</span></h3>
 <div class="paragraph">
-<p>The later a lack of quality is identified the higher are the costs to fix it. Continuously evaluate the quality of work artifacts and immediately take countermeasures or pull the plug as early as possible. Similar to <a href="#Fast-Feedback"><span class="pattern">Fast Feedback</span></a>.</p>
+<p>The later a lack of quality is identified the higher are the costs to fix it.
+Continuously evaluate the quality of work artifacts and immediately take
+countermeasures or pull the plug as early as possible. Similar to <a href="#Fast-Feedback"><span class="pattern">Fast Feedback</span></a>.</p>
 </div>
 <div class="paragraph">
 <p>Suitable methods to identify such situations are:</p>
@@ -5758,7 +5798,28 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="improvement-backlog"><a class="anchor" href="#improvement-backlog"></a>5.8. <span class="pattern">Improvement Backlog</span></h3>
+<h3 id="Impact-Analysis"><a class="anchor" href="#Impact-Analysis"></a>5.8. <span class="pattern">Impact Analysis</span></h3>
+<div class="sect3">
+<h4 id="_intent_36"><a class="anchor" href="#_intent_36"></a>5.8.1. Intent</h4>
+<div class="paragraph">
+<p>Determine what impact (in code, concepts, data and the organization)
+a specific action or issue (e.g. refactoring, recurring problem) will or
+might have. Identify the resultant effects on system development and operations.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_related_practices_6"><a class="anchor" href="#_related_practices_6"></a>5.8.2. Related Practices</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Failure-Mode-and-Effect-Analysis (<a href="http://en.wikipedia.org/wiki/Failure_mode_and_effects_analysis">FMEA</a>), a method for failure analysis, widely used in various industries</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Improvement-Backlog"><a class="anchor" href="#Improvement-Backlog"></a>5.9. <span class="pattern">Improvement Backlog</span></h3>
 <div class="paragraph">
 <p>Keep a public, written backlog of possible improvements, remedies, tactics or strategies.</p>
 </div>
@@ -5783,9 +5844,9 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Separate-Cause-From-Effect"><a class="anchor" href="#Separate-Cause-From-Effect"></a>5.9. <span class="pattern">Separate-Cause-From-Effect</span></h3>
+<h3 id="Separate-Cause-From-Effect"><a class="anchor" href="#Separate-Cause-From-Effect"></a>5.10. <span class="pattern">Separate-Cause-From-Effect</span></h3>
 <div class="sect3">
-<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.9.1. Intent</h4>
+<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.10.1. Intent</h4>
 <div class="paragraph">
 <p>Explicitly differentiate between symptom (<em>effect</em>) and cause:</p>
 </div>
@@ -5801,13 +5862,13 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_35"><a class="anchor" href="#_description_35"></a>5.9.2. Description</h4>
+<h4 id="_description_36"><a class="anchor" href="#_description_36"></a>5.10.2. Description</h4>
 <div class="paragraph">
 <p>Under discussion!</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_practices_6"><a class="anchor" href="#_related_practices_6"></a>5.9.3. Related Practices</h4>
+<h4 id="_related_practices_7"><a class="anchor" href="#_related_practices_7"></a>5.10.3. Related Practices</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5818,12 +5879,12 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Slide-Or-Write"><a class="anchor" href="#Slide-Or-Write"></a>5.10. <span class="pattern">Slide or Write</span></h3>
+<h3 id="Slide-Or-Write"><a class="anchor" href="#Slide-Or-Write"></a>5.11. <span class="pattern">Slide or Write</span></h3>
 <div class="paragraph">
 <p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.10.1. Intent</h4>
+<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.11.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5839,7 +5900,7 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_36"><a class="anchor" href="#_description_36"></a>5.10.2. Description</h4>
+<h4 id="_description_37"><a class="anchor" href="#_description_37"></a>5.11.2. Description</h4>
 <div class="paragraph">
 <p>There are two common ways to deliver review results:</p>
 </div>
@@ -5861,7 +5922,7 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.10.3. Experiences</h4>
+<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.11.3. Experiences</h4>
 <div class="paragraph">
 <p>In a review for a financial broker we agreed initially to deliver a detailed document with the results. When we were later asked to present the outcomes to two different audiences (engineers and management) it was quite easy to create specific slides for both of them from the ~ 40 pages of documentation.</p>
 </div>
@@ -5870,11 +5931,11 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.10.4. Applicability</h4>
+<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.11.4. Applicability</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.10.5. Related Patterns</h4>
+<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.11.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5888,25 +5949,25 @@ assumptions or requirements.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Traceability"><a class="anchor" href="#Traceability"></a>5.11. <span class="pattern">Traceability</span></h3>
+<h3 id="Traceability"><a class="anchor" href="#Traceability"></a>5.12. <span class="pattern">Traceability</span></h3>
 <div class="paragraph">
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_39"><a class="anchor" href="#_intent_39"></a>5.11.1. Intent</h4>
+<h4 id="_intent_39"><a class="anchor" href="#_intent_39"></a>5.12.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
 findings keeps eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_37"><a class="anchor" href="#_description_37"></a>5.11.2. Description</h4>
+<h4 id="_description_38"><a class="anchor" href="#_description_38"></a>5.12.2. Description</h4>
 <div class="paragraph">
 <p>(To be done)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.11.3. Experiences</h4>
+<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.12.3. Experiences</h4>
 <div class="paragraph">
 <p>Some anti-experiences that happened when we neglected traceability:</p>
 </div>
@@ -5924,7 +5985,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>5.11.4. Applicability</h4>
+<h4 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>5.12.4. Applicability</h4>
 <div class="paragraph">
 <p>Apply traceability whenever you identify problems or issues</p>
 </div>
@@ -5946,7 +6007,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.11.5. Related Patterns</h4>
+<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.12.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6258,8 +6319,9 @@ Category: <a href="#Analyze">Analyze</a></p>
 <dl>
 <dt class="hdlist1"><span class="pattern">Impact Analysis</span></dt>
 <dd>
-<p>Determine what impact (in code, concepts and the organization) a specific action (e.g. refactoring) will or might have.
-Category: <a href="#Evaluate">Evaluate</a></p>
+<p>Determine what impact (in code, concepts and
+  the organization) a specific action (e.g. refactoring) will or might have.
+Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 </dd>
 </dl>
 </div>
@@ -6284,7 +6346,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#improvement-backlog"><span class="pattern">Improvement Backlog</span></a></strong></p>
+<p><strong><a href="#improvement-backlog">[improvement-backlog]</a></strong></p>
 <div class="paragraph">
 <p>Keep a backlog of possible improvements, remedies, tactics or strategies.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
@@ -7323,7 +7385,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-18)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-20)</p>
 </li>
 </ul>
 </div>
@@ -7397,7 +7459,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-18 12:30:34 UTC
+Last updated 2014-08-20 06:19:05 UTC
 </div>
 </div>
 </body>
