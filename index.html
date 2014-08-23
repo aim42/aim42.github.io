@@ -2125,7 +2125,7 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;</p>
 </div>
 <div class="paragraph">
-<p>Version 0.4, last update 2014-08-22</p>
+<p>Version 0.4, last update 2014-08-23</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -2304,10 +2304,10 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="#Analyze">Analyze</a>: note down problems, risks, deficiencies and technical debt within your system and your development process. Focus on problems in this phase, not on potential solution approaches. In addition, develop (and document) an understanding of internal structures, concepts and architectural approaches.</p>
+<p><a href="#Analyze">Analyze</a>: collect <em>issues</em>: problems, risks, deficiencies and technical debt within your system and your development process. Focus on problems in this phase, not on potential solution approaches. In addition, develop (and document) an understanding of internal structures, concepts and architectural approaches.</p>
 </li>
 <li>
-<p><a href="#Evaluate">Evaluate</a>: determine the „value“ of problems, issues and their remedies, prioritize them</p>
+<p><a href="#Evaluate">Evaluate</a>: determine the „value“ of issues and their solutions (<em>improvements</em>)</p>
 </li>
 <li>
 <p><a href="#Improve">Improve</a>: systematically improve code and structures, reduce technical debt, remove waste and optimize.</p>
@@ -2315,7 +2315,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 </ol>
 </div>
 <div class="paragraph">
-<p>Several <a href="#Crosscutting">cross-cutting practices and patterns</a> can or should be applied in all phases, for example documenting results or <a href="#collect-opportunities-for-improvement"><span class="pattern">Collect Opportunities for Improvement</span></a>.</p>
+<p>Several <a href="#Crosscutting">cross-cutting practices and patterns</a> should be applied in all phases, for example documenting results or <a href="#collect-opportunities-for-improvement"><span class="pattern">Collect Opportunities for Improvement</span></a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2331,7 +2331,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 </div>
 </div>
 <div class="sect3">
-<h4 id="_fundamental_concepts"><a class="anchor" href="#_fundamental_concepts"></a>1.3.3. Fundamental Concepts</h4>
+<h4 id="_common_terminology"><a class="anchor" href="#_common_terminology"></a>1.3.3. Common Terminology</h4>
 <div class="paragraph">
 <p>aim42 relies on a common terminology, a small set of fundamental concepts. You may even
 call it the <em>software improvement domain</em>.</p>
@@ -2349,35 +2349,30 @@ call it the <em>software improvement domain</em>.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Problem, Issue</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Might be problem, issue or fault within system or processes related to system
-(e.g. management, development, administrative or organizational process)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Issue (problem)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any problem, error, fault or suboptimal situation within the <a href="#SuD">[SuD]</a> processes related to it (e.g. management, development, administrative or organizational process).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cause</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fundamental reason for one or several problems.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fundamental reason for one or several issues.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Remedy</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Solution or cure for one or several problems or causes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Improvement</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Solution, remedy or cure for one or several issues or causes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of problem)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The cost (in monetary units, e.g. Euro or $) of the problem, related to a
-frequency or period of time. For example – cost of every occurrence of problem,
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of issue)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The cost (in monetary units, e.g. Euro or $) of the issue, related to a
+frequency or period of time. For example – cost of every occurrence of the issue,
 or recurring cost per week.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of remedy)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The cost (in monetary units) of the remedy, tactic or strategy.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Prio(rity)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The relative or absolute priority of the problem or remedy.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of improvement)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The cost (in monetary units) of the improvement, remedy, tactic or strategy.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Risk</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Potential problem or issue. Remedies can have associated risks.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Potential problem or issue. Improvements can have associated risks.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7463,7 +7458,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-22)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-23)</p>
 </li>
 </ul>
 </div>
@@ -7537,7 +7532,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-22 16:54:03 UTC
+Last updated 2014-08-23 06:32:01 UTC
 </div>
 </div>
 </body>
