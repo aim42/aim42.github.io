@@ -2125,7 +2125,7 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;</p>
 </div>
 <div class="paragraph">
-<p>Version 0.4, last update 2014-08-24</p>
+<p>Version 0.4, last update 2014-08-25</p>
 </div>
 <div class="paragraph">
 <p>Our current build status: <span class="image"><img src="https://travis-ci.org/aim42/aim42.png?branch=master" alt="unknown"></span></p>
@@ -5784,45 +5784,91 @@ which makes electronic approaches more viable.</p>
 </div>
 <div class="title">Figure 16. Levels of Reaction when presented with problems</div>
 </div>
+<div class="paragraph">
+<p>From enthusiasm to neutrality things will be easy, but from here on it gets interesting or difficult, however you might call it.</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>Enthusiasm</strong>:</p>
+<p><strong>Enthusiasm</strong>:
+Some people will embrace your findings - like "that&#8217;s what we always said&#8230;". Enthusiasts sometimes expect that findings or the appropriate
+improvement approaches directly improve their own situation.</p>
 </li>
 <li>
-<p><strong>Agreement</strong>:</p>
+<p><strong>Agreement</strong>:
+Others will agree, without further ado.</p>
 </li>
 <li>
-<p><strong>Neutrality</strong>:</p>
+<p><strong>Neutrality</strong>:
+Some stakeholders won&#8217;t care. These are probably unconcerned by
+any finding.</p>
 </li>
 <li>
-<p><strong>Amazement</strong>:</p>
+<p><strong>Amazement</strong>:
+Your results will amaze or astonish some people. Although they would never have expected your findings, amazed stakeholders might be convinced to agreement or neutrality by using explanation and proofs in stakeholder-specific language or communication. On the other hand, amazed stakeholders pose the serious risk of becoming more negative (doubtful or resisting) if you fail to convince them - or if other people (your opponents, for example) manage to bring them over to the <em>dark side</em>&#8230;</p>
+<div class="paragraph">
+<p>Always ask amazed stakeholders <em>why</em> for the reasons of their amazement - that can help you in your argumentation.</p>
+</div>
 </li>
 <li>
-<p><strong>Doubt</strong>:</p>
+<p><strong>Doubt</strong>:
+You will hear or read "Can&#8217;t be, impossible!"or similar expressions
+from some people. If these stakeholders can explain the reasons for their doubts, you might find ways to improve your explanation (maybe your issues were simply ill-formulated) or you have to look for additional and better ways to explain. Doubt can lead you to errors or ommissions in your own argumentation or conclusions.</p>
+<div class="paragraph">
+<p>Some doubtful stakeholders will be emotional - and therefore not open for rational or objective arguments. That&#8217;s a serious and difficult communication problem - beyond the scope of this guide.</p>
+</div>
 </li>
 <li>
-<p><strong>Minimization</strong>: This is the first level of denial. The fact itself is accepted, but its consequences, evaluations or seriousness are denied.</p>
+<p><strong>Minimization</strong>, sometimes disavowal:
+This is the first level of denial. The fact itself is accepted, but its consequences, evaluations or seriousness are denied. In practice we encountered this phenomenon quite often: Affected stakeholders repeat their assessment "problem acknowledged, but the consequences are only minimal" like a mantra. Other stakeholders, especially doubtful or amazed ones, might start to believe in this minimization tactic - especially if the truth implies inconvenient or uncomfortable changes in their own working environment.</p>
 </li>
 <li>
-<p><strong>Resistance</strong>: Findings are opposed, either actively or passively.</p>
+<p><strong>Resistance</strong>:
+Findings are opposed, either actively or passively.</p>
+<div class="paragraph">
+<p>In case you encounter minimization or resistance, get support from the highest management level you can access: As a consequence some, if not many, minimizing or resisting stakeholders will turn to your side.</p>
+</div>
 </li>
 <li>
-<p><strong>Hostility</strong>, or "<em>Shoot the messenger</em>"</p>
+<p><strong>Hostility</strong>, or "<em>Shoot the messenger</em>". Always remain calm and polite - but hard in your argumentation and facts. Hostile stakeholders can rarely be convinced of something, but need to be handled with diplomacy, politics and organizational skills (none of which we can cover here).</p>
+<div class="paragraph">
+<p>Be prepared for <em>hostile actions</em>, though: In case of critical issues, always keep details documentation of their origin. Be prepared to <em>proof</em> those issues, remove even minor omissions or formal weaknesses in your argumentation. Your issues and <a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a> has to be flawless and backed by meticulous research and management support. Ensure <a href="#Traceability"><span class="pattern">Traceability</span></a> of your chain of reasoning! Keep written records of <a href="#Stakeholder-Interviews">[Stakeholder-Interviews]</a> and of suspicious pieces of sourcecode, or documentation.</p>
+</div>
 </li>
 </ol>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>5.4.3. Experiences</h4>
 <div class="paragraph">
-<p>TBD</p>
+<p>Let others review your findings before publication.
+==== Experiences</p>
+</div>
+<div class="paragraph">
+<p>In one audit of a European Logistic Company (&gt;40.000 employees) we found serious issues within their development processes, in addition to some issues in their source code. The process problems caused massive (&gt; 3month) delays in delivery of working software to production, whereas the pure software bugs were relatively minor in their consequences. When we presented these issues, all process-related issues were minimized or doubted by senior management of the IT-department.</p>
+</div>
+<div class="paragraph">
+<p>+
+With the help of the CIO, we identified those minimizers to be the root-cause of most process-issues, as they had themselves introduced inefficient, formal and bloated processes.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>5.4.4. Consequences</h4>
+<h4 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>5.4.3. Consequences</h4>
 <div class="paragraph">
 <p>Especially when presenting results to (opposing) management stakeholders, you should be able to <strong>verify</strong> all your claims. In critical cases you should keep written protocols and note who-said-what in your <a href="#Stakeholder-Interview">stakeholder interviews</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.4.4. Related Patterns</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Collect-Issues">[Collect-Issues]</a></p>
+</li>
+<li>
+<p><a href="#Issue-Cost">[Issue-Cost]</a></p>
+</li>
+<li>
+<p><a href="#Traceability"><span class="pattern">Traceability</span></a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -6013,7 +6059,7 @@ might have. Identify the resultant effects on system development and operations.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.11.3. Experiences</h4>
+<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>5.11.3. Experiences</h4>
 <div class="paragraph">
 <p>In a review for a financial broker we agreed initially to deliver a detailed document with the results. When we were later asked to present the outcomes to two different audiences (engineers and management) it was quite easy to create specific slides for both of them from the ~ 40 pages of documentation.</p>
 </div>
@@ -6026,7 +6072,7 @@ might have. Identify the resultant effects on system development and operations.
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.11.5. Related Patterns</h4>
+<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.11.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6058,7 +6104,7 @@ findings keeps eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.12.3. Experiences</h4>
+<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.12.3. Experiences</h4>
 <div class="paragraph">
 <p>Some anti-experiences that happened when we neglected traceability:</p>
 </div>
@@ -6098,7 +6144,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.12.5. Related Patterns</h4>
+<h4 id="_related_patterns_22"><a class="anchor" href="#_related_patterns_22"></a>5.12.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -7476,7 +7522,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-24)</p>
+<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-25)</p>
 </li>
 </ul>
 </div>
@@ -7550,7 +7596,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-24 18:07:16 UTC
+Last updated 2014-08-25 13:31:16 UTC
 </div>
 </div>
 </body>
