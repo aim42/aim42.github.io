@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="generator" content="Asciidoctor 0.1.4">
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.0">
+<meta name="description" content="aim 42 supports software evolution, maintenance and improvement - in a systematic and pragmatic way.">
+<meta name="keywords" content="software-architecture, evolution, maintenance, improvement, analysis, evaluation, reengineering, refactoring, patterns, practices">
 <title>Method Guide</title>
 <style>
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400);
@@ -1898,172 +1901,259 @@ b.conum * {
 	font-variant:small-caps;
 }
 </style>
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
 <style>
-/* Foundation stylesheet for CodeRay (to match GitHub theme) | MIT License | http://foundation.zurb.com */
-table.CodeRay { border-collapse: collapse; padding: 2px; margin-bottom: 0; border: 0; background: transparent; }
-table.CodeRay td { padding: 0 .5em; vertical-align: top; }
-table.CodeRay td.line-numbers { text-align: right; color: #999; border-right: 1px solid #e5e5e5; padding-left: 0; }
-span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inline-block; margin-right: 0.5em; padding-right: 0.5em; }
-.CodeRay td.line-numbers strong, .CodeRay span.line-numbers strong { font-weight: normal; }
-.CodeRay .debug { color: white !important; background: blue !important; }
-.CodeRay .annotation { color: #007; }
-.CodeRay .attribute-name { color: #f08; }
-.CodeRay .attribute-value { color: #700; }
-.CodeRay .binary { color: #509; }
-.CodeRay .comment  { color: #999; font-style: italic; }
-.CodeRay .char { color: #04D; }
-.CodeRay .char .content { color: #04D; }
-.CodeRay .char .delimiter { color: #039; }
-.CodeRay .class { color: #458; }
-.CodeRay .complex { color: #A08; }
-.CodeRay .constant { color: teal; }
-.CodeRay .color { color: #0A0; }
-.CodeRay .class-variable { color: #369; }
-.CodeRay .decorator { color: #B0B; }
-.CodeRay .definition { color: #099; }
-.CodeRay .directive { color: #088; }
-.CodeRay .delimiter { color: black; }
-.CodeRay .doc { color: #970; }
-.CodeRay .doctype { color: #34b; }
-.CodeRay .doc-string { color: #D42; }
-.CodeRay .escape  { color: #666; }
-.CodeRay .entity { color: #800; }
-.CodeRay .error { color: #808; }
-.CodeRay .exception { color: #C00; }
-.CodeRay .filename { color: #099; }
-.CodeRay .function { color: #900; }
-.CodeRay .global-variable { color: teal; }
-.CodeRay .hex { color: #058; }
-.CodeRay .integer  { color: #099; }
-.CodeRay .include { color: #B44; }
-.CodeRay .inline { color: black; }
-.CodeRay .inline .inline { background: #ccc; }
-.CodeRay .inline .inline .inline { background: #bbb; }
-.CodeRay .inline .inline-delimiter { color: #D14; }
-.CodeRay .inline-delimiter { color: #D14; }
-.CodeRay .important { color: #f00; }
-.CodeRay .interpreted { color: #B2B; }
-.CodeRay .instance-variable { color: teal; }
-.CodeRay .label { color: #970; }
-.CodeRay .local-variable { color: #963; }
-.CodeRay .octal { color: #40E; }
-.CodeRay .predefined { color: #369; }
-.CodeRay .preprocessor { color: #579; }
-.CodeRay .pseudo-class { color: #00C; }
-.CodeRay .predefined-type { color: #074; }
-.CodeRay .reserved, .keyword  { color: #000; }
-.CodeRay .key { color: #808; }
-.CodeRay .key .delimiter { color: #606; }
-.CodeRay .key .char { color: #80f; }
-.CodeRay .value { color: #088; }
-.CodeRay .regexp { background-color: #fff0ff; }
-.CodeRay .regexp .content { color: #808; }
-.CodeRay .regexp .delimiter { color: #404; }
-.CodeRay .regexp .modifier { color: #C2C; }
-.CodeRay .regexp .function  { color: #404; font-weight: bold; }
-.CodeRay .string { color: #D20; }
-.CodeRay .string .string { }
-.CodeRay .string .string .string { background-color: #ffd0d0; }
-.CodeRay .string .content { color: #D14; }
-.CodeRay .string .char { color: #D14; }
-.CodeRay .string .delimiter { color: #D14; }
-.CodeRay .shell { color: #D14; }
-.CodeRay .shell .content { }
-.CodeRay .shell .delimiter { color: #D14; }
-.CodeRay .symbol { color: #990073; }
-.CodeRay .symbol .content { color: #A60; }
-.CodeRay .symbol .delimiter { color: #630; }
-.CodeRay .tag, .CodeRay .attribute-name { color: #070; }
-.CodeRay .tag-special { color: #D70; }
-.CodeRay .type { color: #339; }
-.CodeRay .variable  { color: #036; }
-.CodeRay .insert { background: #afa; }
-.CodeRay .delete { background: #faa; }
-.CodeRay .change { color: #aaf; background: #007; }
-.CodeRay .head { color: #f8f; background: #505; }
-.CodeRay .insert .insert { color: #080; }
-.CodeRay .delete .delete { color: #800; }
-.CodeRay .change .change { color: #66f; }
-.CodeRay .head .head { color: #f4f; }
-
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{font-weight: normal}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#00}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
 </style>
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1><span class="image"><img src="images/aim42-logo.png" alt="aim42-logo"></span> Method Guide</h1>
+<h1><span class="image"><img src="images/aim42-logo.png" alt="aim 42"></span> Method Guide</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_about_aim42">About aim42</a></li>
-<li><a href="#_introduction">1. Introduction</a></li>
-<li>
+<li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#_why_is_software_being_changed">1.1. Why is software being changed?</a></li>
-<li><a href="#_why_does_software_need_improvement">1.2. Why does software need improvement?</a></li>
-<li><a href="#_how_does_aim42_work">1.3. How does aim42 work?</a></li>
+<li><a href="#_why_does_software_need_improvement">1.2. Why does software need improvement?</a>
+<ul class="sectlevel3">
+<li><a href="#_long_term_goal">1.2.1. Long-Term Goal</a></li>
+</ul>
+</li>
+<li><a href="#_how_does_aim42_work">1.3. How does aim42 work?</a>
+<ul class="sectlevel3">
+<li><a href="#_three_simple_phases">1.3.1. Three Simple Phases</a></li>
+<li><a href="#_common_terminology">1.3.2. Common Terminology</a></li>
+<li><a href="#Iterative-Approach">1.3.3. Iterative Approach</a></li>
+</ul>
+</li>
 <li><a href="#_patterns_and_practices_provide_no_guarantee">1.4. Patterns and Practices Provide No Guarantee</a></li>
 </ul>
 </li>
-<li><a href="#Analyze">2. Analyze</a></li>
-<li>
+<li><a href="#Analyze">2. Analyze</a>
 <ul class="sectlevel2">
 <li><a href="#_goals">2.1. Goals</a></li>
 <li><a href="#_how_it_works">2.2. How it works</a></li>
-<li><a href="#_patterns_and_practices_for_analysis">2.3. Patterns and Practices for Analysis</a></li>
+<li><a href="#_patterns_and_practices_for_analysis">2.3. Patterns and Practices for Analysis</a>
+<ul class="sectlevel3">
+<li><a href="#Architecture-Documentation">2.3.1. <span class="pattern">Architecture Documentation</span></a></li>
+<li><a href="#ATAM">2.3.2. <span class="pattern">Atam</span></a></li>
+<li><a href="#Capture-Quality-Requirements">2.3.3. <span class="pattern">Capture Quality Requirements</span></a></li>
+<li><a href="#Context-Analysis">2.3.4. <span class="pattern">Context-Analysis</span></a></li>
+<li><a href="#Data-Analysis">2.3.5. <span class="pattern">Data-Analysis</span></a></li>
+<li><a href="#Debugging">2.3.6. <span class="pattern">Debugging</span></a></li>
+<li><a href="#Development-Process-Analysis">2.3.7. <span class="pattern">Development-Process-Analysis</span></a></li>
+<li><a href="#Documentation-Analysis">2.3.8. <span class="pattern">Documentation-Analysis</span></a></li>
+<li><a href="#Infrastructure-Analysis">2.3.9. <span class="pattern">Infrastructure-Analysis</span></a></li>
+<li><a href="#Instrument-System">2.3.10. <span class="pattern">Instrument System</span></a></li>
+<li><a href="#Issue-Tracker-Analysis">2.3.11. <span class="pattern">Issue-Tracker-Analysis</span></a></li>
+<li><a href="#Organizational-Analysis">2.3.12. <span class="pattern">Organizational-Analysis</span></a></li>
+<li><a href="#Qualitative-Analysis">2.3.13. <span class="pattern">Qualitative Analysis</span></a></li>
+<li><a href="#_also_known_as_2">2.3.14. Also Known As</a></li>
+<li><a href="#Quantitative-Analysis">2.3.15. <span class="pattern">Quantitative-Analysis</span></a></li>
+<li><a href="#Pre-Interview-Questionnaire">2.3.16. <span class="pattern">Pre Interview Questionnaire</span></a></li>
+<li><a href="#Questionnaire">2.3.17. <span class="pattern">Questionnaire</span></a></li>
+<li><a href="#Requirements-Analysis">2.3.18. <span class="pattern">Requirements-Analysis</span></a></li>
+<li><a href="#Root-Cause-Analysis">2.3.19. <span class="pattern">Root Cause Analysis</span></a></li>
+<li><a href="#Runtime-Analysis">2.3.20. <span class="pattern">Runtime-Analysis</span></a></li>
+<li><a href="#Software-Archeology">2.3.21. <span class="pattern">Software Archeology</span></a></li>
+<li><a href="#Stakeholder-Analysis">2.3.22. <span class="pattern">Stakeholder Analysis</span></a></li>
+<li><a href="#Stakeholder-Interview">2.3.23. <span class="pattern">Stakeholder Interview</span></a></li>
+<li><a href="#Static-Code-Analysis">2.3.24. <span class="pattern">Static Code Analysis</span></a></li>
+<li><a href="#Take-What-They-Mean">2.3.25. <span class="pattern">Take What They Mean, Not What They Say</span></a></li>
+<li><a href="#View-Based-Understanding">2.3.26. <span class="pattern">View Based Understanding</span></a></li>
+<li><a href="#_references_9">2.3.27. References</a></li>
 </ul>
 </li>
-<li><a href="#Evaluate">3. Evaluate</a></li>
-<li>
+</ul>
+</li>
+<li><a href="#Evaluate">3. Evaluate</a>
 <ul class="sectlevel2">
 <li><a href="#_goals_2">3.1. Goals</a></li>
 <li><a href="#_estimation">3.2. Estimation</a></li>
-<li><a href="#_pattern_and_practices_for_evaluation">3.3. Pattern and Practices for Evaluation</a></li>
+<li><a href="#_pattern_and_practices_for_evaluation">3.3. Pattern and Practices for Evaluation</a>
+<ul class="sectlevel3">
+<li><a href="#Estimate-Feature-Value">3.3.1. <span class="pattern">Estimate Feature Value</span></a></li>
+<li><a href="#Estimate-In-Interval">3.3.2. <span class="pattern">Estimate in Interval</span></a></li>
+<li><a href="#Estimate-Issue-Cost">3.3.3. <span class="pattern">Estimate Issue Cost</span></a></li>
+<li><a href="#Estimate-Improvement-Cost">3.3.4. <span class="pattern">Estimate Improvement Cost</span></a></li>
 </ul>
 </li>
-<li><a href="#Improve">4. Improve</a></li>
-<li>
+</ul>
+</li>
+<li><a href="#Improve">4. Improve</a>
 <ul class="sectlevel2">
-<li><a href="#_goals_3">4.1. Goals</a></li>
-<li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a></li>
-<li><a href="#Anticorruption-Layer">4.3. <span class="pattern">Anticorruption Layer</span></a></li>
-<li><a href="#Interface-Segregation-Principle">4.4. <span class="pattern">Interface Segregation Principle</span></a></li>
-<li><a href="#Introduce-Boy-Scout-Rule">4.5. <span class="pattern">Introduce Boy Scout Rule</span></a></li>
-<li><a href="#Manage-Complex-Client-Dependencies-With-Facade">4.6. <span class="pattern">Manage Complex Client Dependencies With Facade</span></a></li>
-<li><a href="#Use-Invariants-To-Kill-Zombies">4.7. <span class="pattern">Use Invariants To Kill Zombies</span></a></li>
-<li><a href="#Improve-Logging">4.8. <span class="pattern">Improve Logging</span></a></li>
+<li><a href="#_goals_3">4.1. Goals</a>
+<ul class="sectlevel3">
+<li><a href="#_refactoring_source_code">4.1.1. Refactoring Source Code</a></li>
 </ul>
 </li>
-<li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a></li>
-<li>
+<li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a>
+<ul class="sectlevel3">
+<li><a href="#Anticorruption-Layer">4.2.1. <span class="pattern">Anticorruption Layer</span></a></li>
+<li><a href="#Improve-Logging">4.2.2. <span class="pattern">Improve Logging</span></a></li>
+<li><a href="#Interface-Segregation-Principle">4.2.3. <span class="pattern">Interface Segregation Principle</span></a></li>
+<li><a href="#Introduce-Boy-Scout-Rule">4.2.4. <span class="pattern">Introduce Boy Scout Rule</span></a></li>
+<li><a href="#Manage-Complex-Client-Dependencies-With-Facade">4.2.5. <span class="pattern">Manage Complex Client Dependencies With Facade</span></a></li>
+<li><a href="#Use-Invariants-To-Kill-Zombies">4.2.6. <span class="pattern">Use Invariants To Kill Zombies</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a>
 <ul class="sectlevel2">
 <li><a href="#_pattern_and_practices_for_cross_cutting_concerns">5.1. Pattern and Practices for Cross-Cutting Concerns</a></li>
 <li><a href="#collect-opportunities-for-improvement">5.2. <span class="pattern">Collect Opportunities for Improvement</span></a></li>
 <li><a href="#Collect-Issues">5.3. <span class="pattern">Collect Issues</span></a></li>
-<li><a href="#Expect-Denial">5.4. <span class="pattern">Expect Denial</span></a></li>
-<li><a href="#Explicit-Assumption">5.5. <span class="pattern">Explicit Assumption</span></a></li>
+<li><a href="#Expect-Denial">5.4. <span class="pattern">Expect Denial</span></a>
+<ul class="sectlevel3">
+<li><a href="#_intent_35">5.4.1. Intent</a></li>
+<li><a href="#_description_34">5.4.2. Description</a></li>
+<li><a href="#_consequences_12">5.4.3. Consequences</a></li>
+<li><a href="#_related_patterns_19">5.4.4. Related Patterns</a></li>
+</ul>
+</li>
+<li><a href="#Explicit-Assumption">5.5. <span class="pattern">Explicit Assumption</span></a>
+<ul class="sectlevel3">
+<li><a href="#_description_35">5.5.1. Description</a></li>
+</ul>
+</li>
 <li><a href="#Fail-Fast">5.6. <span class="pattern">Fail Fast</span></a></li>
 <li><a href="#Fast-Feedback">5.7. <span class="pattern">Fast Feedback</span></a></li>
-<li><a href="#Impact-Analysis">5.8. <span class="pattern">Impact Analysis</span></a></li>
+<li><a href="#Impact-Analysis">5.8. <span class="pattern">Impact Analysis</span></a>
+<ul class="sectlevel3">
+<li><a href="#_intent_36">5.8.1. Intent</a></li>
+<li><a href="#_related_practices_7">5.8.2. Related Practices</a></li>
+</ul>
+</li>
 <li><a href="#Improvement-Backlog">5.9. <span class="pattern">Improvement Backlog</span></a></li>
-<li><a href="#Separate-Cause-From-Effect">5.10. <span class="pattern">Separate-Cause-From-Effect</span></a></li>
-<li><a href="#Slide-Or-Write">5.11. <span class="pattern">Slide or Write</span></a></li>
-<li><a href="#Traceability">5.12. <span class="pattern">Traceability</span></a></li>
+<li><a href="#Separate-Cause-From-Effect">5.10. <span class="pattern">Separate-Cause-From-Effect</span></a>
+<ul class="sectlevel3">
+<li><a href="#_intent_37">5.10.1. Intent</a></li>
+<li><a href="#_description_36">5.10.2. Description</a></li>
+<li><a href="#_related_practices_8">5.10.3. Related Practices</a></li>
+</ul>
+</li>
+<li><a href="#Slide-Or-Write">5.11. <span class="pattern">Slide or Write</span></a>
+<ul class="sectlevel3">
+<li><a href="#_intent_38">5.11.1. Intent</a></li>
+<li><a href="#_description_37">5.11.2. Description</a></li>
+<li><a href="#_experiences_14">5.11.3. Experiences</a></li>
+<li><a href="#_applicability_18">5.11.4. Applicability</a></li>
+<li><a href="#_related_patterns_20">5.11.5. Related Patterns</a></li>
+</ul>
+</li>
+<li><a href="#Traceability">5.12. <span class="pattern">Traceability</span></a>
+<ul class="sectlevel3">
+<li><a href="#_intent_39">5.12.1. Intent</a></li>
+<li><a href="#_description_38">5.12.2. Description</a></li>
+<li><a href="#_experiences_15">5.12.3. Experiences</a></li>
+<li><a href="#_applicability_19">5.12.4. Applicability</a></li>
+<li><a href="#_related_patterns_21">5.12.5. Related Patterns</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_pattern_index">6. Pattern index</a></li>
 <li><a href="#bibliography">Appendix A: Bibliography</a></li>
 <li><a href="#_glossary">Appendix B: Glossary</a></li>
-<li><a href="#_organizational_stuff">Appendix C: Organizational Stuff</a></li>
-<li>
+<li><a href="#_organizational_stuff">Appendix C: Organizational Stuff</a>
 <ul class="sectlevel2">
 <li><a href="#_the_team">The Team</a></li>
 <li><a href="#_license">License</a></li>
 <li><a href="#contributions">Contribute to aim42.org</a></li>
 </ul>
 </li>
-<li><a href="#_asciidoc_help">Appendix D: Asciidoc Help</a></li>
-<li>
+<li><a href="#_asciidoc_help">Appendix D: Asciidoc Help</a>
 <ul class="sectlevel2">
 <li><a href="#_headings">Headings</a></li>
 <li><a href="#_cross_references">Cross-References</a></li>
@@ -2092,7 +2182,7 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <table>
 <tr>
 <td class="icon">
-<i class="icon-note" title="Note"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -2231,7 +2321,7 @@ The reasons for changing a system can be grouped into four categories (see <a hr
 <h3 id="_why_does_software_need_improvement"><a class="anchor" href="#_why_does_software_need_improvement"></a>1.2. Why does software need improvement?</h3>
 <div class="paragraph">
 <p>The most important reason is depicted in the following diagram: The cost-of-change
-of most software increases heavily over time&#8230; making those people really unhappy that
+of most software increases heavily over time&#8230;&#8203; making those people really unhappy that
 have to pay for these changes (called maintenance, evolution, new-features or else)</p>
 </div>
 <div class="paragraph">
@@ -2268,7 +2358,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 <p>inappropriate selection of <em>technology</em> (<em>frameworks, libraries or languages</em>)</p>
 </li>
 <li>
-<p>(you can surely find a few more&#8230;)</p>
+<p>(you can surely find a few more&#8230;&#8203;)</p>
 </li>
 </ol>
 </div>
@@ -2334,10 +2424,10 @@ call it the <em>software improvement domain</em>.</p>
 </div>
 <div class="title">Figure 4. aim42 domain terminology</div>
 </div>
-<table class="tableblock frame-all grid-all" style="width:80%; ">
+<table class="tableblock frame-all grid-all" style="width: 80%;">
 <colgroup>
-<col style="width:33%;">
-<col style="width:66%;"> 
+<col style="width: 33%;">
+<col style="width: 66%;">
 </colgroup>
 <tbody>
 <tr>
@@ -2366,7 +2456,6 @@ call it the <em>software improvement domain</em>.</p>
 </tr>
 </tbody>
 </table>
-
 </div>
 <div class="sect3">
 <h4 id="Iterative-Approach"><a class="anchor" href="#Iterative-Approach"></a>1.3.3. Iterative Approach</h4>
@@ -2406,7 +2495,7 @@ But (yes, there&#8217;s always a but) we cannot guarantee: Maybe your software i
 </div>
 <div class="paragraph">
 <p>Maybe your organization does not fit our prerequisites, or is way more advanced
-than we anticipated in our approach&#8230;</p>
+than we anticipated in our approach&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
 <p>You have to use all practices, patterns and approaches of aim42 at your own risk
@@ -2453,7 +2542,7 @@ responsible for any results of applying aim42.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="icon-tip" title="Tip"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 To effectively find issues, you need an appropriate amount of <em>understanding</em> of the system under design (<a href="#SuD">[SuD]</a>), its technical concepts, code-structure, inner workings, major external interfaces and its development process.
@@ -2527,7 +2616,7 @@ based upon the specific quality requirements</p>
 <table>
 <tr>
 <td class="icon">
-<i class="icon-warning" title="Warning"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 Never start solving problems until you have a thorough understanding of current stakeholder requirements. Otherwise you risk wasting effort in areas which no influential stakeholder cares about.
@@ -2558,7 +2647,6 @@ Never start solving problems until you have a thorough understanding of current 
 	<area shape=rect coords="667,539,742,578" href="#ATAM">
 	<area shape=rect coords="497,399,609,447" href="#Qualitative-Analysis">
 </map>
-
 <div class="paragraph">
 <p>Figure: Detailed overview of Analysis Practices and Patterns</p>
 </div>
@@ -2625,7 +2713,7 @@ compliance with quality goals.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><em>Identify the relevant stakeholders</em>:
+<p>'Identify the relevant stakeholders':
 The specific goals of the relevant stakeholders define the primary
 goals of the architecture. Who belongs to these <em>relevant</em> stakeholders
 has to be determined by a <a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a>.</p>
@@ -2638,21 +2726,21 @@ has to be determined by a <a href="#Stakeholder-Analysis"><span class="pattern">
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><em>Present the ATAM method</em>:
+<p>'Present the ATAM method':
 Convince the relevant stakeholders of the significance of
 comprehensible and specific architecture and quality goals.
 ATAM helps identify risks, non-risks, tradeoffs and sensitivity points.
 Calculation of quantitative attributes is not subject of this method.</p>
 </li>
 <li>
-<p><em>Present the business objectives and architecture goals</em>:
+<p>'Present the business objectives and architecture goals':
 Present the business context to the relevant stakeholders, especially the
 <em>business motivation and reasons</em> for the development of the system.
 Clarify specific requirements that the architecture should meet,
 for instance flexibility, modifiability and performance.</p>
 </li>
 <li>
-<p><em>Present the architecture of the system</em>:
+<p>'Present the architecture of the system':
 The architect presents the <em>architecture</em> of the system. This includes:</p>
 <div class="ulist">
 <ul>
@@ -2679,7 +2767,7 @@ The architect presents the <em>architecture</em> of the system. This includes:</
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><em>Explain in detail the architecture approaches</em>:
+<p>'Explain in detail the architecture approaches':
 The following questions are answered by the architect or developers:</p>
 <div class="ulist">
 <ul>
@@ -2698,7 +2786,7 @@ challenges?</p>
 </div>
 </li>
 <li>
-<p><em>Create a quality tree and scenarios</em>:
+<p>'Create a quality tree and scenarios':
 In the context of a creative brainstorming the stakeholders develop the
 relevant required quality goals. These are arranged in a quality tree.
 Afterward the quality requirements and architecture goals of the
@@ -2706,7 +2794,7 @@ system are refined by scenarios which are added to the quality tree. The
 found scenarios are prioritized regarding to their business value.</p>
 </li>
 <li>
-<p><em>Analyze the architecture approaches with respect to the scenarios</em>:
+<p>'Analyze the architecture approaches with respect to the scenarios':
 Based on the priorities of the scenarios the evaluation team examines
 together with the architect or developers how the architecture approaches
 support the considered scenario. The findings of the analysis are:</p>
@@ -2737,7 +2825,7 @@ formative influence to the quality attributes.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><em>Present the results</em>:
+<p>'Present the results':
 Creation of a report with:</p>
 <div class="ulist">
 <ul>
@@ -2790,7 +2878,7 @@ Creation of a report with:</p>
 <table>
 <tr>
 <td class="icon">
-<i class="icon-important" title="Important"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 The ATAM method does not develop concrete measures, strategies or
@@ -2903,7 +2991,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <p><strong>Covers organization and process</strong>: Scenarios sometimes cover process or organizational aspects (like: release cycles should be faster than they are now). Move those to your <a href="#Improvement-Backlog"><span class="pattern">Improvement Backlog</span></a>.</p>
 </li>
 <li>
-<p><strong>Improves human communication</strong>: Different stakeholders often start communicating about the systeme or their requirements during such workshops. This kind of interaction <em>should</em> have happened long before&#8230;</p>
+<p><strong>Improves human communication</strong>: Different stakeholders often start communicating about the systeme or their requirements during such workshops. This kind of interaction <em>should</em> have happened long before&#8230;&#8203;</p>
 </li>
 </ul>
 </div>
@@ -2968,7 +3056,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <div class="ulist">
 <ul>
 <li>
-<p>Real-world examples of software quality requirements. Currently available only in German language on <a href="https://bitbucket.org/arc42/quality-requirements">https://bitbucket.org/arc42/quality-requirements</a> (this document is likely to be moved to github under the arc42 organization).</p>
+<p>Real-world examples of software quality requirements. Currently available only in German language on <a href="https://bitbucket.org/arc42/quality-requirements" class="bare">https://bitbucket.org/arc42/quality-requirements</a> (this document is likely to be moved to github under the arc42 organization).</p>
 </li>
 <li>
 <p><a href="#Clements-ATAM">[Clements-ATAM]</a>, contains a brief description of scenario-based quality description and details how to setup such workshops.</p>
@@ -3018,7 +3106,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <table>
 <tr>
 <td class="icon">
-<i class="icon-tip" title="Tip"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 Many software developers we met violated the basic rules of debugging. They worked in haste, took wrong assumptions, imagined-instead-of-read or simply hunted bugs at the wrong parts of the system.
@@ -3315,7 +3403,7 @@ introduce instrumentation without modifying the original system.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="icon-tip" title="Tip"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -3336,7 +3424,7 @@ system back with the original system!</p>
 <table>
 <tr>
 <td class="icon">
-<i class="icon-warning" title="Warning"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 even if used cautiously, the instrumentation the system under design can
@@ -3562,13 +3650,7 @@ real fast.</p>
 <div class="sect4">
 <h5 id="_description_14"><a class="anchor" href="#_description_14"></a>Description</h5>
 <div class="paragraph">
-<p>A specialisation of <a href="#Questionnaire">questionnaire</a> - targeted to be used by stakeholders (aka your interview partners).</p>
-</div>
-<div class="paragraph">
-<p>As with the more general <a href="#Questionnaire">questionnaire</a> you need to collect appropriate topics, questions and suggestions.</p>
-</div>
-<div class="paragraph">
-<p>Remember to apply <a href="#Stakeholder-Specific-Communication">stakeholder-specific communication</a>: It might be useful to create different questionnaires per stakeholder or stakeholder-group. That&#8217;s more work for you as interviewer, but will lead to better interview results.</p>
+<p>A specialisation of <a href="#Questionnaire">questionnaire</a> - targeted to be used by stakeholders (aka your interview partners). As with the more general <a href="#Questionnaire">questionnaire</a> you need to collect appropriate topics, questions and suggestions. Remember to apply <a href="#Stakeholder-Specific-Communication">stakeholder-specific communication</a>: It might be useful to create different questionnaires per stakeholder or stakeholder-group. That&#8217;s more work for you as interviewer, but will lead to better interview results.</p>
 </div>
 <div class="paragraph">
 <p>Mix open and closed questions:</p>
@@ -3576,7 +3658,7 @@ real fast.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>open questions require stakeholders to formulate answers on their own. For example "How did you&#8230;?" or "Please explain&#8230;?"</p>
+<p>open questions require stakeholders to formulate answers on their own. For example "How did you&#8230;&#8203;?" or "Please explain&#8230;&#8203;?"</p>
 </li>
 <li>
 <p>closed questions ask stakeholders to select from several predefined choices.</p>
@@ -3584,13 +3666,7 @@ real fast.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Include a "Comments/Remarks" section at the end of the questionnaire, so stakeholders can comment on topics you did not consider in advance.</p>
-</div>
-<div class="paragraph">
-<p>The <a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a> shall be handed over to the appropriate stakeholders in advance, a few days before the interview.</p>
-</div>
-<div class="paragraph">
-<p>As these documents will be read and processed by external and potentially critical stakeholders, you need to care for several details:</p>
+<p>Include a "Comments/Remarks" section at the end of the questionnaire, so stakeholders can comment on topics you did not consider in advance. The <a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a> shall be handed over to the appropriate stakeholders in advance, a few days before the interview. As these documents will be read and processed by external and potentially critical stakeholders, you need to care for several details:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3808,7 +3884,7 @@ and build a system that minimizes future mistakes.
 <table>
 <tr>
 <td class="icon">
-<i class="icon-tip" title="Tip"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -3874,7 +3950,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://en.wikipedia.org/wiki/Root_cause_analysis">http://en.wikipedia.org/wiki/Root_cause_analysis</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Root_cause_analysis" class="bare">http://en.wikipedia.org/wiki/Root_cause_analysis</a></p>
 </li>
 </ul>
 </div>
@@ -4042,14 +4118,14 @@ configuration-manager, release-manager, maintenance-team, external service provi
 <div class="paragraph">
 <p>Include those stakeholders in a simple table:</p>
 </div>
-<table class="tableblock frame-all grid-all" style="width:100%; ">
+<table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 1. Stakeholder Table</caption>
 <colgroup>
-<col style="width:15%;">
-<col style="width:21%;">
-<col style="width:21%;">
-<col style="width:21%;">
-<col style="width:21%;"> 
+<col style="width: 15%;">
+<col style="width: 21%;">
+<col style="width: 21%;">
+<col style="width: 21%;">
+<col style="width: 21%;">
 </colgroup>
 <thead>
 <tr>
@@ -4070,7 +4146,6 @@ configuration-manager, release-manager, maintenance-team, external service provi
 </tr>
 </tbody>
 </table>
-
 </div>
 <div class="sect4">
 <h5 id="_experience_2"><a class="anchor" href="#_experience_2"></a>Experience</h5>
@@ -4097,7 +4172,7 @@ employee organization.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>arc42 example stakeholder table: <a href="https://github.com/arc42/arc42-template/blob/master/src/DE/asciidoc/plain/src/kap01.adoc">https://github.com/arc42/arc42-template/blob/master/src/DE/asciidoc/plain/src/kap01.adoc</a></p>
+<p>arc42 example stakeholder table: <a href="https://github.com/arc42/arc42-template/blob/master/src/DE/asciidoc/plain/src/kap01.adoc" class="bare">https://github.com/arc42/arc42-template/blob/master/src/DE/asciidoc/plain/src/kap01.adoc</a></p>
 </li>
 </ul>
 </div>
@@ -4153,7 +4228,7 @@ different departments, roles, management-levels. Include at least business-peopl
 <p>What worries you about the <a href="#SuD">[SuD]</a>? What are currently the 3 worst problems?</p>
 </li>
 <li>
-<p>What problems or risks do you see in (business/development/operation/usage&#8230;)?</p>
+<p>What problems or risks do you see in (business/development/operation/usage&#8230;&#8203;)?</p>
 <div class="ulist">
 <ul>
 <li>
@@ -4233,7 +4308,7 @@ At the end of the interview, give a short feedback and summarize important resul
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://boxesandarrows.com/a-stakeholder-interview-checklist">http://boxesandarrows.com/a-stakeholder-interview-checklist</a>, nice checklists for several kinds of stakeholder interviews</p>
+<p><a href="http://boxesandarrows.com/a-stakeholder-interview-checklist" class="bare">http://boxesandarrows.com/a-stakeholder-interview-checklist</a>, nice checklists for several kinds of stakeholder interviews</p>
 </li>
 </ul>
 </div>
@@ -4581,12 +4656,12 @@ or observe the evaluation subject and produce <em>hard facts</em>.</p>
 </div>
 <div class="title">Figure 12. Evaluation Concepts Domain Model</div>
 </div>
-<table class="tableblock frame-all grid-all" style="width:80%; ">
+<table class="tableblock frame-all grid-all" style="width: 80%;">
 <caption class="title">Table 2. Evaluation Domain Concepts</caption>
 <colgroup>
-<col style="width:12%;">
-<col style="width:50%;">
-<col style="width:37%;"> 
+<col style="width: 12%;">
+<col style="width: 50%;">
+<col style="width: 37%;">
 </colgroup>
 <thead>
 <tr>
@@ -4650,7 +4725,6 @@ concerned by the problem, we count their number.</p>
 </tr>
 </tbody>
 </table>
-
 </div>
 <div class="sect2">
 <h3 id="_pattern_and_practices_for_evaluation"><a class="anchor" href="#_pattern_and_practices_for_evaluation"></a>3.3. Pattern and Practices for Evaluation</h3>
@@ -4707,10 +4781,10 @@ Estimates are uncertain, otherwise they would be observations (or measurements!)
 <table>
 <tr>
 <td class="icon">
-<i class="icon-caution" title="Caution"></i>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring">http://en.wikipedia.org/wiki/Anchoring</a>
+Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring" class="bare">http://en.wikipedia.org/wiki/Anchoring</a>
 </td>
 </tr>
 </table>
@@ -4875,6 +4949,9 @@ uncertainty and propability involved.</p>
 <p><a href="#Improve-Code-Layout">[Improve-Code-Layout]</a></p>
 </li>
 <li>
+<p><a href="#Improve-Logging"><span class="pattern">Improve Logging</span></a></p>
+</li>
+<li>
 <p><a href="#Interface-Segregation-Principle"><span class="pattern">Interface Segregation Principle</span></a></p>
 </li>
 <li>
@@ -4891,6 +4968,9 @@ uncertainty and propability involved.</p>
 </li>
 <li>
 <p><a href="#Manage-Complex-Client-Dependencies-With-Facade"><span class="pattern">Manage Complex Client Dependencies With Facade</span></a></p>
+</li>
+<li>
+<p><a href="#Measure-Everything">[Measure-Everything]</a></p>
 </li>
 <li>
 <p><a href="#Never-Change-Running-System">[Never-Change-Running-System]</a></p>
@@ -4922,29 +5002,22 @@ uncertainty and propability involved.</p>
 <li>
 <p><a href="#Use-Invariants-To-Kill-Zombies"><span class="pattern">Use Invariants To Kill Zombies</span></a></p>
 </li>
-<li>
-<p><a href="#Improve-Logging"><span class="pattern">Improve Logging</span></a></p>
-</li>
-<li>
-<p><a href="#Measure-Everything">[Measure-Everything]</a></p>
-</li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.3. <span class="pattern">Anticorruption Layer</span></h3>
 <div class="sect3">
-<h4 id="_intent_29"><a class="anchor" href="#_intent_29"></a>4.3.1. Intent</h4>
+<h4 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.2.1. <span class="pattern">Anticorruption Layer</span></h4>
+<div class="sect4">
+<h5 id="_intent_29"><a class="anchor" href="#_intent_29"></a>Intent</h5>
 <div class="paragraph">
-<p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface remains untouched developers can implement changes or even exchange own or third-party software without affecting the clients.</p>
+<p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface remains untouched developers can implement changes or even exchange own or third-party software without affecting the clients of this interface.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_description_28"><a class="anchor" href="#_description_28"></a>4.3.2. Description</h4>
+<div class="sect4">
+<h5 id="_description_28"><a class="anchor" href="#_description_28"></a>Description</h5>
 
 </div>
-<div class="sect3">
-<h4 id="_experiences_9"><a class="anchor" href="#_experiences_9"></a>4.3.3. Experiences</h4>
+<div class="sect4">
+<h5 id="_experiences_9"><a class="anchor" href="#_experiences_9"></a>Experiences</h5>
 <div class="paragraph">
 <p>Here are some real-life experiences:</p>
 </div>
@@ -4956,14 +5029,14 @@ uncertainty and propability involved.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_applicability_12"><a class="anchor" href="#_applicability_12"></a>4.3.4. Applicability</h4>
+<div class="sect4">
+<h5 id="_applicability_12"><a class="anchor" href="#_applicability_12"></a>Applicability</h5>
 <div class="paragraph">
 <p>Apply this pattern when clients shall be protected from internal changes in a module or subsystem.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_consequences_6"><a class="anchor" href="#_consequences_6"></a>4.3.5. Consequences</h4>
+<div class="sect4">
+<h5 id="_consequences_6"><a class="anchor" href="#_consequences_6"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -4975,12 +5048,12 @@ uncertainty and propability involved.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_also_known_as_8"><a class="anchor" href="#_also_known_as_8"></a>4.3.6. Also Known As</h4>
+<div class="sect4">
+<h5 id="_also_known_as_8"><a class="anchor" href="#_also_known_as_8"></a>Also Known As</h5>
 
 </div>
-<div class="sect3">
-<h4 id="_related_patterns_14"><a class="anchor" href="#_related_patterns_14"></a>4.3.7. Related Patterns</h4>
+<div class="sect4">
+<h5 id="_related_patterns_14"><a class="anchor" href="#_related_patterns_14"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -4989,504 +5062,15 @@ uncertainty and propability involved.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_references_10"><a class="anchor" href="#_references_10"></a>4.3.8. References</h4>
+<div class="sect4">
+<h5 id="_references_10"><a class="anchor" href="#_references_10"></a>References</h5>
 
 </div>
 </div>
-<div class="sect2">
-<h3 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.4. <span class="pattern">Interface Segregation Principle</span></h3>
 <div class="sect3">
-<h4 id="_intent_30"><a class="anchor" href="#_intent_30"></a>4.4.1. Intent</h4>
-<div class="paragraph">
-<p>Reduce coupling between clients and service providers.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description_29"><a class="anchor" href="#_description_29"></a>4.4.2. Description</h4>
-<div class="paragraph">
-<p>Service components may provide more functionality than required by one client.
-To remove the client&#8217;s dependency from functionality not required introduce interfaces that are tailored
-to the client&#8217;s needs.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_applicability_13"><a class="anchor" href="#_applicability_13"></a>4.4.3. Applicability</h4>
-<div class="paragraph">
-<p>Apply when</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>clients only require a restricted functionality from a complex service,</p>
-</li>
-<li>
-<p>you have to deal with low cohesion components you cannot change</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>4.4.4. Consequences</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Reduces coupling between client and service providers. Changing the service provider interface will affect fewer clients.</p>
-</li>
-<li>
-<p>Introduces additional interfaces that must be maintained.</p>
-</li>
-<li>
-<p>You have to find a good compromise between "good client fit" and the number of interfaces.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_also_known_as_9"><a class="anchor" href="#_also_known_as_9"></a>4.4.5. Also Known As</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_related_patterns_15"><a class="anchor" href="#_related_patterns_15"></a>4.4.6. Related Patterns</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_references_11"><a class="anchor" href="#_references_11"></a>4.4.7. References</h4>
-
-</div>
-</div>
-<div class="sect2">
-<h3 id="Introduce-Boy-Scout-Rule"><a class="anchor" href="#Introduce-Boy-Scout-Rule"></a>4.5. <span class="pattern">Introduce Boy Scout Rule</span></h3>
-<div class="paragraph">
-<p>The &#8220;Boy Scout Rule&#8221; for software development basically states that we</p>
-</div>
-<div class="quoteblock">
-<blockquote>
-&#8220;Always check a module in cleaner than when you checked it out.&#8221;.
-</blockquote>
-<div class="attribution">
-&#8212; Robert C. Martin
-</div>
-</div>
-<div class="paragraph">
-<p>Uncle Bob (Robert C. Martin) proposed this adoption of the rule from the boy
-scout rulebook which reads &#8220;Try and leave this world a little better than you
-found it.&#8221; for the software development world in an article in Kevlin Henney&#8217;s
-&#8220;97 Things a Programmer Should Know&#8221; <a href="#Henney">[Henney]</a>.</p>
-</div>
-<div class="sect3">
-<h4 id="_intent_31"><a class="anchor" href="#_intent_31"></a>4.5.1. Intent</h4>
-<div class="paragraph">
-<p>Enable crosscutting architectural improvement even if it is not feasible to change the whole codebase.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Often the introduction of concepts like layering is deemed <em>“impossible”</em> due to the huge codebase that would be affected. In these cases the Boy Scout Rule approach is a lightweight way to enhance the code quality one day at a time.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description_30"><a class="anchor" href="#_description_30"></a>4.5.2. Description</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Drafting from an <a href="#improvement-backlog">[improvement-backlog]</a>, define a specific rule set
-on how to improve the contents of specific file types.</p>
-</li>
-<li>
-<p>Specify how much effort should be allowed to perform each specific
-clean-up operation</p>
-</li>
-<li>
-<p>Specify how to proceed if the cleanup takes up too much time</p>
-</li>
-<li>
-<p>Revisit the rule set regularly</p>
-</li>
-<li>
-<p>Install a mechanism to ensure that the things that where too big to
-be cleaned up while visiting the file will end up in the
-<a href="#improvement-backlog">[improvement-backlog]</a>.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="title">Example Boy Scout Rule agreement</div>
-<div class="paragraph">
-<p>This is a very concrete agreement from a specific project - yours
-should look rather different.</p>
-</div>
-<div class="paragraph">
-<p><strong>Boy Scout Rule agreement for project X from 2014-02-19 onwards:</strong>
-. Apply defined source code formatting (via IDE) to adhere to coding style<br>
-If the formatting introduces errors and those errors can not be fixed within 10
-Minutes revert changes and add the file to the "redo formatting list" (e.g. add
-an TODO REFORMAT comment, if such a comment already exist add an exclamation mark
-each time you handle the file)</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Move SQL strings to the db-encapsulation layer and replace the former
-direct database calls by appropriate calls to the correct architecture elements<br>
-If this takes longer than 20 minutes revert changes and add file to the list
-"difficulties with database extraction" (e.g. add an TODO DB-EXTRACT comment,
-if such a comment already exist add an exclamation mark each time you handle
-the file)</p>
-</li>
-<li>
-<p>Remove magic numbers from source code and replace them with
-  constants (e.g. replace <code>if (item.id &gt; 99)</code> with <code>if (item.id &gt;
-Item.COMPOUND_ITEMS_THRESHHOLD)</code>.</p>
-</li>
-<li>
-<p>If time allows replace the former "magic number conditionals" with a
-  function on a business logic level (e.g. replace <code>if (item.id &gt;
-Item.COMPOUND_ITEMS_THRESHHOLD)</code>
-  with <code>if (item.is_compound()</code>)</p>
-</li>
-</ol>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_experiences_10"><a class="anchor" href="#_experiences_10"></a>4.5.3. Experiences</h4>
-<div class="paragraph">
-<p>Introducing the Boy Scout Rule on a heavily deteriorated code base
-induces heavy payback on <a href="#technical-debt">[technical-debt]</a> and often gets challenged
-by team members and senior management. It is important to point out
-that the extended time spent on fixing the artifacts &#8220;as the teams
-goes&#8221; actually is the <em>explicit</em> payment of the <a href="#technical-debt">[technical-debt]</a>
-interest rate.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_risks"><a class="anchor" href="#_risks"></a>4.5.4. Risks</h4>
-<div class="paragraph">
-<p>Sometimes the Boy Scout Rule can be taken as a means by itself. In
-these cases the higher goals tend to be forgotten and thus</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_applicability_14"><a class="anchor" href="#_applicability_14"></a>4.5.5. Applicability</h4>
-<div class="paragraph">
-<p>The pattern &#8220;Introduce Boy Scout Rule&#8221; can always be applied.<br>
-Some of the most effective uses are</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>unstructured code (no layers, no separation of concerns etc.)</p>
-</li>
-<li>
-<p>systematic weaknesses (insecure logging, insecure handling of
-database inserts etc.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_consequences_8"><a class="anchor" href="#_consequences_8"></a>4.5.6. Consequences</h4>
-<div class="paragraph">
-<p>The introduction the Boy Scout Rule often proved to enable structural
-improvements as a prerequisite for higher level architectural
-improvements. Also it heightens the team&#8217;s awareness of good practices
-in their code base.</p>
-</div>
-<div class="paragraph">
-<p>The introduction of the Boy Scout Rule leads to a dramatic shift in
-the distribution of the code quality because those parts of the system
-that get changed the most also get the most care. For more stable
-parts of the system other approaches have to be utilized.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_also_known_as_10"><a class="anchor" href="#_also_known_as_10"></a>4.5.7. Also Known As</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_related_patterns_16"><a class="anchor" href="#_related_patterns_16"></a>4.5.8. Related Patterns</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#Refactoring-Plan">[Refactoring-Plan]</a>, as an alternative or complimenting approach</p>
-</li>
-<li>
-<p><a href="#Introduce-Layering">[Introduce-Layering]</a> can be performed using the Boy Scout Rule</p>
-</li>
-<li>
-<p><a href="#Anticorruption-Layer"><span class="pattern">Anticorruption Layer</span></a> can be performed using the Boy Scout Rule</p>
-</li>
-<li>
-<p>An <a href="#improvement-backlog">[improvement-backlog]</a> should be the basis for the tasks
-performed when applying the Boy Scout Rule</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_references_12"><a class="anchor" href="#_references_12"></a>4.5.9. References</h4>
-<div class="paragraph">
-<p>The original description of the boy scout rule can be found online at <a href="#Boy-Scout-Rule-article">[Boy-Scout-Rule-article]</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.6. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h3>
-<div class="sect3">
-<h4 id="_intent_32"><a class="anchor" href="#_intent_32"></a>4.6.1. Intent</h4>
-<div class="paragraph">
-<p>Simplify the interaction of a client with a set of service components.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description_31"><a class="anchor" href="#_description_31"></a>4.6.2. Description</h4>
-<div class="paragraph">
-<p>When clients use a set of components with repeating patterns these
-interaction patterns are implemented in a Facade component.</p>
-</div>
-<div class="paragraph">
-<p>The interface the Facade provides to the client is tailored to the client&#8217;s
-need. Technical details that are specific for the service component implementations
-are handled inside the facade.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_experiences_11"><a class="anchor" href="#_experiences_11"></a>4.6.3. Experiences</h4>
-<div class="paragraph">
-<p>Consider a Facade if you must use generic frameworks or systems you cannot modify
-e.g. legacy systems.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_applicability_15"><a class="anchor" href="#_applicability_15"></a>4.6.4. Applicability</h4>
-<div class="paragraph">
-<p>Apply this pattern when clients use a set of components in stereotypcial fashion.
-Things that can be handled by a facade:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>recurring control flows</p>
-</li>
-<li>
-<p>technical details</p>
-<div class="ulist">
-<ul>
-<li>
-<p>configuration of components</p>
-</li>
-<li>
-<p>resource lookup</p>
-</li>
-<li>
-<p>error handling</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_consequences_9"><a class="anchor" href="#_consequences_9"></a>4.6.5. Consequences</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Enhances Information Hiding. Clients do not need information about the components' technical detail.</p>
-</li>
-<li>
-<p>Supports DRY principle: complex interactions are implemented in one place. No need to reimplement this in different clients.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_also_known_as_11"><a class="anchor" href="#_also_known_as_11"></a>4.6.6. Also Known As</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_related_patterns_17"><a class="anchor" href="#_related_patterns_17"></a>4.6.7. Related Patterns</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_references_13"><a class="anchor" href="#_references_13"></a>4.6.8. References</h4>
-
-</div>
-</div>
-<div class="sect2">
-<h3 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.7. <span class="pattern">Use Invariants To Kill Zombies</span></h3>
-<div class="sect3">
-<h4 id="_intent_33"><a class="anchor" href="#_intent_33"></a>4.7.1. Intent</h4>
-<div class="paragraph">
-<p>Provide a safe approach in situations where  it seems to dangerous to delete
-code or whole modules from a huge system because <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> can&#8217;t
-recognize whether the code is still in use or not.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description_32"><a class="anchor" href="#_description_32"></a>4.7.2. Description</h4>
-<div class="paragraph">
-<p>Oftentimes old systems contain lots of code that probably is no longer in use
-but still has to be tended to. Such code puts a burden on every cross-cutting
-change - from the year-2000 efforts of the late nineties to the upcoming
-end-of-unix-system date rewrites. New processor architectures, new versions of
-operating systems with a different handling of the byte-order and all kinds of
-external regulations are just some examples for things that make it necessary to
-make changes to <strong>all</strong> existing code&#8201;&#8212;&#8201;whether it is still in use or not. This
-code is deemed dead, but like the proverbial zombie it still goes around and
-munches on everybody&#8217;s brain when it is time for the next system-wide change.</p>
-</div>
-<div class="paragraph">
-<p>This kind of zombie can be killed more safely by employing invariants.</p>
-</div>
-<div class="paragraph">
-<p>An <a href="#invariant">[invariant]</a>&#8201;&#8212;&#8201;as described by Bertrand Meyer in
-<a href="#Object-Oriented-Software-Construction">[Object-Oriented-Software-Construction]</a>&#8201;&#8212;&#8201;is a logical expression that always
-is true for a given set of circumstances. He proposes to actually verify those
-invariants <em>in the code itself</em>. What happens if the invariant does not hold
-true is open to discussion - in some circumstances it&#8217;s best to <a href="#Fail-Fast">fail-fast</a>
-but when improving legacy software with hundreds or thousand of users this often
-is not an option.</p>
-</div>
-<div class="paragraph">
-<p>So if we want to make sure we can delete this code our invariant is simple:</p>
-</div>
-<div class="listingblock">
-<div class="title">Pseudo-Code</div>
-<div class="content">
-<pre>assertTrue(false, "We should not be here" + __FILE__ + __LINE__ );</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>How to implement <code>assertTrue()</code> for this case is hard, though.</p>
-</div>
-<div class="paragraph">
-<p>As just pointed out, the simple “let the program die” approach might not be
-appropriate.<br>
-Just logging the fact might not have a sufficient effect.<br>
-Sending an e-mail requires at least some infrastructure (and infrastructure
-code)<br>
-Sending an SMTP-Trap might not be feasible in the environment.<br></p>
-</div>
-<div class="paragraph">
-<p>And so on.</p>
-</div>
-<div class="paragraph">
-<p>This is a classical situation that calls for trade-off decisions, but since this
-piece of code should never be called anyway things like sending an e-mail or
-calling some webservice are not so far out of the question.</p>
-</div>
-<div class="paragraph">
-<p>If a huge number of deployments is possible without problems it can also be
-feasible to de-escalate slowly and use more and more intrusive ways to handle
-the failed invariant&#8201;&#8212;&#8201;write a log entry in the first two weeks, send an SNMP
-trap in the next four weeks and after that send an e-mail (although it doesn&#8217;t
-hurt to keep the logging turned on).</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_experiences_12"><a class="anchor" href="#_experiences_12"></a>4.7.3. Experiences</h4>
-<div class="paragraph">
-<p>In several cases this approach helped to delete up to 50% of the code base.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_risks_2"><a class="anchor" href="#_risks_2"></a>4.7.4. Risks</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Sometimes the Zombie is buried to early&#8201;&#8212;&#8201;to be on the safe side the
-presumably dead code should live through at least each season. For huge
-systems that really means 366 days.</p>
-</li>
-<li>
-<p>The presumably dead code might be called <em>much</em> more often than anticipated -
-in these cases a highly invasive reaction, like sending an e-mail, can lead to
-side-effects that are close to a denial-of-service attack.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_applicability_16"><a class="anchor" href="#_applicability_16"></a>4.7.5. Applicability</h4>
-<div class="paragraph">
-<p>This pattern can be applied whenever the code-base has gotten too big and there
-are parts of the system that are perhaps unused (e.g. dead) but still add to the
-weight of the system.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_consequences_10"><a class="anchor" href="#_consequences_10"></a>4.7.6. Consequences</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Dead code can be safely deleted</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_also_known_as_12"><a class="anchor" href="#_also_known_as_12"></a>4.7.7. Also Known As</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>4.7.8. Related Patterns</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Use <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> to find candidates, entry points and exit points.</p>
-</li>
-<li>
-<p>Using invariants to kill zombies is a special case of <a href="#Assertions">[Assertions]</a> in the
-context of architecture improvement.</p>
-</li>
-<li>
-<p>Introducing invariants to verify that the code is really dead is a specific
-way to make <a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a>s</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_references_14"><a class="anchor" href="#_references_14"></a>4.7.9. References</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Invariants (and other <a href="#Assertions">[Assertions]</a>) have been made popular by Bertrand Meyer
-in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Oriented-Software-Construction]</a></p>
-</li>
-<li>
-<p>Brian Foote references Zombie code in <a href="#Big-Ball-Of-Mud">[Big-Ball-Of-Mud]</a></p>
-</li>
-<li>
-<p>Dead code is an alternate name for the lava-flow anti pattern in
-<a href="#AntiPatterns">[AntiPatterns]</a>.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.8. <span class="pattern">Improve Logging</span></h3>
-<div class="sect3">
-<h4 id="_intent_34"><a class="anchor" href="#_intent_34"></a>4.8.1. Intent</h4>
+<h4 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.2.2. <span class="pattern">Improve Logging</span></h4>
+<div class="sect4">
+<h5 id="_intent_30"><a class="anchor" href="#_intent_30"></a>Intent</h5>
 <div class="paragraph">
 <p>Employ sophisticated logging mechanisms such as modern logging frameworks,
 distributed log collection and visualization tools in order to gain more
@@ -5494,8 +5078,8 @@ detailed information about the system during runtime with a minimal or
 predictable performance impact.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_description_33"><a class="anchor" href="#_description_33"></a>4.8.2. Description</h4>
+<div class="sect4">
+<h5 id="_description_29"><a class="anchor" href="#_description_29"></a>Description</h5>
 <div class="paragraph">
 <p>While some time ago it was quite common to output log statements to standard out,
 people usually use logging frameworks nowadays that give more control about what should
@@ -5534,8 +5118,8 @@ that are not widely known or used. To name a few:</p>
 <p>Using such features makes the problem analysis easier and more data is available in a standardized fashion.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_experiences_13"><a class="anchor" href="#_experiences_13"></a>4.8.3. Experiences</h4>
+<div class="sect4">
+<h5 id="_experiences_10"><a class="anchor" href="#_experiences_10"></a>Experiences</h5>
 <div class="paragraph">
 <p>Most projects write log files in a more or less sophisticated fashion, in many
 cases log messages are phrased in a rather unstructured way. It turns out that
@@ -5548,7 +5132,7 @@ which additional log levels or markers shall be used for what purpose.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="icon-tip" title="Tip"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -5559,11 +5143,11 @@ were expected and properly handled with a delayed retry mechanism.</p>
 </div>
 <div class="paragraph">
 <p>While this approach worked quite well, we got frequently complaints from the
-operations team, which reported a number of <code>ERROR</code> log messages along with longish
+operations team, which reported a number of ERROR log messages along with longish
 stacktraces that set their alarm bells off. These log messages were written by
 the ORM tool whenever a DB deadlock was experienced. Since the application could
 perfectly deal with this situation this was not an error anymore and should have
-been logged as <code>WARN</code> or <code>INFO</code> at best. The problem was that a third-party
+been logged as WARN or INFO at best. The problem was that a third-party
 framework used the wrong log level and was thus causing a lot of confusion.
 Bear this in mind when working on a framework-like codebase and thinking about
 log levels.</p>
@@ -5573,8 +5157,8 @@ log levels.</p>
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_risks_3"><a class="anchor" href="#_risks_3"></a>4.8.4. Risks</h4>
+<div class="sect4">
+<h5 id="_risks"><a class="anchor" href="#_risks"></a>Risks</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5603,14 +5187,14 @@ stream manageable.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>4.8.5. Applicability</h4>
+<div class="sect4">
+<h5 id="_applicability_13"><a class="anchor" href="#_applicability_13"></a>Applicability</h5>
 <div class="paragraph">
 <p>This pattern should always be considered.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_consequences_11"><a class="anchor" href="#_consequences_11"></a>4.8.6. Consequences</h4>
+<div class="sect4">
+<h5 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5624,12 +5208,12 @@ context information (in case MDCs are used).</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_also_known_as_13"><a class="anchor" href="#_also_known_as_13"></a>4.8.7. Also Known As</h4>
+<div class="sect4">
+<h5 id="_also_known_as_9"><a class="anchor" href="#_also_known_as_9"></a>Also Known As</h5>
 
 </div>
-<div class="sect3">
-<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>4.8.8. Related Patterns</h4>
+<div class="sect4">
+<h5 id="_related_patterns_15"><a class="anchor" href="#_related_patterns_15"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5643,9 +5227,521 @@ that cannot be isolated without modifying the code.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_references_15"><a class="anchor" href="#_references_15"></a>4.8.9. References</h4>
+<div class="sect4">
+<h5 id="_references_11"><a class="anchor" href="#_references_11"></a>References</h5>
 
+</div>
+</div>
+<div class="sect3">
+<h4 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.2.3. <span class="pattern">Interface Segregation Principle</span></h4>
+<div class="sect4">
+<h5 id="_intent_31"><a class="anchor" href="#_intent_31"></a>Intent</h5>
+<div class="paragraph">
+<p>Reduce coupling between clients and service providers.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_description_30"><a class="anchor" href="#_description_30"></a>Description</h5>
+<div class="paragraph">
+<p>Service components may provide more functionality than required by one client.
+To remove the client&#8217;s dependency from functionality not required introduce interfaces that are tailored
+to the client&#8217;s needs.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_applicability_14"><a class="anchor" href="#_applicability_14"></a>Applicability</h5>
+<div class="paragraph">
+<p>Apply when</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>clients only require a restricted functionality from a complex service,</p>
+</li>
+<li>
+<p>you have to deal with low cohesion components you cannot change</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_consequences_8"><a class="anchor" href="#_consequences_8"></a>Consequences</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Reduces coupling between client and service providers. Changing the service provider interface will affect fewer clients.</p>
+</li>
+<li>
+<p>Introduces additional interfaces that must be maintained.</p>
+</li>
+<li>
+<p>You have to find a good compromise between "good client fit" and the number of interfaces.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_10"><a class="anchor" href="#_also_known_as_10"></a>Also Known As</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_related_practices_6"><a class="anchor" href="#_related_practices_6"></a>Related Practices</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>If <a href="#Never-Change-Running-System">[Never-Change-Running-System]</a> is a must meaning a service component or its API must not be changed, consider using</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Manage-Complex-Client-Dependencies-With-Facade"><span class="pattern">Manage Complex Client Dependencies With Facade</span></a> and</p>
+</li>
+<li>
+<p><a href="#Front-End-Switch">[Front-End-Switch]</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_12"><a class="anchor" href="#_references_12"></a>References</h5>
+
+</div>
+</div>
+<div class="sect3">
+<h4 id="Introduce-Boy-Scout-Rule"><a class="anchor" href="#Introduce-Boy-Scout-Rule"></a>4.2.4. <span class="pattern">Introduce Boy Scout Rule</span></h4>
+<div class="paragraph">
+<p>The &#8220;Boy Scout Rule&#8221; for software development basically states that we</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+&#8220;Always check a module in cleaner than when you checked it out.&#8221;.
+</blockquote>
+<div class="attribution">
+&#8212; Robert C. Martin
+</div>
+</div>
+<div class="paragraph">
+<p>Uncle Bob (Robert C. Martin) proposed this adoption of the rule from the boy
+scout rulebook which reads &#8220;Try and leave this world a little better than you
+found it.&#8221; for the software development world in an article in Kevlin Henney&#8217;s
+&#8220;97 Things a Programmer Should Know&#8221; <a href="#Henney">[Henney]</a>.</p>
+</div>
+<div class="sect4">
+<h5 id="_intent_32"><a class="anchor" href="#_intent_32"></a>Intent</h5>
+<div class="paragraph">
+<p>Enable crosscutting architectural improvement even if it is not feasible to change the whole codebase.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Often the introduction of concepts like layering is deemed <em>“impossible”</em> due to the huge codebase that would be affected. In these cases the Boy Scout Rule approach is a lightweight way to enhance the code quality one day at a time.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_description_31"><a class="anchor" href="#_description_31"></a>Description</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Drafting from an <a href="#improvement-backlog">[improvement-backlog]</a>, define a specific rule set
+on how to improve the contents of specific file types.</p>
+</li>
+<li>
+<p>Specify how much effort should be allowed to perform each specific
+clean-up operation</p>
+</li>
+<li>
+<p>Specify how to proceed if the cleanup takes up too much time</p>
+</li>
+<li>
+<p>Revisit the rule set regularly</p>
+</li>
+<li>
+<p>Install a mechanism to ensure that the things that where too big to
+be cleaned up while visiting the file will end up in the
+<a href="#improvement-backlog">[improvement-backlog]</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Example Boy Scout Rule agreement</div>
+<div class="paragraph">
+<p>This is a very concrete agreement from a specific project - yours
+should look rather different.</p>
+</div>
+<div class="paragraph">
+<p><strong>Boy Scout Rule agreement for project X from 2014-02-19 onwards:</strong>
+. Apply defined source code formatting (via IDE) to adhere to coding style<br>
+If the formatting introduces errors and those errors can not be fixed within 10
+Minutes revert changes and add the file to the "redo formatting list" (e.g. add
+an TODO REFORMAT comment, if such a comment already exist add an exclamation mark
+each time you handle the file)</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Move SQL strings to the db-encapsulation layer and replace the former
+direct database calls by appropriate calls to the correct architecture elements<br>
+If this takes longer than 20 minutes revert changes and add file to the list
+"difficulties with database extraction" (e.g. add an TODO DB-EXTRACT comment,
+if such a comment already exist add an exclamation mark each time you handle
+the file)</p>
+</li>
+<li>
+<p>Remove magic numbers from source code and replace them with
+  constants (e.g. replace if (item.id &gt; 99) with if (item.id &gt;
+Item.COMPOUND_ITEMS_THRESHHOLD).</p>
+</li>
+<li>
+<p>If time allows replace the former "magic number conditionals" with a
+  function on a business logic level (e.g. replace if (item.id &gt;
+Item.COMPOUND_ITEMS_THRESHHOLD)
+  with if (item.is_compound())</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_experiences_11"><a class="anchor" href="#_experiences_11"></a>Experiences</h5>
+<div class="paragraph">
+<p>Introducing the Boy Scout Rule on a heavily deteriorated code base
+induces heavy payback on <a href="#technical-debt">[technical-debt]</a> and often gets challenged
+by team members and senior management. It is important to point out
+that the extended time spent on fixing the artifacts ``as the teams
+goes'' actually is the <em>explicit</em> payment of the <a href="#technical-debt">[technical-debt]</a>
+interest rate.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_risks_2"><a class="anchor" href="#_risks_2"></a>Risks</h5>
+<div class="paragraph">
+<p>Sometimes the Boy Scout Rule can be taken as a means by itself. In
+these cases the higher goals tend to be forgotten and thus</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_applicability_15"><a class="anchor" href="#_applicability_15"></a>Applicability</h5>
+<div class="paragraph">
+<p>The pattern &#8220;Introduce Boy Scout Rule&#8221; can always be applied.<br>
+Some of the most effective uses are</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>unstructured code (no layers, no separation of concerns etc.)</p>
+</li>
+<li>
+<p>systematic weaknesses (insecure logging, insecure handling of
+database inserts etc.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_consequences_9"><a class="anchor" href="#_consequences_9"></a>Consequences</h5>
+<div class="paragraph">
+<p>The introduction the Boy Scout Rule often proved to enable structural
+improvements as a prerequisite for higher level architectural
+improvements. Also it heightens the team&#8217;s awareness of good practices
+in their code base.</p>
+</div>
+<div class="paragraph">
+<p>The introduction of the Boy Scout Rule leads to a dramatic shift in
+the distribution of the code quality because those parts of the system
+that get changed the most also get the most care. For more stable
+parts of the system other approaches have to be utilized.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_11"><a class="anchor" href="#_also_known_as_11"></a>Also Known As</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_16"><a class="anchor" href="#_related_patterns_16"></a>Related Patterns</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Refactoring-Plan">[Refactoring-Plan]</a>, as an alternative or complimenting approach</p>
+</li>
+<li>
+<p><a href="#Introduce-Layering">[Introduce-Layering]</a> can be performed using the Boy Scout Rule</p>
+</li>
+<li>
+<p><a href="#Anticorruption-Layer"><span class="pattern">Anticorruption Layer</span></a> can be performed using the Boy Scout Rule</p>
+</li>
+<li>
+<p>An <a href="#improvement-backlog">[improvement-backlog]</a> should be the basis for the tasks
+performed when applying the Boy Scout Rule</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_13"><a class="anchor" href="#_references_13"></a>References</h5>
+<div class="paragraph">
+<p>The original description of the boy scout rule can be found online at <a href="#Boy-Scout-Rule-article">[Boy-Scout-Rule-article]</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.2.5. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h4>
+<div class="sect4">
+<h5 id="_intent_33"><a class="anchor" href="#_intent_33"></a>Intent</h5>
+<div class="paragraph">
+<p>Simplify the interaction of a client with a set of service components.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_description_32"><a class="anchor" href="#_description_32"></a>Description</h5>
+<div class="paragraph">
+<p>When clients use a set of components with repeating patterns these
+interaction patterns are implemented in a Facade component.</p>
+</div>
+<div class="paragraph">
+<p>The interface the Facade provides to the client is tailored to the client&#8217;s
+need. Technical details that are specific for the service component implementations
+are handled inside the facade.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_experiences_12"><a class="anchor" href="#_experiences_12"></a>Experiences</h5>
+<div class="paragraph">
+<p>Consider a Facade if you must use generic frameworks or systems you cannot modify
+e.g. legacy systems.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_applicability_16"><a class="anchor" href="#_applicability_16"></a>Applicability</h5>
+<div class="paragraph">
+<p>Apply this pattern when clients use a set of components in stereotypcial fashion.
+Things that can be handled by a facade:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>recurring control flows</p>
+</li>
+<li>
+<p>technical details</p>
+<div class="ulist">
+<ul>
+<li>
+<p>configuration of components</p>
+</li>
+<li>
+<p>resource lookup</p>
+</li>
+<li>
+<p>error handling</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_consequences_10"><a class="anchor" href="#_consequences_10"></a>Consequences</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Enhances Information Hiding. Clients do not need information about the components' technical detail.</p>
+</li>
+<li>
+<p>Supports DRY principle: complex interactions are implemented in one place. No need to reimplement this in different clients.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_12"><a class="anchor" href="#_also_known_as_12"></a>Also Known As</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_17"><a class="anchor" href="#_related_patterns_17"></a>Related Patterns</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Interface-Segregation-Principle"><span class="pattern">Interface Segregation Principle</span></a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_14"><a class="anchor" href="#_references_14"></a>References</h5>
+
+</div>
+</div>
+<div class="sect3">
+<h4 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.2.6. <span class="pattern">Use Invariants To Kill Zombies</span></h4>
+<div class="sect4">
+<h5 id="_intent_34"><a class="anchor" href="#_intent_34"></a>Intent</h5>
+<div class="paragraph">
+<p>Provide a safe approach in situations where  it seems to dangerous to delete
+code or whole modules from a huge system because <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> can&#8217;t
+recognize whether the code is still in use or not.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_description_33"><a class="anchor" href="#_description_33"></a>Description</h5>
+<div class="paragraph">
+<p>Oftentimes old systems contain lots of code that probably is no longer in use
+but still has to be tended to. Such code puts a burden on every cross-cutting
+change - from the year-2000 efforts of the late nineties to the upcoming
+end-of-unix-system date rewrites. New processor architectures, new versions of
+operating systems with a different handling of the byte-order and all kinds of
+external regulations are just some examples for things that make it necessary to
+make changes to <strong>all</strong> existing code&#8201;&#8212;&#8201;whether it is still in use or not. This
+code is deemed dead, but like the proverbial zombie it still goes around and
+munches on everybody&#8217;s brain when it is time for the next system-wide change.</p>
+</div>
+<div class="paragraph">
+<p>This kind of zombie can be killed more safely by employing invariants.</p>
+</div>
+<div class="paragraph">
+<p>An <a href="#invariant">[invariant]</a>&#8201;&#8212;&#8201;as described by Bertrand Meyer in
+<a href="#Object-Oriented-Software-Construction">[Object-Oriented-Software-Construction]</a>&#8201;&#8212;&#8201;is a logical expression that always
+is true for a given set of circumstances. He proposes to actually verify those
+invariants <em>in the code itself</em>. What happens if the invariant does not hold
+true is open to discussion - in some circumstances it&#8217;s best to <a href="#Fail-Fast">fail-fast</a>
+but when improving legacy software with hundreds or thousand of users this often
+is not an option.</p>
+</div>
+<div class="paragraph">
+<p>So if we want to make sure we can delete this code our invariant is simple:</p>
+</div>
+<div class="listingblock">
+<div class="title">Pseudo-Code</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">assertTrue(<span class="predefined-constant">false</span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">We should not be here</span><span class="delimiter">&quot;</span></span> + __FILE__ + __LINE__ );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>How to implement assertTrue() for this case is hard, though.</p>
+</div>
+<div class="paragraph">
+<p>As just pointed out, the simple “let the program die” approach might not be
+appropriate.<br>
+Just logging the fact might not have a sufficient effect.<br>
+Sending an e-mail requires at least some infrastructure (and infrastructure
+code)<br>
+Sending an SMTP-Trap might not be feasible in the environment.<br></p>
+</div>
+<div class="paragraph">
+<p>And so on.</p>
+</div>
+<div class="paragraph">
+<p>This is a classical situation that calls for trade-off decisions, but since this
+piece of code should never be called anyway things like sending an e-mail or
+calling some webservice are not so far out of the question.</p>
+</div>
+<div class="paragraph">
+<p>If a huge number of deployments is possible without problems it can also be
+feasible to de-escalate slowly and use more and more intrusive ways to handle
+the failed invariant&#8201;&#8212;&#8201;write a log entry in the first two weeks, send an SNMP
+trap in the next four weeks and after that send an e-mail (although it doesn&#8217;t
+hurt to keep the logging turned on).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_experiences_13"><a class="anchor" href="#_experiences_13"></a>Experiences</h5>
+<div class="paragraph">
+<p>In several cases this approach helped to delete up to 50% of the code base.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_risks_3"><a class="anchor" href="#_risks_3"></a>Risks</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Sometimes the Zombie is buried to early&#8201;&#8212;&#8201;to be on the safe side the
+presumably dead code should live through at least each season. For huge
+systems that really means 366 days.</p>
+</li>
+<li>
+<p>The presumably dead code might be called <em>much</em> more often than anticipated -
+in these cases a highly invasive reaction, like sending an e-mail, can lead to
+side-effects that are close to a denial-of-service attack.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>Applicability</h5>
+<div class="paragraph">
+<p>This pattern can be applied whenever the code-base has gotten too big and there
+are parts of the system that are perhaps unused (e.g. dead) but still add to the
+weight of the system.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_consequences_11"><a class="anchor" href="#_consequences_11"></a>Consequences</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Dead code can be safely deleted</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_13"><a class="anchor" href="#_also_known_as_13"></a>Also Known As</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>Related Patterns</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Use <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> to find candidates, entry points and exit points.</p>
+</li>
+<li>
+<p>Using invariants to kill zombies is a special case of <a href="#Assertions">[Assertions]</a> in the
+context of architecture improvement.</p>
+</li>
+<li>
+<p>Introducing invariants to verify that the code is really dead is a specific
+way to make <a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a>s</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_15"><a class="anchor" href="#_references_15"></a>References</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Invariants (and other <a href="#Assertions">[Assertions]</a>) have been made popular by Bertrand Meyer
+in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Oriented-Software-Construction]</a></p>
+</li>
+<li>
+<p>Brian Foote references Zombie code in <a href="#Big-Ball-Of-Mud">[Big-Ball-Of-Mud]</a></p>
+</li>
+<li>
+<p>Dead code is an alternate name for the lava-flow anti pattern in
+<a href="#AntiPatterns">[AntiPatterns]</a>.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -5793,7 +5889,7 @@ which makes electronic approaches more viable.</p>
 <ol class="arabic">
 <li>
 <p><strong>Enthusiasm</strong>:
-Some people will embrace your findings - like "that&#8217;s what we always said&#8230;". Enthusiasts sometimes expect that findings or the appropriate
+Some people will embrace your findings - like "that&#8217;s what we always said&#8230;&#8203;". Enthusiasts sometimes expect that findings or the appropriate
 improvement approaches directly improve their own situation.</p>
 </li>
 <li>
@@ -5807,7 +5903,7 @@ any finding.</p>
 </li>
 <li>
 <p><strong>Amazement</strong>:
-Your results will amaze or astonish some people. Although they would never have expected your findings, amazed stakeholders might be convinced to agreement or neutrality by using explanation and proofs in stakeholder-specific language or communication. On the other hand, amazed stakeholders pose the serious risk of becoming more negative (doubtful or resisting) if you fail to convince them - or if other people (your opponents, for example) manage to bring them over to the <em>dark side</em>&#8230;</p>
+Your results will amaze or astonish some people. Although they would never have expected your findings, amazed stakeholders might be convinced to agreement or neutrality by using explanation and proofs in stakeholder-specific language or communication. On the other hand, amazed stakeholders pose the serious risk of becoming more negative (doubtful or resisting) if you fail to convince them - or if other people (your opponents, for example) manage to bring them over to the <em>dark side</em>&#8230;&#8203;</p>
 <div class="paragraph">
 <p>Always ask amazed stakeholders <em>why</em> for the reasons of their amazement - that can help you in your argumentation.</p>
 </div>
@@ -5858,7 +5954,7 @@ With the help of the CIO, we identified those minimizers to be the root-cause of
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.4.4. Related Patterns</h4>
+<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>5.4.4. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5947,7 +6043,7 @@ might have. Identify the resultant effects on system development and operations.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_practices_6"><a class="anchor" href="#_related_practices_6"></a>5.8.2. Related Practices</h4>
+<h4 id="_related_practices_7"><a class="anchor" href="#_related_practices_7"></a>5.8.2. Related Practices</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6007,7 +6103,7 @@ might have. Identify the resultant effects on system development and operations.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_practices_7"><a class="anchor" href="#_related_practices_7"></a>5.10.3. Related Practices</h4>
+<h4 id="_related_practices_8"><a class="anchor" href="#_related_practices_8"></a>5.10.3. Related Practices</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6074,7 +6170,7 @@ might have. Identify the resultant effects on system development and operations.
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.11.5. Related Patterns</h4>
+<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.11.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6146,7 +6242,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_22"><a class="anchor" href="#_related_patterns_22"></a>5.12.5. Related Patterns</h4>
+<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.12.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6415,7 +6511,7 @@ Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
 <dl>
 <dt class="hdlist1"><span class="pattern">Front End Switch</span></dt>
 <dd>
-<p>Route front-end requests to either new or old backend systems, depending on their nature.
+<p>Route front-end requests to either new or old backend systems, depending on their nature, content-negotiation or other request criteria. This is especially helpful to support <a href="#Never-Change-Running-System">[Never-Change-Running-System]</a>.
 Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
@@ -6567,18 +6663,6 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><a id="Limit-Feature-by-Client"></a></p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><span class="pattern">Limit Feature by Client</span></dt>
-<dd>
-<p>Support different feature sets for different clients, fade out legacy versions based on usage.
-Category: <a href="#Improve">Improve</a></p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
 <p><strong><a href="#Manage-Complex-Client-Dependencies-With-Facade"><span class="pattern">Manage Complex Client Dependencies With Facade</span></a></strong></p>
 <div class="paragraph">
 <p>Simplify the interaction of a client with a set of service components.
@@ -6697,7 +6781,7 @@ Category: <a href="#Analyze">Analyze</a></p>
 <dl>
 <dt class="hdlist1"><span class="pattern">Quality Driven Software Architecture</span> (QDSA)</dt>
 <dd>
-<p>Derive (technical, structural or process-related) decisions based upon detailed quality requirements. QDSA requires <a href="#Capture-Quality-Requirements">explicit quality requirements</a>. See <a href="#Quality-Function-Deployment">[Quality-Function-Deployment]</a>.
+<p>Derive (technical, structural or process-related) decisions based upon detailed quality requirements. QDSA requires <a href="#Capture-Quality-Requirements">explicit quality requirements</a>.
 Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
@@ -6918,7 +7002,7 @@ Category: <a href="#Analyze">Analyze</a></p>
 <p><strong><a href="#Use-Invariants-To-Kill-Zombies"><span class="pattern">Use Invariants To Kill Zombies</span></a></strong></p>
 <div class="paragraph">
 <p>Use Invariants to make sure that you can
-kill Zombies safely. If code seems to be &#8220;dead&#8221;&#8201;&#8212;&#8201;meaning that it
+kill Zombies safely. If code seems to be ``dead''&#8201;&#8212;&#8201;meaning that it
 supposedly isn&#8217;t called anymore&#8201;&#8212;&#8201;but no one dares to remove it from the
 codebase, the introduction of invariants can provide reliable feedback on
 whether it is safe to remove the code or not.
@@ -6975,14 +7059,14 @@ Software Engineering Institute, Carnegie Mellon University.</p>
 <p><a id="Bass09"></a>[Bass09] Len Bass et.al.: Software Architecture in Practice. Addison-Wesley, 2. Edition 2009.</p>
 </li>
 <li>
-<p><a id="Big-Ball-Of-Mud"></a>[Big-Ball-Of-Mud] Brian Foote and Joseph Yoder, <a href="http://laputan.org/mud/">Big Ball of Mud</a> - very influentual paper from the <a href="http://hillside.net/plop/plop97/">fourth conference on Patterns languages of Program Design</a></p>
+<p><a id="Big-Ball-Of-Mud"></a>[Big-Ball-Of-Mud] Brian Foote and Joseph Yoder, <a href="http://laputan.org/mud/">Big Ball of Mud</a> - very influentual paper from the <a href="http://hillside.net/plop/plop97/">fourth conference on Patterns languages of Program Design, PLoP97</a></p>
 </li>
 <li>
 <p><a id="Bommer-Wartung"></a>[Bommer-Wartung] Christoph Bommer, M. Spindler, V. Barr: Softwarewartung: Grundlagen, Management und Wartungstechniken.
 (in German) dpunkt Verlag, 2008. Interesting treatment of categories of software systems and their respective need for maintenance and evolution. Authors quote studies from Lehman and Belady from the 1970&#8217;s.</p>
 </li>
 <li>
-<p><a id="Boy-Scout-Rule-article"></a>[Boy-Scout-Rule-article] The Boy Scout Rule, see <a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule">http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule</a></p>
+<p><a id="Boy-Scout-Rule-article"></a>[Boy-Scout-Rule-article] The Boy Scout Rule, see <a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule" class="bare">http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule</a></p>
 </li>
 <li>
 <p><a id="Brodie-Stonebraker"></a>[Brodie-Stonebraker] Brodie, M. and Stonebraker, M: Migrating Legacy Systems: Gateway, Interfaces &amp; the Incremental Approach; Morgan Kaufmann 1995.</p>
@@ -6996,10 +7080,10 @@ Addison-Wesley, 2001. Detailed overview of ATAM (and other evaluation methods).<
 the flexible, multi-language code-analysis toolkit.</p>
 </li>
 <li>
-<p><a id="Feathers"></a>[Feathers] Michael Feathers: Working Effectively with Legacy Code. Prentice Hall, 2005. The author claims "Code without tests is bad code". So true&#8230;</p>
+<p><a id="Feathers"></a>[Feathers] Michael Feathers: Working Effectively with Legacy Code. Prentice Hall, 2005. The author claims "Code without tests is bad code". So true&#8230;&#8203;</p>
 </li>
 <li>
-<p><a id="Fowler-Refactoring"></a>[Fowler-Refactoring] Martin Fowler: Refactoring. Addision-Wesley. Addision-Wesley, 1999.</p>
+<p><a id="Fowler-Refactoring"></a>[Fowler-Refactoring] Martin Fowler: Refactoring. Addision-Wesley. Addision-Wesley, 1999. See also <a href="http://www.refactoring.com/">refactoring.com</a></p>
 </li>
 <li>
 <p><a id="Freemann"></a>[Freemann] Steve Freeman, Nat Pryce: Growing Object Oriented Software By Tests. Addison-Wesley, 2010.</p>
@@ -7038,7 +7122,7 @@ A detailed writeup of how (object-oriented) code should look like. Lots of thing
 </li>
 <li>
 <p><a id="Mikado"></a>[Mikado] Ola Elnestam, Daniel Brolund: The Mikado Method. Manning, 2014. Describes a method to <em>morphing</em> software from bad to better state. Quote from the book:
-&#8220;It helps us visualize, plan, and perform business-value-focused improvements over several iterations and increments of work, without ever having a broken codebase&#8221;</p>
+``It helps us visualize, plan, and perform business-value-focused improvements over several iterations and increments of work, without ever having a broken codebase''</p>
 </li>
 <li>
 <p><a id="Moyer-Archeology"></a>[Moyer-Archeology] Brian Moyer: <a href="http://adm.omg.org/docs/Software_Archeology_4-Mar-2009.pdf">Software Archeology</a></p>
@@ -7083,7 +7167,7 @@ Completed in 2008, holds a fairly large number of deliverables.</p>
 a variety of programming languages, plugins for different metrics and checks. SonarQube can track results over time - showing the history of code quality for software systems.</p>
 </li>
 <li>
-<p><a id="Spolsky-NeverRewrite"></a>[Spolsky-NeverRewrite] Joel Spolsky: <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">Things You Should Never Do</a></p>
+<p><a id="Spolsky-NeverRewrite"></a>[Spolsky-NeverRewrite] Joel Spolsky: <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">Things You Should Never Do, Part-I</a></p>
 </li>
 </ul>
 </div>
@@ -7215,7 +7299,7 @@ You may not use this file except in compliance with the License.
 You may obtain a copy of the License at</p>
 </div>
 <div class="paragraph">
-<p><a href="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</a></p>
+<p><a href="http://creativecommons.org/licenses/by-sa/4.0/" class="bare">http://creativecommons.org/licenses/by-sa/4.0/</a></p>
 </div>
 <div class="paragraph">
 <p>Unless required by applicable law or agreed to in writing, software and documentation
@@ -7270,7 +7354,7 @@ limitations under the License.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="icon-tip" title="Tip"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -7338,7 +7422,7 @@ limitations under the License.</p>
 <div class="sect2">
 <h3 id="_anchor"><a class="anchor" href="#_anchor"></a>Anchor</h3>
 <div id="some-anchor" class="paragraph">
-<p>here we explain <em>some-anchor</em> topic&#8230;</p>
+<p>here we explain 'some-anchor' topic&#8230;&#8203;</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -7413,7 +7497,7 @@ TIP: maybe some practice report</pre>
 <table>
 <tr>
 <td class="icon">
-<i class="icon-note" title="Note"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Admonition paragraphs call attention to special words of advice
@@ -7425,7 +7509,7 @@ Admonition paragraphs call attention to special words of advice
 <table>
 <tr>
 <td class="icon">
-<i class="icon-warning" title="Warning"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 a warning
@@ -7437,7 +7521,7 @@ a warning
 <table>
 <tr>
 <td class="icon">
-<i class="icon-caution" title="Caution"></i>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 be careful
@@ -7449,7 +7533,7 @@ be careful
 <table>
 <tr>
 <td class="icon">
-<i class="icon-important" title="Important"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 must be really worth reading
@@ -7461,7 +7545,7 @@ must be really worth reading
 <table>
 <tr>
 <td class="icon">
-<i class="icon-tip" title="Tip"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 maybe some practice report
@@ -7488,7 +7572,7 @@ The result is rendered nicely.
 <table>
 <tr>
 <td class="icon">
-<i class="icon-tip" title="Tip"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -7524,7 +7608,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>{docdate}</code> will insert the last modification data (here: 2014-08-25)</p>
+<p><code>2014-08-25</code> will insert the last modification data (here: 2014-08-25)</p>
 </li>
 </ul>
 </div>
@@ -7598,7 +7682,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-25 15:46:02 UTC
+Last updated 2014-08-25 21:14:48 UTC
 </div>
 </div>
 </body>
