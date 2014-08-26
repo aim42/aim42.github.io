@@ -2092,14 +2092,15 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a>
 <ul class="sectlevel2">
 <li><a href="#_pattern_and_practices_for_cross_cutting_concerns">5.1. Pattern and Practices for Cross-Cutting Concerns</a></li>
-<li><a href="#collect-opportunities-for-improvement">5.2. <span class="pattern">Collect Opportunities for Improvement</span></a></li>
+<li><a href="#Collect-Opportunities-For-Improvement">5.2. <span class="pattern">Collect Opportunities for Improvement</span></a></li>
 <li><a href="#Collect-Issues">5.3. <span class="pattern">Collect Issues</span></a></li>
 <li><a href="#Expect-Denial">5.4. <span class="pattern">Expect Denial</span></a>
 <ul class="sectlevel3">
 <li><a href="#_intent_35">5.4.1. Intent</a></li>
 <li><a href="#_description_34">5.4.2. Description</a></li>
-<li><a href="#_consequences_12">5.4.3. Consequences</a></li>
-<li><a href="#_related_patterns_19">5.4.4. Related Patterns</a></li>
+<li><a href="#_experiences_14">5.4.3. Experiences</a></li>
+<li><a href="#_consequences_12">5.4.4. Consequences</a></li>
+<li><a href="#_related_patterns_19">5.4.5. Related Patterns</a></li>
 </ul>
 </li>
 <li><a href="#Explicit-Assumption">5.5. <span class="pattern">Explicit Assumption</span></a>
@@ -2116,29 +2117,30 @@ table.CodeRay td.code>pre{padding:0}
 </ul>
 </li>
 <li><a href="#Improvement-Backlog">5.9. <span class="pattern">Improvement Backlog</span></a></li>
-<li><a href="#Separate-Cause-From-Effect">5.10. <span class="pattern">Separate-Cause-From-Effect</span></a>
+<li><a href="#Issue-List">5.10. <span class="pattern">Issue List</span></a></li>
+<li><a href="#Separate-Cause-From-Effect">5.11. <span class="pattern">Separate-Cause-From-Effect</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_37">5.10.1. Intent</a></li>
-<li><a href="#_description_36">5.10.2. Description</a></li>
-<li><a href="#_related_practices_8">5.10.3. Related Practices</a></li>
+<li><a href="#_intent_37">5.11.1. Intent</a></li>
+<li><a href="#_description_36">5.11.2. Description</a></li>
+<li><a href="#_related_practices_8">5.11.3. Related Practices</a></li>
 </ul>
 </li>
-<li><a href="#Slide-Or-Write">5.11. <span class="pattern">Slide or Write</span></a>
+<li><a href="#Slide-Or-Write">5.12. <span class="pattern">Slide or Write</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_38">5.11.1. Intent</a></li>
-<li><a href="#_description_37">5.11.2. Description</a></li>
-<li><a href="#_experiences_14">5.11.3. Experiences</a></li>
-<li><a href="#_applicability_18">5.11.4. Applicability</a></li>
-<li><a href="#_related_patterns_20">5.11.5. Related Patterns</a></li>
-</ul>
-</li>
-<li><a href="#Traceability">5.12. <span class="pattern">Traceability</span></a>
-<ul class="sectlevel3">
-<li><a href="#_intent_39">5.12.1. Intent</a></li>
-<li><a href="#_description_38">5.12.2. Description</a></li>
+<li><a href="#_intent_38">5.12.1. Intent</a></li>
+<li><a href="#_description_37">5.12.2. Description</a></li>
 <li><a href="#_experiences_15">5.12.3. Experiences</a></li>
-<li><a href="#_applicability_19">5.12.4. Applicability</a></li>
-<li><a href="#_related_patterns_21">5.12.5. Related Patterns</a></li>
+<li><a href="#_applicability_18">5.12.4. Applicability</a></li>
+<li><a href="#_related_patterns_20">5.12.5. Related Patterns</a></li>
+</ul>
+</li>
+<li><a href="#Traceability">5.13. <span class="pattern">Traceability</span></a>
+<ul class="sectlevel3">
+<li><a href="#_intent_39">5.13.1. Intent</a></li>
+<li><a href="#_description_38">5.13.2. Description</a></li>
+<li><a href="#_experiences_16">5.13.3. Experiences</a></li>
+<li><a href="#_applicability_19">5.13.4. Applicability</a></li>
+<li><a href="#_related_patterns_21">5.13.5. Related Patterns</a></li>
 </ul>
 </li>
 </ul>
@@ -2409,7 +2411,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 </div>
 <div class="paragraph">
 <p>These three phases are performed iteratively - as explained <a href="#Iterative-Approach">below</a>.
-Several <a href="#Crosscutting">cross-cutting practices and patterns</a> should be applied in all phases, for example documenting results or <a href="#collect-opportunities-for-improvement"><span class="pattern">Collect Opportunities for Improvement</span></a>.</p>
+Several <a href="#Crosscutting">cross-cutting practices and patterns</a> should be applied in all phases, for example documenting results or <a href="#collect-opportunities-for-improvement">[collect-opportunities-for-improvement]</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -4839,7 +4841,7 @@ uncertainty and propability involved.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Estimate-In-Intervall">[Estimate-In-Intervall]</a></p>
+<p><a href="#Estimate-In-Interval"><span class="pattern">Estimate in Interval</span></a></p>
 </li>
 <li>
 <p><a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a></p>
@@ -5776,7 +5778,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#collect-opportunities-for-improvement"><span class="pattern">Collect Opportunities for Improvement</span></a></p>
+<p><a href="#Collect-Opportunities-For-Improvement"><span class="pattern">Collect Opportunities for Improvement</span></a></p>
 </li>
 <li>
 <p><a href="#Collect-Issues"><span class="pattern">Collect Issues</span></a></p>
@@ -5800,6 +5802,9 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <p><a href="#Improvement-Backlog"><span class="pattern">Improvement Backlog</span></a></p>
 </li>
 <li>
+<p><a href="#Issue-List"><span class="pattern">Issue List</span></a></p>
+</li>
+<li>
 <p><a href="#Slide-Or-Write"><span class="pattern">Slide or Write</span></a></p>
 </li>
 <li>
@@ -5808,23 +5813,24 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 </ul>
 </div>
 <map name="CrosscuttingConcepts">
-<area shape=rect coords="378,23,489,70" href="#Traceability">
-<area shape=rect coords="3,418,100,468" href="#Slide-Or-Write">
-<area shape=rect coords="338,405,465,482" href="#Separate-Cause-From-Effect">
-<area shape=rect coords="129,513,232,564" href="#Fast-Feedback">
-<area shape=rect coords="293,513,393,564" href="#Fail-Fast">
-<area shape=rect coords="545,369,674,424" href="#Improvement-Backlog">
-<area shape=rect coords="12,260,139,307" href="#Explicit-Assumption">
-<area shape=rect coords="62,23,173,77" href="#Expect-Denial">
-<area shape=rect coords="365,310,463,357" href="#Impact-Analysis">
-<area shape=rect coords="505,160,673,228" href="#collect-opportunities-for-improvement">
-<area shape=rect coords="199,174,302,228" href="#Collect-Issues">
+	<area shape=poly coords="295,376,406,376,415,381,415,379,419,383,419,381,424,385,424,439,415,443,303,443,295,441,290,439,286,435,286,381,295,376" href="#Issue-List">
+	<area shape=rect coords="415,3,526,50" href="#Traceability">
+	<area shape=rect coords="3,88,100,138" href="#Slide-Or-Write">
+	<area shape=rect coords="129,406,246,474" href="#Separate-Cause-From-Effect">
+	<area shape=rect coords="56,513,159,564" href="#Fast-Feedback">
+	<area shape=rect coords="220,513,320,564" href="#Fail-Fast">
+	<area shape=poly coords="564,375,688,375,698,379,698,377,703,381,703,379,707,384,707,439,698,443,573,443,564,441,559,439,554,435,554,379,564,375" href="#Improvement-Backlog">
+	<area shape=rect coords="19,313,146,360" href="#Explicit-Assumption">
+	<area shape=rect coords="113,6,224,60" href="#Expect-Denial">
+	<area shape=rect coords="367,284,464,331" href="#Impact-Analysis">
+	<area shape=rect coords="549,166,716,234" href="#Collect-Opportunities-For-Improvement">
+	<area shape=rect coords="198,180,301,234" href="#Collect-Issues">
 </map>
 
 <img border=0 src="images/crosscutting-patterns-conceptmap.png" usemap="#CrosscuttingConcepts">
 </div>
 <div class="sect2">
-<h3 id="collect-opportunities-for-improvement"><a class="anchor" href="#collect-opportunities-for-improvement"></a>5.2. <span class="pattern">Collect Opportunities for Improvement</span></h3>
+<h3 id="Collect-Opportunities-For-Improvement"><a class="anchor" href="#Collect-Opportunities-For-Improvement"></a>5.2. <span class="pattern">Collect Opportunities for Improvement</span></h3>
 <div class="paragraph">
 <p>You should look for improvement opportunities, remedies, measures,
 tactics and strategies in all of the aim42-phases.</p>
@@ -5839,18 +5845,15 @@ tactics and strategies in all of the aim42-phases.</p>
 <div class="sect2">
 <h3 id="Collect-Issues"><a class="anchor" href="#Collect-Issues"></a>5.3. <span class="pattern">Collect Issues</span></h3>
 <div class="paragraph">
-<p>You should constantly watch out for issues (problems and risks).
-Keep a list of those issues. Regularly match those to your
-<a href="#collect-opportunities-for-improvement">collection of possible improvements</a>.</p>
+<p>You should constantly watch out for issues (problems and risks), especially
+during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Interviews">[Stakeholder-Interviews]</a> and others.</p>
 </div>
 <div class="paragraph">
-<p>It&#8217;s difficult to decide how much formalism to apply in collecting issues and problems:
-Sometimes a wiki-page might suffice, for other systems a full-blown
-issue-tracker can be useful.</p>
+<p>The artifact (physical collection) is the <a href="#Issue-List"><span class="pattern">Issue List</span></a>.</p>
 </div>
 <div class="paragraph">
-<p>As always: documentation is only valuable if it can be found and searched -
-which makes electronic approaches more viable.</p>
+<p>Regularly match these issues to your
+<a href="#Collect-Opportunities-For-Improvement">collection of possible improvements</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -5936,25 +5939,26 @@ Findings are opposed, either actively or passively.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>Let others review your findings before publication.
-==== Experiences</p>
+<p>Let others review your findings before publication.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>5.4.3. Experiences</h4>
 <div class="paragraph">
 <p>In one audit of a European Logistic Company (&gt;40.000 employees) we found serious issues within their development processes, in addition to some issues in their source code. The process problems caused massive (&gt; 3month) delays in delivery of working software to production, whereas the pure software bugs were relatively minor in their consequences. When we presented these issues, all process-related issues were minimized or doubted by senior management of the IT-department.</p>
 </div>
 <div class="paragraph">
-<p>+
-With the help of the CIO, we identified those minimizers to be the root-cause of most process-issues, as they had themselves introduced inefficient, formal and bloated processes.</p>
+<p>With the help of the CIO, we identified those minimizers to be the root-cause of most process-issues, as they had themselves introduced inefficient, formal and bloated processes.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>5.4.3. Consequences</h4>
+<h4 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>5.4.4. Consequences</h4>
 <div class="paragraph">
 <p>Especially when presenting results to (opposing) management stakeholders, you should be able to <strong>verify</strong> all your claims. In critical cases you should keep written protocols and note who-said-what in your <a href="#Stakeholder-Interview">stakeholder interviews</a>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>5.4.4. Related Patterns</h4>
+<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>5.4.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6079,9 +6083,32 @@ might have. Identify the resultant effects on system development and operations.
 </div>
 </div>
 <div class="sect2">
-<h3 id="Separate-Cause-From-Effect"><a class="anchor" href="#Separate-Cause-From-Effect"></a>5.10. <span class="pattern">Separate-Cause-From-Effect</span></h3>
+<h3 id="Issue-List"><a class="anchor" href="#Issue-List"></a>5.10. <span class="pattern">Issue List</span></h3>
+<div class="paragraph">
+<p>A physical collection of issues (problems, risks) found during <a href="#Collect-Issues"><span class="pattern">Collect Issues</span></a>.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s difficult to decide how much formalism to apply in collecting issues and problems:
+Sometimes a wiki-page might suffice, for other systems a full-blown
+issue-tracker can be useful.</p>
+</div>
+<div class="paragraph">
+<p>As always: documentation is only valuable if it can be found and searched -
+which makes electronic approaches more viable.</p>
+</div>
+<div class="paragraph">
+<p>For every entry in this issue list we need to <a href="#Estimate-Issue-Cost"><span class="pattern">Estimate Issue Cost</span></a>, an estimation of the cost of this issued in any business-related unit.</p>
+</div>
+<div class="paragraph">
+<p>In case you already have identified or developed options to adress this issue,
+links to the corresponding improvements (remedies, tactics, strategies, changes) in the
+<a href="#Improvement-Backlog"><span class="pattern">Improvement Backlog</span></a> are neccesssary.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Separate-Cause-From-Effect"><a class="anchor" href="#Separate-Cause-From-Effect"></a>5.11. <span class="pattern">Separate-Cause-From-Effect</span></h3>
 <div class="sect3">
-<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.10.1. Intent</h4>
+<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.11.1. Intent</h4>
 <div class="paragraph">
 <p>Explicitly differentiate between symptom (<em>effect</em>) and cause:</p>
 </div>
@@ -6097,13 +6124,13 @@ might have. Identify the resultant effects on system development and operations.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_36"><a class="anchor" href="#_description_36"></a>5.10.2. Description</h4>
+<h4 id="_description_36"><a class="anchor" href="#_description_36"></a>5.11.2. Description</h4>
 <div class="paragraph">
 <p>Under discussion!</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_practices_8"><a class="anchor" href="#_related_practices_8"></a>5.10.3. Related Practices</h4>
+<h4 id="_related_practices_8"><a class="anchor" href="#_related_practices_8"></a>5.11.3. Related Practices</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6114,12 +6141,12 @@ might have. Identify the resultant effects on system development and operations.
 </div>
 </div>
 <div class="sect2">
-<h3 id="Slide-Or-Write"><a class="anchor" href="#Slide-Or-Write"></a>5.11. <span class="pattern">Slide or Write</span></h3>
+<h3 id="Slide-Or-Write"><a class="anchor" href="#Slide-Or-Write"></a>5.12. <span class="pattern">Slide or Write</span></h3>
 <div class="paragraph">
 <p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.11.1. Intent</h4>
+<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.12.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6135,7 +6162,7 @@ might have. Identify the resultant effects on system development and operations.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_37"><a class="anchor" href="#_description_37"></a>5.11.2. Description</h4>
+<h4 id="_description_37"><a class="anchor" href="#_description_37"></a>5.12.2. Description</h4>
 <div class="paragraph">
 <p>There are two common ways to deliver review results:</p>
 </div>
@@ -6157,7 +6184,7 @@ might have. Identify the resultant effects on system development and operations.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>5.11.3. Experiences</h4>
+<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.12.3. Experiences</h4>
 <div class="paragraph">
 <p>In a review for a financial broker we agreed initially to deliver a detailed document with the results. When we were later asked to present the outcomes to two different audiences (engineers and management) it was quite easy to create specific slides for both of them from the ~ 40 pages of documentation.</p>
 </div>
@@ -6166,11 +6193,11 @@ might have. Identify the resultant effects on system development and operations.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.11.4. Applicability</h4>
+<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.12.4. Applicability</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.11.5. Related Patterns</h4>
+<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.12.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6184,25 +6211,25 @@ might have. Identify the resultant effects on system development and operations.
 </div>
 </div>
 <div class="sect2">
-<h3 id="Traceability"><a class="anchor" href="#Traceability"></a>5.12. <span class="pattern">Traceability</span></h3>
+<h3 id="Traceability"><a class="anchor" href="#Traceability"></a>5.13. <span class="pattern">Traceability</span></h3>
 <div class="paragraph">
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_39"><a class="anchor" href="#_intent_39"></a>5.12.1. Intent</h4>
+<h4 id="_intent_39"><a class="anchor" href="#_intent_39"></a>5.13.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
 findings keeps eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_38"><a class="anchor" href="#_description_38"></a>5.12.2. Description</h4>
+<h4 id="_description_38"><a class="anchor" href="#_description_38"></a>5.13.2. Description</h4>
 <div class="paragraph">
 <p>(To be done)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.12.3. Experiences</h4>
+<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.13.3. Experiences</h4>
 <div class="paragraph">
 <p>Some anti-experiences that happened when we neglected traceability:</p>
 </div>
@@ -6220,7 +6247,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>5.12.4. Applicability</h4>
+<h4 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>5.13.4. Applicability</h4>
 <div class="paragraph">
 <p>Apply traceability whenever you identify problems or issues</p>
 </div>
@@ -6242,7 +6269,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.12.5. Related Patterns</h4>
+<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.13.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6379,7 +6406,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#collect-opportunities-for-improvement"><span class="pattern">Collect Opportunities for Improvement</span></a></strong></p>
+<p><strong><a href="#collect-opportunities-for-improvement">[collect-opportunities-for-improvement]</a></strong></p>
 <div class="paragraph">
 <p>Keep a list of possible and potential measures, remedies, tactics, strategies for improvements. Regularly match those to your <a href="#Collect-Issues">collection of issues</a>.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
@@ -6581,7 +6608,7 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#improvement-backlog">[improvement-backlog]</a></strong></p>
+<p><strong><a href="#Improvement-Backlog"><span class="pattern">Improvement Backlog</span></a></strong></p>
 <div class="paragraph">
 <p>Keep a backlog of possible improvements, remedies, tactics or strategies.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
@@ -6641,6 +6668,15 @@ Category: <a href="#Improve">Improve</a></p>
 Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
+</div>
+</li>
+<li>
+<p><strong><a href="#Issue-List"><span class="pattern">Issue List</span></a></strong></p>
+<div class="literalblock">
+<div class="content">
+<pre> Keep a list or collection or issues (problems, risks) - together with an appropriate amount of description and evaluation.
+Category: &lt;&lt;Crosscutting&gt;&gt;</pre>
+</div>
 </div>
 </li>
 <li>
@@ -7682,7 +7718,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-26 16:11:09 UTC
+Last updated 2014-08-26 16:31:53 UTC
 </div>
 </div>
 </body>
