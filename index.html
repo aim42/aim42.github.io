@@ -2124,29 +2124,33 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#Improvement-Backlog">5.11. <span class="pattern">Improvement Backlog</span></a></li>
 <li><a href="#Issue-List">5.12. <span class="pattern">Issue List</span></a></li>
-<li><a href="#Separate-Cause-From-Effect">5.13. <span class="pattern">Separate-Cause-From-Effect</span></a>
+<li><a href="#Report-Structure">5.13. <span class="pattern">Report-Structure</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_36">5.13.1. Intent</a></li>
-<li><a href="#_description_36">5.13.2. Description</a></li>
-<li><a href="#_related_practices_8">5.13.3. Related Practices</a></li>
+<li><a href="#_related_practices_8">5.13.1. Related Practices</a></li>
 </ul>
 </li>
-<li><a href="#Slide-Or-Write">5.14. <span class="pattern">Slide or Write</span></a>
+<li><a href="#Separate-Cause-From-Effect">5.14. <span class="pattern">Separate-Cause-From-Effect</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_37">5.14.1. Intent</a></li>
-<li><a href="#_description_37">5.14.2. Description</a></li>
-<li><a href="#_experiences_16">5.14.3. Experiences</a></li>
-<li><a href="#_applicability_18">5.14.4. Applicability</a></li>
-<li><a href="#_related_patterns_20">5.14.5. Related Patterns</a></li>
+<li><a href="#_intent_36">5.14.1. Intent</a></li>
+<li><a href="#_description_36">5.14.2. Description</a></li>
+<li><a href="#_related_practices_9">5.14.3. Related Practices</a></li>
 </ul>
 </li>
-<li><a href="#Traceability">5.15. <span class="pattern">Traceability</span></a>
+<li><a href="#Slide-Or-Write">5.15. <span class="pattern">Slide or Write</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_38">5.15.1. Intent</a></li>
-<li><a href="#_description_38">5.15.2. Description</a></li>
-<li><a href="#_experiences_17">5.15.3. Experiences</a></li>
-<li><a href="#_applicability_19">5.15.4. Applicability</a></li>
-<li><a href="#_related_patterns_21">5.15.5. Related Patterns</a></li>
+<li><a href="#_intent_37">5.15.1. Intent</a></li>
+<li><a href="#_description_37">5.15.2. Description</a></li>
+<li><a href="#_experiences_16">5.15.3. Experiences</a></li>
+<li><a href="#_related_patterns_20">5.15.4. Related Patterns</a></li>
+</ul>
+</li>
+<li><a href="#Traceability">5.16. <span class="pattern">Traceability</span></a>
+<ul class="sectlevel3">
+<li><a href="#_intent_38">5.16.1. Intent</a></li>
+<li><a href="#_description_38">5.16.2. Description</a></li>
+<li><a href="#_experiences_17">5.16.3. Experiences</a></li>
+<li><a href="#_applicability_18">5.16.4. Applicability</a></li>
+<li><a href="#_related_patterns_21">5.16.5. Related Patterns</a></li>
 </ul>
 </li>
 </ul>
@@ -5810,6 +5814,9 @@ facilitates identification of additional issues and improvements.</p>
 <p><a href="#Issue-List"><span class="pattern">Issue List</span></a></p>
 </li>
 <li>
+<p><a href="#Report-Structure"><span class="pattern">Report-Structure</span></a></p>
+</li>
+<li>
 <p><a href="#Slide-Or-Write"><span class="pattern">Slide or Write</span></a></p>
 </li>
 <li>
@@ -6182,9 +6189,97 @@ links to the corresponding improvements (remedies, tactics, strategies, changes)
 </div>
 </div>
 <div class="sect2">
-<h3 id="Separate-Cause-From-Effect"><a class="anchor" href="#Separate-Cause-From-Effect"></a>5.13. <span class="pattern">Separate-Cause-From-Effect</span></h3>
+<h3 id="Report-Structure"><a class="anchor" href="#Report-Structure"></a>5.13. <span class="pattern">Report-Structure</span></h3>
+<div class="paragraph">
+<p>When you examine (audit, review) systems, as proposed
+in <a href="#Analyze">Analyze</a>, you often need to prepare a report for
+the management in charge.</p>
+</div>
+<div class="paragraph">
+<p>This practice proposes a generic report structure you
+might use in preparing such documents.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 3. Report Structure</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Chapter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formalities</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formal stuff, like disclaimer, references to
+                 contractual documents, table of contents,
+                 licence, change history etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Management Summary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1, at most 2 page summary</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Goals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">describe the goals of the review/audit.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Review Approach</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">brief description how the review was conducted,
+                    outline the activities or actions performed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stakeholders</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outline which stakeholders participated,
+                     in what form, at that time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Findings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in order of importance or priority, list
+                     and explain your findings</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Proposed Actions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conclusion</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Appendix: Sources</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list your sources and references, e.g. documents,
+                         source-code, interview protocols,
+                         issue-trackers, websites etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Appendix: The Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">briefly introduce the review team and explain
+                       their role in the review.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect3">
-<h4 id="_intent_36"><a class="anchor" href="#_intent_36"></a>5.13.1. Intent</h4>
+<h4 id="_related_practices_8"><a class="anchor" href="#_related_practices_8"></a>5.13.1. Related Practices</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Slide-Or-Write"><span class="pattern">Slide or Write</span></a> to decide, wether you really need to prepare a written report.</p>
+</li>
+<li>
+<p><a href="#Traceability"><span class="pattern">Traceability</span></a>, to ensure you have proper sources for all important issues.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Separate-Cause-From-Effect"><a class="anchor" href="#Separate-Cause-From-Effect"></a>5.14. <span class="pattern">Separate-Cause-From-Effect</span></h3>
+<div class="sect3">
+<h4 id="_intent_36"><a class="anchor" href="#_intent_36"></a>5.14.1. Intent</h4>
 <div class="paragraph">
 <p>Explicitly differentiate between symptom (<em>effect</em>) and cause:</p>
 </div>
@@ -6200,13 +6295,13 @@ links to the corresponding improvements (remedies, tactics, strategies, changes)
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_36"><a class="anchor" href="#_description_36"></a>5.13.2. Description</h4>
+<h4 id="_description_36"><a class="anchor" href="#_description_36"></a>5.14.2. Description</h4>
 <div class="paragraph">
 <p>Under discussion!</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_practices_8"><a class="anchor" href="#_related_practices_8"></a>5.13.3. Related Practices</h4>
+<h4 id="_related_practices_9"><a class="anchor" href="#_related_practices_9"></a>5.14.3. Related Practices</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6217,12 +6312,12 @@ links to the corresponding improvements (remedies, tactics, strategies, changes)
 </div>
 </div>
 <div class="sect2">
-<h3 id="Slide-Or-Write"><a class="anchor" href="#Slide-Or-Write"></a>5.14. <span class="pattern">Slide or Write</span></h3>
+<h3 id="Slide-Or-Write"><a class="anchor" href="#Slide-Or-Write"></a>5.15. <span class="pattern">Slide or Write</span></h3>
 <div class="paragraph">
 <p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.14.1. Intent</h4>
+<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.15.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6238,7 +6333,7 @@ links to the corresponding improvements (remedies, tactics, strategies, changes)
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_37"><a class="anchor" href="#_description_37"></a>5.14.2. Description</h4>
+<h4 id="_description_37"><a class="anchor" href="#_description_37"></a>5.15.2. Description</h4>
 <div class="paragraph">
 <p>There are two common ways to deliver review results:</p>
 </div>
@@ -6260,7 +6355,7 @@ links to the corresponding improvements (remedies, tactics, strategies, changes)
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.14.3. Experiences</h4>
+<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.15.3. Experiences</h4>
 <div class="paragraph">
 <p>In a review for a financial broker we agreed initially to deliver a detailed document with the results. When we were later asked to present the outcomes to two different audiences (engineers and management) it was quite easy to create specific slides for both of them from the ~ 40 pages of documentation.</p>
 </div>
@@ -6269,15 +6364,11 @@ links to the corresponding improvements (remedies, tactics, strategies, changes)
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.14.4. Applicability</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.14.5. Related Patterns</h4>
+<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.15.4. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Report-Structure">[Report-Structure]</a></p>
+<p><a href="#Report-Structure"><span class="pattern">Report-Structure</span></a></p>
 </li>
 <li>
 <p><a href="#Traceability"><span class="pattern">Traceability</span></a></p>
@@ -6287,25 +6378,25 @@ links to the corresponding improvements (remedies, tactics, strategies, changes)
 </div>
 </div>
 <div class="sect2">
-<h3 id="Traceability"><a class="anchor" href="#Traceability"></a>5.15. <span class="pattern">Traceability</span></h3>
+<h3 id="Traceability"><a class="anchor" href="#Traceability"></a>5.16. <span class="pattern">Traceability</span></h3>
 <div class="paragraph">
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.15.1. Intent</h4>
+<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.16.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
 findings keeps eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_38"><a class="anchor" href="#_description_38"></a>5.15.2. Description</h4>
+<h4 id="_description_38"><a class="anchor" href="#_description_38"></a>5.16.2. Description</h4>
 <div class="paragraph">
 <p>(To be done)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_17"><a class="anchor" href="#_experiences_17"></a>5.15.3. Experiences</h4>
+<h4 id="_experiences_17"><a class="anchor" href="#_experiences_17"></a>5.16.3. Experiences</h4>
 <div class="paragraph">
 <p>Some anti-experiences that happened when we neglected traceability:</p>
 </div>
@@ -6323,7 +6414,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>5.15.4. Applicability</h4>
+<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.16.4. Applicability</h4>
 <div class="paragraph">
 <p>Apply traceability whenever you identify problems or issues</p>
 </div>
@@ -6345,7 +6436,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.15.5. Related Patterns</h4>
+<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.16.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6953,6 +7044,13 @@ Category: <a href="#Analyze">Analyze</a></p>
 Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
+</div>
+</li>
+<li>
+<p><strong><a href="#Report-Structure"><span class="pattern">Report-Structure</span></a></strong></p>
+<div class="paragraph">
+<p>A generic structure for written audit or review reports, usually
+following an <a href="#Analyze">Analyze</a> phase. See <a href="#Slide-Or-Write"><span class="pattern">Slide or Write</span></a>. Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a>.</p>
 </div>
 </li>
 <li>
@@ -7801,7 +7899,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-28 12:27:09 UTC
+Last updated 2014-08-28 13:38:11 UTC
 </div>
 </div>
 </body>
