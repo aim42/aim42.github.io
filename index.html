@@ -5,8 +5,6 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.0">
-<meta name="description" content="aim 42 supports software evolution, maintenance and improvement - in a systematic and pragmatic way.">
-<meta name="keywords" content="software-architecture, evolution, maintenance, improvement, analysis, evaluation, reengineering, refactoring, patterns, practices">
 <title>Method Guide</title>
 <style>
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400);
@@ -1996,26 +1994,17 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1><span class="image"><img src="images/aim42-logo.png" alt="aim 42"></span> Method Guide</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
+<ul class="sectlevel0">
+<li><a href="#__span_class_image_img_src_images_aim42_logo_png_alt_aim_42_span_method_guide"><span class="image"><img src="images/aim42-logo.png" alt="aim 42"></span> Method Guide</a>
 <ul class="sectlevel1">
 <li><a href="#_about_aim42">About aim42</a></li>
 <li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#_why_is_software_being_changed">1.1. Why is software being changed?</a></li>
-<li><a href="#_why_does_software_need_improvement">1.2. Why does software need improvement?</a>
-<ul class="sectlevel3">
-<li><a href="#_long_term_goal">1.2.1. Long-Term Goal</a></li>
-</ul>
-</li>
-<li><a href="#_how_does_aim42_work">1.3. How does aim42 work?</a>
-<ul class="sectlevel3">
-<li><a href="#_three_simple_phases">1.3.1. Three Simple Phases</a></li>
-<li><a href="#_common_terminology">1.3.2. Common Terminology</a></li>
-<li><a href="#Iterative-Approach">1.3.3. Iterative Approach</a></li>
-</ul>
-</li>
+<li><a href="#_why_does_software_need_improvement">1.2. Why does software need improvement?</a></li>
+<li><a href="#_how_does_aim42_work">1.3. How does aim42 work?</a></li>
 <li><a href="#_patterns_and_practices_provide_no_guarantee">1.4. Patterns and Practices Provide No Guarantee</a></li>
 </ul>
 </li>
@@ -2023,136 +2012,40 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel2">
 <li><a href="#_goals">2.1. Goals</a></li>
 <li><a href="#_how_it_works">2.2. How it works</a></li>
-<li><a href="#_patterns_and_practices_for_analysis">2.3. Patterns and Practices for Analysis</a>
-<ul class="sectlevel3">
-<li><a href="#ATAM">2.3.1. <span class="pattern">Atam</span></a></li>
-<li><a href="#Capture-Quality-Requirements">2.3.2. <span class="pattern">Capture Quality Requirements</span></a></li>
-<li><a href="#Context-Analysis">2.3.3. <span class="pattern">Context-Analysis</span></a></li>
-<li><a href="#Data-Analysis">2.3.4. <span class="pattern">Data-Analysis</span></a></li>
-<li><a href="#Debugging">2.3.5. <span class="pattern">Debugging</span></a></li>
-<li><a href="#Development-Process-Analysis">2.3.6. <span class="pattern">Development-Process-Analysis</span></a></li>
-<li><a href="#Documentation-Analysis">2.3.7. <span class="pattern">Documentation-Analysis</span></a></li>
-<li><a href="#Infrastructure-Analysis">2.3.8. <span class="pattern">Infrastructure-Analysis</span></a></li>
-<li><a href="#Instrument-System">2.3.9. <span class="pattern">Instrument System</span></a></li>
-<li><a href="#Issue-Tracker-Analysis">2.3.10. <span class="pattern">Issue-Tracker-Analysis</span></a></li>
-<li><a href="#Organizational-Analysis">2.3.11. <span class="pattern">Organizational-Analysis</span></a></li>
-<li><a href="#Qualitative-Analysis">2.3.12. <span class="pattern">Qualitative Analysis</span></a></li>
-<li><a href="#Quantitative-Analysis">2.3.13. <span class="pattern">Quantitative-Analysis</span></a></li>
-<li><a href="#Pre-Interview-Questionnaire">2.3.14. <span class="pattern">Pre Interview Questionnaire</span></a></li>
-<li><a href="#Questionnaire">2.3.15. <span class="pattern">Questionnaire</span></a></li>
-<li><a href="#Requirements-Analysis">2.3.16. <span class="pattern">Requirements-Analysis</span></a></li>
-<li><a href="#Root-Cause-Analysis">2.3.17. <span class="pattern">Root Cause Analysis</span></a></li>
-<li><a href="#Runtime-Analysis">2.3.18. <span class="pattern">Runtime-Analysis</span></a></li>
-<li><a href="#Software-Archeology">2.3.19. <span class="pattern">Software Archeology</span></a></li>
-<li><a href="#Stakeholder-Analysis">2.3.20. <span class="pattern">Stakeholder Analysis</span></a></li>
-<li><a href="#Stakeholder-Interview">2.3.21. <span class="pattern">Stakeholder Interview</span></a></li>
-<li><a href="#Static-Code-Analysis">2.3.22. <span class="pattern">Static Code Analysis</span></a></li>
-<li><a href="#Take-What-They-Mean">2.3.23. <span class="pattern">Take What They Mean, Not What They Say</span></a></li>
-<li><a href="#View-Based-Understanding">2.3.24. <span class="pattern">View Based Understanding</span></a></li>
-<li><a href="#_references_9">2.3.25. References</a></li>
-</ul>
-</li>
+<li><a href="#_patterns_and_practices_for_analysis">2.3. Patterns and Practices for Analysis</a></li>
 </ul>
 </li>
 <li><a href="#Evaluate">3. Evaluate</a>
 <ul class="sectlevel2">
 <li><a href="#_goals_2">3.1. Goals</a></li>
 <li><a href="#_estimation">3.2. Estimation</a></li>
-<li><a href="#_pattern_and_practices_for_evaluation">3.3. Pattern and Practices for Evaluation</a>
-<ul class="sectlevel3">
-<li><a href="#Estimate-Feature-Value">3.3.1. <span class="pattern">Estimate Feature Value</span></a></li>
-<li><a href="#Estimate-In-Interval">3.3.2. <span class="pattern">Estimate in Interval</span></a></li>
-<li><a href="#Estimate-Issue-Cost">3.3.3. <span class="pattern">Estimate Issue Cost</span></a></li>
-<li><a href="#Estimate-Improvement-Cost">3.3.4. <span class="pattern">Estimate Improvement Cost</span></a></li>
-</ul>
-</li>
+<li><a href="#_pattern_and_practices_for_evaluation">3.3. Pattern and Practices for Evaluation</a></li>
 </ul>
 </li>
 <li><a href="#Improve">4. Improve</a>
 <ul class="sectlevel2">
-<li><a href="#_goals_3">4.1. Goals</a>
-<ul class="sectlevel3">
-<li><a href="#_refactoring_source_code">4.1.1. Refactoring Source Code</a></li>
-</ul>
-</li>
-<li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a>
-<ul class="sectlevel3">
-<li><a href="#Anticorruption-Layer">4.2.1. <span class="pattern">Anticorruption Layer</span></a></li>
-<li><a href="#Improve-Logging">4.2.2. <span class="pattern">Improve Logging</span></a></li>
-<li><a href="#Interface-Segregation-Principle">4.2.3. <span class="pattern">Interface Segregation Principle</span></a></li>
-<li><a href="#Introduce-Boy-Scout-Rule">4.2.4. <span class="pattern">Introduce Boy Scout Rule</span></a></li>
-<li><a href="#Manage-Complex-Client-Dependencies-With-Facade">4.2.5. <span class="pattern">Manage Complex Client Dependencies With Facade</span></a></li>
-<li><a href="#Use-Invariants-To-Kill-Zombies">4.2.6. <span class="pattern">Use Invariants To Kill Zombies</span></a></li>
-</ul>
-</li>
+<li><a href="#_goals_3">4.1. Goals</a></li>
+<li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a></li>
 </ul>
 </li>
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a>
 <ul class="sectlevel2">
 <li><a href="#_how_it_works_2">5.1. How it works</a></li>
 <li><a href="#_crosscutting_practices">5.2. Crosscutting Practices</a></li>
-<li><a href="#Architectural-Understanding">5.3. <span class="pattern">Architectural-Understanding</span></a>
-<ul class="sectlevel3">
-<li><a href="#_description_33">5.3.1. Description</a></li>
-<li><a href="#_experiences_14">5.3.2. Experiences</a></li>
-<li><a href="#_related_practices_6">5.3.3. Related Practices</a></li>
-</ul>
-</li>
+<li><a href="#Architectural-Understanding">5.3. <span class="pattern">Architectural-Understanding</span></a></li>
 <li><a href="#Collect-Opportunities-For-Improvement">5.4. <span class="pattern">Collect Opportunities for Improvement</span></a></li>
 <li><a href="#Collect-Issues">5.5. <span class="pattern">Collect Issues</span></a></li>
-<li><a href="#Expect-Denial">5.6. <span class="pattern">Expect Denial</span></a>
-<ul class="sectlevel3">
-<li><a href="#_intent_34">5.6.1. Intent</a></li>
-<li><a href="#_description_34">5.6.2. Description</a></li>
-<li><a href="#_experiences_15">5.6.3. Experiences</a></li>
-<li><a href="#_consequences_12">5.6.4. Consequences</a></li>
-<li><a href="#_related_patterns_19">5.6.5. Related Patterns</a></li>
-</ul>
-</li>
-<li><a href="#Explicit-Assumption">5.7. <span class="pattern">Explicit Assumption</span></a>
-<ul class="sectlevel3">
-<li><a href="#_description_35">5.7.1. Description</a></li>
-</ul>
-</li>
+<li><a href="#Expect-Denial">5.6. <span class="pattern">Expect Denial</span></a></li>
+<li><a href="#Explicit-Assumption">5.7. <span class="pattern">Explicit Assumption</span></a></li>
 <li><a href="#Fail-Fast">5.8. <span class="pattern">Fail Fast</span></a></li>
 <li><a href="#Fast-Feedback">5.9. <span class="pattern">Fast Feedback</span></a></li>
-<li><a href="#Impact-Analysis">5.10. <span class="pattern">Impact Analysis</span></a>
-<ul class="sectlevel3">
-<li><a href="#_intent_35">5.10.1. Intent</a></li>
-<li><a href="#_related_practices_7">5.10.2. Related Practices</a></li>
-</ul>
-</li>
+<li><a href="#Impact-Analysis">5.10. <span class="pattern">Impact Analysis</span></a></li>
 <li><a href="#Improvement-Backlog">5.11. <span class="pattern">Improvement Backlog</span></a></li>
 <li><a href="#Issue-List">5.12. <span class="pattern">Issue List</span></a></li>
-<li><a href="#Report-Structure">5.13. <span class="pattern">Report-Structure</span></a>
-<ul class="sectlevel3">
-<li><a href="#_related_practices_8">5.13.1. Related Practices</a></li>
-</ul>
-</li>
-<li><a href="#Separate-Cause-From-Effect">5.14. <span class="pattern">Separate-Cause-From-Effect</span></a>
-<ul class="sectlevel3">
-<li><a href="#_intent_36">5.14.1. Intent</a></li>
-<li><a href="#_description_36">5.14.2. Description</a></li>
-<li><a href="#_related_practices_9">5.14.3. Related Practices</a></li>
-</ul>
-</li>
-<li><a href="#Slide-Or-Write">5.15. <span class="pattern">Slide or Write</span></a>
-<ul class="sectlevel3">
-<li><a href="#_intent_37">5.15.1. Intent</a></li>
-<li><a href="#_description_37">5.15.2. Description</a></li>
-<li><a href="#_experiences_16">5.15.3. Experiences</a></li>
-<li><a href="#_related_patterns_20">5.15.4. Related Patterns</a></li>
-</ul>
-</li>
-<li><a href="#Traceability">5.16. <span class="pattern">Traceability</span></a>
-<ul class="sectlevel3">
-<li><a href="#_intent_38">5.16.1. Intent</a></li>
-<li><a href="#_description_38">5.16.2. Description</a></li>
-<li><a href="#_experiences_17">5.16.3. Experiences</a></li>
-<li><a href="#_applicability_18">5.16.4. Applicability</a></li>
-<li><a href="#_related_patterns_21">5.16.5. Related Patterns</a></li>
-</ul>
-</li>
+<li><a href="#Report-Structure">5.13. <span class="pattern">Report-Structure</span></a></li>
+<li><a href="#Separate-Cause-From-Effect">5.14. <span class="pattern">Separate-Cause-From-Effect</span></a></li>
+<li><a href="#Slide-Or-Write">5.15. <span class="pattern">Slide or Write</span></a></li>
+<li><a href="#Traceability">5.16. <span class="pattern">Traceability</span></a></li>
 </ul>
 </li>
 <li><a href="#_pattern_index">6. Pattern index</a></li>
@@ -2181,9 +2074,13 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#_how_to_add_a_new_pattern_or_practice">Appendix E: How to add a new pattern or practice</a></li>
 </ul>
+</li>
+</ul>
 </div>
 </div>
 <div id="content">
+<a href="https://github.com/aim42/aim42"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+<h1 id="__span_class_image_img_src_images_aim42_logo_png_alt_aim_42_span_method_guide" class="sect0"><a class="anchor" href="#__span_class_image_img_src_images_aim42_logo_png_alt_aim_42_span_method_guide"></a><span class="image"><img src="images/aim42-logo.png" alt="aim 42"></span> Method Guide</h1>
 <div class="sect1">
 <h2 id="_about_aim42"><a class="anchor" href="#_about_aim42"></a>About aim42</h2>
 <div class="sectionbody">
@@ -2227,17 +2124,13 @@ table.CodeRay td.code>pre{padding:0}
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;</p>
 </div>
 <div class="paragraph">
-<p>Version 0.4.5, last update 2014-08-31</p>
+<p>Version 0.4.6, last update 2014-08-31</p>
 </div>
 <div class="paragraph">
 <p>Current status:
-<span class="image"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="https://travis-ci.org/aim42/aim42"></span></p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="https://waffle.io/aim42/aim42"></span></p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="https://github.com/aim42/aim42/issues"></span></p>
+<span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="master"></a></span>
+<span class="image"><a class="image" href="https://waffle.io/aim42/aim42"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="aim42"></a></span>
+<span class="image"><a class="image" href="https://github.com/aim42/aim42/issues"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="aim42"></a></span></p>
 </div>
 </div>
 </div>
@@ -7906,7 +7799,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-08-31 16:58:09 UTC
+Last updated 2014-08-31 17:08:09 UTC
 </div>
 </div>
 </body>
