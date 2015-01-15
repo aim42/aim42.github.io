@@ -4861,7 +4861,7 @@ uncertainty and propability involved.</p>
 <p><a href="#Manage-Complex-Client-Dependencies-With-Facade"><span class="pattern">Manage Complex Client Dependencies With Facade</span></a></p>
 </li>
 <li>
-<p><a href="#Measure-Everything">[Measure-Everything]</a></p>
+<p><a href="#Measure"><span class="pattern">Measure</span></a></p>
 </li>
 <li>
 <p><a href="#Never-Change-Running-System">[Never-Change-Running-System]</a></p>
@@ -5482,9 +5482,82 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.2.6. <span class="pattern">Use Invariants To Kill Zombies</span></h4>
+<h4 id="Measure"><a class="anchor" href="#Measure"></a>4.2.6. <span class="pattern">Measure</span></h4>
 <div class="sect4">
 <h5 id="_intent_33"><a class="anchor" href="#_intent_33"></a>Intent</h5>
+<div class="paragraph">
+<p>If you don’t measure it, you can’t optimize it.&#8201;&#8212;&#8201;Coda Hale</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_description_32"><a class="anchor" href="#_description_32"></a>Description</h5>
+<div class="paragraph">
+<p>TODO: explain different kind of metrics (static-code, runtime, organisational&#8230;&#8203;)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_experiences_13"><a class="anchor" href="#_experiences_13"></a>Experiences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_risks_3"><a class="anchor" href="#_risks_3"></a>Risks</h5>
+<div class="paragraph">
+<p>If you measure too many different parameters or attributes, you might drown in numbers.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>Applicability</h5>
+<div class="paragraph">
+<p>This pattern should always be considered.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_consequences_11"><a class="anchor" href="#_consequences_11"></a>Consequences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_13"><a class="anchor" href="#_also_known_as_13"></a>Also Known As</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>quantitative analysis</p>
+</li>
+<li>
+<p>quantitative runtime analysis</p>
+</li>
+<li>
+<p>profiling</p>
+</li>
+<li>
+<p>organisational metrics</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>Related Patterns</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>This pattern is an important enabler for a successful <a href="#Runtime-Artifact-Analysis">[Runtime-Artifact-Analysis]</a> or <a href="#Performance Analysis">[Performance Analysis]</a>.</p>
+</li>
+<li>
+<p><a href="#Instrument-System"><span class="pattern">Instrument System</span></a> and <a href="#Profiling">[Profiling]</a> are very similar to this pattern, however they are limited to a temporary instrumentation that is needed during the Analysis phase to identify or scope a certain problem that cannot be isolated without modifying the code.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_15"><a class="anchor" href="#_references_15"></a>References</h5>
+<div class="paragraph">
+<p><a href="https://www.youtube.com/watch?v=czes-oa0yik" class="bare">https://www.youtube.com/watch?v=czes-oa0yik</a></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.2.7. <span class="pattern">Use Invariants To Kill Zombies</span></h4>
+<div class="sect4">
+<h5 id="_intent_34"><a class="anchor" href="#_intent_34"></a>Intent</h5>
 <div class="paragraph">
 <p>Provide a safe approach in situations where  it seems to dangerous to delete
 code or whole modules from a huge system because <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> can&#8217;t
@@ -5492,7 +5565,7 @@ recognize whether the code is still in use or not.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_32"><a class="anchor" href="#_description_32"></a>Description</h5>
+<h5 id="_description_33"><a class="anchor" href="#_description_33"></a>Description</h5>
 <div class="paragraph">
 <p>Oftentimes old systems contain lots of code that probably is no longer in use
 but still has to be tended to. Such code puts a burden on every cross-cutting
@@ -5553,13 +5626,13 @@ hurt to keep the logging turned on).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_experiences_13"><a class="anchor" href="#_experiences_13"></a>Experiences</h5>
+<h5 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>Experiences</h5>
 <div class="paragraph">
 <p>In several cases this approach helped to delete up to 50% of the code base.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_risks_3"><a class="anchor" href="#_risks_3"></a>Risks</h5>
+<h5 id="_risks_4"><a class="anchor" href="#_risks_4"></a>Risks</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5576,7 +5649,7 @@ side-effects that are close to a denial-of-service attack.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>Applicability</h5>
+<h5 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>Applicability</h5>
 <div class="paragraph">
 <p>This pattern can be applied whenever the code-base has gotten too big and there
 are parts of the system that are perhaps unused (e.g. dead) but still add to the
@@ -5584,7 +5657,7 @@ weight of the system.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_11"><a class="anchor" href="#_consequences_11"></a>Consequences</h5>
+<h5 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5594,11 +5667,11 @@ weight of the system.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_13"><a class="anchor" href="#_also_known_as_13"></a>Also Known As</h5>
+<h5 id="_also_known_as_14"><a class="anchor" href="#_also_known_as_14"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>Related Patterns</h5>
+<h5 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5616,7 +5689,7 @@ way to make <a href="#Explicit-Assumption"><span class="pattern">Explicit Assump
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_15"><a class="anchor" href="#_references_15"></a>References</h5>
+<h5 id="_references_16"><a class="anchor" href="#_references_16"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5752,7 +5825,7 @@ facilitates identification of additional issues and improvements.</p>
 <p>Develop and document an understanding of internal structures, concepts, architectural approaches  and important decisions of the <a href="#SuD">[SuD]</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_description_33"><a class="anchor" href="#_description_33"></a>5.3.1. Description</h4>
+<h4 id="_description_34"><a class="anchor" href="#_description_34"></a>5.3.1. Description</h4>
 <div class="paragraph">
 <p>Collect and organize architectural information about the <a href="#SuD">[SuD]</a>:
 Document structures, concepts, decisions, interfaces etc. of the <a href="#SuD">[SuD]</a>
@@ -5791,7 +5864,7 @@ development of the system.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>5.3.2. Experiences</h4>
+<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.3.2. Experiences</h4>
 <div class="paragraph">
 <p>Architectural understanding can be gained in small increments, so there is no
 need to reserve long times just for documentation.</p>
@@ -5849,7 +5922,7 @@ during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Int
 <p>Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish, attack or dispute your findings.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_34"><a class="anchor" href="#_intent_34"></a>5.6.1. Intent</h4>
+<h4 id="_intent_35"><a class="anchor" href="#_intent_35"></a>5.6.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5865,7 +5938,7 @@ during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Int
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_34"><a class="anchor" href="#_description_34"></a>5.6.2. Description</h4>
+<h4 id="_description_35"><a class="anchor" href="#_description_35"></a>5.6.2. Description</h4>
 <div id="figure-reaction-pyramid" class="imageblock">
 <div class="content">
 <img src="images/expect-denial-reaction-levels.png" alt="Reaction levels">
@@ -5930,7 +6003,7 @@ Findings are opposed, either actively or passively.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>5.6.3. Experiences</h4>
+<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.6.3. Experiences</h4>
 <div class="paragraph">
 <p>In one audit of a European Logistic Company (&gt;40.000 employees) we found serious issues within their development processes, in addition to some issues in their source code. The process problems caused massive (&gt; 3month) delays in delivery of working software to production, whereas the pure software bugs were relatively minor in their consequences. When we presented these issues, all process-related issues were minimized or doubted by senior management of the IT-department.</p>
 </div>
@@ -5939,13 +6012,13 @@ Findings are opposed, either actively or passively.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>5.6.4. Consequences</h4>
+<h4 id="_consequences_13"><a class="anchor" href="#_consequences_13"></a>5.6.4. Consequences</h4>
 <div class="paragraph">
 <p>Especially when presenting results to (opposing) management stakeholders, you should be able to <strong>verify</strong> all your claims. In critical cases you should keep written protocols and note who-said-what in your <a href="#Stakeholder-Interview">stakeholder interviews</a>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>5.6.5. Related Patterns</h4>
+<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.6.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5968,7 +6041,7 @@ Findings are opposed, either actively or passively.</p>
 opinions) by explicit (usually written) assumptions about those facts.</p>
 </div>
 <div class="sect3">
-<h4 id="_description_35"><a class="anchor" href="#_description_35"></a>5.7.1. Description</h4>
+<h4 id="_description_36"><a class="anchor" href="#_description_36"></a>5.7.1. Description</h4>
 <div class="paragraph">
 <p>Making assumptions <em>explicit</em> is fundamentally important to
 <a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a>, so that development teams don&#8217;t
@@ -6026,7 +6099,7 @@ countermeasures or pull the plug as early as possible. Similar to <a href="#Fast
 <div class="sect2">
 <h3 id="Impact-Analysis"><a class="anchor" href="#Impact-Analysis"></a>5.10. <span class="pattern">Impact Analysis</span></h3>
 <div class="sect3">
-<h4 id="_intent_35"><a class="anchor" href="#_intent_35"></a>5.10.1. Intent</h4>
+<h4 id="_intent_36"><a class="anchor" href="#_intent_36"></a>5.10.1. Intent</h4>
 <div class="paragraph">
 <p>Determine what impact (in code, concepts, data and the organization)
 a specific action or issue (e.g. refactoring, recurring problem) will or
@@ -6183,7 +6256,7 @@ might use in preparing such documents.</p>
 <div class="sect2">
 <h3 id="Separate-Cause-From-Effect"><a class="anchor" href="#Separate-Cause-From-Effect"></a>5.14. <span class="pattern">Separate-Cause-From-Effect</span></h3>
 <div class="sect3">
-<h4 id="_intent_36"><a class="anchor" href="#_intent_36"></a>5.14.1. Intent</h4>
+<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.14.1. Intent</h4>
 <div class="paragraph">
 <p>Explicitly differentiate between symptom (<em>effect</em>) and cause:</p>
 </div>
@@ -6199,7 +6272,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_36"><a class="anchor" href="#_description_36"></a>5.14.2. Description</h4>
+<h4 id="_description_37"><a class="anchor" href="#_description_37"></a>5.14.2. Description</h4>
 <div class="paragraph">
 <p>Under discussion!</p>
 </div>
@@ -6221,7 +6294,7 @@ might use in preparing such documents.</p>
 <p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.15.1. Intent</h4>
+<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.15.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6237,7 +6310,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_37"><a class="anchor" href="#_description_37"></a>5.15.2. Description</h4>
+<h4 id="_description_38"><a class="anchor" href="#_description_38"></a>5.15.2. Description</h4>
 <div class="paragraph">
 <p>There are two common ways to deliver review results:</p>
 </div>
@@ -6259,7 +6332,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.15.3. Experiences</h4>
+<h4 id="_experiences_17"><a class="anchor" href="#_experiences_17"></a>5.15.3. Experiences</h4>
 <div class="paragraph">
 <p>In a review for a financial broker we agreed initially to deliver a detailed document with the results. When we were later asked to present the outcomes to two different audiences (engineers and management) it was quite easy to create specific slides for both of them from the ~ 40 pages of documentation.</p>
 </div>
@@ -6268,7 +6341,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>5.15.4. Related Patterns</h4>
+<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.15.4. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6287,20 +6360,20 @@ might use in preparing such documents.</p>
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.16.1. Intent</h4>
+<h4 id="_intent_39"><a class="anchor" href="#_intent_39"></a>5.16.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
 findings keeps eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_38"><a class="anchor" href="#_description_38"></a>5.16.2. Description</h4>
+<h4 id="_description_39"><a class="anchor" href="#_description_39"></a>5.16.2. Description</h4>
 <div class="paragraph">
 <p>(To be done)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_17"><a class="anchor" href="#_experiences_17"></a>5.16.3. Experiences</h4>
+<h4 id="_experiences_18"><a class="anchor" href="#_experiences_18"></a>5.16.3. Experiences</h4>
 <div class="paragraph">
 <p>Some anti-experiences that happened when we neglected traceability:</p>
 </div>
@@ -6318,7 +6391,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>5.16.4. Applicability</h4>
+<h4 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>5.16.4. Applicability</h4>
 <div class="paragraph">
 <p>Apply traceability whenever you identify problems or issues</p>
 </div>
@@ -6340,7 +6413,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.16.5. Related Patterns</h4>
+<h4 id="_related_patterns_22"><a class="anchor" href="#_related_patterns_22"></a>5.16.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6776,12 +6849,12 @@ Category: <a href="#Improve">Improve</a></p>
 </div>
 </li>
 <li>
-<p><a id="Measure-Everything"></a></p>
+<p><a id="Measure"></a></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Measure Everything</dt>
+<dt class="hdlist1">[pattern]Measure</dt>
 <dd>
-<p>Gather runtime metrics and make them visual on dashboards in order to make your system behavior more predictable and assumed coincidences explainable. Examples of such metrics are thread pool saturation, number of failed logins, requests per second but also number of successful orders today.
+<p>Gather various metrics and visualize them on dashboards in order to make your system behavior more predictable and assumed coincidences explainable. Examples of such metrics are thread pool saturation, number of failed logins, requests per second but also number of successful orders today, amount-of-time-spent-debugging-this-component, code-metrics, amount-of-effort-needed-for-feature&#8230;&#8203;
 Category: <a href="#Improve">Improve</a></p>
 </dd>
 </dl>
@@ -7806,7 +7879,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-01-15 14:17:13 UTC
+Last updated 2015-01-15 14:17:30 UTC
 </div>
 </div>
 </body>
