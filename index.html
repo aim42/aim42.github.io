@@ -2025,7 +2025,8 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#Improve">4. Improve</a>
 <ul class="sectlevel2">
 <li><a href="#_goals_3">4.1. Goals</a></li>
-<li><a href="#_patterns_and_practices_for_improvement">4.2. Patterns and Practices for Improvement</a></li>
+<li><a href="#_structure_of_improvement_practices">4.2. Structure of Improvement Practices</a></li>
+<li><a href="#_practices_for_improvement">4.3. Practices for Improvement</a></li>
 </ul>
 </li>
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a>
@@ -4801,7 +4802,7 @@ uncertainty and propability involved.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_patterns_and_practices_for_improvement"><a class="anchor" href="#_patterns_and_practices_for_improvement"></a>4.2. Patterns and Practices for Improvement</h3>
+<h3 id="_structure_of_improvement_practices"><a class="anchor" href="#_structure_of_improvement_practices"></a>4.2. Structure of Improvement Practices</h3>
 <div class="sect3">
 <h4 id="_fundamentals"><a class="anchor" href="#_fundamentals"></a>4.2.1. Fundamentals</h4>
 <div class="paragraph">
@@ -4874,14 +4875,21 @@ to similar entities and potential synergies are utilized.</p>
 <p>We divide improvement practices into several categories (shown in
 figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 </div>
-<div class="paragraph">
-<p>TODO</p>
-</div>
 <div id="improvement-categories" class="imageblock">
 <div class="content">
 <img src="images/improve-patterns-categories.png" alt="improvement-categories">
 </div>
 <div class="title">Figure 14. Improvement Categories</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_practices_for_improvement"><a class="anchor" href="#_practices_for_improvement"></a>4.3. Practices for Improvement</h3>
+<div id="improvement-practices-1" class="imageblock">
+<div class="content">
+<img src="images/iimprove-patterns-complete-1.png" alt="improvement-practices">
+</div>
+<div class="title">Figure 15. Improvement Practices (Part 1)</div>
 </div>
 <div class="paragraph">
 <p>(given in alphabetical order)</p>
@@ -4971,9 +4979,8 @@ figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 </li>
 </ul>
 </div>
-</div>
 <div class="sect3">
-<h4 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.2.3. <span class="pattern">Anticorruption Layer</span></h4>
+<h4 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.3.1. <span class="pattern">Anticorruption Layer</span></h4>
 <div class="sect4">
 <h5 id="_intent_28"><a class="anchor" href="#_intent_28"></a>Intent</h5>
 <div class="paragraph">
@@ -5036,7 +5043,7 @@ figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.2.4. <span class="pattern">Improve Logging</span></h4>
+<h4 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.3.2. <span class="pattern">Improve Logging</span></h4>
 <div class="sect4">
 <h5 id="_intent_29"><a class="anchor" href="#_intent_29"></a>Intent</h5>
 <div class="paragraph">
@@ -5201,7 +5208,7 @@ that cannot be isolated without modifying the code.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.2.5. <span class="pattern">Interface Segregation Principle</span></h4>
+<h4 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.3.3. <span class="pattern">Interface Segregation Principle</span></h4>
 <div class="sect4">
 <h5 id="_intent_30"><a class="anchor" href="#_intent_30"></a>Intent</h5>
 <div class="paragraph">
@@ -5278,7 +5285,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Introduce-Boy-Scout-Rule"><a class="anchor" href="#Introduce-Boy-Scout-Rule"></a>4.2.6. <span class="pattern">Introduce Boy Scout Rule</span></h4>
+<h4 id="Introduce-Boy-Scout-Rule"><a class="anchor" href="#Introduce-Boy-Scout-Rule"></a>4.3.4. <span class="pattern">Introduce Boy Scout Rule</span></h4>
 <div class="paragraph">
 <p>The &#8220;Boy Scout Rule&#8221; for software development basically states that we</p>
 </div>
@@ -5470,7 +5477,7 @@ performed when applying the Boy Scout Rule</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.2.7. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h4>
+<h4 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.3.5. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h4>
 <div class="sect4">
 <h5 id="_intent_32"><a class="anchor" href="#_intent_32"></a>Intent</h5>
 <div class="paragraph">
@@ -5559,7 +5566,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Measure"><a class="anchor" href="#Measure"></a>4.2.8. <span class="pattern">Measure</span></h4>
+<h4 id="Measure"><a class="anchor" href="#Measure"></a>4.3.6. <span class="pattern">Measure</span></h4>
 <div class="sect4">
 <h5 id="_intent_33"><a class="anchor" href="#_intent_33"></a>Intent</h5>
 <div class="paragraph">
@@ -5632,7 +5639,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.2.9. <span class="pattern">Use Invariants To Kill Zombies</span></h4>
+<h4 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.3.7. <span class="pattern">Use Invariants To Kill Zombies</span></h4>
 <div class="sect4">
 <h5 id="_intent_34"><a class="anchor" href="#_intent_34"></a>Intent</h5>
 <div class="paragraph">
@@ -5827,7 +5834,7 @@ facilitates identification of additional issues and improvements.</p>
 <div class="content">
 <img src="images/issues-and-improvements.png" alt="issues and improvements">
 </div>
-<div class="title">Figure 15. Collect issues and improvements</div>
+<div class="title">Figure 16. Collect issues and improvements</div>
 </div>
 </div>
 <div class="sect2">
@@ -5980,7 +5987,7 @@ tactics and strategies in all of the aim42-phases.</p>
 <div class="content">
 <img src="images/collect-remedies.png" alt="collect remedies">
 </div>
-<div class="title">Figure 16. Collect Remedies in All Phases</div>
+<div class="title">Figure 17. Collect Remedies in All Phases</div>
 </div>
 </div>
 <div class="sect2">
@@ -6024,7 +6031,7 @@ during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Int
 <div class="content">
 <img src="images/expect-denial-reaction-levels.png" alt="Reaction levels">
 </div>
-<div class="title">Figure 17. Levels of Reaction when presented with problems</div>
+<div class="title">Figure 18. Levels of Reaction when presented with problems</div>
 </div>
 <div class="paragraph">
 <p>From enthusiasm to neutrality things will be easy, but from here on it gets interesting or difficult, however you might call it.</p>
@@ -6220,7 +6227,7 @@ might have. Identify the resultant effects on system development and operations.
 <div class="content">
 <img src="images/improvement-backlog.jpg" alt="improvement backlog">
 </div>
-<div class="title">Figure 18. Improvement Backlog</div>
+<div class="title">Figure 19. Improvement Backlog</div>
 </div>
 </div>
 <div class="sect2">
@@ -7753,7 +7760,7 @@ here we explain 'some-anchor' topic...</pre>
 <div class="content">
 <img src="images/aim42-logo.png" alt="alternate-text">
 </div>
-<div class="title">Figure 19. caption</div>
+<div class="title">Figure 20. caption</div>
 </div>
 </div>
 <div class="sect2">
@@ -7982,7 +7989,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-01-18 17:21:25 UTC
+Last updated 2015-01-18 17:33:52 UTC
 </div>
 </div>
 </body>
