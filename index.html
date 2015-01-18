@@ -2128,7 +2128,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;</p>
 </div>
 <div class="paragraph">
-<p>Version 0.5.0, last update 2015-01-17</p>
+<p>Version 0.5.0, last update 2015-01-18</p>
 </div>
 <div class="paragraph">
 <p>Current status:
@@ -4801,11 +4801,71 @@ uncertainty and propability involved.</p>
 </div>
 <div class="sect2">
 <h3 id="_patterns_and_practices_for_improvement"><a class="anchor" href="#_patterns_and_practices_for_improvement"></a>4.2. Patterns and Practices for Improvement</h3>
+<div class="sect3">
+<h4 id="_fundamentals"><a class="anchor" href="#_fundamentals"></a>4.2.1. Fundamentals</h4>
+<div class="paragraph">
+<p>For improvement we take a number of fundamental principles for granted:</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+<span class="pattern">Improve Incrementally</span>
+<br>
+<span class="pattern">Fast-Feedback</span>
+<br>
+<span class="pattern">Prototype-Improvement</span>
+</td>
+<td class="hdlist2">
+<p>Verify the viability and effectiveness of improvements,
+usually in smaller scales with reasonable risks. Helps to get [Fast-Feedback]</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<span class="pattern">Regression-Test-After-Every-Change</span>
+</td>
+<td class="hdlist2">
+<p>Always make sure that changes,
+even minor ones, leave your system intact.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<span class="pattern">Reduce Complexity</span>
+</td>
+<td class="hdlist2">
+<p>Simpler solutions are most often easier to comprehend,
+maintain and operate. Therefore always strive for simplicity and the reduction
+of accidental, unneccessary complexity.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<span class="pattern">Group Improvement Actions</span>
+</td>
+<td class="hdlist2">
+<p>Group related actions, so that they refer
+to similar entities and potential synergies are utilized.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_categories"><a class="anchor" href="#_categories"></a>4.2.2. Categories</h4>
+<div class="paragraph">
+<p>We divide improvement practices into several categories (shown in
+figure <a href="#improvement-categories">[improvement-categories]</a>).</p>
+</div>
+<div class="paragraph">
+<p>TODO</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="images/improve-patterns-conceptmap.png" alt="improvement-practices">
+<img src="images/improve-patterns-concepts.png" alt="improvement-categories">
 </div>
-<div class="title">Figure 14. Improve Practices</div>
+<div class="title">Figure 14. Improvement Categories</div>
 </div>
 <div class="paragraph">
 <p>(given in alphabetical order)</p>
@@ -4895,8 +4955,9 @@ uncertainty and propability involved.</p>
 </li>
 </ul>
 </div>
+</div>
 <div class="sect3">
-<h4 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.2.1. <span class="pattern">Anticorruption Layer</span></h4>
+<h4 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.2.3. <span class="pattern">Anticorruption Layer</span></h4>
 <div class="sect4">
 <h5 id="_intent_28"><a class="anchor" href="#_intent_28"></a>Intent</h5>
 <div class="paragraph">
@@ -4959,7 +5020,7 @@ uncertainty and propability involved.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.2.2. <span class="pattern">Improve Logging</span></h4>
+<h4 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.2.4. <span class="pattern">Improve Logging</span></h4>
 <div class="sect4">
 <h5 id="_intent_29"><a class="anchor" href="#_intent_29"></a>Intent</h5>
 <div class="paragraph">
@@ -5124,7 +5185,7 @@ that cannot be isolated without modifying the code.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.2.3. <span class="pattern">Interface Segregation Principle</span></h4>
+<h4 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.2.5. <span class="pattern">Interface Segregation Principle</span></h4>
 <div class="sect4">
 <h5 id="_intent_30"><a class="anchor" href="#_intent_30"></a>Intent</h5>
 <div class="paragraph">
@@ -5201,7 +5262,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Introduce-Boy-Scout-Rule"><a class="anchor" href="#Introduce-Boy-Scout-Rule"></a>4.2.4. <span class="pattern">Introduce Boy Scout Rule</span></h4>
+<h4 id="Introduce-Boy-Scout-Rule"><a class="anchor" href="#Introduce-Boy-Scout-Rule"></a>4.2.6. <span class="pattern">Introduce Boy Scout Rule</span></h4>
 <div class="paragraph">
 <p>The &#8220;Boy Scout Rule&#8221; for software development basically states that we</p>
 </div>
@@ -5393,7 +5454,7 @@ performed when applying the Boy Scout Rule</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.2.5. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h4>
+<h4 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.2.7. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h4>
 <div class="sect4">
 <h5 id="_intent_32"><a class="anchor" href="#_intent_32"></a>Intent</h5>
 <div class="paragraph">
@@ -5482,7 +5543,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Measure"><a class="anchor" href="#Measure"></a>4.2.6. <span class="pattern">Measure</span></h4>
+<h4 id="Measure"><a class="anchor" href="#Measure"></a>4.2.8. <span class="pattern">Measure</span></h4>
 <div class="sect4">
 <h5 id="_intent_33"><a class="anchor" href="#_intent_33"></a>Intent</h5>
 <div class="paragraph">
@@ -5555,7 +5616,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.2.7. <span class="pattern">Use Invariants To Kill Zombies</span></h4>
+<h4 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.2.9. <span class="pattern">Use Invariants To Kill Zombies</span></h4>
 <div class="sect4">
 <h5 id="_intent_34"><a class="anchor" href="#_intent_34"></a>Intent</h5>
 <div class="paragraph">
@@ -7818,7 +7879,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>2015-01-17</code> will insert the last modification data (here: 2015-01-17)</p>
+<p><code>2015-01-18</code> will insert the last modification data (here: 2015-01-18)</p>
 </li>
 </ul>
 </div>
@@ -7892,7 +7953,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-01-17 20:24:43 UTC
+Last updated 2015-01-18 10:21:22 UTC
 </div>
 </div>
 </body>
