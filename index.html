@@ -2052,16 +2052,17 @@ table.CodeRay td.code>pre{padding:0}
 </ul>
 </li>
 <li><a href="#_pattern_index">6. Pattern index</a></li>
-<li><a href="#bibliography">Appendix A: Bibliography</a></li>
-<li><a href="#_glossary">Appendix B: Glossary</a></li>
-<li><a href="#_organizational_stuff">Appendix C: Organizational Stuff</a>
+<li><a href="#_domain_model">Appendix A: Domain Model</a></li>
+<li><a href="#bibliography">Appendix B: Bibliography</a></li>
+<li><a href="#_glossary">Appendix C: Glossary</a></li>
+<li><a href="#_organizational_stuff">Appendix D: Organizational Stuff</a>
 <ul class="sectlevel2">
 <li><a href="#_the_team">The Team</a></li>
 <li><a href="#_license">License</a></li>
 <li><a href="#contributions">Contribute to aim42.org <span class="icon"><i class="fa fa-smile-o"></i></span></a></li>
 </ul>
 </li>
-<li><a href="#_asciidoc_help">Appendix D: Asciidoc Help</a>
+<li><a href="#_asciidoc_help">Appendix E: Asciidoc Help</a>
 <ul class="sectlevel2">
 <li><a href="#_headings">Headings</a></li>
 <li><a href="#_cross_references">Cross-References</a></li>
@@ -2075,7 +2076,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_footnotes">Footnotes</a></li>
 </ul>
 </li>
-<li><a href="#_how_to_add_a_new_pattern_or_practice">Appendix E: How to add a new pattern or practice</a></li>
+<li><a href="#_how_to_add_a_new_pattern_or_practice">Appendix F: How to add a new pattern or practice</a></li>
 </ul>
 </li>
 </ul>
@@ -2332,12 +2333,11 @@ Several <a href="#Crosscutting">cross-cutting practices and patterns</a> should 
 <div class="sect3">
 <h4 id="_common_terminology"><a class="anchor" href="#_common_terminology"></a>1.3.2. Common Terminology</h4>
 <div class="paragraph">
-<p>aim42 relies on a common terminology, a small set of fundamental concepts. You may even
-call it the <em>software improvement domain</em>.</p>
+<p>aim42 relies on a common terminology, a small set of fundamental concepts.</p>
 </div>
 <div id="figure-fundamental-concepts" class="imageblock">
 <div class="content">
-<img src="images/aim42-domain-model.png" alt="aim42 domain model">
+<img src="images/aim42-concept-map.png" alt="aim42 concept map">
 </div>
 <div class="title">Figure 4. aim42 domain terminology</div>
 </div>
@@ -2348,8 +2348,9 @@ call it the <em>software improvement domain</em>.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Issue (problem)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Any problem, error, fault or suboptimal situation within the <a href="#System">[System]</a> processes related to it (e.g. management, development, administrative or organizational process).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Issue</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any problem, error, fault, risk, suboptimal situation or their causes within the
+<a href="#System">[System]</a> or processes related to it (e.g. management, operational, development, administrative or organizational activities).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cause</strong></p></td>
@@ -2357,7 +2358,7 @@ call it the <em>software improvement domain</em>.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Improvement</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Solution, remedy or cure for one or several issues or causes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Solution, remedy or cure for one or several issues.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of issue)</strong></p></td>
@@ -2369,7 +2370,7 @@ call it the <em>software improvement domain</em>.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Risk</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Potential problem or issue. Improvements can have associated risks.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Potential</em> problem. Improvements can change associated risks for the better or the worse, even create new risks.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7486,7 +7487,24 @@ Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="bibliography"><a class="anchor" href="#bibliography"></a>Appendix A: Bibliography</h2>
+<h2 id="_domain_model"><a class="anchor" href="#_domain_model"></a>Appendix A: Domain Model</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Within the systematic improvement we consider and manipulate several
+typical kinds of information, <strong>entities</strong>.</p>
+</div>
+<div id="figure-domain-model" class="imageblock">
+<div class="content">
+<img src="images/aim42-domain-model.png" alt="aim42 domain model">
+</div>
+<div class="title">Figure 22. aim42 domain terminology - detailed</div>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 80%;">
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="bibliography"><a class="anchor" href="#bibliography"></a>Appendix B: Bibliography</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -7639,7 +7657,7 @@ a variety of programming languages, plugins for different metrics and checks. So
 </div>
 </div>
 <div class="sect1">
-<h2 id="_glossary"><a class="anchor" href="#_glossary"></a>Appendix B: Glossary</h2>
+<h2 id="_glossary"><a class="anchor" href="#_glossary"></a>Appendix C: Glossary</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
@@ -7714,7 +7732,7 @@ sponsored by the US Departement of Defense.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_organizational_stuff"><a class="anchor" href="#_organizational_stuff"></a>Appendix C: Organizational Stuff</h2>
+<h2 id="_organizational_stuff"><a class="anchor" href="#_organizational_stuff"></a>Appendix D: Organizational Stuff</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_the_team"><a class="anchor" href="#_the_team"></a>The Team</h3>
@@ -7823,7 +7841,7 @@ limitations under the License.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_asciidoc_help"><a class="anchor" href="#_asciidoc_help"></a>Appendix D: Asciidoc Help</h2>
+<h2 id="_asciidoc_help"><a class="anchor" href="#_asciidoc_help"></a>Appendix E: Asciidoc Help</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To facilitate contributions we summarize the AsciiDoc (respectively AsciiDoctor) features used within this guide.</p>
@@ -7931,7 +7949,7 @@ here we explain 'some-anchor' topic...</pre>
 <div class="content">
 <img src="images/aim42-logo.png" alt="alternate-text">
 </div>
-<div class="title">Figure 22. caption</div>
+<div class="title">Figure 23. caption</div>
 </div>
 </div>
 <div class="sect2">
@@ -8105,7 +8123,7 @@ The result is rendered nicely.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_add_a_new_pattern_or_practice"><a class="anchor" href="#_how_to_add_a_new_pattern_or_practice"></a>Appendix E: How to add a new pattern or practice</h2>
+<h2 id="_how_to_add_a_new_pattern_or_practice"><a class="anchor" href="#_how_to_add_a_new_pattern_or_practice"></a>Appendix F: How to add a new pattern or practice</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -8160,7 +8178,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-03-06 14:39:05 UTC
+Last updated 2015-03-06 15:52:16 UTC
 </div>
 </div>
 </body>
