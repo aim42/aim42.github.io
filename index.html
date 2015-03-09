@@ -2132,7 +2132,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;</p>
 </div>
 <div class="paragraph">
-<p><span class="small">Version 0.5.3, last update 2015-03-08, Status:</span>
+<p><span class="small">Version 0.5.3, last update 2015-03-09, Status:</span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
@@ -7506,6 +7506,103 @@ typical kinds of information, <strong>entities</strong>.</p>
 <div class="title">Figure 22. aim42 domain terminology - detailed</div>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
+<colgroup>
+<col style="width: 11%;">
+<col style="width: 29%;">
+<col style="width: 58%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Cause</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Root cause of an Issue.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>is-a</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(inherits from) Issue</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>is real source of</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">one or many Issues.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Documentation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any (hopefully written) information about
+the systems, its goals, requirements, architecture, implementation, operation or management.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Hardware</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Structure and kind of hardware required to develop, test and operate the System.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Improvement</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any remedy, opportunity, tactic or strategy to improve the System by resolving one or several Issues.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>modifies</em> or <em>creates</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Risk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>remedy</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for the System.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Issue</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Organization</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The organization or entity responsible or owning the System.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Process</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processes, conventions or activities for developing, maintaining, operating or managing the System.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Risk</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>is an</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issue, but not occurred yet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Software</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All sourcecode and configuration that make up the System under improvement. Hopefully stored in version-control.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Stakeholder</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">People or roles interested or participating in the System or any of its associated Processes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>belong to</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the Organization responsible or owning the System.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>System</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The system under improvement, consisting of Software, Hardware and Documentation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>managed and affected by</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>remedy</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the System or aspects of it by Improvements</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>suffers from</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issue</p></td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
@@ -8110,7 +8207,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>2015-03-08</code> will insert the last modification data (here: 2015-03-08)</p>
+<p><code>2015-03-09</code> will insert the last modification data (here: 2015-03-09)</p>
 </li>
 </ul>
 </div>
@@ -8184,7 +8281,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-03-08 21:23:30 UTC
+Last updated 2015-03-09 06:12:12 UTC
 </div>
 </div>
 </body>
