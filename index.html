@@ -2133,7 +2133,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;</p>
 </div>
 <div class="paragraph">
-<p><span class="small">Version 0.5.3, last update 2015-03-30, Status:</span>
+<p><span class="small">Version 0.5.3, last update 2015-03-31, Status:</span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
@@ -3134,6 +3134,12 @@ responsible for this requirement will likely contain risks.</p>
 <li>
 <p>Data Actuality and Correctness</p>
 </li>
+<li>
+<p>Data Access Protection</p>
+</li>
+<li>
+<p>Backup</p>
+</li>
 </ul>
 </div>
 <div class="sect5">
@@ -3198,8 +3204,11 @@ or unsuitable indirections involved?</p>
 <p>Are some parts of the data especially large?</p>
 </li>
 <li>
-<p>Does the relation between record-size (<em>how large is a single record</em>?)
+<p>Is the relation between record-size (<em>how large is a single record</em>?)
 and record-volume (<em>how many records exists</em>?) plausible?</p>
+</li>
+<li>
+<p>Do critical queries involve especially large parts of data?</p>
 </li>
 </ul>
 </div>
@@ -3228,9 +3237,8 @@ and record-volume (<em>how many records exists</em>?) plausible?</p>
 <div class="paragraph">
 <p>Especially in data concerning dynamic entities like people, organizations,
 markets, commodities etc., facts are very likely to change over time.
-Such data might become invalid sooner or later. Other types of information
-(like tax records, invoices or bookings on bank accounts) are created once and remain
-intact forever).</p>
+Such data (<em>stored facts</em>) might become invalid sooner or later.
+Other types of information (like tax records, invoices or bookings on bank accounts) are created once and remain valid forever).</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3248,6 +3256,71 @@ become invalid every year.</p>
 </td>
 </tr>
 </table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Which parts of the data are subject to (what kind of) changes?</p>
+</li>
+<li>
+<p>Are parts of the data known to be invalid or contain invalid portions?</p>
+</li>
+<li>
+<p>Does the System handle potentially wrong or invalid data appropriately?</p>
+</li>
+<li>
+<p>Are there (organizational or technical) processes in place that deal with
+data inconsistencies or faults?</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_analyze_data_access_protection"><a class="anchor" href="#_analyze_data_access_protection"></a>Analyze Data Access Protection</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>Is there an overview what kinds of data need which level of (access) protection?</p>
+</li>
+<li>
+<p>Is there a security concept in place covering protection against unauthorized access?</p>
+<div class="ulist">
+<ul>
+<li>
+<p>How are users/roles/organizations <em>allowed</em> to access data managed?</p>
+</li>
+<li>
+<p>Is there a process in place to revoke access for outdated users/roles/organizations?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Is there a plan what shall happen in case of security breaches or data theft?</p>
+</li>
+<li>
+<p>How is data theft recognized?</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_analyze_backup"><a class="anchor" href="#_analyze_backup"></a>Analyze Backup</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>Is there a universal backup strategy in place, covering all areas of data storage?</p>
+</li>
+<li>
+<p>Does the backup strategy match the business criticality of the data?</p>
+</li>
+<li>
+<p>To what extend has the backup been verified?</p>
+</li>
+<li>
+<p>Does a fallback scenario exist in case of (partial or complete) data loss?</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -8600,7 +8673,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>2015-03-30</code> will insert the last modification data (here: 2015-03-30)</p>
+<p><code>2015-03-31</code> will insert the last modification data (here: 2015-03-31)</p>
 </li>
 </ul>
 </div>
@@ -8685,7 +8758,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-03-30 14:36:31 UTC
+Last updated 2015-03-31 11:17:43 UTC
 </div>
 </div>
 </body>
