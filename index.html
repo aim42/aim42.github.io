@@ -2555,8 +2555,9 @@ Never start solving problems until you have a thorough understanding of current 
 </div>
 <div class="sect2">
 <h3 id="_patterns_and_practices_for_analysis"><a class="anchor" href="#_patterns_and_practices_for_analysis"></a>2.3. Patterns and Practices for Analysis</h3>
-<img border=0 src="images/analyze-patterns-conceptmap.png" usemap="#AnalysisPatterns" alt="Analyze Patterns">
+<img border=0 src="images/analyze-patterns-complete.png" usemap="#AnalysisPatterns" alt="Analyze Patterns">
 <map name="AnalysisPatterns">
+	<area shape=rect coords="358,4,440,52" href="#User-Analysis">
 	<area shape=rect coords="93,690,175,729" href="#Instrument-System">
 	<area shape=rect coords="196,590,299,629" href="#Infrastructure-Analysis">
 	<area shape=rect coords="294,319,398,379" href="#Development-Process-Analysis">
@@ -2564,14 +2565,14 @@ Never start solving problems until you have a thorough understanding of current 
 	<area shape=rect coords="305,508,402,557" href="#Collect-Issues">
 	<area shape=rect coords="28,803,125,852" href="#Static-Code-Analysis">
 	<area shape=rect coords="358,690,449,739" href="#Software-Archeology">
-	<area shape=rect coords="449,25,553,64" href="#Questionnaire">
+	<area shape=rect coords="511,25,615,64" href="#Questionnaire">
 	<area shape=rect coords="15,294,150,343" href="#Quantitative-Analysis">
 	<area shape=rect coords="649,332,756,381" href="#Requirements-Analysis">
 	<area shape=rect coords="330,141,449,190" href="#Stakeholder-Interview">
 	<area shape=rect coords="40,167,159,215" href="#Stakeholde-Analysis">
 	<area shape=rect coords="66,494,150,539" href="#Runtime-Analysis">
 	<area shape=rect coords="543,253,664,301" href="#Documentation-Analysis">
-	<area shape=rect coords="145,433,210,472" href="#Data-Analysis">
+	<area shape=rect coords="152,423,218,462" href="#Data-Analysis">
 	<area shape=rect coords="455,562,567,611" href="#Issue-Tracker-Analysis">
 	<area shape=rect coords="124,2,218,51" href="#Context-Analysis">
 	<area shape=rect coords="654,526,729,565" href="#ATAM">
@@ -4738,9 +4739,16 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 </div>
 </div>
 <div class="sect3">
-<h4 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>2.3.24. <span class="pattern">View Based Understanding</span></h4>
+<h4 id="User-Analysis"><a class="anchor" href="#User-Analysis"></a>2.3.24. <span class="pattern">User-Analysis</span></h4>
 <div class="sect4">
 <h5 id="_intent_24"><a class="anchor" href="#_intent_24"></a>Intent</h5>
+
+</div>
+</div>
+<div class="sect3">
+<h4 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>2.3.25. <span class="pattern">View Based Understanding</span></h4>
+<div class="sect4">
+<h5 id="_intent_25"><a class="anchor" href="#_intent_25"></a>Intent</h5>
 <div class="paragraph">
 <p>Understand the inner workings and internal (code) structure of of the systems. Document (and communicate) this via
 architectural views, especially the building-block view.</p>
@@ -4848,7 +4856,7 @@ and reason about the code structure</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_9"><a class="anchor" href="#_references_9"></a>2.3.25. References</h4>
+<h4 id="_references_9"><a class="anchor" href="#_references_9"></a>2.3.26. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4987,7 +4995,7 @@ concerned by the problem, we count their number.</p>
 <div class="sect3">
 <h4 id="Estimate-Feature-Value"><a class="anchor" href="#Estimate-Feature-Value"></a>3.3.1. <span class="pattern">Estimate Feature Value</span></h4>
 <div class="sect4">
-<h5 id="_intent_25"><a class="anchor" href="#_intent_25"></a>Intent</h5>
+<h5 id="_intent_26"><a class="anchor" href="#_intent_26"></a>Intent</h5>
 <div class="paragraph">
 <p>Estimate the (monetary) value of a given feature, so you can compare features of the system with each other.</p>
 </div>
@@ -5012,7 +5020,7 @@ concerned by the problem, we count their number.</p>
 <div class="sect3">
 <h4 id="Estimate-In-Interval"><a class="anchor" href="#Estimate-In-Interval"></a>3.3.2. <span class="pattern">Estimate in Interval</span></h4>
 <div class="sect4">
-<h5 id="_intent_26"><a class="anchor" href="#_intent_26"></a>Intent</h5>
+<h5 id="_intent_27"><a class="anchor" href="#_intent_27"></a>Intent</h5>
 <div class="paragraph">
 <p>Estimation is a guess, not a <strong>measurement</strong>.
 Estimates are uncertain, otherwise they would be observations (or measurements!).</p>
@@ -5046,7 +5054,7 @@ Be aware of the anchoring effect <a href="http://en.wikipedia.org/wiki/Anchoring
 <div class="sect3">
 <h4 id="Estimate-Issue-Cost"><a class="anchor" href="#Estimate-Issue-Cost"></a>3.3.3. <span class="pattern">Estimate Issue Cost</span></h4>
 <div class="sect4">
-<h5 id="_intent_27"><a class="anchor" href="#_intent_27"></a>Intent</h5>
+<h5 id="_intent_28"><a class="anchor" href="#_intent_28"></a>Intent</h5>
 <div class="paragraph">
 <p>Find out how much a given issue costs in units of money or effort in a period of time or for every occurence.</p>
 </div>
@@ -5431,7 +5439,7 @@ figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 <div class="sect3">
 <h4 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.3.2. <span class="pattern">Anticorruption Layer</span></h4>
 <div class="sect4">
-<h5 id="_intent_28"><a class="anchor" href="#_intent_28"></a>Intent</h5>
+<h5 id="_intent_29"><a class="anchor" href="#_intent_29"></a>Intent</h5>
 <div class="paragraph">
 <p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface remains untouched developers can implement changes or even exchange own or third-party software without affecting the clients of this interface.</p>
 </div>
@@ -5494,7 +5502,7 @@ figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 <div class="sect3">
 <h4 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.3.3. <span class="pattern">Improve Logging</span></h4>
 <div class="sect4">
-<h5 id="_intent_29"><a class="anchor" href="#_intent_29"></a>Intent</h5>
+<h5 id="_intent_30"><a class="anchor" href="#_intent_30"></a>Intent</h5>
 <div class="paragraph">
 <p>Employ sophisticated logging mechanisms such as modern logging frameworks,
 distributed log collection and visualization tools in order to gain more
@@ -5659,7 +5667,7 @@ that cannot be isolated without modifying the code.</p>
 <div class="sect3">
 <h4 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.3.4. <span class="pattern">Interface Segregation Principle</span></h4>
 <div class="sect4">
-<h5 id="_intent_30"><a class="anchor" href="#_intent_30"></a>Intent</h5>
+<h5 id="_intent_31"><a class="anchor" href="#_intent_31"></a>Intent</h5>
 <div class="paragraph">
 <p>Reduce coupling between clients and service providers.</p>
 </div>
@@ -5753,7 +5761,7 @@ found it.&#8221; for the software development world in an article in Kevlin Henn
 &#8220;97 Things a Programmer Should Know&#8221; <a href="#Henney">[Henney]</a>.</p>
 </div>
 <div class="sect4">
-<h5 id="_intent_31"><a class="anchor" href="#_intent_31"></a>Intent</h5>
+<h5 id="_intent_32"><a class="anchor" href="#_intent_32"></a>Intent</h5>
 <div class="paragraph">
 <p>Enable crosscutting architectural improvement even if it is not feasible to change the whole codebase.</p>
 </div>
@@ -5928,7 +5936,7 @@ performed when applying the Boy Scout Rule</p>
 <div class="sect3">
 <h4 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.3.6. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h4>
 <div class="sect4">
-<h5 id="_intent_32"><a class="anchor" href="#_intent_32"></a>Intent</h5>
+<h5 id="_intent_33"><a class="anchor" href="#_intent_33"></a>Intent</h5>
 <div class="paragraph">
 <p>Simplify the interaction of a client with a set of service components.</p>
 </div>
@@ -6017,7 +6025,7 @@ Things that can be handled by a facade:</p>
 <div class="sect3">
 <h4 id="Measure"><a class="anchor" href="#Measure"></a>4.3.7. <span class="pattern">Measure</span></h4>
 <div class="sect4">
-<h5 id="_intent_33"><a class="anchor" href="#_intent_33"></a>Intent</h5>
+<h5 id="_intent_34"><a class="anchor" href="#_intent_34"></a>Intent</h5>
 <div class="paragraph">
 <p>If you don’t measure it, you can’t optimize it.&#8201;&#8212;&#8201;Coda Hale</p>
 </div>
@@ -6091,7 +6099,7 @@ Things that can be handled by a facade:</p>
 <div class="sect3">
 <h4 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.3.8. <span class="pattern">Use Invariants To Kill Zombies</span></h4>
 <div class="sect4">
-<h5 id="_intent_34"><a class="anchor" href="#_intent_34"></a>Intent</h5>
+<h5 id="_intent_35"><a class="anchor" href="#_intent_35"></a>Intent</h5>
 <div class="paragraph">
 <p>Provide a safe approach in situations where  it seems to dangerous to delete
 code or whole modules from a huge system because <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> can&#8217;t
@@ -6466,7 +6474,7 @@ during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Int
 <p>Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish, attack or dispute your findings.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_35"><a class="anchor" href="#_intent_35"></a>5.6.1. Intent</h4>
+<h4 id="_intent_36"><a class="anchor" href="#_intent_36"></a>5.6.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6643,7 +6651,7 @@ countermeasures or pull the plug as early as possible. Similar to <a href="#Fast
 <div class="sect2">
 <h3 id="Impact-Analysis"><a class="anchor" href="#Impact-Analysis"></a>5.10. <span class="pattern">Impact Analysis</span></h3>
 <div class="sect3">
-<h4 id="_intent_36"><a class="anchor" href="#_intent_36"></a>5.10.1. Intent</h4>
+<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.10.1. Intent</h4>
 <div class="paragraph">
 <p>Determine what impact (in code, concepts, data and the organization)
 a specific action or issue (e.g. refactoring, recurring problem) will or
@@ -6686,7 +6694,7 @@ might have. Identify the resultant effects on system development and operations.
 <div class="title">Figure 22. Improvement Backlog</div>
 </div>
 <div class="sect3">
-<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.11.1. Intent</h4>
+<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.11.1. Intent</h4>
 <div class="paragraph">
 <p>Collect all known issues and problems within a system or its associated processes. Make the issues comparable by evaluating each one, usually using economical units like money or time. Align carefully with <a href="#Issue-List"><span class="pattern">Issue List</span></a>.</p>
 </div>
@@ -6739,7 +6747,7 @@ as easy as possible to link issues to improvements and vice versa.</p>
 <p>A collection of issues (problems, risks) found during <a href="#Collect-Issues"><span class="pattern">Collect Issues</span></a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.12.1. Intent</h4>
+<h4 id="_intent_39"><a class="anchor" href="#_intent_39"></a>5.12.1. Intent</h4>
 <div class="paragraph">
 <p>Collect all known issues and problems within a system or its associated processes. Make the issues comparable by evaluating each one, usually using economical units like money or time.</p>
 </div>
@@ -6903,7 +6911,7 @@ might use in preparing such documents.</p>
 <div class="sect2">
 <h3 id="Separate-Cause-From-Effect"><a class="anchor" href="#Separate-Cause-From-Effect"></a>5.15. <span class="pattern">Separate-Cause-From-Effect</span></h3>
 <div class="sect3">
-<h4 id="_intent_39"><a class="anchor" href="#_intent_39"></a>5.15.1. Intent</h4>
+<h4 id="_intent_40"><a class="anchor" href="#_intent_40"></a>5.15.1. Intent</h4>
 <div class="paragraph">
 <p>Explicitly differentiate between symptom (<em>effect</em>) and cause:</p>
 </div>
@@ -6941,7 +6949,7 @@ might use in preparing such documents.</p>
 <p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_40"><a class="anchor" href="#_intent_40"></a>5.16.1. Intent</h4>
+<h4 id="_intent_41"><a class="anchor" href="#_intent_41"></a>5.16.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -7007,7 +7015,7 @@ might use in preparing such documents.</p>
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_41"><a class="anchor" href="#_intent_41"></a>5.17.1. Intent</h4>
+<h4 id="_intent_42"><a class="anchor" href="#_intent_42"></a>5.17.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
 findings keeps eventual critics in check.</p>
@@ -7855,6 +7863,13 @@ Category: <a href="#Improve">Improve</a></p>
 Category: <a href="#Analyze">Analyze</a></p>
 </dd>
 </dl>
+</div>
+</li>
+<li>
+<p><strong><a href="#User-Analysis"><span class="pattern">User-Analysis</span></a></strong></p>
+<div class="paragraph">
+<p>Get an overview of user-categories or -groups, their goals, requirements
+and expectations. Find out about issues users have with the system. Related to <a href="#Context-Analysis"><span class="pattern">Context-Analysis</span></a> and <a href="#Requirements-Analysis"><span class="pattern">Requirements-Analysis</span></a>. Category: <a href="#Analyze">Analyze</a></p>
 </div>
 </li>
 <li>
@@ -8764,7 +8779,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-04-05 07:56:42 UTC
+Last updated 2015-04-05 08:44:55 UTC
 </div>
 </div>
 </body>
