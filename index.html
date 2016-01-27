@@ -2076,7 +2076,13 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel3">
 <li><a href="#_fundamentals">4.2.1. Fundamentals</a></li>
 <li><a href="#improve-approaches">4.2.2. Approaches</a></li>
-<li><a href="#improve-categories">4.2.3. Categories</a></li>
+<li><a href="#big-bang-approach">4.2.3. <span class="pattern">Big Bang Approach</span></a></li>
+<li><a href="#chicken-little-strategy">4.2.4. <span class="pattern">Chicken-Little Strategy</span></a></li>
+<li><a href="#database-first-approach">4.2.5. <span class="pattern">Database First Approach</span></a></li>
+<li><a href="#database-last-approach">4.2.6. <span class="pattern">Database Last Approach</span></a></li>
+<li><a href="#composite-database-approach">4.2.7. <span class="pattern">Composite Database Approach</span></a></li>
+<li><a href="#Butterfly-Methodology">4.2.8. <span class="pattern">Butterfly-Methodology</span></a></li>
+<li><a href="#improve-categories">4.2.9. Categories</a></li>
 </ul>
 </li>
 <li><a href="#improve-practices">4.3. Practices for Improvement</a>
@@ -2100,8 +2106,8 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_crosscutting_practices">5.2. Crosscutting Practices</a></li>
 <li><a href="#Architectural-Understanding">5.3. <span class="pattern">Architectural-Understanding</span></a>
 <ul class="sectlevel3">
-<li><a href="#_description_36">5.3.1. Description</a></li>
-<li><a href="#_experiences_16">5.3.2. Experiences</a></li>
+<li><a href="#_description_42">5.3.1. Description</a></li>
+<li><a href="#_experiences_22">5.3.2. Experiences</a></li>
 <li><a href="#_related_practices_6">5.3.3. Related Practices</a></li>
 </ul>
 </li>
@@ -2109,36 +2115,36 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#Collect-Issues">5.5. <span class="pattern">Collect Issues</span></a></li>
 <li><a href="#Expect-Denial">5.6. <span class="pattern">Expect Denial</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_37">5.6.1. Intent</a></li>
-<li><a href="#_description_37">5.6.2. Description</a></li>
-<li><a href="#_experiences_17">5.6.3. Experiences</a></li>
-<li><a href="#_consequences_14">5.6.4. Consequences</a></li>
-<li><a href="#_related_patterns_21">5.6.5. Related Patterns</a></li>
+<li><a href="#_intent_43">5.6.1. Intent</a></li>
+<li><a href="#_description_43">5.6.2. Description</a></li>
+<li><a href="#_experiences_23">5.6.3. Experiences</a></li>
+<li><a href="#_consequences_20">5.6.4. Consequences</a></li>
+<li><a href="#_related_patterns_27">5.6.5. Related Patterns</a></li>
 </ul>
 </li>
 <li><a href="#Explicit-Assumption">5.7. <span class="pattern">Explicit Assumption</span></a>
 <ul class="sectlevel3">
-<li><a href="#_description_38">5.7.1. Description</a></li>
+<li><a href="#_description_44">5.7.1. Description</a></li>
 </ul>
 </li>
 <li><a href="#Fail-Fast">5.8. <span class="pattern">Fail Fast</span></a></li>
 <li><a href="#Fast-Feedback">5.9. <span class="pattern">Fast Feedback</span></a></li>
 <li><a href="#Impact-Analysis">5.10. <span class="pattern">Impact Analysis</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_38">5.10.1. Intent</a></li>
+<li><a href="#_intent_44">5.10.1. Intent</a></li>
 <li><a href="#_related_practices_7">5.10.2. Related Practices</a></li>
 </ul>
 </li>
 <li><a href="#Improvement-Backlog">5.11. <span class="pattern">Improvement Backlog</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_39">5.11.1. Intent</a></li>
+<li><a href="#_intent_45">5.11.1. Intent</a></li>
 <li><a href="#_content">5.11.2. Content</a></li>
 <li><a href="#_representation_and_tools">5.11.3. Representation and Tools</a></li>
 </ul>
 </li>
 <li><a href="#Issue-List">5.12. <span class="pattern">Issue List</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_40">5.12.1. Intent</a></li>
+<li><a href="#_intent_46">5.12.1. Intent</a></li>
 <li><a href="#_content_2">5.12.2. Content</a></li>
 <li><a href="#_representation_and_tools_2">5.12.3. Representation and Tools</a></li>
 </ul>
@@ -2151,26 +2157,26 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#Separate-Cause-From-Effect">5.15. <span class="pattern">Separate-Cause-From-Effect</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_41">5.15.1. Intent</a></li>
-<li><a href="#_description_39">5.15.2. Description</a></li>
+<li><a href="#_intent_47">5.15.1. Intent</a></li>
+<li><a href="#_description_45">5.15.2. Description</a></li>
 <li><a href="#_related_practices_9">5.15.3. Related Practices</a></li>
 </ul>
 </li>
 <li><a href="#Slide-Or-Write">5.16. <span class="pattern">Slide or Write</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_42">5.16.1. Intent</a></li>
-<li><a href="#_description_40">5.16.2. Description</a></li>
-<li><a href="#_experiences_18">5.16.3. Experiences</a></li>
-<li><a href="#_related_patterns_22">5.16.4. Related Patterns</a></li>
+<li><a href="#_intent_48">5.16.1. Intent</a></li>
+<li><a href="#_description_46">5.16.2. Description</a></li>
+<li><a href="#_experiences_24">5.16.3. Experiences</a></li>
+<li><a href="#_related_patterns_28">5.16.4. Related Patterns</a></li>
 </ul>
 </li>
 <li><a href="#Traceability">5.17. <span class="pattern">Traceability</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_43">5.17.1. Intent</a></li>
-<li><a href="#_description_41">5.17.2. Description</a></li>
-<li><a href="#_experiences_19">5.17.3. Experiences</a></li>
-<li><a href="#_applicability_20">5.17.4. Applicability</a></li>
-<li><a href="#_related_patterns_23">5.17.5. Related Patterns</a></li>
+<li><a href="#_intent_49">5.17.1. Intent</a></li>
+<li><a href="#_description_47">5.17.2. Description</a></li>
+<li><a href="#_experiences_25">5.17.3. Experiences</a></li>
+<li><a href="#_applicability_26">5.17.4. Applicability</a></li>
+<li><a href="#_related_patterns_29">5.17.5. Related Patterns</a></li>
 </ul>
 </li>
 <li><a href="#Widen-Your-Options">5.18. <span class="pattern">Widen Your Options</span></a></li>
@@ -5453,6 +5459,26 @@ to similar entities and potential synergies are utilized.</p>
 <dd>
 <p>Keep the existing system for a limited time, apply only critical bugfixes. In parallel, build a replacement system. Replace old by new at predefined time.</p>
 </dd>
+<dt class="hdlist1"><span class="pattern">Chicken-Little</span></dt>
+<dd>
+<p>Incrementally (11 steps) build a replacement system. You can choose between Database-First, Database-Last and Composite-Database Approach.</p>
+</dd>
+<dt class="hdlist1"><span class="pattern">Database-First</span></dt>
+<dd>
+<p>Do a Big-Bang migration of the database, incrementally implement new applications and interfaces and connect the legacy system to the new database by forward gateways.</p>
+</dd>
+<dt class="hdlist1"><span class="pattern">Database-Last</span></dt>
+<dd>
+<p>Keep the existing database for a limited time, incrementally implement new applications and interfaces and connect them to the legacy database by reverse gateways.</p>
+</dd>
+<dt class="hdlist1"><span class="pattern">Composite-Database</span></dt>
+<dd>
+<p>Combination of Database-Firt and Database-Last. Beside a forward- and reverse-gateway, there is a need for a transaction-coordinator.</p>
+</dd>
+<dt class="hdlist1"><span class="pattern">Butterfly-Methodology</span></dt>
+<dd>
+<p>Data-Migration Method without the need for gateways. Enables zero-downtime migrations by working with temporary data stores.</p>
+</dd>
 <dt class="hdlist1"><span class="pattern">Strangulate-Bad-Parts</span></dt>
 <dd>
 <p>TBD</p>
@@ -5467,7 +5493,584 @@ Underlying idea is to refactor those parts of the system(s) which are actually t
 </div>
 </div>
 <div class="sect3">
-<h4 id="improve-categories"><a class="anchor" href="#improve-categories"></a>4.2.3. Categories</h4>
+<h4 id="big-bang-approach"><a class="anchor" href="#big-bang-approach"></a>4.2.3. <span class="pattern">Big Bang Approach</span></h4>
+<div class="sect4">
+<h5 id="_intent_29"><a class="anchor" href="#_intent_29"></a>Intent</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_description_28"><a class="anchor" href="#_description_28"></a>Description</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_experiences_9"><a class="anchor" href="#_experiences_9"></a>Experiences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_risks"><a class="anchor" href="#_risks"></a>Risks</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_applicability_12"><a class="anchor" href="#_applicability_12"></a>Applicability</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_consequences_6"><a class="anchor" href="#_consequences_6"></a>Consequences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_8"><a class="anchor" href="#_also_known_as_8"></a>Also Known As</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_14"><a class="anchor" href="#_related_patterns_14"></a>Related Patterns</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>test</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_10"><a class="anchor" href="#_references_10"></a>References</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>test</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="chicken-little-strategy"><a class="anchor" href="#chicken-little-strategy"></a>4.2.4. <span class="pattern">Chicken-Little Strategy</span></h4>
+<div class="sect4">
+<h5 id="_intent_30"><a class="anchor" href="#_intent_30"></a>Intent</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_description_29"><a class="anchor" href="#_description_29"></a>Description</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_experiences_10"><a class="anchor" href="#_experiences_10"></a>Experiences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_risks_2"><a class="anchor" href="#_risks_2"></a>Risks</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_applicability_13"><a class="anchor" href="#_applicability_13"></a>Applicability</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>Consequences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_9"><a class="anchor" href="#_also_known_as_9"></a>Also Known As</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_15"><a class="anchor" href="#_related_patterns_15"></a>Related Patterns</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>test</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_11"><a class="anchor" href="#_references_11"></a>References</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>test</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="database-first-approach"><a class="anchor" href="#database-first-approach"></a>4.2.5. <span class="pattern">Database First Approach</span></h4>
+<div class="sect4">
+<h5 id="_intent_31"><a class="anchor" href="#_intent_31"></a>Intent</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_description_30"><a class="anchor" href="#_description_30"></a>Description</h5>
+<div class="paragraph">
+<p>The Database First approach, also called the Forward Migration Method, involves the initial
+migration of legacy data to a modern, probably relational, Database Management System (DBMS) and
+then incrementally migrating the legacy applications and interfaces.
+While legacy applications and interfaces are being redeveloped, the legacy system remains operable. This
+methodology falls within a group of methodologies which allow for the interoperability between both the
+legacy and target systems. This interoperability is provided by a module known as
+Gateway: a software module introduced between components to mediate between them. Gateways
+can play several roles in migration, insulating certain components from changes being made to others,
+translating requests and data between components or co-ordinating queries and updates between components.</p>
+</div>
+<div class="paragraph">
+<p>The concrete gateway used by the Database First approach is called Forward Gateway. It enables the
+legacy applications to access the database environment in the target side of the migration process, as shown in
+Fig. 1.  This gateway translates and redirects these calls forward to the new database service.  Results returned
+by the new database service are similarly translated for used by legacy applications.</p>
+</div>
+<div class="paragraph">
+<p>The main advantage of this approach is that once the legacy data has been migrated, the latest programming
+languages and reporting tools can be used to access the data providing immediate productivity
+benefits.  The legacy system can remain operational while legacy applications and interfaces are rebuilt and
+migrated to the target system one-by-one. When the migration is complete, the gateway will no longer be
+required and can be decommissioned as the old legacy system is shut down.</p>
+</div>
+<div class="paragraph">
+<p>There are several disadvantages to this approach, in particular, it is only applicable to fully decomposable
+legacy systems where a clean interface to the legacy database service exists. Also, before migration can start,
+the new database structure must be defined.  The major risk with this activity is that the structure of the legacy
+database may adversely influence the structure of the new database.</p>
+</div>
+<div class="paragraph">
+<p>The Forward Gateway employed can be very difficult, and sometimes even impossible, to construct due to the differences between
+the source and the target in technology, in database structure, constraints etc..</p>
+</div>
+<div class="paragraph">
+<p>Overall this is a rather simplistic approach to legacy system migration. The migration of the legacy data may
+take a significant amount of time during which the legacy system will be inaccessible.  When dealing with
+mission critical information systems this may be unacceptable.</p>
+</div>
+<div class="paragraph">
+<p>(taken from BISBAL, J. et.al.)</p>
+</div>
+<div class="paragraph">
+<p>The database first approach (also known as forward migration method) provides for legacy databases to be moved unchanged into a
+relational database management system (RDBMS) to incrementally develop the user interface and the applications on the target system.
+But there is a need for a gateway to accept database calls from the legacy system and to redirect them to the new database system.</p>
+</div>
+<div class="paragraph">
+<p>As BATEMAN and MURPHY say, there are a few problems and challenges:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>to develop a forward gateway can be complex or even impossible, because there can be big differences in technologies according to structure, constraints, query languages and semantic heterogeneity.</p>
+</li>
+<li>
+<p>usually reverse gateways are available on the market. Vendor tools often enable remote database access for example by sql. The purpose is that the legacy system becomes a big database server.</p>
+</li>
+<li>
+<p>a pre condition to develop a forward gateway is, that the legacy system has clearly specified interfaces to the database layer. If this is not the case, there have to be expensive modifications to the applications, which can be time and cost intensive.</p>
+</li>
+<li>
+<p>maybe there are a lot of external systems like reports, relying on the interaction with the legacy system. These systems have to be localized and analysed, so that they won&#8217;t crash after the migration.</p>
+</li>
+<li>
+<p>the new database structure has to be designed and the data mapping has to be implemented before the migration can start. A problem can be data structures, that can not be adopted to the new data structure.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The main advantage of the database first approach is, that after the big-bang migration of the database, new programming languages and
+reporting tools can be used with the new database system. New applications can be developed in parallel to the legacy system, step by step,
+module by module, without an influence on the legacy system. As the migration is finished, the gateway can be deactivated and the
+legacy system can be shut down.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_experiences_11"><a class="anchor" href="#_experiences_11"></a>Experiences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_risks_3"><a class="anchor" href="#_risks_3"></a>Risks</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_applicability_14"><a class="anchor" href="#_applicability_14"></a>Applicability</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_consequences_8"><a class="anchor" href="#_consequences_8"></a>Consequences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_10"><a class="anchor" href="#_also_known_as_10"></a>Also Known As</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_16"><a class="anchor" href="#_related_patterns_16"></a>Related Patterns</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Chicken-Little Strategy">[Chicken-Little Strategy]</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_12"><a class="anchor" href="#_references_12"></a>References</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>BATEMAN, A. und J.P.MURPHY: Migration of Legacy Systems. Working Paper: CA-2984, School of Computer Applications, Dublin City University, Ireland 1994</p>
+</li>
+<li>
+<p>BISBAL, J. et.al.; A Survey of Research into Legacy System Migration. Technical Report TCD-CS-1997-01, Computer Science Department, Trinity College Dublin, 1997. <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051" class="bare">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="database-last-approach"><a class="anchor" href="#database-last-approach"></a>4.2.6. <span class="pattern">Database Last Approach</span></h4>
+<div class="sect4">
+<h5 id="_intent_32"><a class="anchor" href="#_intent_32"></a>Intent</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_description_31"><a class="anchor" href="#_description_31"></a>Description</h5>
+<div class="paragraph">
+<p>The Database Last approach, also called the
+Reverse Migration Method, is based on a similar
+concept to the Database First approach and is also
+suitable only for fully decomposable legacy systems.
+Legacy applications are gradually migrated to the target
+platform while the legacy database remains on the
+original platform. The legacy database migration is the
+final step of the migration process.  As with the
+Database First approach, a gateway is used to allow for
+the interoperability of both information systems. In this
+case a Reverse Gateway enables target applications to
+access the legacy data management environment. It is
+employed to convert calls from the newly created
+applications and redirect them to the legacy database
+service, as shown in Fig. 1.</p>
+</div>
+<div class="paragraph">
+<p>graphic</p>
+</div>
+<div class="paragraph">
+<p>If the legacy database service is to be migrated to a
+relational database management service, then the target
+applications will be developed completely with SQL
+calls to the data service.  It is these calls that are
+captured by the Reverse Gateway and converted to the
+equivalent legacy calls.  The Database Last approach
+has a lot in common with the client/server paradigm.
+The legacy database takes on the role of a database
+server with the  target applications operating as clients.
+There are commercial products available which
+effectively act as reverse gateways.</p>
+</div>
+<div class="paragraph">
+<p>The Database Last approach is not without its
+problems however. Performance issues can be raised
+with regard to the gateway.  The Reverse Gateway will
+be responsible for mapping the target database schema
+to the legacy database.  This mapping can be complex
+and slow which will affect the new applications. Also
+many of the complex features found in relational
+databases (integrity, consistency constraints, triggers
+etc.), may not be found in the archaic legacy database,
+and hence cannot be exploited by the new application.</p>
+</div>
+<div class="paragraph">
+<p>This approach is probably more commercially
+acceptable than the Database First approach as legacy
+applications can continue to operate normally while
+being redeveloped.</p>
+</div>
+<div class="paragraph">
+<p>However, the migration of the
+legacy data will still require that the legacy system be
+inaccessible for a significant amount of time.  When
+dealing with mission critical information systems, this
+may be unacceptable</p>
+</div>
+<div class="paragraph">
+<p>(taken from BISBAL, J. et.al.)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_experiences_12"><a class="anchor" href="#_experiences_12"></a>Experiences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_risks_4"><a class="anchor" href="#_risks_4"></a>Risks</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_applicability_15"><a class="anchor" href="#_applicability_15"></a>Applicability</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_consequences_9"><a class="anchor" href="#_consequences_9"></a>Consequences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_11"><a class="anchor" href="#_also_known_as_11"></a>Also Known As</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_17"><a class="anchor" href="#_related_patterns_17"></a>Related Patterns</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Chicken-Little Strategy">[Chicken-Little Strategy]</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_13"><a class="anchor" href="#_references_13"></a>References</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>BISBAL, J. et.al.; A Survey of Research into Legacy System Migration. Technical Report TCD-CS-1997-01, Computer Science Department, Trinity College Dublin, 1997. <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051" class="bare">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="composite-database-approach"><a class="anchor" href="#composite-database-approach"></a>4.2.7. <span class="pattern">Composite Database Approach</span></h4>
+<div class="sect4">
+<h5 id="_intent_33"><a class="anchor" href="#_intent_33"></a>Intent</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_description_32"><a class="anchor" href="#_description_32"></a>Description</h5>
+<div class="paragraph">
+<p>In Composite Database approach, the legacy
+information system and its target information system are
+operated in parallel throughout the migration project.
+The target applications are gradually rebuilt on the
+target platform using modern tools and technology.
+Initially the target system will be quite small but will
+grow as the migration progresses.  Eventually the target
+system should perform all the functionality of the
+legacy system and the old legacy system can be retired.</p>
+</div>
+<div class="paragraph">
+<p>During the migration, the old legacy system and its
+target system form a composite information system, as
+shown in Fig. 1, employing a
+combination of forward and reverse gateways.  The
+approach may involve data being duplicated across both
+the legacy database and the target database.  To
+maintain data integrity, a Transaction Co-ordinator is
+employed which intercepts all update requests, from
+legacy or target applications, and processes them to
+identify whether they refer to data replicated in both
+databases.  If they do, the update is propagated to both
+databases using a two-phase commit protocol as for
+distributed database systems.</p>
+</div>
+<div class="paragraph">
+<p>Analysing non-decomposable legacy components
+can be very difficult.  In the worst case the component
+must be treated as a black box.  The best that can be
+achieved is to discover its functionality and try to elicit
+as much legacy data as possible.  Sometimes using
+existing legacy applications, (e.g., database query,
+report generation, and access routines), is the only way
+to extract the legacy data.  Once the functionality has
+been ascertained, the component can be re-developed
+from scratch.  It can often be very difficult to identify
+when legacy data or functions are independent; in many
+cases they may simply have to be replicated and target
+copies co-ordinated until the entire legacy system can
+be safely retired.</p>
+</div>
+<div class="paragraph">
+<p>The Composite Database approach eliminates the
+need for a single large migration of legacy data as
+required in the Database First and Database Last
+approaches. This is significant in a mission critical
+environment. However, this approach suffers from the
+overhead not only of the other two approaches but also
+the added complexity introduced by the co-ordinator.</p>
+</div>
+<div class="paragraph">
+<p>(taken from BISBAL, J. et.al.)</p>
+</div>
+<div class="paragraph">
+<p>Bei der Composite oder auch Parallel Database Strategie existiert die alte Datenbank weiter, während zusätzlich die neue relationale
+Datenbank aufgesetzt wird. Die neuen Anwendungen werden unter Zuhilfenahme neuer Programmiersprachen, Tools, Methoden und Techniken
+auf der neuen Plattform mit Zugriff auf die neue Datenbank entwickelt. Da die Alt-Anwendungen weiterhin mit der Alt-Datenbank arbeiten,
+besteht nun der Bedarf, die somit entstehenden Daten-Duplikationen synchron und konsistent zu halten. Dies geschieht vorwiegend
+über einen Two-Phase-Commit (2PC) Mechanismus (vgl. [BAT94]).
+Um die Operationen des Gateways zu koordinieren, wird ein Transaktionen-Koordinator benötigt, welcher die Anfragen an die entsprechende
+Datenbank weiterleitet und die Wahrung der Datenintegrität gewährleistet. Des Weiteren ist er unter Zuhilfenahme des Two-Phase-Commit
+Mechanismus, für das Managen der Abhängigkeiten zwischen den Datenbanksystemen zuständig. Um den Anforderungen gerecht zu werden
+ist erfahrungsgemäß eine Eigenentwicklung des Koordinators nötig. Dies kann wiederum fehleranfällig, zeit- und kostenintensiv und
+sogar technisch unmöglich sein (vgl. [BAT94]).
+Um die Komplexität geringer zu halten, könnte man, wenn das denn möglich ist, eine Tabelle nach der anderen migrieren. Man kommt
+jedoch bei dieser Methode um die Entwicklung eines Forward- sowie eines Reverse-Gateways nicht herum. Die folgende Abbildung 7
+zeigt die Technik der Composite-Database Strategie.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_experiences_13"><a class="anchor" href="#_experiences_13"></a>Experiences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_risks_5"><a class="anchor" href="#_risks_5"></a>Risks</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_applicability_16"><a class="anchor" href="#_applicability_16"></a>Applicability</h5>
+<div class="paragraph">
+<p>The Composite Database approach is
+applicable to fully decomposable, semi-decomposable
+and non-decomposable legacy systems.  In reality, few
+legacy systems fit easily into a single category.  Most
+legacy systems have some decomposable components,
+some which are semi-decomposable and others which
+are non-decomposable, i.e.  what is known as a Hybrid
+Information System architecture.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_consequences_10"><a class="anchor" href="#_consequences_10"></a>Consequences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_12"><a class="anchor" href="#_also_known_as_12"></a>Also Known As</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>Related Patterns</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Chicken-Little Strategy">[Chicken-Little Strategy]</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_14"><a class="anchor" href="#_references_14"></a>References</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>BISBAL, J. et.al.; A Survey of Research into Legacy System Migration. Technical Report TCD-CS-1997-01, Computer Science Department, Trinity College Dublin, 1997. <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051" class="bare">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Butterfly-Methodology"><a class="anchor" href="#Butterfly-Methodology"></a>4.2.8. <span class="pattern">Butterfly-Methodology</span></h4>
+<div class="sect4">
+<h5 id="_intent_34"><a class="anchor" href="#_intent_34"></a>Intent</h5>
+<div class="paragraph">
+<p>Data-Migration Method without the need for gateways.
+Enables zero-downtime migrations by working with temporary data stores.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_description_33"><a class="anchor" href="#_description_33"></a>Description</h5>
+<div class="paragraph">
+<p>The Butterfly-Methodology focuses on data. There is no need for a gateway like in the Chicken-Little Strategy.
+At the beginning there is a initial data migration, which can be used to develop the new application
+without an influence on the legacy system. When the migration process starts, the data of the legacy system
+gets freezed and set to read-only.
+From now on data changes will be stored in a temp-store.
+A Data-Access-Allocator (DAA) decides, if a request has to be send to the temp-store (for already changed data) or to the original database.
+With the help of a Chrysalizer (Data-Transformator), where transformation rules are implemented, all the data from the read-only database will be moved to the new system.
+No data will be lost, because changes are written to the first temp-store.
+When the inital migration is finished, the data of the temp-store will be migrated; changes will be written to a second temp-store and the first one
+is set to read-only. This process will continue until the time period of the migration is so short, that there was no change in between.
+At this moment, the legacy system can be shut down, the last temp-store gets migrated and the new system is turned on.
+This approach helps to migrate a productive system without downtime.
+Another pro is, that the process can be canceled at any time by rolling back the temp-stores. It is also possible to do tests of the parallel
+development with actual data.
+A problem can be the amount of hardware that is needed to keep all the temp-stores if you have a mass of data.
+Also it can be very expensive to implement the DAA.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/butterfly.png" alt="Butterfly-Methodology">
+</div>
+<div class="title">Figure 17. Butterfly-Methodology</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>Experiences</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_risks_6"><a class="anchor" href="#_risks_6"></a>Risks</h5>
+<div class="paragraph">
+<p>If the Butterfly Method will be successful depends on the factor v / u,
+where u is the speed of the Chrysalizer and v the speed of the DAA to setup new temp-stores.
+If v = 0 this approach is similar to the <a href="#Big-Bang Strategy">[Big-Bang Strategy]</a>, if v &gt; u the migration will never end.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>Applicability</h5>
+<div class="paragraph">
+<p>Apply this pattern if you need to migrate a mass of data without downtime.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_consequences_11"><a class="anchor" href="#_consequences_11"></a>Consequences</h5>
+<div class="paragraph">
+<p>Enables zero-downtime migrations by working with temporary data stores.
+If the amount of data is huge, there is a need for a lot of hardware.</p>
+</div>
+<div class="paragraph">
+<p>Critical success factors are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a very good unterstanding of the old and new system</p>
+</li>
+<li>
+<p>a initial migration without errors / mistakes</p>
+</li>
+<li>
+<p>a fast Chrysalizer</p>
+</li>
+<li>
+<p>a efficient Data-Access-Allocator</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_13"><a class="anchor" href="#_also_known_as_13"></a>Also Known As</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>Related Patterns</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Chicken-Little Strategy">[Chicken-Little Strategy]</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_references_15"><a class="anchor" href="#_references_15"></a>References</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#BISBAL">[BISBAL]</a></p>
+</li>
+<li>
+<p><a href="#ERDLE">[ERDLE]</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="improve-categories"><a class="anchor" href="#improve-categories"></a>4.2.9. Categories</h4>
 <div class="paragraph">
 <p>We divide improvement practices into several categories (shown in
 figure <a href="#improvement-categories">Improvement Categories</a>).</p>
@@ -5476,7 +6079,7 @@ figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 <div class="content">
 <img src="images/improve-categories.png" alt="improvement-categories">
 </div>
-<div class="title">Figure 17. Improvement Categories</div>
+<div class="title">Figure 18. Improvement Categories</div>
 </div>
 </div>
 </div>
@@ -5486,13 +6089,13 @@ figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 <div class="content">
 <img src="images/improve-patterns-rest.png" alt="improvement-practices">
 </div>
-<div class="title">Figure 18. Improvement Practices (Part 1)</div>
+<div class="title">Figure 19. Improvement Practices (Part 1)</div>
 </div>
 <div id="improvement-practices-2" class="imageblock">
 <div class="content">
 <img src="images/improve-patterns-codestructure.png" alt="code-improvement-practices">
 </div>
-<div class="title">Figure 19. Improvement Practices (Part 2, Code Restructuring Practices)</div>
+<div class="title">Figure 20. Improvement Practices (Part 2, Code Restructuring Practices)</div>
 </div>
 <div class="sect3">
 <h4 id="_practices_in_detail"><a class="anchor" href="#_practices_in_detail"></a>4.3.1. Practices in Detail</h4>
@@ -5591,17 +6194,17 @@ figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 <div class="sect3">
 <h4 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.3.2. <span class="pattern">Anticorruption Layer</span></h4>
 <div class="sect4">
-<h5 id="_intent_29"><a class="anchor" href="#_intent_29"></a>Intent</h5>
+<h5 id="_intent_35"><a class="anchor" href="#_intent_35"></a>Intent</h5>
 <div class="paragraph">
 <p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface remains untouched developers can implement changes or even exchange own or third-party software without affecting the clients of this interface.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_28"><a class="anchor" href="#_description_28"></a>Description</h5>
+<h5 id="_description_34"><a class="anchor" href="#_description_34"></a>Description</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_experiences_9"><a class="anchor" href="#_experiences_9"></a>Experiences</h5>
+<h5 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>Experiences</h5>
 <div class="paragraph">
 <p>Here are some real-life experiences:</p>
 </div>
@@ -5614,13 +6217,13 @@ figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_12"><a class="anchor" href="#_applicability_12"></a>Applicability</h5>
+<h5 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>Applicability</h5>
 <div class="paragraph">
 <p>Apply this pattern when clients shall be protected from internal changes in a module or subsystem.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_6"><a class="anchor" href="#_consequences_6"></a>Consequences</h5>
+<h5 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5633,11 +6236,11 @@ figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_8"><a class="anchor" href="#_also_known_as_8"></a>Also Known As</h5>
+<h5 id="_also_known_as_14"><a class="anchor" href="#_also_known_as_14"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_14"><a class="anchor" href="#_related_patterns_14"></a>Related Patterns</h5>
+<h5 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5647,14 +6250,14 @@ figure <a href="#improvement-categories">Improvement Categories</a>).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_10"><a class="anchor" href="#_references_10"></a>References</h5>
+<h5 id="_references_16"><a class="anchor" href="#_references_16"></a>References</h5>
 
 </div>
 </div>
 <div class="sect3">
 <h4 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.3.3. <span class="pattern">Improve Logging</span></h4>
 <div class="sect4">
-<h5 id="_intent_30"><a class="anchor" href="#_intent_30"></a>Intent</h5>
+<h5 id="_intent_36"><a class="anchor" href="#_intent_36"></a>Intent</h5>
 <div class="paragraph">
 <p>Employ sophisticated logging mechanisms such as modern logging frameworks,
 distributed log collection and visualization tools in order to gain more
@@ -5663,7 +6266,7 @@ predictable performance impact.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_29"><a class="anchor" href="#_description_29"></a>Description</h5>
+<h5 id="_description_35"><a class="anchor" href="#_description_35"></a>Description</h5>
 <div class="paragraph">
 <p>While some time ago it was quite common to output log statements to standard out,
 people usually use logging frameworks nowadays that give more control about what should
@@ -5703,7 +6306,7 @@ that are not widely known or used. To name a few:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_experiences_10"><a class="anchor" href="#_experiences_10"></a>Experiences</h5>
+<h5 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>Experiences</h5>
 <div class="paragraph">
 <p>Most projects write log files in a more or less sophisticated fashion, in many
 cases log messages are phrased in a rather unstructured way. It turns out that
@@ -5742,7 +6345,7 @@ log levels.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_risks"><a class="anchor" href="#_risks"></a>Risks</h5>
+<h5 id="_risks_7"><a class="anchor" href="#_risks_7"></a>Risks</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5772,13 +6375,13 @@ stream manageable.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_13"><a class="anchor" href="#_applicability_13"></a>Applicability</h5>
+<h5 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>Applicability</h5>
 <div class="paragraph">
 <p>This pattern should always be considered.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>Consequences</h5>
+<h5 id="_consequences_13"><a class="anchor" href="#_consequences_13"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5793,11 +6396,11 @@ context information (in case MDCs are used).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_9"><a class="anchor" href="#_also_known_as_9"></a>Also Known As</h5>
+<h5 id="_also_known_as_15"><a class="anchor" href="#_also_known_as_15"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_15"><a class="anchor" href="#_related_patterns_15"></a>Related Patterns</h5>
+<h5 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5812,20 +6415,20 @@ that cannot be isolated without modifying the code.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_11"><a class="anchor" href="#_references_11"></a>References</h5>
+<h5 id="_references_17"><a class="anchor" href="#_references_17"></a>References</h5>
 
 </div>
 </div>
 <div class="sect3">
 <h4 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.3.4. <span class="pattern">Interface Segregation Principle</span></h4>
 <div class="sect4">
-<h5 id="_intent_31"><a class="anchor" href="#_intent_31"></a>Intent</h5>
+<h5 id="_intent_37"><a class="anchor" href="#_intent_37"></a>Intent</h5>
 <div class="paragraph">
 <p>Reduce coupling between clients and service providers.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_30"><a class="anchor" href="#_description_30"></a>Description</h5>
+<h5 id="_description_36"><a class="anchor" href="#_description_36"></a>Description</h5>
 <div class="paragraph">
 <p>Service components may provide more functionality than required by one client.
 To remove the client&#8217;s dependency from functionality not required introduce interfaces that are tailored
@@ -5833,7 +6436,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_14"><a class="anchor" href="#_applicability_14"></a>Applicability</h5>
+<h5 id="_applicability_20"><a class="anchor" href="#_applicability_20"></a>Applicability</h5>
 <div class="paragraph">
 <p>Apply when</p>
 </div>
@@ -5849,7 +6452,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_8"><a class="anchor" href="#_consequences_8"></a>Consequences</h5>
+<h5 id="_consequences_14"><a class="anchor" href="#_consequences_14"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -5865,7 +6468,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_10"><a class="anchor" href="#_also_known_as_10"></a>Also Known As</h5>
+<h5 id="_also_known_as_16"><a class="anchor" href="#_also_known_as_16"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
@@ -5889,7 +6492,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_12"><a class="anchor" href="#_references_12"></a>References</h5>
+<h5 id="_references_18"><a class="anchor" href="#_references_18"></a>References</h5>
 
 </div>
 </div>
@@ -5913,7 +6516,7 @@ found it.&#8221; for the software development world in an article in Kevlin Henn
 &#8220;97 Things a Programmer Should Know&#8221; <a href="#Henney">[Henney]</a>.</p>
 </div>
 <div class="sect4">
-<h5 id="_intent_32"><a class="anchor" href="#_intent_32"></a>Intent</h5>
+<h5 id="_intent_38"><a class="anchor" href="#_intent_38"></a>Intent</h5>
 <div class="paragraph">
 <p>Enable crosscutting architectural improvement even if it is not feasible to change the whole codebase.</p>
 </div>
@@ -5931,7 +6534,7 @@ Often the introduction of concepts like layering is deemed <em>“impossible”<
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_31"><a class="anchor" href="#_description_31"></a>Description</h5>
+<h5 id="_description_37"><a class="anchor" href="#_description_37"></a>Description</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6004,7 +6607,7 @@ Item.COMPOUND_ITEMS_THRESHHOLD)
 </div>
 </div>
 <div class="sect4">
-<h5 id="_experiences_11"><a class="anchor" href="#_experiences_11"></a>Experiences</h5>
+<h5 id="_experiences_17"><a class="anchor" href="#_experiences_17"></a>Experiences</h5>
 <div class="paragraph">
 <p>Introducing the Boy Scout Rule on a heavily deteriorated code base
 induces heavy payback on <a href="#technical-debt">[technical-debt]</a> and often gets challenged
@@ -6015,14 +6618,14 @@ interest rate.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_risks_2"><a class="anchor" href="#_risks_2"></a>Risks</h5>
+<h5 id="_risks_8"><a class="anchor" href="#_risks_8"></a>Risks</h5>
 <div class="paragraph">
 <p>Sometimes the Boy Scout Rule can be taken as a means by itself. In
 these cases the higher goals tend to be forgotten and thus</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_15"><a class="anchor" href="#_applicability_15"></a>Applicability</h5>
+<h5 id="_applicability_21"><a class="anchor" href="#_applicability_21"></a>Applicability</h5>
 <div class="paragraph">
 <p>The pattern &#8220;Introduce Boy Scout Rule&#8221; can always be applied.<br>
 Some of the most effective uses are</p>
@@ -6040,7 +6643,7 @@ database inserts etc.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_9"><a class="anchor" href="#_consequences_9"></a>Consequences</h5>
+<h5 id="_consequences_15"><a class="anchor" href="#_consequences_15"></a>Consequences</h5>
 <div class="paragraph">
 <p>The introduction the Boy Scout Rule often proved to enable structural
 improvements as a prerequisite for higher level architectural
@@ -6055,11 +6658,11 @@ parts of the system other approaches have to be utilized.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_11"><a class="anchor" href="#_also_known_as_11"></a>Also Known As</h5>
+<h5 id="_also_known_as_17"><a class="anchor" href="#_also_known_as_17"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_16"><a class="anchor" href="#_related_patterns_16"></a>Related Patterns</h5>
+<h5 id="_related_patterns_22"><a class="anchor" href="#_related_patterns_22"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6079,7 +6682,7 @@ performed when applying the Boy Scout Rule</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_13"><a class="anchor" href="#_references_13"></a>References</h5>
+<h5 id="_references_19"><a class="anchor" href="#_references_19"></a>References</h5>
 <div class="paragraph">
 <p>The original description of the boy scout rule can be found online at <a href="#Boy-Scout-Rule-article">[Boy-Scout-Rule-article]</a>.</p>
 </div>
@@ -6088,13 +6691,13 @@ performed when applying the Boy Scout Rule</p>
 <div class="sect3">
 <h4 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.3.6. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h4>
 <div class="sect4">
-<h5 id="_intent_33"><a class="anchor" href="#_intent_33"></a>Intent</h5>
+<h5 id="_intent_39"><a class="anchor" href="#_intent_39"></a>Intent</h5>
 <div class="paragraph">
 <p>Simplify the interaction of a client with a set of service components.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_32"><a class="anchor" href="#_description_32"></a>Description</h5>
+<h5 id="_description_38"><a class="anchor" href="#_description_38"></a>Description</h5>
 <div class="paragraph">
 <p>When clients use a set of components with repeating patterns these
 interaction patterns are implemented in a Facade component.</p>
@@ -6106,14 +6709,14 @@ are handled inside the facade.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_experiences_12"><a class="anchor" href="#_experiences_12"></a>Experiences</h5>
+<h5 id="_experiences_18"><a class="anchor" href="#_experiences_18"></a>Experiences</h5>
 <div class="paragraph">
 <p>Consider a Facade if you must use generic frameworks or systems you cannot modify
 e.g. legacy systems.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_16"><a class="anchor" href="#_applicability_16"></a>Applicability</h5>
+<h5 id="_applicability_22"><a class="anchor" href="#_applicability_22"></a>Applicability</h5>
 <div class="paragraph">
 <p>Apply this pattern when clients use a set of components in stereotypcial fashion.
 Things that can be handled by a facade:</p>
@@ -6143,7 +6746,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_10"><a class="anchor" href="#_consequences_10"></a>Consequences</h5>
+<h5 id="_consequences_16"><a class="anchor" href="#_consequences_16"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6156,11 +6759,11 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_12"><a class="anchor" href="#_also_known_as_12"></a>Also Known As</h5>
+<h5 id="_also_known_as_18"><a class="anchor" href="#_also_known_as_18"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_17"><a class="anchor" href="#_related_patterns_17"></a>Related Patterns</h5>
+<h5 id="_related_patterns_23"><a class="anchor" href="#_related_patterns_23"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6170,46 +6773,46 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_14"><a class="anchor" href="#_references_14"></a>References</h5>
+<h5 id="_references_20"><a class="anchor" href="#_references_20"></a>References</h5>
 
 </div>
 </div>
 <div class="sect3">
 <h4 id="Measure"><a class="anchor" href="#Measure"></a>4.3.7. <span class="pattern">Measure</span></h4>
 <div class="sect4">
-<h5 id="_intent_34"><a class="anchor" href="#_intent_34"></a>Intent</h5>
+<h5 id="_intent_40"><a class="anchor" href="#_intent_40"></a>Intent</h5>
 <div class="paragraph">
 <p>If you don’t measure it, you can’t optimize it.&#8201;&#8212;&#8201;Coda Hale</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_33"><a class="anchor" href="#_description_33"></a>Description</h5>
+<h5 id="_description_39"><a class="anchor" href="#_description_39"></a>Description</h5>
 <div class="paragraph">
 <p>TODO: explain different kind of metrics (static-code, runtime, organisational&#8230;&#8203;)</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_experiences_13"><a class="anchor" href="#_experiences_13"></a>Experiences</h5>
+<h5 id="_experiences_19"><a class="anchor" href="#_experiences_19"></a>Experiences</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_risks_3"><a class="anchor" href="#_risks_3"></a>Risks</h5>
+<h5 id="_risks_9"><a class="anchor" href="#_risks_9"></a>Risks</h5>
 <div class="paragraph">
 <p>If you measure too many different parameters or attributes, you might drown in numbers.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_17"><a class="anchor" href="#_applicability_17"></a>Applicability</h5>
+<h5 id="_applicability_23"><a class="anchor" href="#_applicability_23"></a>Applicability</h5>
 <div class="paragraph">
 <p>This pattern should always be considered.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_11"><a class="anchor" href="#_consequences_11"></a>Consequences</h5>
+<h5 id="_consequences_17"><a class="anchor" href="#_consequences_17"></a>Consequences</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_13"><a class="anchor" href="#_also_known_as_13"></a>Also Known As</h5>
+<h5 id="_also_known_as_19"><a class="anchor" href="#_also_known_as_19"></a>Also Known As</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6228,7 +6831,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_18"><a class="anchor" href="#_related_patterns_18"></a>Related Patterns</h5>
+<h5 id="_related_patterns_24"><a class="anchor" href="#_related_patterns_24"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6242,7 +6845,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_15"><a class="anchor" href="#_references_15"></a>References</h5>
+<h5 id="_references_21"><a class="anchor" href="#_references_21"></a>References</h5>
 <div class="paragraph">
 <p><a href="https://www.youtube.com/watch?v=czes-oa0yik">Coda Hale Talk on "Metrics-Everywhere"</a></p>
 </div>
@@ -6251,7 +6854,7 @@ Things that can be handled by a facade:</p>
 <div class="sect3">
 <h4 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.3.8. <span class="pattern">Use Invariants To Kill Zombies</span></h4>
 <div class="sect4">
-<h5 id="_intent_35"><a class="anchor" href="#_intent_35"></a>Intent</h5>
+<h5 id="_intent_41"><a class="anchor" href="#_intent_41"></a>Intent</h5>
 <div class="paragraph">
 <p>Provide a safe approach in situations where it seems to dangerous to delete
 code or whole modules from a huge system because <a href="#Static-Code-Analysis"><span class="pattern">Static Code Analysis</span></a> can&#8217;t
@@ -6259,7 +6862,7 @@ recognize whether the code is still in use or not.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_34"><a class="anchor" href="#_description_34"></a>Description</h5>
+<h5 id="_description_40"><a class="anchor" href="#_description_40"></a>Description</h5>
 <div class="paragraph">
 <p>Oftentimes old systems contain lots of code that probably is no longer in use
 but still has to be tended to. Such code puts a burden on every cross-cutting
@@ -6320,13 +6923,13 @@ hurt to keep the logging turned on).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>Experiences</h5>
+<h5 id="_experiences_20"><a class="anchor" href="#_experiences_20"></a>Experiences</h5>
 <div class="paragraph">
 <p>In several cases this approach helped to delete up to 50% of the code base.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_risks_4"><a class="anchor" href="#_risks_4"></a>Risks</h5>
+<h5 id="_risks_10"><a class="anchor" href="#_risks_10"></a>Risks</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6343,7 +6946,7 @@ side-effects that are close to a denial-of-service attack.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_18"><a class="anchor" href="#_applicability_18"></a>Applicability</h5>
+<h5 id="_applicability_24"><a class="anchor" href="#_applicability_24"></a>Applicability</h5>
 <div class="paragraph">
 <p>This pattern can be applied whenever the code-base has gotten too big and there
 are parts of the system that are perhaps unused (e.g. dead) but still add to the
@@ -6351,7 +6954,7 @@ weight of the system.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>Consequences</h5>
+<h5 id="_consequences_18"><a class="anchor" href="#_consequences_18"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6361,11 +6964,11 @@ weight of the system.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_14"><a class="anchor" href="#_also_known_as_14"></a>Also Known As</h5>
+<h5 id="_also_known_as_20"><a class="anchor" href="#_also_known_as_20"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>Related Patterns</h5>
+<h5 id="_related_patterns_25"><a class="anchor" href="#_related_patterns_25"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6383,7 +6986,7 @@ way to make <a href="#Explicit-Assumption"><span class="pattern">Explicit Assump
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_16"><a class="anchor" href="#_references_16"></a>References</h5>
+<h5 id="_references_22"><a class="anchor" href="#_references_22"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6404,13 +7007,13 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="sect3">
 <h4 id="Improve-feedback-from-and-for-stakeholders"><a class="anchor" href="#Improve-feedback-from-and-for-stakeholders"></a>4.3.9. <span class="pattern">Improve Feedback From And For Stakeholders</span></h4>
 <div class="sect4">
-<h5 id="_intent_36"><a class="anchor" href="#_intent_36"></a>Intent</h5>
+<h5 id="_intent_42"><a class="anchor" href="#_intent_42"></a>Intent</h5>
 <div class="paragraph">
 <p>Effectively collect feedback from various stakeholders.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_35"><a class="anchor" href="#_description_35"></a>Description</h5>
+<h5 id="_description_41"><a class="anchor" href="#_description_41"></a>Description</h5>
 <div class="paragraph">
 <p>It is expensive to collect information (problems, opinions etc.) from stakeholders (customers, support staff, developers, backoffice etc.) via surveys, interviews or meetings (e.g. <a id="atam"></a>). There are possibilities to offer low-threshold services for involved people to give feedback. Possibilities e.g. are:</p>
 </div>
@@ -6438,33 +7041,33 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 </div>
 </div>
 <div class="sect4">
-<h5 id="_experiences_15"><a class="anchor" href="#_experiences_15"></a>Experiences</h5>
+<h5 id="_experiences_21"><a class="anchor" href="#_experiences_21"></a>Experiences</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_risks_5"><a class="anchor" href="#_risks_5"></a>Risks</h5>
+<h5 id="_risks_11"><a class="anchor" href="#_risks_11"></a>Risks</h5>
 <div class="paragraph">
 <p>Since most improvements are based on voluntariness (all examples except a), the information might be biased.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>Applicability</h5>
+<h5 id="_applicability_25"><a class="anchor" href="#_applicability_25"></a>Applicability</h5>
 <div class="paragraph">
 <p>Many of the tools supporting this use case are used for a group of stakeholders and can possibly be used for others as well (e.g. ticketing systems or Wikis for developers in open source projects).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_13"><a class="anchor" href="#_consequences_13"></a>Consequences</h5>
+<h5 id="_consequences_19"><a class="anchor" href="#_consequences_19"></a>Consequences</h5>
 <div class="paragraph">
 <p>Stakeholders give valuable information, their satisfaction with the system increases.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_15"><a class="anchor" href="#_also_known_as_15"></a>Also Known As</h5>
+<h5 id="_also_known_as_21"><a class="anchor" href="#_also_known_as_21"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>Related Patterns</h5>
+<h5 id="_related_patterns_26"><a class="anchor" href="#_related_patterns_26"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -6489,7 +7092,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_17"><a class="anchor" href="#_references_17"></a>References</h5>
+<h5 id="_references_23"><a class="anchor" href="#_references_23"></a>References</h5>
 
 </div>
 </div>
@@ -6536,7 +7139,7 @@ facilitates identification of additional issues and improvements.</p>
 <div class="content">
 <img src="images/issues-and-improvements.png" alt="issues and improvements">
 </div>
-<div class="title">Figure 20. Collect issues and improvements</div>
+<div class="title">Figure 21. Collect issues and improvements</div>
 </div>
 </div>
 <div class="sect2">
@@ -6621,7 +7224,7 @@ facilitates identification of additional issues and improvements.</p>
 <p>Develop and document an understanding of internal structures, concepts, architectural approaches  and important decisions of the <a href="#System">[System]</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_description_36"><a class="anchor" href="#_description_36"></a>5.3.1. Description</h4>
+<h4 id="_description_42"><a class="anchor" href="#_description_42"></a>5.3.1. Description</h4>
 <div class="paragraph">
 <p>Collect and organize architectural information about the <a href="#System">[System]</a>:
 Document structures, concepts, decisions, interfaces etc. of the <a href="#System">[System]</a>
@@ -6660,7 +7263,7 @@ development of the system.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_16"><a class="anchor" href="#_experiences_16"></a>5.3.2. Experiences</h4>
+<h4 id="_experiences_22"><a class="anchor" href="#_experiences_22"></a>5.3.2. Experiences</h4>
 <div class="paragraph">
 <p>Architectural understanding can be gained in small increments, so there is no
 need to reserve long times just for documentation.</p>
@@ -6695,7 +7298,7 @@ tactics and strategies in all of the aim42-phases.</p>
 <div class="content">
 <img src="images/collect-remedies.png" alt="collect remedies">
 </div>
-<div class="title">Figure 21. Collect Remedies in All Phases</div>
+<div class="title">Figure 22. Collect Remedies in All Phases</div>
 </div>
 </div>
 <div class="sect2">
@@ -6718,7 +7321,7 @@ during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Int
 <p>Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish, attack or dispute your findings.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_37"><a class="anchor" href="#_intent_37"></a>5.6.1. Intent</h4>
+<h4 id="_intent_43"><a class="anchor" href="#_intent_43"></a>5.6.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6734,12 +7337,12 @@ during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Int
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_37"><a class="anchor" href="#_description_37"></a>5.6.2. Description</h4>
+<h4 id="_description_43"><a class="anchor" href="#_description_43"></a>5.6.2. Description</h4>
 <div id="figure-reaction-pyramid" class="imageblock">
 <div class="content">
 <img src="images/expect-denial-reaction-levels.png" alt="Reaction levels">
 </div>
-<div class="title">Figure 22. Levels of Reaction when presented with problems</div>
+<div class="title">Figure 23. Levels of Reaction when presented with problems</div>
 </div>
 <div class="paragraph">
 <p>From enthusiasm to neutrality things will be easy, but from here on it gets interesting or difficult, however you might call it.</p>
@@ -6799,7 +7402,7 @@ Findings are opposed, either actively or passively.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_17"><a class="anchor" href="#_experiences_17"></a>5.6.3. Experiences</h4>
+<h4 id="_experiences_23"><a class="anchor" href="#_experiences_23"></a>5.6.3. Experiences</h4>
 <div class="paragraph">
 <p>In one audit of a European Logistic Company (&gt;40.000 employees) we found serious issues within their development processes, in addition to some issues in their source code. The process problems caused massive (&gt; 3month) delays in delivery of working software to production, whereas the pure software bugs were relatively minor in their consequences. When we presented these issues, all process-related issues were minimized or doubted by senior management of the IT-department.</p>
 </div>
@@ -6808,13 +7411,13 @@ Findings are opposed, either actively or passively.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_14"><a class="anchor" href="#_consequences_14"></a>5.6.4. Consequences</h4>
+<h4 id="_consequences_20"><a class="anchor" href="#_consequences_20"></a>5.6.4. Consequences</h4>
 <div class="paragraph">
 <p>Especially when presenting results to (opposing) management stakeholders, you should be able to <strong>verify</strong> all your claims. In critical cases you should keep written protocols and note who-said-what in your <a href="#Stakeholder-Interview">stakeholder interviews</a>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>5.6.5. Related Patterns</h4>
+<h4 id="_related_patterns_27"><a class="anchor" href="#_related_patterns_27"></a>5.6.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6837,7 +7440,7 @@ Findings are opposed, either actively or passively.</p>
 opinions) by explicit (written) assumptions about those facts.</p>
 </div>
 <div class="sect3">
-<h4 id="_description_38"><a class="anchor" href="#_description_38"></a>5.7.1. Description</h4>
+<h4 id="_description_44"><a class="anchor" href="#_description_44"></a>5.7.1. Description</h4>
 <div class="paragraph">
 <p>Making assumptions <em>explicit</em> is fundamentally important to
 <a href="#Capture-Quality-Requirements"><span class="pattern">Capture Quality Requirements</span></a>, so that development teams don&#8217;t
@@ -6895,7 +7498,7 @@ countermeasures or pull the plug as early as possible. Similar to <a href="#Fast
 <div class="sect2">
 <h3 id="Impact-Analysis"><a class="anchor" href="#Impact-Analysis"></a>5.10. <span class="pattern">Impact Analysis</span></h3>
 <div class="sect3">
-<h4 id="_intent_38"><a class="anchor" href="#_intent_38"></a>5.10.1. Intent</h4>
+<h4 id="_intent_44"><a class="anchor" href="#_intent_44"></a>5.10.1. Intent</h4>
 <div class="paragraph">
 <p>Determine what impact (in code, concepts, data and the organization)
 a specific action or issue (e.g. refactoring, recurring problem) will or
@@ -6935,10 +7538,10 @@ might have. Identify the resultant effects on system development and operations.
 <div class="content">
 <img src="images/improvement-backlog.jpg" alt="improvement backlog">
 </div>
-<div class="title">Figure 23. Improvement Backlog</div>
+<div class="title">Figure 24. Improvement Backlog</div>
 </div>
 <div class="sect3">
-<h4 id="_intent_39"><a class="anchor" href="#_intent_39"></a>5.11.1. Intent</h4>
+<h4 id="_intent_45"><a class="anchor" href="#_intent_45"></a>5.11.1. Intent</h4>
 <div class="paragraph">
 <p>Collect all known issues and problems within a system or its associated processes. Make the issues comparable by evaluating each one, usually using economical units like money or time. Align carefully with <a href="#Issue-List"><span class="pattern">Issue List</span></a>.</p>
 </div>
@@ -6991,7 +7594,7 @@ as easy as possible to link issues to improvements and vice versa.</p>
 <p>A collection of issues (problems, risks) found during <a href="#Collect-Issues"><span class="pattern">Collect Issues</span></a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_40"><a class="anchor" href="#_intent_40"></a>5.12.1. Intent</h4>
+<h4 id="_intent_46"><a class="anchor" href="#_intent_46"></a>5.12.1. Intent</h4>
 <div class="paragraph">
 <p>Collect all known issues and problems within a system or its associated processes. Make the issues comparable by evaluating each one, usually using economical units like money or time.</p>
 </div>
@@ -7155,7 +7758,7 @@ might use in preparing such documents.</p>
 <div class="sect2">
 <h3 id="Separate-Cause-From-Effect"><a class="anchor" href="#Separate-Cause-From-Effect"></a>5.15. <span class="pattern">Separate-Cause-From-Effect</span></h3>
 <div class="sect3">
-<h4 id="_intent_41"><a class="anchor" href="#_intent_41"></a>5.15.1. Intent</h4>
+<h4 id="_intent_47"><a class="anchor" href="#_intent_47"></a>5.15.1. Intent</h4>
 <div class="paragraph">
 <p>Explicitly differentiate between symptom (<em>effect</em>) and cause:</p>
 </div>
@@ -7171,7 +7774,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_39"><a class="anchor" href="#_description_39"></a>5.15.2. Description</h4>
+<h4 id="_description_45"><a class="anchor" href="#_description_45"></a>5.15.2. Description</h4>
 <div class="paragraph">
 <p>Under discussion!</p>
 </div>
@@ -7193,7 +7796,7 @@ might use in preparing such documents.</p>
 <p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_42"><a class="anchor" href="#_intent_42"></a>5.16.1. Intent</h4>
+<h4 id="_intent_48"><a class="anchor" href="#_intent_48"></a>5.16.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -7209,7 +7812,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_40"><a class="anchor" href="#_description_40"></a>5.16.2. Description</h4>
+<h4 id="_description_46"><a class="anchor" href="#_description_46"></a>5.16.2. Description</h4>
 <div class="paragraph">
 <p>There are two common ways to deliver review results:</p>
 </div>
@@ -7231,7 +7834,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_18"><a class="anchor" href="#_experiences_18"></a>5.16.3. Experiences</h4>
+<h4 id="_experiences_24"><a class="anchor" href="#_experiences_24"></a>5.16.3. Experiences</h4>
 <div class="paragraph">
 <p>In a review for a financial broker we agreed initially to deliver a detailed document with the results. When we were later asked to present the outcomes to two different audiences (engineers and management) it was quite easy to create specific slides for both of them from the ~ 40 pages of documentation.</p>
 </div>
@@ -7240,7 +7843,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_22"><a class="anchor" href="#_related_patterns_22"></a>5.16.4. Related Patterns</h4>
+<h4 id="_related_patterns_28"><a class="anchor" href="#_related_patterns_28"></a>5.16.4. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -7259,20 +7862,20 @@ might use in preparing such documents.</p>
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_43"><a class="anchor" href="#_intent_43"></a>5.17.1. Intent</h4>
+<h4 id="_intent_49"><a class="anchor" href="#_intent_49"></a>5.17.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
 findings keeps eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_41"><a class="anchor" href="#_description_41"></a>5.17.2. Description</h4>
+<h4 id="_description_47"><a class="anchor" href="#_description_47"></a>5.17.2. Description</h4>
 <div class="paragraph">
 <p>(To be done)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_experiences_19"><a class="anchor" href="#_experiences_19"></a>5.17.3. Experiences</h4>
+<h4 id="_experiences_25"><a class="anchor" href="#_experiences_25"></a>5.17.3. Experiences</h4>
 <div class="paragraph">
 <p>Some anti-experiences that happened when we neglected traceability:</p>
 </div>
@@ -7290,7 +7893,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_20"><a class="anchor" href="#_applicability_20"></a>5.17.4. Applicability</h4>
+<h4 id="_applicability_26"><a class="anchor" href="#_applicability_26"></a>5.17.4. Applicability</h4>
 <div class="paragraph">
 <p>Apply traceability whenever you identify problems or issues</p>
 </div>
@@ -7312,7 +7915,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_23"><a class="anchor" href="#_related_patterns_23"></a>5.17.5. Related Patterns</h4>
+<h4 id="_related_patterns_29"><a class="anchor" href="#_related_patterns_29"></a>5.17.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -8152,7 +8755,7 @@ typical kinds of information, <strong>entities</strong>.</p>
 <div class="content">
 <img src="images/aim42-domain-model.png" alt="aim42 domain model">
 </div>
-<div class="title">Figure 24. aim42 domain terminology - detailed</div>
+<div class="title">Figure 25. aim42 domain terminology - detailed</div>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
 <colgroup>
@@ -8363,6 +8966,9 @@ Software Engineering Institute, Carnegie Mellon University.</p>
 <p><a id="Big-Ball-Of-Mud"></a>[Big-Ball-Of-Mud] Brian Foote and Joseph Yoder, <a href="http://laputan.org/mud/">Big Ball of Mud</a> - very influentual paper from the <a href="http://hillside.net/plop/plop97/">fourth conference on Patterns languages of Program Design, PLoP97</a></p>
 </li>
 <li>
+<p><a id="BISBAL"></a>[BISBAL] BISBAL, J. et.al.: A Survey of Research into Legacy System Migration. Technical Report TCD-CS-1997-01, Computer Science Department, Trinity College Dublin, 1997. <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051" class="bare">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051</a></p>
+</li>
+<li>
 <p><a id="Bommer-Wartung"></a>[Bommer-Wartung] Christoph Bommer, M. Spindler, V. Barr: Softwarewartung: Grundlagen, Management und Wartungstechniken.
 (in German) dpunkt Verlag, 2008. Interesting treatment of categories of software systems and their respective need for maintenance and evolution. Authors quote studies from Lehman and Belady from the 1970&#8217;s.</p>
 </li>
@@ -8379,6 +8985,9 @@ Addison-Wesley, 2001. Detailed overview of ATAM (and other evaluation methods).<
 <li>
 <p><a id="Campbell14"></a>[Campbell14] Ann Campbell et. al: SonarQube in Action. Manning Publications, 2014. Great introduction to
 the flexible, multi-language code-analysis toolkit.</p>
+</li>
+<li>
+<p><a id="ERDLE"></a>[ERDLE] ERDLE, C.: Management von Softwaresystemen – Legacy Migrationsstrategien. Seminar an der TU München, Fakultät Informatik, 2005. <a href="http://www4.in.tum.de/lehre/seminare/hs/WS0506/mvs/files/Ausarbeitung_Erdle.pdf" class="bare">http://www4.in.tum.de/lehre/seminare/hs/WS0506/mvs/files/Ausarbeitung_Erdle.pdf</a></p>
 </li>
 <li>
 <p><a id="Feathers"></a>[Feathers] Michael Feathers: Working Effectively with Legacy Code. Prentice Hall, 2005. The author claims "Code without tests is bad code". So true&#8230;&#8203;</p>
@@ -8773,7 +9382,7 @@ image::aim42-logo.png["alternate-text", title="caption-example"]</pre>
 <div class="content">
 <img src="images/aim42-logo.png" alt="alternate-text">
 </div>
-<div class="title">Figure 25. caption-example</div>
+<div class="title">Figure 26. caption-example</div>
 </div>
 <div class="paragraph">
 <p>You can even reference these images, like see figure <a href="#caption-example">caption-example</a>:</p>
@@ -9024,7 +9633,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-01-27 11:31:03 +00:00
+Last updated 2016-01-27 11:35:10 +00:00
 </div>
 </div>
 </body>
