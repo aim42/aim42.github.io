@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.2">
+<meta name="generator" content="Asciidoctor 1.5.3">
 <meta name="description" content="aim 42 supports software evolution, maintenance and improvement - in a systematic and pragmatic way.">
 <meta name="keywords" content="software-architecture, evolution, maintenance, modernization, improvement, analysis, evaluation, reengineering, refactoring, patterns, practices">
 <title>Method Guide</title>
@@ -1901,15 +1901,15 @@ b.conum * {
 	font-variant:small-caps;
 }
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <style>
 /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
 .CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
-.CodeRay .line-numbers strong{font-weight: normal}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
 table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
-table.CodeRay td{vertical-align: top}
+table.CodeRay td{vertical-align: top;line-height:1.45}
 table.CodeRay td.line-numbers{text-align:right}
 table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
 table.CodeRay td.code{padding:0 0 0 .5em}
@@ -1944,7 +1944,7 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .hex{color:#058}
 .CodeRay .integer,.CodeRay .float{color:#099}
 .CodeRay .include{color:#555}
-.CodeRay .inline{color:#00}
+.CodeRay .inline{color:#000}
 .CodeRay .inline .inline{background:#ccc}
 .CodeRay .inline .inline .inline{background:#bbb}
 .CodeRay .inline .inline-delimiter{color:#d14}
@@ -2263,7 +2263,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="http://img.shields.io/badge/Version-0.6.2-green.svg" alt="0.6.2"></span>
-<span class="image"><img src="http://img.shields.io/badge/Date-Jan 27. 2016-green.svg" alt="/Jan 27. 2016"></span>
+<span class="image"><img src="http://img.shields.io/badge/Date-Jul 4. 2016-green.svg" alt="/Jul 4. 2016"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
@@ -2921,7 +2921,7 @@ tactics against the found risks.
 </div>
 <div class="paragraph">
 <p>ATAM has been successfully applied by many organizations to a variety of systems. It is widely regarded as the most important
-systematic approach to qualitative system/architecture analysis<span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p>
+systematic approach to qualitative system/architecture analysis<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>.</p>
 </div>
 </div>
 <div class="sect4">
@@ -5079,12 +5079,20 @@ or observe the evaluation subject and produce <em>hard facts</em>.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">an <em>approximation</em> of any subject
   (here: issues,problems or remedies), which is needed because
 	facts or real observations are not available or possible.</p></td>
-<td class="tableblock halign-left valign-top"><div></div></td>
+<td class="tableblock halign-left valign-top"><div><div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+
+</div>
+</div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subject</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div><div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+
+</div>
+<div class="paragraph">
 <p>a recurring problem in the <a href="#System">[System]</a> or
 associated processes</p>
 </div></div></td>
@@ -5093,7 +5101,11 @@ associated processes</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">an important element or foundation of the
 estimation.</p></td>
-<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<td class="tableblock halign-left valign-top"><div><div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+
+</div>
+<div class="ulist">
 <ul>
 <li>
 <p>number of developers on the system</p>
@@ -5108,13 +5120,21 @@ estimation.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Assumption</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a fixed setting for any parameter.
   See <a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a></p></td>
-<td class="tableblock halign-left valign-top"><div></div></td>
+<td class="tableblock halign-left valign-top"><div><div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+
+</div>
+</div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Observation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">measure, count, calculate gather real data
 for parameters</p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div><div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+
+</div>
+<div class="paragraph">
 <p>if every developer is
 concerned by the problem, we count their number.</p>
 </div></div></td>
@@ -5122,7 +5142,11 @@ concerned by the problem, we count their number.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Interval</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">see <a href="#Estimate-In-Interval"><span class="pattern">Estimate in Interval</span></a></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div><div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+
+</div>
+<div class="paragraph">
 <p>between 15 and 25%</p>
 </div></div></td>
 </tr>
@@ -9548,7 +9572,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>2016-01-27</code> will insert the last modification data (here: 2016-01-27)</p>
+<p><code>2016-07-04</code> will insert the last modification data (here: 2016-07-04)</p>
 </li>
 </ul>
 </div>
@@ -9633,7 +9657,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-01-27 11:35:10 +00:00
+Last updated 2016-07-04 10:29:36 +00:00
 </div>
 </div>
 </body>
