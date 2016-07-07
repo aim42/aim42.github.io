@@ -2266,7 +2266,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="http://img.shields.io/badge/Version-0.7.0-green.svg" alt="0.7.0"></span>
-<span class="image"><img src="http://img.shields.io/badge/Date-Jul 6. 2016-green.svg" alt="/Jul 6. 2016"></span>
+<span class="image"><img src="http://img.shields.io/badge/Date-Jul 7. 2016-green.svg" alt="/Jul 7. 2016"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
@@ -5649,6 +5649,12 @@ legacy applications to access the database environment in the target side of the
 Fig. 1.  This gateway translates and redirects these calls forward to the new database service.  Results returned
 by the new database service are similarly translated for used by legacy applications.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../../resources/images/improvement-approaches/databaseFirst.png" alt="Database-First-Approach">
+</div>
+<div class="title">Figure 17. Database-First-Approach</div>
+</div>
 <div class="paragraph">
 <p>The main advantage of this approach is that once the legacy data has been migrated, the latest programming
 languages and reporting tools can be used to access the data providing immediate productivity
@@ -5777,8 +5783,11 @@ employed to convert calls from the newly created
 applications and redirect them to the legacy database
 service, as shown in Fig. 1.</p>
 </div>
-<div class="paragraph">
-<p>graphic</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../resources/images/improvement-approaches/databaseLast.png" alt="Database-Last-Approach">
+</div>
+<div class="title">Figure 18. Database-Last-Approach</div>
 </div>
 <div class="paragraph">
 <p>If the legacy database service is to be migrated to a
@@ -5882,6 +5891,12 @@ grow as the migration progresses.  Eventually the target
 system should perform all the functionality of the
 legacy system and the old legacy system can be retired.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../../resources/images/improvement-approaches/composite.png" alt="Composite-Database-Approach">
+</div>
+<div class="title">Figure 19. Composite-Database Approach</div>
+</div>
 <div class="paragraph">
 <p>During the migration, the old legacy system and its
 target system form a composite information system, as
@@ -5924,21 +5939,6 @@ the added complexity introduced by the co-ordinator.</p>
 </div>
 <div class="paragraph">
 <p>(taken from BISBAL, J. et.al.)</p>
-</div>
-<div class="paragraph">
-<p>Bei der Composite oder auch Parallel Database Strategie existiert die alte Datenbank weiter, während zusätzlich die neue relationale
-Datenbank aufgesetzt wird. Die neuen Anwendungen werden unter Zuhilfenahme neuer Programmiersprachen, Tools, Methoden und Techniken
-auf der neuen Plattform mit Zugriff auf die neue Datenbank entwickelt. Da die Alt-Anwendungen weiterhin mit der Alt-Datenbank arbeiten,
-besteht nun der Bedarf, die somit entstehenden Daten-Duplikationen synchron und konsistent zu halten. Dies geschieht vorwiegend
-über einen Two-Phase-Commit (2PC) Mechanismus (vgl. [BAT94]).
-Um die Operationen des Gateways zu koordinieren, wird ein Transaktionen-Koordinator benötigt, welcher die Anfragen an die entsprechende
-Datenbank weiterleitet und die Wahrung der Datenintegrität gewährleistet. Des Weiteren ist er unter Zuhilfenahme des Two-Phase-Commit
-Mechanismus, für das Managen der Abhängigkeiten zwischen den Datenbanksystemen zuständig. Um den Anforderungen gerecht zu werden
-ist erfahrungsgemäß eine Eigenentwicklung des Koordinators nötig. Dies kann wiederum fehleranfällig, zeit- und kostenintensiv und
-sogar technisch unmöglich sein (vgl. [BAT94]).
-Um die Komplexität geringer zu halten, könnte man, wenn das denn möglich ist, eine Tabelle nach der anderen migrieren. Man kommt
-jedoch bei dieser Methode um die Entwicklung eines Forward- sowie eines Reverse-Gateways nicht herum. Die folgende Abbildung 7
-zeigt die Technik der Composite-Database Strategie.</p>
 </div>
 </div>
 <div class="sect4">
@@ -6022,9 +6022,9 @@ Also it can be very expensive to implement the DAA.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/butterfly.png" alt="Butterfly-Methodology">
+<img src="../../resources/images/improvement-approaches/butterfly.png" alt="Butterfly-Methodology">
 </div>
-<div class="title">Figure 17. Butterfly-Methodology</div>
+<div class="title">Figure 20. Butterfly-Methodology</div>
 </div>
 </div>
 <div class="sect4">
@@ -6110,7 +6110,7 @@ the figure below).</p>
 <div class="content">
 <img src="images/improve-practice-categories.png" alt="improve practice categories">
 </div>
-<div class="title">Figure 18. Categories of Improvement Practices</div>
+<div class="title">Figure 21. Categories of Improvement Practices</div>
 </div>
 <div class="ulist">
 <ul>
@@ -6136,7 +6136,7 @@ engineering, delivery, operations and management.</p>
 <div class="content">
 <img src="images/improve-processes.png" alt="Practices for Improve Processes" width="400">
 </div>
-<div class="title">Figure 19. Practices to improve processes</div>
+<div class="title">Figure 22. Practices to improve processes</div>
 </div>
 </div>
 <div class="sect2">
@@ -6157,7 +6157,7 @@ This category contains a fairly large number of practices.
 <div class="content">
 <img src="images/improve-architecture.png" alt="Practices to Improve Architecture" width="600">
 </div>
-<div class="title">Figure 20. Practices to improve architecture and code structure</div>
+<div class="title">Figure 23. Practices to improve architecture and code structure</div>
 </div>
 <div class="sect3">
 <h4 id="_architecture_and_code_practices_in_detail"><a class="anchor" href="#_architecture_and_code_practices_in_detail"></a>4.7.1. Architecture and Code Practices in Detail</h4>
@@ -7165,7 +7165,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="content">
 <img src="images/improve-technical-infrastructure.png" alt="Practices to Improve Technical Infrastructure" width="400">
 </div>
-<div class="title">Figure 21. Practices to improve technical infrastructure</div>
+<div class="title">Figure 24. Practices to improve technical infrastructure</div>
 </div>
 </div>
 <div class="sect2">
@@ -7174,7 +7174,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="content">
 <img src="images/improve-analyzability.png" alt="Practices for Improve Analyzability" width="400">
 </div>
-<div class="title">Figure 22. Practices to improve analyzability</div>
+<div class="title">Figure 25. Practices to improve analyzability</div>
 </div>
 </div>
 </div>
@@ -7219,7 +7219,7 @@ facilitates identification of additional issues and improvements.</p>
 <div class="content">
 <img src="images/issues-and-improvements.png" alt="issues and improvements">
 </div>
-<div class="title">Figure 23. Collect issues and improvements</div>
+<div class="title">Figure 26. Collect issues and improvements</div>
 </div>
 </div>
 <div class="sect2">
@@ -7378,7 +7378,7 @@ tactics and strategies in all of the aim42-phases.</p>
 <div class="content">
 <img src="images/collect-remedies.png" alt="collect remedies">
 </div>
-<div class="title">Figure 24. Collect Remedies in All Phases</div>
+<div class="title">Figure 27. Collect Remedies in All Phases</div>
 </div>
 </div>
 <div class="sect2">
@@ -7422,7 +7422,7 @@ during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Int
 <div class="content">
 <img src="images/expect-denial-reaction-levels.png" alt="Reaction levels">
 </div>
-<div class="title">Figure 25. Levels of Reaction when presented with problems</div>
+<div class="title">Figure 28. Levels of Reaction when presented with problems</div>
 </div>
 <div class="paragraph">
 <p>From enthusiasm to neutrality things will be easy, but from here on it gets interesting or difficult, however you might call it.</p>
@@ -7618,7 +7618,7 @@ might have. Identify the resultant effects on system development and operations.
 <div class="content">
 <img src="images/improvement-backlog.jpg" alt="improvement backlog">
 </div>
-<div class="title">Figure 26. Improvement Backlog</div>
+<div class="title">Figure 29. Improvement Backlog</div>
 </div>
 <div class="sect3">
 <h4 id="_intent_45"><a class="anchor" href="#_intent_45"></a>5.11.1. Intent</h4>
@@ -8835,7 +8835,7 @@ typical kinds of information, <strong>entities</strong>.</p>
 <div class="content">
 <img src="images/aim42-domain-model.png" alt="aim42 domain model">
 </div>
-<div class="title">Figure 27. aim42 domain terminology - detailed</div>
+<div class="title">Figure 30. aim42 domain terminology - detailed</div>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
 <colgroup>
@@ -9462,7 +9462,7 @@ image::aim42-logo.png["alternate-text", title="caption-example"]</pre>
 <div class="content">
 <img src="images/aim42-logo.png" alt="alternate-text">
 </div>
-<div class="title">Figure 28. caption-example</div>
+<div class="title">Figure 31. caption-example</div>
 </div>
 <div class="paragraph">
 <p>You can even reference these images, like see figure <a href="#caption-example">caption-example</a>:</p>
@@ -9628,7 +9628,7 @@ The result is rendered nicely.
 <div class="ulist">
 <ul>
 <li>
-<p><code>2016-07-06</code> will insert the last modification data (here: 2016-07-06)</p>
+<p><code>2016-07-07</code> will insert the last modification data (here: 2016-07-07)</p>
 </li>
 </ul>
 </div>
@@ -9713,7 +9713,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-06 19:22:11 +00:00
+Last updated 2016-07-07 06:44:20 +00:00
 </div>
 </div>
 </body>
