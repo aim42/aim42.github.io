@@ -2266,7 +2266,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="http://img.shields.io/badge/Version-0.7.0-green.svg" alt="0.7.0"></span>
-<span class="image"><img src="http://img.shields.io/badge/Date-Jul 28. 2016-green.svg" alt="/Jul 28. 2016"></span>
+<span class="image"><img src="http://img.shields.io/badge/Date-Nov 8. 2016-green.svg" alt="/Nov 8. 2016"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
@@ -5502,38 +5502,244 @@ Underlying idea is to refactor those parts of the system(s) which are actually t
 <h4 id="big-bang-approach"><a class="anchor" href="#big-bang-approach"></a>4.4.1. <span class="pattern">Big Bang Approach</span></h4>
 <div class="sect4">
 <h5 id="_intent_29"><a class="anchor" href="#_intent_29"></a>Intent</h5>
-
+<div class="paragraph">
+<p>Replace an existing system from one day to another with a completely new system, because</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Quality developers with experience in the technology you need are too hard to find</p>
+</li>
+<li>
+<p>You have deprecated central software frameworks or hardware (It can&#8217;t be upgraded to support newer platforms/features)</p>
+</li>
+<li>
+<p>There is new technology out there making things possible, which weren&#8217;t possible before (and those things give you a competitive advantage)</p>
+</li>
+<li>
+<p>The cost of maintaining the current system is too high</p>
+</li>
+<li>
+<p>Important (new) quality attributes like performance, availability or security cannot be met anymore and the changes
+needed to implement them are so substantial that a rewrite is necessary</p>
+</li>
+<li>
+<p>Even simple bug fixes take too long because of the complexity of existing code and might introduce new bugs</p>
+</li>
+<li>
+<p>New features take too long and cost too much because of the interdependence of the codebase (new features cannot be isolated, and therefore affect existing features)</p>
+</li>
+<li>
+<p>Deployment is hard or impossible to automate, takes too long and is really risky. In fact, in fails often.</p>
+</li>
+<li>
+<p>Your data are inconsistent and causes surprised and/or angry users. Keeping the data consistent is extremely hard,
+because the data model and the code operating on the data model is a huge mess.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="http://softwareengineering.stackexchange.com/questions/6268/when-is-a-big-rewrite-the-answer">This</a> list covers even more reasons.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, you cannot or want to incrementally replace the system, because:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The new system should undergo a revolutionary improvement instead an incremental one for both, technology and functionality</p>
+</li>
+<li>
+<p>The system is small enough that it can be rewritten quickly within a few month</p>
+</li>
+<li>
+<p>You analyzed other approaches like <a href="http://www.martinfowler.com/bliki/StranglerApplication.html">Strangler</a> or
+<a href="https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1478609966&amp;sr=1-1&amp;keywords=Working+Effectively+with+Legacy+Code">Seams</a>
+and they could not help you approaching the problem incrementally</p>
+</li>
+<li>
+<p>You and your stakeholders are aware and understand the risks of a big bang rewrite and want to go for it anyways. You might have good reasons to do so.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>And, you and your stakeholders are OK with</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Not getting new features, rather less, for the time of the rewrite despite having higher cost (writing the new system and running the old one)</p>
+</li>
+<li>
+<p>The new system will have less features then the old one (at least in the beginning)</p>
+</li>
+<li>
+<p>The new system will have more bugs (because the old one is already battle-proofed for a long time and the new one is not)
+Please be aware that it is naive to belief that you can deliver the new system almost bug free, because you already have
+the experience of the old system</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_description_28"><a class="anchor" href="#_description_28"></a>Description</h5>
-
+<div class="paragraph">
+<p>A big bang rewrite replaces an old system completely from one day to the other. The opposite approach would be an incremental
+replacement, where individual parts get replaced step by step.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_experiences_9"><a class="anchor" href="#_experiences_9"></a>Experiences</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Basecamp <a href="https://signalvnoise.com/posts/3856-the-big-rewrite-revisited">rewrote</a> their product successfully within a year.
+(Note: they kept the old system running in parallel)</p>
+</li>
+<li>
+<p>Netscape&#8217;s market share dropped to almost zero (and stayed there), because of their <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">rewrite</a></p>
+</li>
+<li>
+<p>Borland and Microsoft sank a lot of money with trying to rewrite Quattro Pro and Word (which eventually failed)</p>
+</li>
+<li>
+<p>Chad Fowler <a href="http://chadfowler.com/2006/12/27/the-big-rewrite.html">wrote</a> about all the failures he was involved (and the reasons)</p>
+</li>
+<li>
+<p>All large big bang system replacements I (Sven) was involved took twice as long as expected and didn&#8217;t deliver the promised state</p>
+</li>
+<li>
+<p>I (Sven) was involved in a small system big bang replacement, which went reasonably well</p>
+</li>
+<li>
+<p>A multiple years running big bang replacement of a German governmental application has been successfully delivered in time and budget (but they also had no market pressure for new features)</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_risks"><a class="anchor" href="#_risks"></a>Risks</h5>
-
+<div class="paragraph">
+<p>Big bang replacement of medium and large systems have many risks, which shouldn&#8217;t be taken lightheaded. You need to make
+sure that you understand and communicate the risks and that risk, cost and benefit are worth it.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Software as a spec: Way too often, a big bang rewrite project
+has no proper requirements engineering. "Make it do what it already does." is an often heard answer on how a feature should
+implemented. As Chad Fowler points out in his <a href="http://chadfowler.com/2006/12/28/software-as-spec.html">blog</a>, this has two major drawbacks: 1) if you are not familiar with the
+old system you don&#8217;t know what questions to ask and 2) if you are familiar you certainly don&#8217;t remember every little
+corner (especially when you need to estimate effort this will go horribly wrong).<br>
+Therefore you need to reverse engineer the code base to write proper requirements. Since the software is in such a bad
+condition that it needs to be rewritten you can be sure that this is not an easy task.</p>
+</li>
+<li>
+<p>Your business will certainly not like the big bang rewrite, because it takes minimum one year, often two or three to
+fully rewrite a system. This means that your business won&#8217;t get any new features during that time and that could be a
+thread to the business itself. Governmental agencies might be fine with this, but the rest certainly not.
+<a href="http://www.joelonsoftware.com/articles/fog0000000069.html">Ask Netscape</a>.</p>
+</li>
+<li>
+<p>In many cases, the business is asking for new features for the old system, while the new system is under development (nobody likes waiting 1-3 years for new features, right?.
+You will then chase a moving target, which can be a long and painful journey. The old systems has certainly some dark corners and a few stakeholders want to get
+rid of them. This is what Chad Fowler calls a <a href="http://chadfowler.com/2006/12/30/the-wish-list.html">wish list</a>.
+Now you&#8217;re at a point where you have to clearly write down the requirements, because the two systems go into two different
+directions.</p>
+</li>
+<li>
+<p>The old system usually collected a lot of bad Technical Debt (that&#8217;s the reason we rewrite). In the beginning of the
+rewrite everything is good, the code is clean. But because you chase a moving target and/or need to implement new
+features you are running out of time, which introduces a lot of bad Technical Debt in the new system. You replaced a
+badly implemented system with old technology with a badly implemented system using new technology.</p>
+</li>
+<li>
+<p>The organisation creates often a culture of the "tiger team": the people who get a lot of rights, because they work on the
+new system and promise a lot. Expectations grow and are hard to manage.</p>
+</li>
+<li>
+<p>The "Big Bang Day". Eventually you have to deploy the new system and migrate the data. This needs to happen big bang and
+is therefore a major risk and more difficult to implement than smaller and incremental changes.</p>
+</li>
+<li>
+<p>As Joel Spolsky <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">put it</a>: "It&#8217;s important to remember that when you start from scratch there is absolutely no reason to
+believe that you are going to do a better job than you did the first time. First of all, you probably don&#8217;t even have
+the same programming team that worked on version one, so you don&#8217;t actually have "more experience". You&#8217;re just going
+to make most of the old mistakes again, and introduce some new problems that weren&#8217;t in the original version."</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_applicability_12"><a class="anchor" href="#_applicability_12"></a>Applicability</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Your application is totally unmaintainable, but it needs new features, because the market demands them. And:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Your application is rather small and can be rewritten in less than 3-6 month if you are in a domain where your
+customers don&#8217;t accept a longer time without new features</p>
+</li>
+<li>
+<p>Your application can be rewritten in less than 6-12 month if you are in a domain where your customers
+totally accept a longer time without new features (or have no choice, e.g. internal applications or government)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>You lost the source code and you have no other choice</p>
+</li>
+<li>
+<p>Your platform is so old, that you need to buy hardware at eBay, because the current hardware is deprecated.</p>
+</li>
+<li>
+<p>Your codebase is still pretty good, but you want your application to do things in a radical new way and incremental
+change doesn&#8217;t help you with that. You don&#8217;t want to replace the current system with a new one and keep the requirements
+as they are right now, but you want to build a better system for your users as well (= your main motivation).</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_consequences_6"><a class="anchor" href="#_consequences_6"></a>Consequences</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>In case the application cannot be rewritten within 3 month, you need enough budget, manpower and patience to rewrite
+the application completely</p>
+</li>
+<li>
+<p>You will have higher cost and risk of failure, but no benefit for your users. If you want to give your users a benefit, too, you cannot
+simply replace the old system with a new one, but you also need to rethink the way the application behaves in terms
+of usability, speed or flexibility. If you don&#8217;t want to incrementally improve your product, but rather introduce a
+revolution, the big bang rewrite is what you need</p>
+</li>
+<li>
+<p>You cannot deliver new features during the time of the big rewrite. If you do, you&#8217;ll introduce new risks (see risks section)</p>
+</li>
+<li>
+<p>In case you rewrite the system using a new platform and language, there will be winners and losers regarding the change.
+Developers who are strong in the "old" technology will feel left behind unless they get a good chance in mastering the
+new technology. In any case, they will loose their strong expert position for some time and that alone causes tension and conflict.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_also_known_as_8"><a class="anchor" href="#_also_known_as_8"></a>Also Known As</h5>
-
+<div class="paragraph">
+<p>Things you should never do.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_related_patterns_14"><a class="anchor" href="#_related_patterns_14"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>test</p>
+<p>Strangler (TBD)</p>
 </li>
 </ul>
 </div>
@@ -5543,7 +5749,19 @@ Underlying idea is to refactor those parts of the system(s) which are actually t
 <div class="ulist">
 <ul>
 <li>
-<p>test</p>
+<p>Chad Fowler wrote a blog post series on <a href="http://chadfowler.com/2006/12/27/the-big-rewrite.html">The Big Rewrite</a></p>
+</li>
+<li>
+<p>Joel Spolsky on Big Bang Rewrites: <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">Things You Should Never Do, Part-I</a></p>
+</li>
+<li>
+<p>David Heinemeier Hansson on <a href="https://signalvnoise.com/posts/3856-the-big-rewrite-revisited">when to fully rewrite a system</a></p>
+</li>
+<li>
+<p>Dave Thomas about legacy innovation on <a href="https://www.computer.org/csdl/mags/so/2016/02/mso2016020105.pdf">IEEE Software</a></p>
+</li>
+<li>
+<p><a href="http://softwareengineering.stackexchange.com/questions/6268/when-is-a-big-rewrite-the-answer">Discussion</a> on Stackexchange</p>
 </li>
 </ul>
 </div>
@@ -9507,7 +9725,7 @@ The result is rendered nicely.
 </div>
 </div>
 <div class="paragraph">
-<p>will insert the last modification data (here: 2016-07-28)</p>
+<p>will insert the last modification data (here: 2016-11-08)</p>
 </div>
 </div>
 <div class="sect2">
@@ -9590,7 +9808,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-28 06:20:48 +00:00
+Last updated 2016-11-08 14:41:33 +00:00
 </div>
 </div>
 </body>
