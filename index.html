@@ -6223,21 +6223,15 @@ If the amount of data is huge, there is a need for a lot of hardware.</p>
 several years until the old system is strangled. The most important reason to consider a strangler application over a
 cut-over rewrite is reduced risk (it might cost more to do a strangler, but that&#8217;s the price of risk reduction) [2].</p>
 </div>
-<div class="paragraph">
-<p>Paul Hammant describes the Strangler very well and uses the following visualization:</p>
-</div>
 <div id="figure-strangulation" class="imageblock">
 <div class="content">
 <img src="images/strangulation.jpg" alt="strangulation">
 </div>
-<div class="title">Figure 21. Strangler Applications</div>
+<div class="title">Figure 21. Strangler Applications (Paul Hammant)</div>
 </div>
 <div class="paragraph">
-<p>Paul Hammant describes two ways of achieving the goal of moving from the (red) old system to the (blue) new system:
-1) with adding new features and 2) without adding new features.</p>
-</div>
-<div class="paragraph">
-<p>Deciding to go for the first strategy means that you can still keep your business happy, because you still able to
+<p>He discusses two ways of achieving the goal of moving from the (red) old system to the (blue) new system:
+1) with adding new features and 2) without adding new features. Deciding to go for the first strategy means that you can still keep your business happy, because you still able to
 deliver new features. However, this approach will take longer than the second one.</p>
 </div>
 </div>
@@ -6246,24 +6240,7 @@ deliver new features. However, this approach will take longer than the second on
 <div class="ulist">
 <ul>
 <li>
-<p>Nat Pryce reports failed projects and challenges using the Strangler-pattern:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>"I&#8217;ve seen critical systems that have suffered both of these fates, and ended up with about four or five
-"strategic architectural directions" and "future state architectures". One large multi-site project ended up with
-eight different new persistence mechanisms in its new architecture."</p>
-</li>
-<li>
-<p>"Another ended up with two different database schemas, one for the old way of doing things and another for the
-new way, neither schema was ever removed from the system and there were also multiple class hierarchies that mapped
-to one or even both of these schemas."</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Paul Hammont reports the following <a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">case studies</a></p>
+<p>Paul Hammont reports the following positive <a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">case studies</a></p>
 <div class="ulist">
 <ul>
 <li>
@@ -6287,6 +6264,23 @@ integrating the old and the new system, they have to exist in parallel (it is an
 <p>Used consumer goods magazine’s web portal - a move from Oracle Endeca to Java/JavaScript. First, they changed the
 Oracle frontend that it looks like the new system. Then they integrated a little piece of new functionality from
 the new stack into the website. The first strangler release took 6 month, then the delivered regularly.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Nat Pryce reports failed projects and challenges using the Strangler-pattern:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"I&#8217;ve seen critical systems that have suffered both of these fates, and ended up with about four or five
+"strategic architectural directions" and "future state architectures". One large multi-site project ended up with
+eight different new persistence mechanisms in its new architecture."</p>
+</li>
+<li>
+<p>"Another ended up with two different database schemas, one for the old way of doing things and another for the
+new way, neither schema was ever removed from the system and there were also multiple class hierarchies that mapped
+to one or even both of these schemas."</p>
 </li>
 </ul>
 </div>
@@ -10022,7 +10016,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-09 16:05:05 +00:00
+Last updated 2016-11-09 16:31:13 +00:00
 </div>
 </div>
 </body>
