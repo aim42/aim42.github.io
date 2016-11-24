@@ -2036,22 +2036,26 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#Instrument-System">2.3.9. <span class="pattern">Instrument System</span></a></li>
 <li><a href="#Issue-Tracker-Analysis">2.3.10. <span class="pattern">Issue-Tracker-Analysis</span></a></li>
 <li><a href="#Organizational-Analysis">2.3.11. <span class="pattern">Organizational-Analysis</span></a></li>
-<li><a href="#Qualitative-Analysis">2.3.12. <span class="pattern">Qualitative Analysis</span></a></li>
-<li><a href="#Quantitative-Analysis">2.3.13. <span class="pattern">Quantitative-Analysis</span></a></li>
-<li><a href="#Pre-Interview-Questionnaire">2.3.14. <span class="pattern">Pre Interview Questionnaire</span></a></li>
-<li><a href="#Questionnaire">2.3.15. <span class="pattern">Questionnaire</span></a></li>
-<li><a href="#Requirements-Analysis">2.3.16. <span class="pattern">Requirements-Analysis</span></a></li>
-<li><a href="#Root-Cause-Analysis">2.3.17. <span class="pattern">Root Cause Analysis</span></a></li>
-<li><a href="#Runtime-Analysis">2.3.18. <span class="pattern">Runtime-Analysis</span></a></li>
-<li><a href="#Software-Archeology">2.3.19. <span class="pattern">Software Archeology</span></a></li>
-<li><a href="#Stakeholder-Analysis">2.3.20. <span class="pattern">Stakeholder Analysis</span></a></li>
-<li><a href="#Stakeholder-Interview">2.3.21. <span class="pattern">Stakeholder Interview</span></a></li>
-<li><a href="#Static-Code-Analysis">2.3.22. <span class="pattern">Static Code Analysis</span></a></li>
-<li><a href="#Take-What-They-Mean">2.3.23. <span class="pattern">Take What They Mean, Not What They Say</span></a></li>
-<li><a href="#User-Analysis">2.3.24. <span class="pattern">User-Analysis</span></a></li>
-<li><a href="#View-Based-Understanding">2.3.25. <span class="pattern">View Based Understanding</span></a></li>
-<li><a href="#_references_9">2.3.26. References</a></li>
-<li><a href="#Bus-Factor">2.3.27. <span class="pattern">Bus factor</span></a></li>
+<li><a href="#_software_organizations_and_their_effect_on_systems">2.3.12. Software Organizations and their Effect on Systems</a></li>
+<li><a href="#_conway_s_law_and_what_to_about_it">2.3.13. Conway&#8217;s Law and what to about it</a></li>
+<li><a href="#_organizational_structure_and_its_effect_on_quality">2.3.14. Organizational Structure and its Effect on Quality</a></li>
+<li><a href="#_value_stream_mapping">2.3.15. Value Stream Mapping</a></li>
+<li><a href="#Qualitative-Analysis">2.3.16. <span class="pattern">Qualitative Analysis</span></a></li>
+<li><a href="#Quantitative-Analysis">2.3.17. <span class="pattern">Quantitative-Analysis</span></a></li>
+<li><a href="#Pre-Interview-Questionnaire">2.3.18. <span class="pattern">Pre Interview Questionnaire</span></a></li>
+<li><a href="#Questionnaire">2.3.19. <span class="pattern">Questionnaire</span></a></li>
+<li><a href="#Requirements-Analysis">2.3.20. <span class="pattern">Requirements-Analysis</span></a></li>
+<li><a href="#Root-Cause-Analysis">2.3.21. <span class="pattern">Root Cause Analysis</span></a></li>
+<li><a href="#Runtime-Analysis">2.3.22. <span class="pattern">Runtime-Analysis</span></a></li>
+<li><a href="#Software-Archeology">2.3.23. <span class="pattern">Software Archeology</span></a></li>
+<li><a href="#Stakeholder-Analysis">2.3.24. <span class="pattern">Stakeholder Analysis</span></a></li>
+<li><a href="#Stakeholder-Interview">2.3.25. <span class="pattern">Stakeholder Interview</span></a></li>
+<li><a href="#Static-Code-Analysis">2.3.26. <span class="pattern">Static Code Analysis</span></a></li>
+<li><a href="#Take-What-They-Mean">2.3.27. <span class="pattern">Take What They Mean, Not What They Say</span></a></li>
+<li><a href="#User-Analysis">2.3.28. <span class="pattern">User-Analysis</span></a></li>
+<li><a href="#View-Based-Understanding">2.3.29. <span class="pattern">View Based Understanding</span></a></li>
+<li><a href="#_references_9">2.3.30. References</a></li>
+<li><a href="#Bus-Factor">2.3.31. <span class="pattern">Bus factor</span></a></li>
 </ul>
 </li>
 </ul>
@@ -3880,9 +3884,13 @@ real fast.</p>
 </div>
 <div class="sect4">
 <h5 id="_description_10"><a class="anchor" href="#_description_10"></a>Description</h5>
+
+</div>
+</div>
+<div class="sect3">
+<h4 id="_software_organizations_and_their_effect_on_systems"><a class="anchor" href="#_software_organizations_and_their_effect_on_systems"></a>2.3.12. Software Organizations and their Effect on Systems</h4>
 <div class="paragraph">
-<p><strong>Software Organizations and their Effect on Systems</strong>
-As Nagappan et al write: <em>From the historical perspective, Fred Brooks in his classic book "The Mythical Man Month"
+<p>As Nagappan et al write: <em>From the historical perspective, Fred Brooks in his classic book "The Mythical Man Month"
 provides an analogy in the chapter on "Why did the (mythical) Tower of Babel Fail?" The observation being that, the
 people had (1) a clear mission; (2) manpower; (3) (raw) materials; (4) time and (5) technology. The project failed because
 of communication, and its consequent organization. Brooks further states that in software systems schedule
@@ -3906,9 +3914,11 @@ build your own service, you build a bounded context around the thing that your t
 and you build a service or a group of services that interface with all the other things that your company is doing, as
 if they were separate companies. It’s a different bounded context. <strong>So you talk to them but you are not tightly coupled</em></strong>".</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_conway_s_law_and_what_to_about_it"><a class="anchor" href="#_conway_s_law_and_what_to_about_it"></a>2.3.13. Conway&#8217;s Law and what to about it</h4>
 <div class="paragraph">
-<p><strong>Conway&#8217;s Law and what to about it</strong>
-In 1968 Conway observed that <em>"organizations produce designs which are copies of the communication
+<p>In 1968 Conway observed that <em>"organizations produce designs which are copies of the communication
 structures of these organizations"</em>. That means that the flexibility of an organization is important to effective design
 and operations.
 Since systems usually live longer than corporate structures, it is important that managers keep their organisation
@@ -3925,9 +3935,11 @@ people (or UX specialists or business analysts, etc.) into the product teams. Th
 still exist, but there&#8217;s still a good chance to create a cohesive team structure.
 TODO: provide more case studies, e.g. UK Government Digital Services, Google, Amazon, ING, Otto</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_organizational_structure_and_its_effect_on_quality"><a class="anchor" href="#_organizational_structure_and_its_effect_on_quality"></a>2.3.14. Organizational Structure and its Effect on Quality</h4>
 <div class="paragraph">
-<p><strong>Organizational Structure and its Effect on Quality</strong>
-Microsoft did a large <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2008-11.pdf">study</a> on how
+<p>Microsoft did a large <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2008-11.pdf">study</a> on how
 organizational structure affects software quality. The effect is higher then code churn, code complexity, code coverage or
 bugs found before releasing the software.
 Microsoft looked at a few organisational metrics:</p>
@@ -4002,9 +4014,9 @@ and make their own decisions (4 + 6)</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>Value Stream Mapping</strong></p>
 </div>
+<div class="sect3">
+<h4 id="_value_stream_mapping"><a class="anchor" href="#_value_stream_mapping"></a>2.3.15. Value Stream Mapping</h4>
 <div class="paragraph">
 <p>Value stream mapping is a lean-management method for analyzing the current state of events that take a product or service
 from its beginning through to the customer. Examples in the software world would be all the steps needed from having an
@@ -4028,7 +4040,8 @@ to high cohesion and loose coupling of Departments (<a href="http://philcalcado.
 <p>How to do a / examples of value stream mapping: TODO</p>
 </div>
 <div class="paragraph">
-<p>Look for:</p>
+<p>Old stuff -
+Look for:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4049,7 +4062,6 @@ to high cohesion and loose coupling of Departments (<a href="http://philcalcado.
 </li>
 </ul>
 </div>
-</div>
 <div class="sect4">
 <h5 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h5>
 
@@ -4066,7 +4078,7 @@ to high cohesion and loose coupling of Departments (<a href="http://philcalcado.
 </div>
 </div>
 <div class="sect3">
-<h4 id="Qualitative-Analysis"><a class="anchor" href="#Qualitative-Analysis"></a>2.3.12. <span class="pattern">Qualitative Analysis</span></h4>
+<h4 id="Qualitative-Analysis"><a class="anchor" href="#Qualitative-Analysis"></a>2.3.16. <span class="pattern">Qualitative Analysis</span></h4>
 <div class="sect4">
 <h5 id="_intent_12"><a class="anchor" href="#_intent_12"></a>Intent</h5>
 <div class="paragraph">
@@ -4163,7 +4175,7 @@ to high cohesion and loose coupling of Departments (<a href="http://philcalcado.
 </div>
 </div>
 <div class="sect3">
-<h4 id="Quantitative-Analysis"><a class="anchor" href="#Quantitative-Analysis"></a>2.3.13. <span class="pattern">Quantitative-Analysis</span></h4>
+<h4 id="Quantitative-Analysis"><a class="anchor" href="#Quantitative-Analysis"></a>2.3.17. <span class="pattern">Quantitative-Analysis</span></h4>
 <div class="sect4">
 <h5 id="_intent_13"><a class="anchor" href="#_intent_13"></a>Intent</h5>
 <div class="paragraph">
@@ -4191,7 +4203,7 @@ to high cohesion and loose coupling of Departments (<a href="http://philcalcado.
 </div>
 </div>
 <div class="sect3">
-<h4 id="Pre-Interview-Questionnaire"><a class="anchor" href="#Pre-Interview-Questionnaire"></a>2.3.14. <span class="pattern">Pre Interview Questionnaire</span></h4>
+<h4 id="Pre-Interview-Questionnaire"><a class="anchor" href="#Pre-Interview-Questionnaire"></a>2.3.18. <span class="pattern">Pre Interview Questionnaire</span></h4>
 <div class="sect4">
 <h5 id="_intent_14"><a class="anchor" href="#_intent_14"></a>Intent</h5>
 <div class="paragraph">
@@ -4274,7 +4286,7 @@ to high cohesion and loose coupling of Departments (<a href="http://philcalcado.
 </div>
 </div>
 <div class="sect3">
-<h4 id="Questionnaire"><a class="anchor" href="#Questionnaire"></a>2.3.15. <span class="pattern">Questionnaire</span></h4>
+<h4 id="Questionnaire"><a class="anchor" href="#Questionnaire"></a>2.3.19. <span class="pattern">Questionnaire</span></h4>
 <div class="sect4">
 <h5 id="_intent_15"><a class="anchor" href="#_intent_15"></a>Intent</h5>
 <div class="paragraph">
@@ -4360,7 +4372,7 @@ formulate questions covering the topics or areas of information that:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Requirements-Analysis"><a class="anchor" href="#Requirements-Analysis"></a>2.3.16. <span class="pattern">Requirements-Analysis</span></h4>
+<h4 id="Requirements-Analysis"><a class="anchor" href="#Requirements-Analysis"></a>2.3.20. <span class="pattern">Requirements-Analysis</span></h4>
 <div class="sect4">
 <h5 id="_intent_16"><a class="anchor" href="#_intent_16"></a>Intent</h5>
 <div class="paragraph">
@@ -4397,7 +4409,7 @@ formulate questions covering the topics or areas of information that:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Root-Cause-Analysis"><a class="anchor" href="#Root-Cause-Analysis"></a>2.3.17. <span class="pattern">Root Cause Analysis</span></h4>
+<h4 id="Root-Cause-Analysis"><a class="anchor" href="#Root-Cause-Analysis"></a>2.3.21. <span class="pattern">Root Cause Analysis</span></h4>
 <div class="quoteblock">
 <blockquote>
 To find mistakes is not enough. It is necessary to find the cause behind the mistake
@@ -4508,7 +4520,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="Runtime-Analysis"><a class="anchor" href="#Runtime-Analysis"></a>2.3.18. <span class="pattern">Runtime-Analysis</span></h4>
+<h4 id="Runtime-Analysis"><a class="anchor" href="#Runtime-Analysis"></a>2.3.22. <span class="pattern">Runtime-Analysis</span></h4>
 <div class="sect4">
 <h5 id="_intent_18"><a class="anchor" href="#_intent_18"></a>Intent</h5>
 <div class="paragraph">
@@ -4560,7 +4572,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="Software-Archeology"><a class="anchor" href="#Software-Archeology"></a>2.3.19. <span class="pattern">Software Archeology</span></h4>
+<h4 id="Software-Archeology"><a class="anchor" href="#Software-Archeology"></a>2.3.23. <span class="pattern">Software Archeology</span></h4>
 <div class="sect4">
 <h5 id="_intent_19"><a class="anchor" href="#_intent_19"></a>Intent</h5>
 <div class="paragraph">
@@ -4639,7 +4651,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 </div>
 </div>
 <div class="sect3">
-<h4 id="Stakeholder-Analysis"><a class="anchor" href="#Stakeholder-Analysis"></a>2.3.20. <span class="pattern">Stakeholder Analysis</span></h4>
+<h4 id="Stakeholder-Analysis"><a class="anchor" href="#Stakeholder-Analysis"></a>2.3.24. <span class="pattern">Stakeholder Analysis</span></h4>
 <div class="paragraph">
 <p>Find out which people, roles, organizational units or organizations have interests in the <a href="#System">[System]</a>.</p>
 </div>
@@ -4730,7 +4742,7 @@ employee organization.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Stakeholder-Interview"><a class="anchor" href="#Stakeholder-Interview"></a>2.3.21. <span class="pattern">Stakeholder Interview</span></h4>
+<h4 id="Stakeholder-Interview"><a class="anchor" href="#Stakeholder-Interview"></a>2.3.25. <span class="pattern">Stakeholder Interview</span></h4>
 <div class="paragraph">
 <p>Conduct personal interviews with key persons of the <a href="#System">[System]</a> or associated processes to identify, clarify or discuss potential issues and remedies.</p>
 </div>
@@ -4866,7 +4878,7 @@ At the end of the interview, give a short feedback and summarize important resul
 </div>
 </div>
 <div class="sect3">
-<h4 id="Static-Code-Analysis"><a class="anchor" href="#Static-Code-Analysis"></a>2.3.22. <span class="pattern">Static Code Analysis</span></h4>
+<h4 id="Static-Code-Analysis"><a class="anchor" href="#Static-Code-Analysis"></a>2.3.26. <span class="pattern">Static Code Analysis</span></h4>
 <div class="sect4">
 <h5 id="_intent_22"><a class="anchor" href="#_intent_22"></a>Intent</h5>
 <div class="paragraph">
@@ -4968,7 +4980,7 @@ e.g. the following:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Take-What-They-Mean"><a class="anchor" href="#Take-What-They-Mean"></a>2.3.23. <span class="pattern">Take What They Mean, Not What They Say</span></h4>
+<h4 id="Take-What-They-Mean"><a class="anchor" href="#Take-What-They-Mean"></a>2.3.27. <span class="pattern">Take What They Mean, Not What They Say</span></h4>
 <div class="sect4">
 <h5 id="_intent_23"><a class="anchor" href="#_intent_23"></a>Intent</h5>
 <div class="paragraph">
@@ -5043,7 +5055,7 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 </div>
 </div>
 <div class="sect3">
-<h4 id="User-Analysis"><a class="anchor" href="#User-Analysis"></a>2.3.24. <span class="pattern">User-Analysis</span></h4>
+<h4 id="User-Analysis"><a class="anchor" href="#User-Analysis"></a>2.3.28. <span class="pattern">User-Analysis</span></h4>
 <div class="sect4">
 <h5 id="_intent_24"><a class="anchor" href="#_intent_24"></a>Intent</h5>
 <div class="paragraph">
@@ -5061,7 +5073,7 @@ useability, layout or design considerations.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>2.3.25. <span class="pattern">View Based Understanding</span></h4>
+<h4 id="View-Based-Understanding"><a class="anchor" href="#View-Based-Understanding"></a>2.3.29. <span class="pattern">View Based Understanding</span></h4>
 <div class="sect4">
 <h5 id="_intent_25"><a class="anchor" href="#_intent_25"></a>Intent</h5>
 <div class="paragraph">
@@ -5171,7 +5183,7 @@ and reason about the code structure</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_9"><a class="anchor" href="#_references_9"></a>2.3.26. References</h4>
+<h4 id="_references_9"><a class="anchor" href="#_references_9"></a>2.3.30. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -5184,7 +5196,7 @@ and reason about the code structure</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Bus-Factor"><a class="anchor" href="#Bus-Factor"></a>2.3.27. <span class="pattern">Bus factor</span></h4>
+<h4 id="Bus-Factor"><a class="anchor" href="#Bus-Factor"></a>2.3.31. <span class="pattern">Bus factor</span></h4>
 <div class="paragraph">
 <p>The bus factor is a measurement of the risk resulting from information and capabilities not being shared among team
 members, from the phrase "in case they get hit by a bus" (Wikipedia).</p>
@@ -10253,7 +10265,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-24 16:13:22 +00:00
+Last updated 2016-11-24 16:25:50 +00:00
 </div>
 </div>
 </body>
