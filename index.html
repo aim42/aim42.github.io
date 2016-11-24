@@ -3894,7 +3894,7 @@ create self-contained, cross-functional teams with a high cohesion inside the te
 </div>
 <div class="paragraph">
 <p>Cohesion in programming refers to the degree to which the elements of a component belong together, all the related code
-should be close to each other. In teams the same is true: all people with the necessary skills to create a feature should
+should be close to each other. For teams the same is true: all people with the necessary skills to create a feature should
 be close together.</p>
 </div>
 <div class="paragraph">
@@ -3922,7 +3922,7 @@ from the classical approach of separate development and operation teams to a str
 and build and run their systems without handovers to other teams. Since there is still a need for centralized work they
 created a production engineering team which takes care of common infrastructure ("run the system that run systems") and
 do internal consulting in case a team needs help.
-In case that is not so easy, e.g. a large insurance has 800 people in an operations department and claims because of that
+For some companies experimentation is really hard, e.g. a large insurance has 800 people in an operations department and claims because of that
 "You build it, you run it" is not possible, the company could still keep the departments, but does insourcing operations
 people (or UX specialists or business analysts, etc.) into the product teams. That way the departments, which are hard to change,
 still exist, but there&#8217;s still a good chance to create a cohesive team structure.
@@ -3933,14 +3933,14 @@ TODO: provide more case studies, e.g. UK Government Digital Services, Google, Am
 <h6 id="_organizational_structure_and_its_effect_on_quality"><a class="anchor" href="#_organizational_structure_and_its_effect_on_quality"></a>Organizational Structure and its Effect on Quality</h6>
 <div class="paragraph">
 <p>Microsoft did a large <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2008-11.pdf">study</a> on how
-organizational structure affects software quality. The effect is higher then code churn, code complexity, code coverage or
-bugs found before releasing the software.
+organizational structure affects software quality. The effect of organizational structure on quality is higher then code
+churn, code complexity, code coverage or bugs found before releasing the software.
 Microsoft looked at a few organisational metrics:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The more people who touch the code the lower the quality. This is of course something you need to balance. Of course if
+<p>Number of Engineers (NOE): The more people who touch the code the lower the quality. This is of course something you need to balance. Of course if
 there is only one person who works on a component, the likelihood of conceptual integrity and few bugs is high (if the
 persons work quality is also good). If 300 people change the component it is much harder to keep conceptual integrity.
 However, a company doesn&#8217;t want knowledge islands, depending on the knowledge of one single person, therefore the company
@@ -3948,62 +3948,63 @@ should find the right balance here. Netflix recommends 2-3 people per component,
 (only so many people should work on a component or service who can be fed by two pizzas)</p>
 </li>
 <li>
-<p>A large loss of team members affects the knowledge retention and thus quality. A similar study at eBay found out that
+<p>Number of Ex-Engineers (NOEE): A large loss of team members affects the knowledge retention and thus quality. A similar
+<a href="http://www.se-radio.net/2014/10/episode-212-randy-shoup-on-company-culture/">study</a> at eBay found out that
 a resource pool (a pool of developers where projects can take people out) led to very bad quality</p>
 </li>
 <li>
-<p>The more source code edits to components the higher the instability and lower the quality (sure, if I never touch code
+<p>Edit Frequency (EF): The more source code edits to components the higher the instability and lower the quality (sure, if I never touch code
 which works I won&#8217;t introduce new bugs. But we know that we need to test (heavily) changed source code with a greater
 intensity than less changed parts of the code)</p>
 </li>
 <li>
-<p>The lower the level of ownership the better the quality. What they mean with that is that a component should have only
-one clear owner and that owner (can be a team) needs to report to only one leader and not many.</p>
+<p>Depth of Master Ownership (DMO): The lower the level of ownership the better the quality. What they mean with that is
+that a component should have only one clear owner and that owner (can be a team) needs to report to only one leader and not many.</p>
 </li>
 <li>
-<p>The more cohesive the contributors organizationally the higher the quality: if all the contributors are in the same
-team in the organization and report to the same managers the better, no communication across organisation units necessary.
-It could be written otherwise: where collaboration is fast, easy and unbureaucratic the better the quality.</p>
+<p>Percentage of Org contributing to development (PO): The more cohesive the contributors organizationally the higher the
+quality. Means that it is important to create a team where its members share a common culture, focus and social cohesion.</p>
 </li>
 <li>
-<p>The more cohesive are the contributors the higher is the quality. Means that it is important to create a team where its
-members share a common culture, focus and social cohesion.</p>
+<p>Level of Organizational Code Ownership (OCO): The more cohesive the contributors (edits) the higher is the quality.
+Means that it is important to create a team where its members share a common culture on how to write and design a system.</p>
 </li>
 <li>
-<p>People who change often the same source code should sit together closely or at least know each other well and have an
-unproblematic way to communicate. E.g. working on a particular piece of source code with a person in another timezone
-lowers quality, pair programming leads to higher quality.</p>
+<p>Overall Organization Ownership (OOW): People who change often the same source code should sit together closely or at
+least know each other well and have an unproblematic way to communicate. E.g. working on a particular piece of source
+code with a person in another timezone lowers quality, pair programming leads to higher quality.</p>
 </li>
 <li>
-<p>The more diffused the different organizations contributing code, the lower the quality. If totally unrelated teams
-contribute to the source code of a component and those changes are small (&lt; 10% of all changed lines) your quality
-declines. Try to not have too many contributors who only contribute little.</p>
+<p>Organization Intersection Factor (OIF): The more diffused the different organizations contributing code, the lower the
+quality. If totally unrelated teams contribute to the source code of a component and those changes are small (&lt; 10% of
+all changed lines) your quality declines. Try to not have too many contributors who only contribute little.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Statistical existence and empirical evidence for low quality could be found for the relationships of</p>
+<p>Statistical existence and empirical evidence for low quality could be found for the relationships of the following
+combinations (in brackets the combined org metrics). TODO: still a bit unclear</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Low quality: Code is often changed AND the number of developers changing that code is high (3 + 1)</p>
+<p>Low quality: Code is often changed AND the number of developers changing that code is high (EF ↔ NOE)</p>
 </li>
 <li>
-<p>Low quality: Code is often changed AND the number of developers who changed that code and left the team/organization is high  (3 + 2)</p>
+<p>Low quality: Code is often changed AND the number of developers who changed that code left the team/organization is high (EF↔ NOEE)</p>
 </li>
 <li>
-<p>High quality: The team is cohesive and share a common culture/focus/social cohesion AND they own their code completely
-and make their own decisions (4 + 6)</p>
+<p>High quality: The team is cohesive and shares a common culture/focus/social cohesion AND they own their code completely
+and make their own decisions (OCO ↔ DMO)</p>
 </li>
 <li>
-<p>High quality: The team members can effectively communicate AND they own their code completely and make their own decisions (5 + 6)</p>
+<p>High quality: The team shares a common culture/focus/social cohesion AND shares a common coding culture (OCO ↔ PO)</p>
 </li>
 <li>
-<p>High quality: people sit together (or low distance or can easily interact) AND collaboration is fast, easy and unbureaucratic (7 + 5)</p>
+<p>High quality: The team sits together (or low distance or can easily interact) AND shares a common coding culture (OOW ↔ PO)</p>
 </li>
 <li>
-<p>High quality: people sit together (or low distance or can easily interact) AND they own their code completely and make their own decisions (7 + 6)</p>
+<p>High quality: The team sits together (or low distance or can easily interact) AND they share a common culture/focus/social cohesion (OOW ↔ OCO)</p>
 </li>
 </ul>
 </div>
@@ -10260,7 +10261,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-24 16:32:48 +00:00
+Last updated 2016-11-24 17:43:24 +00:00
 </div>
 </div>
 </body>
