@@ -2267,7 +2267,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="http://img.shields.io/badge/Version-0.7.0-green.svg" alt="0.7.0"></span>
-<span class="image"><img src="http://img.shields.io/badge/Date-Nov 24. 2016-green.svg" alt="/Nov 24. 2016"></span>
+<span class="image"><img src="http://img.shields.io/badge/Date-Nov 25. 2016-green.svg" alt="/Nov 25. 2016"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
@@ -3879,6 +3879,9 @@ real fast.</p>
 </div>
 <div class="sect4">
 <h5 id="_description_10"><a class="anchor" href="#_description_10"></a>Description</h5>
+<div class="paragraph">
+<p>Work-in-progress: collecting ideas and currently doing research, therefore still chaotic document</p>
+</div>
 <div class="sect5">
 <h6 id="_software_organizations_and_their_effect_on_systems"><a class="anchor" href="#_software_organizations_and_their_effect_on_systems"></a>Software Organizations and their Effect on Systems</h6>
 <div class="paragraph">
@@ -3906,14 +3909,94 @@ build your own service, you build a bounded context around the thing that your t
 and you build a service or a group of services that interface with all the other things that your company is doing, as
 if they were separate companies. It’s a different bounded context. <strong>So you talk to them but you are not tightly coupled</em></strong>".</p>
 </div>
+<div class="paragraph">
+<p>How can an organization be loosely or tightly coupled? What are those properties? MacCormack et al. answered this question
+in a Harvard Business School <a href="http://www.hbs.edu/faculty/Publication%20Files/08-039_1861e507-1dc1-4602-85b8-90d71559d85b.pdf">publication</a>:</p>
+</div>
+<div class="paragraph">
+<p>Table: Characterizing Different Organizational Forms</p>
+</div>
+<table class="tableblock frame-topbot grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Tightly-Coupled</th>
+<th class="tableblock halign-left valign-top">Loosely-Coupled</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Goals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shared, Explicit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Diverse, Implicit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Membership</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Closed, Contracted</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Open, Voluntary</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authority</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formal, Hierarchy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informal, Meritocracy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Centralized, Collocated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decentralized, Distributed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behavior</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Planned, Coordinated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emergent, Independent</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Of course this is not black and white, there&#8217;s always some place in between.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_conway_s_law_and_what_to_about_it"><a class="anchor" href="#_conway_s_law_and_what_to_about_it"></a>Conway&#8217;s Law and what to about it</h6>
 <div class="paragraph">
 <p>In 1968 Conway observed that <em>"organizations produce designs which are copies of the communication
-structures of these organizations"</em>. That means that the flexibility of an organization is important to effective design
-and operations.
-Since systems usually live longer than corporate structures, it is important that managers keep their organisation
+structures of these organizations (If you have four groups working on a compiler, you&#8217;ll get a 4-pass compiler)"</em>. Around
+2006 many companies had a frontend, backend and middleware department reflecting the three-tier architecture they were
+building. Modern companies have individual deployable services built by cross-functional teams.</p>
+</div>
+<div class="paragraph">
+<p>James Coplien wrote in his book that <em>"If the parts of an organization (e.g. teams,
+departments, or subdivisions) do not closely reflect the essential parts of the product, or if the relationship between
+organizations do not reflect the relationships between product parts, then the project will be in trouble&#8230;&#8203; Therefore:
+Make sure the organization is compatible with the product architecture"</em>.</p>
+</div>
+<div class="paragraph">
+<p>David Parnas (1972, 1978) argued that it is easier to split development work across a
+group if people can work independently and in parallel. To support parallelism, Parnas encouraged
+developers to avoid sharing assumptions and data. Specifically, he contended that every developer’s task
+assignment should lie within a product module that is “characterized by its knowledge of a design
+decision that it hides from all others” (1972: p. 1056)</p>
+</div>
+<div class="paragraph">
+<p>That means that the flexibility of an organization is important to effective design
+and operations. It also means that you first create your architecture and then form the organizational communication
+around it. This is not as crazy as it sounds, because existing departments can still exist, but the people inside those
+departments need to be insourced into the newly formed product teams representing end-to-end the individual services or
+components of the system.</p>
+</div>
+<div class="paragraph">
+<p><strong>If you want to improve your architecture you need to improve your organization as well</strong></p>
+</div>
+<div class="paragraph">
+<p>TODO: collect more examples of org transformation</p>
+</div>
+<div class="paragraph">
+<p>Since systems usually live longer than corporate structures, it is important that managers keep their organisation
 flexible. An example for organizational flexibility is Soundcloud.
 They experimented with different organizational models to find the one that fit product development best. That
 experimentation is possible is important to note - many organizations don&#8217;t do that. They moved over a couple of years
@@ -3921,11 +4004,19 @@ from the classical approach of separate development and operation teams to a str
 and build and run their systems without handovers to other teams. Since there is still a need for centralized work they
 created a production engineering team which takes care of common infrastructure ("run the system that run systems") and
 do internal consulting in case a team needs help.
-For some companies experimentation is really hard, e.g. a large insurance has 800 people in an operations department and claims because of that
-"You build it, you run it" is not possible, the company could still keep the departments, but does insourcing operations
-people (or UX specialists or business analysts, etc.) into the product teams. That way the departments, which are hard to change,
-still exist, but there&#8217;s still a good chance to create a cohesive team structure.
-TODO: provide more case studies, e.g. UK Government Digital Services, Google, Amazon, ING, Otto</p>
+For some companies experimentation is really hard, e.g. a large insurance has 800 people in an operations department and
+claims because of that "You build it, you run it" is not possible, the company could still keep the departments, but
+does insourcing operations people (or UX specialists or business analysts, etc.) into the product teams. That way the
+departments, which are hard to change, still exist, but there&#8217;s still a good chance to create a cohesive team structure.</p>
+</div>
+<div class="paragraph">
+<p>An example of a popular change of software producing organizations is the move from operations/development/business/testing
+silos to functional silos (e.g. a cross functional team responsible for product search), because the optimized
+process-based organization is horizontally focused on outcomes, not vertically oriented around skills like testing,
+development and operations.</p>
+</div>
+<div class="paragraph">
+<p>TODO: provide more case studies, e.g. UK Government Digital Services, Google, Amazon, ING, Otto</p>
 </div>
 </div>
 <div class="sect5">
@@ -10177,7 +10268,7 @@ The result is rendered nicely.
 </div>
 </div>
 <div class="paragraph">
-<p>will insert the last modification data (here: 2016-11-24)</p>
+<p>will insert the last modification data (here: 2016-11-25)</p>
 </div>
 </div>
 <div class="sect2">
@@ -10260,7 +10351,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-24 23:24:44 +00:00
+Last updated 2016-11-25 16:45:55 +00:00
 </div>
 </div>
 </body>
