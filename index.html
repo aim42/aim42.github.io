@@ -2006,7 +2006,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_why_is_software_being_changed">1.1. Why is software being changed?</a></li>
 <li><a href="#_why_does_software_need_improvement">1.2. Why does software need improvement?</a>
 <ul class="sectlevel3">
-<li><a href="#_long_term_goal">1.2.1. Long-Term Goal</a></li>
+<li><a href="#_long_term_goal">1.2.1. Long-term Goal</a></li>
 </ul>
 </li>
 <li><a href="#_how_does_aim42_work">1.3. How does aim42 work?</a>
@@ -2081,8 +2081,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#database-first-approach">4.4.3. <span class="pattern">Database First Approach</span></a></li>
 <li><a href="#database-last-approach">4.4.4. <span class="pattern">Database Last Approach</span></a></li>
 <li><a href="#composite-database-approach">4.4.5. <span class="pattern">Composite Database Approach</span></a></li>
-<li><a href="#Butterfly-Methodology">4.4.6. <span class="pattern">Butterfly-Methodology</span></a></li>
-<li><a href="#strangler-approach">4.4.7. <span class="pattern">Strangler Approach</span></a></li>
+<li><a href="#strangler-approach">4.4.6. <span class="pattern">Strangler Approach</span></a></li>
 </ul>
 </li>
 <li><a href="#improve-categories">4.5. Categories of Improvement Practices</a></li>
@@ -2267,7 +2266,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="http://img.shields.io/badge/Version-0.7.0-green.svg" alt="0.7.0"></span>
-<span class="image"><img src="http://img.shields.io/badge/Date-Dec 5. 2016-green.svg" alt="/Dec 5. 2016"></span>
+<span class="image"><img src="http://img.shields.io/badge/Date-Dec 22. 2016-green.svg" alt="/Dec 22. 2016"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
@@ -2375,20 +2374,20 @@ The reasons for changing a system can be grouped into four categories (see <a hr
 <div class="paragraph">
 <p>The most important reason is depicted in the following diagram: The cost-of-change
 of most software increases heavily over time&#8230;&#8203; making those people really unhappy that
-have to pay for these changes (called maintenance, evolution, new-features or else)</p>
+have to pay for these changes (called maintenance, evolution, new-features or else).</p>
 </div>
 <div class="paragraph">
 <p>An additional effect of long-term maintenance of software is the strong
-<em>decrease in understandability</em>: When a system matures it becomes more and more difficult to understand its inner workings, changes become increasingly risky and consequences of changes become difficult to foresee which can render effort estimations quite blurry.</p>
+<em>decrease in understandability</em>: When a system matures it becomes more and more difficult to understand its inner workings, changes become increasingly risky and consequences of changes become difficult to foresee which can lead to quite blurry effort estimations.</p>
 </div>
 <div id="figure-real-situation" class="imageblock">
 <div class="content">
 <img src="images/cost-of-change.jpg" alt="target situation">
 </div>
-<div class="title">Figure 1. Reality: Maintaining Software is too expensive</div>
+<div class="title">Figure 1. Reality: Maintaining software is too expensive</div>
 </div>
 <div class="paragraph">
-<p>These negative effects share a few common root-causes:</p>
+<p>These negative effects share a few common root causes:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2411,17 +2410,17 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 <p>inappropriate selection of <em>technology</em> (<em>frameworks, libraries or languages</em>)</p>
 </li>
 <li>
-<p>(you can surely find a few more&#8230;&#8203;)</p>
+<p>(you surely can find a few more&#8230;&#8203;)</p>
 </li>
 </ol>
 </div>
 <div class="sect3">
-<h4 id="_long_term_goal"><a class="anchor" href="#_long_term_goal"></a>1.2.1. Long-Term Goal</h4>
+<h4 id="_long_term_goal"><a class="anchor" href="#_long_term_goal"></a>1.2.1. Long-term Goal</h4>
 <div class="paragraph">
 <p>In the beginning, though, everything was fine: nice coupling and cohesion, appropriate technologies, well written code, understandable structures and concepts (see figure <a href="#figure-target-situation">Goal: Maintainable Software</a>)</p>
 </div>
 <div class="paragraph">
-<p>But as more and more changes, modifications, tweaks and supposed <em>optimizations</em> were performed under growing time and budget pressure, things got nasty. The maintainers piled up so called <em>technical debt</em> (us software folks call it quick-hack, quick-and-dirty-fix, detours or abbreviations). We&#8217;re quite sure you know what we&#8217;re talking about - we experienced it over and over again, it seems to be the normal situation, not the (bad) exception.</p>
+<p>But as more and more changes, modifications, tweaks and supposed <em>optimizations</em> were performed under growing time and budget pressure, things got nasty. The maintainers piled up so called <em>technical debt</em> (we software folks call it quick-hacks, quick-and-dirty-fixes, detours or abbreviations). We&#8217;re quite sure you know what we&#8217;re talking about - we experienced it over and over again, it seems to be the normal situation, not the (bad) exception.</p>
 </div>
 <div class="paragraph">
 <p>Investment in methodical and systematic software architecture improvement will have the following effect.</p>
@@ -2453,7 +2452,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 <p><a href="#Analyze">Analyze</a>: collect <em>issues</em>: problems, risks, deficiencies and technical debt within your system and your development process. Focus on problems in this phase, not on potential solution approaches. In addition, develop (and document) an understanding of internal structures, concepts and architectural approaches.</p>
 </li>
 <li>
-<p><a href="#Evaluate">Evaluate</a>: determine the „value“ of issues and their solutions (<em>improvements</em>)</p>
+<p><a href="#Evaluate">Evaluate</a>: determine the "value" of issues and their solutions (<em>improvements</em>)</p>
 </li>
 <li>
 <p><a href="#Improve">Improve</a>: systematically improve code and structures, reduce technical debt, remove waste and optimize.</p>
@@ -2498,7 +2497,7 @@ or long- and short-term planning activities.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of issue)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The cost (in any unit appropriate for business, e.g. currency, effort or such) of the issue, related to a frequency or period of time. For example – cost of every occurrence of the issue, or recurring cost per week.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The cost (in any unit appropriate for business, e.g. money, effort or such) of the issue, related to a frequency or period of time. For example – cost of every occurrence of the issue or recurring cost per week.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of improvement)</strong></p></td>
@@ -2534,10 +2533,10 @@ or long- and short-term planning activities.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>related to each other: No improvement-idea without an existing issue - as we do not want to optimize "because we can".</p>
+<p>related to each other: No idea of improvement without an existing issue - as we do not want to optimize "because we can".</p>
 </li>
 <li>
-<p>evaluated in some business-compatible unit (Euro, $ or such) as described above. See <a href="#Evaluate">Evaluate</a>.</p>
+<p>evaluated in some business-compatible unit (e. g. Euro, $) as described above. See <a href="#Evaluate">Evaluate</a>.</p>
 </li>
 </ul>
 </div>
@@ -2548,10 +2547,10 @@ or long- and short-term planning activities.</p>
 <div class="paragraph">
 <p>We are <strong>very</strong> sure that aim42 can work for your system or your organization.
 But (yes, there&#8217;s always a but) we cannot guarantee: Maybe your software is so
-<strong>extraordinaire</strong>, so very special, that it needs other treatment.</p>
+<strong>extraordinaire</strong>, so very special, that it needs other treatments.</p>
 </div>
 <div class="paragraph">
-<p>Maybe your organization does not fit our prerequisites, or is way more advanced
+<p>Maybe your organization does not fit our prerequisites or is way more advanced
 than we anticipated in our approach&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
@@ -2585,7 +2584,7 @@ responsible for any results of applying aim42.</p>
 <p>Find all problems, issues, symptoms, risks or technical debt within the system (<a href="#System">[System]</a>), its operation, maintenance or otherwise related processes.</p>
 </li>
 <li>
-<p>Understand root causes of the problems found, potential interdependencies between issues</p>
+<p>Understand root causes of the problems found, potential interdependencies between issues.</p>
 </li>
 </ol>
 </div>
@@ -2593,7 +2592,7 @@ responsible for any results of applying aim42.</p>
 <div class="sect2">
 <h3 id="_how_it_works"><a class="anchor" href="#_how_it_works"></a>2.2. How it works</h3>
 <div class="paragraph">
-<p>Systematically look for such issues at various places and with various people.</p>
+<p>Look systematically for such issues at various places and with support of various people.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -2602,7 +2601,7 @@ responsible for any results of applying aim42.</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-To effectively find issues, you need an appropriate amount of <em>understanding</em> of the system under design (<a href="#System">[System]</a>), its technical concepts, code-structure, inner workings, major external interfaces and its development process.
+To effectively find issues, you need an appropriate amount of <em>understanding</em> of the system under design (<a href="#System">[System]</a>), its technical concepts, code structure, inner workings, major external interfaces and its development process.
 </td>
 </tr>
 </table>
@@ -2657,7 +2656,7 @@ based upon the specific quality requirements</p>
 </li>
 <li>
 <p>Inspect and analyze all involved organizational processes -
-(development, project-management, operations, requirements-analysis)</p>
+(development, project management, operations, requirements analysis)</p>
 <div class="ulist">
 <ul>
 <li>
@@ -2667,12 +2666,12 @@ based upon the specific quality requirements</p>
 </div>
 </li>
 <li>
-<p>Inspect the data created, modified and queried by the system, for structure, size, volume or specialities</p>
+<p>Inspect the data created, modified and queried by the system for structure, size, volume or specialities</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Finally, do <a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a> of major issues found together with appropriate stakeholders.</p>
+<p>Finally, conduct a <a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a> for the discovered major issues in close collaboration with the appropriate stakeholders.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -2681,7 +2680,7 @@ based upon the specific quality requirements</p>
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Never start solving problems until you have a thorough understanding of current stakeholder requirements. Otherwise you risk wasting effort in areas which no influential stakeholder cares about.
+Never start solving problems until you have a thorough understanding of the current stakeholder requirements. Otherwise you&#8217;ll risk wasting effort in areas which no influential stakeholder cares about.
 </td>
 </tr>
 </table>
@@ -2924,8 +2923,7 @@ tactics against the found risks.
 </table>
 </div>
 <div class="paragraph">
-<p>ATAM has been successfully applied by many organizations to a variety of systems. It is widely regarded as the most important
-systematic approach to qualitative system/architecture analysis<span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p>
+<p>ATAM has been successfully applied by many organizations to a variety of systems. It is widely regarded as the most important systematic approach to qualitative system/architecture analysis <span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span>.</p>
 </div>
 </div>
 <div class="sect4">
@@ -3092,10 +3090,10 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <div class="ulist">
 <ul>
 <li>
-<p>Real-world examples of software quality requirements. Currently available only in German language on <a href="https://bitbucket.org/arc42/quality-requirements" class="bare">https://bitbucket.org/arc42/quality-requirements</a> (this document is likely to be moved to github under the arc42 organization).</p>
+<p>Real-world examples of software quality requirements. Currently available only in German language on <a href="https://bitbucket.org/arc42/quality-requirements" class="bare">https://bitbucket.org/arc42/quality-requirements</a> (this document is likely to be moved to GitHub under the arc42 organization).</p>
 </li>
 <li>
-<p><a href="#Clements-ATAM">[Clements-ATAM]</a>, contains a brief description of scenario-based quality description and details how to setup such workshops.</p>
+<p><a href="#Clements-ATAM">[Clements-ATAM]</a> contains a brief description of scenario-based quality description and details on how to setup such workshops.</p>
 </li>
 </ul>
 </div>
@@ -3146,7 +3144,7 @@ technical environment.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>influence critical quality requirements of the system (e.g. reliability, security, throuput, runtime performance, operation cost)</p>
+<p>influence critical quality requirements of the system (e.g. reliability, security, throughput, runtime performance, operation cost)</p>
 </li>
 <li>
 <p>are overly complex</p>
@@ -3192,8 +3190,7 @@ importance of this topic, aim42 devotes an <a href="#User-Analysis">own section<
 <div class="sect4">
 <h5 id="_example"><a class="anchor" href="#_example"></a>Example</h5>
 <div class="paragraph">
-<p>In the context diagram example of fig. <a href="#context-view-example">Example of Context View</a> you see some user roles and some external systems. The context diagram is accompanied by a tabular
-description of the elements and/or relationships.
+<p>In the context diagram example of fig. <a href="#context-view-example">Example of Context View</a> you see some user roles and some external systems. The context diagram is accompanied by a tabular description of the elements and/or relationships.
 <span class="small">Example taken from the <a href="https://github.com/aim42/htmlSanityCheck">HtmlSanityCheck (HtmlSC)</a> open source project.</span></p>
 </div>
 <div id="context-view-example" class="imageblock">
@@ -3217,16 +3214,16 @@ description of the elements and/or relationships.
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">documents software with toolchain that generates html. Wants to ensure that
-links within this html are valid.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">documents software with toolchain that generates HTML. Wants to ensure that
+links within this HTML are valid.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">build system</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">local html files</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HtmlSC reads and parses local html files and
+<td class="tableblock halign-left valign-top"><p class="tableblock">local HTML files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HtmlSC reads and parses local HTML files and
 performs sanity checks within those.</p></td>
 </tr>
 <tr>
@@ -3281,7 +3278,7 @@ responsible for this requirement will likely contain risks.</p>
 <p><a href="#_analyze_data_access_protection">Data Access Protection</a></p>
 </li>
 <li>
-<p>Analyze Data distribution, replication and syncing,</p>
+<p>Analyze Data Distribution, Replication and Syncing</p>
 </li>
 <li>
 <p><a href="#_analyze_backup">Backup</a></p>
@@ -3297,12 +3294,12 @@ responsible for this requirement will likely contain risks.</p>
 <p>At first, make the <em>structure</em> of the existing data explicit,
 e.g. by creating a rough sketch of a data model as either
 informal diagrams, entity-relationship or class diagrams.
-Focus should be on overview: Where and how are what kinds of
-data stored in what format. What are the relationships between
+Focus should be on overview: Where and how are which kinds of
+data stored in which format. What are the relationships between
 the data elements?</p>
 </div>
 <div class="paragraph">
-<p>Second, create an explicit model the <em>required domain data structures</em>.</p>
+<p>Second, create an explicit model of the <em>required domain data structures</em>.</p>
 </div>
 <div class="paragraph">
 <p>Some typical questions might help in finding problems:</p>
@@ -3337,7 +3334,7 @@ or unsuitable indirections involved?</p>
 <p>How large are the results in number or volume?</p>
 </li>
 <li>
-<p>Do relationships between query results have to be computed, or do appropriate indices exist?</p>
+<p>Do relationships between query results have to be computed or do appropriate indices exist?</p>
 </li>
 </ul>
 </div>
@@ -3500,7 +3497,7 @@ Many software developers we met violated the basic rules of debugging. They work
 <div class="sect4">
 <h5 id="_description_5"><a class="anchor" href="#_description_5"></a>Description</h5>
 <div class="paragraph">
-<p>Debuggers are well-known and important tools for most software developers. Yet - finding bugs is often more difficult than expected - despite powerful tool support.</p>
+<p>Debuggers are well-known and important tools for most software developers. Yet finding bugs is often more difficult than expected - despite powerful tool support.</p>
 </div>
 <div class="paragraph">
 <p>Approach the search for bugs, errors in the following order:</p>
@@ -3526,20 +3523,20 @@ Many software developers we met violated the basic rules of debugging. They work
 <p><strong>Reproduce the error in development environment</strong>: This ensures your development environment is consistent to the live system.</p>
 </li>
 <li>
-<p><strong>Call your error assumption into question</strong>. Realize what is symptom and what is cause of the error.</p>
+<p><strong>Rephrase your error assumption into a question</strong>: Distinguish symptoms from the cause of the error by asking "why?" a few times.</p>
 </li>
 <li>
 <p><strong>Identify the building blocks</strong> which are involved in the error path.</p>
 </li>
 <li>
-<p><strong>Understand the error scenario</strong>: You need to know the business or technical scenario (aka the process or activity flow) of the error: What steps within the system or at its external interfaces precede the error? This step is an example of <a href="#View-Based-Understanding"><span class="pattern">View Based Understanding</span></a>.</p>
+<p><strong>Understand the error scenario</strong>: You need to know the business or technical scenario (aka the process or activity flow) of the error: Which steps within the system or its external interfaces precede the error? This step is an example of <a href="#View-Based-Understanding"><span class="pattern">View Based Understanding</span></a>.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Make this scenario <strong>explicit</strong> - draw or scribble a diagram. See the diagram "Divide and conquer" below as an example. Here the error arises in building block 1. You suppose the processing within the system is spaned by the blue marked data path in which the building blocks 2 to 6 are involved. Cut the path in half and check your assumption at the transition of one half to the other (here beetween building block 4 and 3). If no error is observable here then the error occures after the considered transiton. Otherwise you have to look for the error before the transition.</p>
+<p>Make this scenario <strong>explicit</strong> - draw or scribble a diagram. See the diagram "Divide and conquer" below as an example. Here the error arises in building block 1. You suppose the processing within the system is spanned by the blue marked data path in which the building blocks 2 to 6 are involved. Cut the path in half and check your assumption at the transition of one half to the other (here between building block 4 and 3). If no error is observable here then the error occurs after the considered transition. Otherwise you have to look for the error before the transition.</p>
 <div class="imageblock">
 <div class="content">
-<img src="images/debugging-divide-and-conquer.jpg" alt="Divide and conqer">
+<img src="images/debugging-divide-and-conquer.jpg" alt="Divide and conquer">
 </div>
 <div class="title">Figure 10. Divide and conquer debugging tactics</div>
 </div>
@@ -3555,13 +3552,13 @@ your scenario.</p>
 </div>
 </li>
 <li>
-<p><strong>Look, don&#8217;t imagine</strong>: Sherlock Holmes, the succesful detective has formulated the golden rule of debugging: "<em>It&#8217;s a capital mistake to theorize before one has data</em>". Instrument the system or use step debugging. Look <em>exactly</em> what the messages are, read carefully.</p>
+<p><strong>Look, don&#8217;t imagine</strong>: Sherlock Holmes, the successful detective has formulated the golden rule of debugging: "<em>It&#8217;s a capital mistake to theorize before one has data</em>". Instrument the system or use step debugging. Look <em>exactly</em> what the messages are, read carefully.</p>
 </li>
 <li>
-<p><strong>Change only one thing at a time</strong> and test if the error disappears: Aim for errors with a pistol, not with a scattergun.</p>
+<p><strong>Change only one thing at a time</strong> and test if the error disappears: Aim for errors with a sniper rifle, not with a shotgun.</p>
 </li>
 <li>
-<p>Apply the <strong>4-Eye-Principle</strong>: Describe the problem and your state-of-debugging to somebody else. Especially clarify all your assumptions.</p>
+<p>Apply the <strong>4-Eye-Principle</strong>: Describe the problem and your state of debugging to somebody else. Especially clarify all your assumptions.</p>
 </li>
 </ol>
 </div>
@@ -3569,7 +3566,7 @@ your scenario.</p>
 <div class="sect4">
 <h5 id="_experiences_3"><a class="anchor" href="#_experiences_3"></a>Experiences</h5>
 <div class="paragraph">
-<p>If locating errors takes very long, you&#8217;re propably facing one of the following issues:</p>
+<p>If locating errors takes very long, you&#8217;re probably facing one of the following issues:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3593,7 +3590,7 @@ your scenario.</p>
 <p>Whenever a bug or misbehavior of a program is reported, debugging can help to identify its root cause.</p>
 </li>
 <li>
-<p>Debugging can help in understanding a system by make its inner working explicit.</p>
+<p>Debugging can help to understand a system by make its inner working explicit.</p>
 </li>
 </ul>
 </div>
@@ -3757,7 +3754,7 @@ behavior of system classes or libraries.</p>
 <ul>
 <li>
 <p>Identify and describe the concern that shall be explored (e.g.
-obectect-creation, function entries and exits, code execution or somethings
+object creation, function entries and exits, code execution or something
 else that can be described in the terms of the mechanism used).</p>
 </li>
 <li>
@@ -3781,11 +3778,11 @@ the system</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>In real life, since the mechanisms of instrumentation vary widely, specific ways
+<p>In real life, since the mechanisms of instrumentation varies widely, specific ways
 must be found for each scenario.</p>
 </div>
 <div class="paragraph">
-<p>While tools like AspectJ provide easy ways to instrument Java-Code and Ruby’s
+<p>While tools like AspectJ provide easy ways to instrument Java code and Ruby’s
 metaprogramming model allows for easy introduction of crosscutting functionality
 the same gets harder to do with other languages. In some languages it may be
 necessary to modify a dynamically linked library with central operations to
@@ -3819,10 +3816,10 @@ system back with the original system!</p>
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-even if used cautiously, the instrumentation the system under design can
+even if used cautiously, the instrumentation of the system under design can
 entail heavy performance penalties (on execution time, space used, bandwith
-etc.) so alway make sure that there is a quick way to switch back to the
-original un-instrumented version.
+etc.) so always make sure that there is a quick way to switch back to the
+original non-instrumented version.
 </td>
 </tr>
 </table>
@@ -3862,7 +3859,7 @@ real fast.</p>
 <div class="sect4">
 <h5 id="_intent_10"><a class="anchor" href="#_intent_10"></a>Intent</h5>
 <div class="paragraph">
-<p>Analyse entries from issue-tracker to identify critical areas, components or stakeholders.</p>
+<p>Analyse entries from issue tracker to identify critical areas, components or stakeholders.</p>
 </div>
 <div class="paragraph">
 <p>Under discussion!</p>
@@ -4212,7 +4209,7 @@ Look for:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>wether quality requirements can be met by the system,</p>
+<p>whether quality requirements can be met by the system,</p>
 </li>
 <li>
 <p>which specific quality requirements are risks with respect to the current architecture,</p>
@@ -4241,7 +4238,7 @@ Look for:</p>
 <p>analyze the architectural approach the system takes,</p>
 </li>
 <li>
-<p>decide wether this approach seems appropriate or risky</p>
+<p>decide whether this approach seems appropriate or risky</p>
 </li>
 </ol>
 </div>
@@ -4338,7 +4335,7 @@ Look for:</p>
 <div class="sect4">
 <h5 id="_description_14"><a class="anchor" href="#_description_14"></a>Description</h5>
 <div class="paragraph">
-<p>A specialisation of <a href="#Questionnaire">questionnaire</a> - targeted to be used by stakeholders (aka your interview partners). As with the more general <a href="#Questionnaire">questionnaire</a> you need to collect appropriate topics, questions and suggestions. Remember to apply <a href="#Stakeholder-Specific-Communication">stakeholder-specific communication</a>: It might be useful to create different questionnaires per stakeholder or stakeholder-group. That&#8217;s more work for you as interviewer, but will lead to better interview results.</p>
+<p>A specialisation of <a href="#Questionnaire">questionnaire</a> - targeted to be used by stakeholders (aka your interview partners). As with the more general <a href="#Questionnaire">questionnaire</a> you need to collect appropriate topics, questions and suggestions. Remember to apply <a href="#Stakeholder-Specific-Communication">stakeholder-specific communication</a>: It might be useful to create different questionnaires per stakeholder or a group of stakeholders. This can lead to more work for you as interviewer, but will also lead to better interview results.</p>
 </div>
 <div class="paragraph">
 <p>Mix open and closed questions:</p>
@@ -4441,10 +4438,10 @@ formulate questions covering the topics or areas of information that:</p>
 <div class="sect4">
 <h5 id="_experiences_7"><a class="anchor" href="#_experiences_7"></a>Experiences</h5>
 <div class="paragraph">
-<p>I (Gernot Starke) used such questionnaires within several technical reviews and audits. They helped my stay on track, cover a multitude of topics, even when I conducted several interviews consecutively.</p>
+<p>I (Gernot Starke) used such questionnaires within several technical reviews and audits. They helped me to stay on track, cover a multitude of topics, even when I conducted several interviews consecutively.</p>
 </div>
 <div class="paragraph">
-<p>I usually printed one copy of the questionnaire for every interview I had planned, so I could sketch notes - and always had the context of my notes already printed, saving a lot of note-taking effort.</p>
+<p>I usually printed out one copy of the questionnaire for every interview I had planned, so I could sketch notes - and always had the context of my notes already printed, saving a lot of note-taking effort.</p>
 </div>
 </div>
 <div class="sect4">
@@ -4887,7 +4884,7 @@ employee organization.</p>
 different departments, roles, management-levels. Include at least business-people, IT- and business manager, end-user, developer, tester, customer-service, subject-matter-expert.</p>
 </div>
 <div class="paragraph">
-<p>Plan the interview dates at least 5-10 days in advance, chose a quiet location, make sure nobody can overhear your interviews.</p>
+<p>Plan the interview dates at least 5-10 days in advance, choose a quiet location, make sure nobody can overhear your interviews.</p>
 </div>
 <div class="paragraph">
 <p>If possible, send out a stakeholder- or role-specific <a href="#Pre-Interview-Questionnaire"><span class="pattern">Pre Interview Questionnaire</span></a> some days in advance.</p>
@@ -4938,7 +4935,7 @@ different departments, roles, management-levels. Include at least business-peopl
 </div>
 </li>
 <li>
-<p>How are processes working? What are the differences between <em>theory</em> and <em>practice</em>?</p>
+<p>How are the processes working? What are the differences between <em>theory</em> and <em>practice</em>?</p>
 </li>
 <li>
 <p>If you had time, money and qualified people, what top-3 measures do you propose?</p>
@@ -5023,7 +5020,7 @@ At the end of the interview, give a short feedback and summarize important resul
 <div class="sect4">
 <h5 id="_description_22"><a class="anchor" href="#_description_22"></a>Description</h5>
 <div class="paragraph">
-<p>Use source code analysis tools to analyse static properties of the systems' source code,
+<p>Use source code analysis tools to analyse static properties of the system&#8217;s source code,
 e.g. the following:</p>
 </div>
 <div class="dlist">
@@ -5053,7 +5050,7 @@ e.g. the following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Many metrics and tools are tailored to OO languages.</p>
+<p>Many metrics and tools are tailored to object-oriented programming languages.</p>
 </li>
 <li>
 <p>Dynamically typed languages often have limited tool support.</p>
@@ -5115,7 +5112,7 @@ e.g. the following:</p>
 <div class="sect4">
 <h5 id="_description_23"><a class="anchor" href="#_description_23"></a>Description</h5>
 <div class="paragraph">
-<p>Natural language has the risk that semantics on the senders' side differs from semantics of the receiver: People simply misunderstand each other because <em>meaning</em> of words differs between people.</p>
+<p>Natural language has the risk that semantics on the sender&#8217;s side differs from semantics of the receiver: People simply misunderstand each other because the <em>meaning</em> of words differs between people.</p>
 </div>
 <div class="paragraph">
 <p>Therefore: what people mean/want/need is sometimes not what they say. This is due either to
@@ -5137,7 +5134,7 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 <div class="sect4">
 <h5 id="_applicability_11"><a class="anchor" href="#_applicability_11"></a>Applicability</h5>
 <div class="paragraph">
-<p>Apply this pattern whenever you communicate verbally to other people (aka stakeholders), e.g. in meetings, conferences, phone calls etc.</p>
+<p>Apply this pattern whenever you communicate verbally to other people (aka stakeholders) e.g. in meetings, conferences, phone calls etc.</p>
 </div>
 <div class="paragraph">
 <p>Especially when verbal communication differs from paralanguage or gestures, you should clarify what your communication partner really meant.</p>
@@ -5175,7 +5172,7 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 <div class="sect4">
 <h5 id="_references_8"><a class="anchor" href="#_references_8"></a>References</h5>
 <div class="paragraph">
-<p>Special thanx to Phillip Ghadir (who is too humble to claim this discovery) for giving this pattern its name.</p>
+<p>Special thanks to Phillip Ghadir (who is too humble to claim this discovery) for giving this pattern its name.</p>
 </div>
 </div>
 </div>
@@ -5184,11 +5181,11 @@ clarify by giving explicit <a href="#Fast-Feedback"><span class="pattern">Fast F
 <div class="sect4">
 <h5 id="_intent_25"><a class="anchor" href="#_intent_25"></a>Intent</h5>
 <div class="paragraph">
-<p>Get an overview of user-categories or -groups, their goals, requirements
+<p>Get an overview of user categories or groups, their goals, requirements
 and expectations. Find out about issues users have with the system. Related to <a href="#Stakeholder-Analysis"><span class="pattern">Stakeholder Analysis</span></a>, <a href="#Context-Analysis"><span class="pattern">Context-Analysis</span></a> and <a href="#Requirements-Analysis"><span class="pattern">Requirements-Analysis</span></a>.</p>
 </div>
 <div class="paragraph">
-<p>In contrast to the other analysis practices, user-analysis can also include
+<p>In contrast to the other analysis practices, user analysis can also include
 useability, layout or design considerations.</p>
 </div>
 </div>
@@ -5323,8 +5320,7 @@ and reason about the code structure</p>
 <div class="sect3">
 <h4 id="Bus-Factor"><a class="anchor" href="#Bus-Factor"></a>2.3.26. <span class="pattern">Bus factor</span></h4>
 <div class="paragraph">
-<p>The bus factor is a measurement of the risk resulting from information and capabilities not being shared among team
-members, from the phrase "in case they get hit by a bus" (Wikipedia).</p>
+<p>The bus factor is a measurement of the risk resulting from information and capabilities not being shared among team members, from the phrase "in case they get hit by a bus" (Wikipedia).</p>
 </div>
 <div class="sect4">
 <h5 id="_intent_27"><a class="anchor" href="#_intent_27"></a>Intent</h5>
@@ -5335,17 +5331,16 @@ members, from the phrase "in case they get hit by a bus" (Wikipedia).</p>
 <div class="sect4">
 <h5 id="_description_26"><a class="anchor" href="#_description_26"></a>Description</h5>
 <div class="paragraph">
-<p>In an ideal world, the whole team owns the all code and anybody can safely change anything. Often this is not the case,
-because</p>
+<p>In an ideal world, the whole team owns the all code and anybody can safely change anything. Often this is not the case, because</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>the (monolithic) system has already grown so large and complex so that knowing all the details and concepts are too overwhelming for
+<p>the (monolithic) system has already grown so large and complex that knowing all the details and concepts are too overwhelming for
 a single person</p>
 </li>
 <li>
-<p>requirements of certain parts of the domain are always given (by the management) to the same developer, because this
+<p>requirements of certain parts of the domain are always given to the same developer (by the management), because this
 developer knows everything about the domain and can therefore implement these requirements very fast. Any newbie would need
 a lot of time to achieve small things and the organisation takes on this organisational debt (they gain an advantage
 short term, but it could be very problematic long term), because they don&#8217;t want to invest in distributing knowledge</p>
@@ -5905,7 +5900,7 @@ time and budget (but they also had no market pressure for new features)</p>
 <p>Netscape&#8217;s market share dropped to almost zero (and stayed there), because of their <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">rewrite</a></p>
 </li>
 <li>
-<p>Borland and Microsoft sank a lot of money with trying to rewrite Quattro Pro and Word (which eventually failed)</p>
+<p>Borland and Microsoft wasted a lot of money with trying to rewrite Quattro Pro and Word (which eventually failed)</p>
 </li>
 <li>
 <p>Logistics company lost 4 years and rewrote the system twice until they could proceed with new features</p>
@@ -5955,7 +5950,7 @@ directions.</p>
 <li>
 <p>The old system usually collected a lot of bad Technical Debt (that&#8217;s often the main reason we rewrite). In the beginning of the
 rewrite everything is good, the code is clean. But because you chase a moving target, need to implement new
-features or things are just harder as expected, you are running out of time, which introduces a lot of bad Technical Debt
+features or things that are just harder as expected, you are running out of time, which introduces a lot of bad Technical Debt
 in the new system. You replaced a badly implemented system with old technology with a badly implemented system using new technology.</p>
 </li>
 <li>
@@ -5970,7 +5965,7 @@ is therefore a major risk.</p>
 <p>As Joel Spolsky <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">put it</a>: "It&#8217;s important to remember that when
 you start from scratch there is absolutely no reason to believe that you are going to do a better job than you did the
 first time. First of all, you probably don&#8217;t even have the same programming team that worked on version one, so you don&#8217;t
-actually have "more experience". You&#8217;re just going to make most of the old mistakes again, and introduce some new problems
+actually have "more experience". You&#8217;re just going to make most of the old mistakes again and introduce some new problems
 that weren&#8217;t in the original version."</p>
 </li>
 </ul>
@@ -5979,7 +5974,7 @@ that weren&#8217;t in the original version."</p>
 <div class="sect4">
 <h5 id="_applicability_14"><a class="anchor" href="#_applicability_14"></a>Applicability</h5>
 <div class="paragraph">
-<p>You should consider a rewrite (not necessarily bing bang) for the following reasons:</p>
+<p>You should consider a rewrite (not necessarily big bang) for the following reasons:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -6029,7 +6024,7 @@ needed to implement them are so substantial that a rewrite is necessary</p>
 <p>Even simple bug fixes take too long because of the complexity of existing code and might introduce new bugs</p>
 </li>
 <li>
-<p>New features take too long and cost too much because of the interdependence of the codebase (new features cannot be isolated, and therefore affect existing features)</p>
+<p>New features take too long and cost too much because of the interdependence of the codebase (new features cannot be isolated and therefore affect existing features)</p>
 </li>
 <li>
 <p>Deployment is hard or impossible to automate, takes too long and is really risky. In fact, it fails often.</p>
@@ -6086,7 +6081,7 @@ the experience of the old system</p>
 </div>
 </li>
 <li>
-<p>In case the application cannot be rewritten within 3 month, you and your stakeholders need besides enough budget and manpower
+<p>In case the application cannot be rewritten within 3 months, you and your stakeholders need besides enough budget and manpower
 a lot of patience to rewrite the application completely. Getting impatient and rush into the release creates bad Technical Debt</p>
 </li>
 <li>
@@ -6157,7 +6152,7 @@ new technology. In any case, they will loose their strong expert position for so
 <div class="sect4">
 <h5 id="_description_31"><a class="anchor" href="#_description_31"></a>Description</h5>
 <div class="paragraph">
-<p>The Database First approach, also called the Forward Migration Method, involves the initial
+<p>The Database First approach (also called the Forward Migration Method) involves the initial
 migration of legacy data to a modern, probably relational, Database Management System (DBMS) and
 then incrementally migrating the legacy applications and interfaces.
 While legacy applications and interfaces are being redeveloped, the legacy system remains operable. This
@@ -6165,7 +6160,7 @@ methodology falls within a group of methodologies which allow for the interopera
 legacy and target systems. This interoperability is provided by a module known as
 Gateway: a software module introduced between components to mediate between them. Gateways
 can play several roles in migration, insulating certain components from changes being made to others,
-translating requests and data between components or co-ordinating queries and updates between components.</p>
+translating requests and data between components or coordinating queries and updates between components.</p>
 </div>
 <div class="paragraph">
 <p>The concrete gateway used by the Database First approach is called Forward Gateway. It enables the
@@ -6181,20 +6176,14 @@ by the new database service are similarly translated for used by legacy applicat
 </div>
 <div class="paragraph">
 <p>The main advantage of this approach is that once the legacy data has been migrated, the latest programming
-languages and reporting tools can be used to access the data providing immediate productivity
-benefits.  The legacy system can remain operational while legacy applications and interfaces are rebuilt and
-migrated to the target system one-by-one. When the migration is complete, the gateway will no longer be
-required and can be decommissioned as the old legacy system is shut down.</p>
+languages and reporting tools can be used to access the data providing immediate productivity benefits. The legacy system can remain operational while legacy applications and interfaces are rebuilt and migrated to the target system one-by-one. When the migration is complete, the gateway will no longer be required and can be decommissioned as the old legacy system is shut down.</p>
 </div>
 <div class="paragraph">
 <p>There are several disadvantages to this approach, in particular, it is only applicable to fully decomposable
-legacy systems where a clean interface to the legacy database service exists. Also, before migration can start,
-the new database structure must be defined.  The major risk with this activity is that the structure of the legacy
-database may adversely influence the structure of the new database.</p>
+legacy systems where a clean interface to the legacy database service exists. Also, before migration can start, the new database structure must be defined. The major risk with this activity is that the structure of the legacy database may adversely influence the structure of the new database.</p>
 </div>
 <div class="paragraph">
-<p>The Forward Gateway employed can be very difficult, and sometimes even impossible, to construct due to the differences between
-the source and the target in technology, in database structure, constraints etc..</p>
+<p>The Forward Gateway employed can be very difficult, and sometimes even impossible, to construct due to the differences between the source and the target in technology, in database structure, constraints etc..</p>
 </div>
 <div class="paragraph">
 <p>Overall this is a rather simplistic approach to legacy system migration. The migration of the legacy data may
@@ -6205,9 +6194,7 @@ mission critical information systems this may be unacceptable.</p>
 <p>(taken from BISBAL, J. et.al.)</p>
 </div>
 <div class="paragraph">
-<p>The database first approach (also known as forward migration method) provides for legacy databases to be moved unchanged into a
-relational database management system (RDBMS) to incrementally develop the user interface and the applications on the target system.
-But there is a need for a gateway to accept database calls from the legacy system and to redirect them to the new database system.</p>
+<p>The database first approach (also known as forward migration method) provides for legacy databases to be moved unchanged into a relational database management system (RDBMS) to incrementally develop the user interface and the applications on the target system. But there is a need for a gateway to accept database calls from the legacy system and to redirect them to the new database system.</p>
 </div>
 <div class="paragraph">
 <p>As BATEMAN and MURPHY say, there are a few problems and challenges:</p>
@@ -6371,7 +6358,7 @@ operated in parallel throughout the migration project.
 The target applications are gradually rebuilt on the
 target platform using modern tools and technology.
 Initially the target system will be quite small but will
-grow as the migration progresses.  Eventually the target
+grow as the migration progresses. Eventually the target
 system should perform all the functionality of the
 legacy system and the old legacy system can be retired.</p>
 </div>
@@ -6388,28 +6375,28 @@ shown in Fig. 1, employing a
 combination of forward and reverse gateways.  The
 approach may involve data being duplicated across both
 the legacy database and the target database.  To
-maintain data integrity, a Transaction Co-ordinator is
+maintain data integrity, a Transaction Coordinator is
 employed which intercepts all update requests, from
 legacy or target applications, and processes them to
 identify whether they refer to data replicated in both
-databases.  If they do, the update is propagated to both
+databases. If they do, the update is propagated to both
 databases using a two-phase commit protocol as for
 distributed database systems.</p>
 </div>
 <div class="paragraph">
 <p>Analysing non-decomposable legacy components
 can be very difficult.  In the worst case the component
-must be treated as a black box.  The best that can be
+must be treated as a black box. The best that can be
 achieved is to discover its functionality and try to elicit
-as much legacy data as possible.  Sometimes using
-existing legacy applications, (e.g., database query,
-report generation, and access routines), is the only way
-to extract the legacy data.  Once the functionality has
-been ascertained, the component can be re-developed
-from scratch.  It can often be very difficult to identify
-when legacy data or functions are independent; in many
+as much legacy data as possible. Sometimes using
+existing legacy applications (e.g. database query,
+report generation and access routines) are the only way
+to extract the legacy data. Once the functionality has
+been ascertained, the component can be redeveloped
+from scratch. It can often be very difficult to identify
+when legacy data or functions are independent. In many
 cases they may simply have to be replicated and target
-copies co-ordinated until the entire legacy system can
+copies coordinated until the entire legacy system can
 be safely retired.</p>
 </div>
 <div class="paragraph">
@@ -6419,7 +6406,7 @@ required in the Database First and Database Last
 approaches. This is significant in a mission critical
 environment. However, this approach suffers from the
 overhead not only of the other two approaches but also
-the added complexity introduced by the co-ordinator.</p>
+the added complexity introduced by the coordinator.</p>
 </div>
 <div class="paragraph">
 <p>(taken from BISBAL, J. et.al.)</p>
@@ -6434,7 +6421,7 @@ and non-decomposable legacy systems.  In reality, few
 legacy systems fit easily into a single category.  Most
 legacy systems have some decomposable components,
 some which are semi-decomposable and others which
-are non-decomposable, i.e.  what is known as a Hybrid
+are non-decomposable, i.e. what is known as a Hybrid
 Information System architecture.</p>
 </div>
 </div>
@@ -6453,39 +6440,37 @@ Information System architecture.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>BISBAL, J. et.al.; A Survey of Research into Legacy System Migration. Technical Report TCD-CS-1997-01, Computer Science Department, Trinity College Dublin, 1997. <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051" class="bare">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051</a></p>
+<p>BISBAL, J. et.al.; A Survey of Research into Legacy System Migration. Technical Report TCD-CS-1997-01, Computer Science Department, Trinity College Dublin, 1997. <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051" class="bare">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.9051</a>
+==== <span class="pattern">Butterfly-Methodology</span></p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect3">
-<h4 id="Butterfly-Methodology"><a class="anchor" href="#Butterfly-Methodology"></a>4.4.6. <span class="pattern">Butterfly-Methodology</span></h4>
 <div class="sect4">
 <h5 id="_intent_35"><a class="anchor" href="#_intent_35"></a>Intent</h5>
 <div class="paragraph">
-<p>Data-Migration Method without the need for gateways.
+<p>Data migration method without the need of gateways.
 Enables zero-downtime migrations by working with temporary data stores.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_description_34"><a class="anchor" href="#_description_34"></a>Description</h5>
 <div class="paragraph">
-<p>The Butterfly-Methodology focuses on data. There is no need for a gateway like in the Chicken-Little Strategy.
-At the beginning there is a initial data migration, which can be used to develop the new application
+<p>The Butterfly methodology focuses on data. There is no need for a gateway like in the Chicken-Little Strategy.
+At the beginning there is an initial data migration, which can be used to develop the new application
 without an influence on the legacy system. When the migration process starts, the data of the legacy system
 gets freezed and set to read-only.
-From now on data changes will be stored in a temp-store.
-A Data-Access-Allocator (DAA) decides, if a request has to be send to the temp-store (for already changed data) or to the original database.
-With the help of a Chrysalizer (Data-Transformator), where transformation rules are implemented, all the data from the read-only database will be moved to the new system.
-No data will be lost, because changes are written to the first temp-store.
-When the inital migration is finished, the data of the temp-store will be migrated; changes will be written to a second temp-store and the first one
-is set to read-only. This process will continue until the time period of the migration is so short, that there was no change in between.
-At this moment, the legacy system can be shut down, the last temp-store gets migrated and the new system is turned on.
+From now on data changes will be stored in a temporarily store.
+A Data Access Allocator (DAA) decides, if a request has to be send to temp store (for already changed data) or to the original database.
+With the help of a Chrysalizer (a data transformator), where transformation rules are implemented, all the data from the read-only database will be moved to the new system.
+No data will be lost, because changes are written to the first temp store.
+When the initial migration is finished, the data of the temp-store will be migrated, changes will be written to a second temp store and the first one
+is set to read-only. This process will continue until the time period of the migration is so short, that there will be no change in between the two stores anymore.
+At this moment, the legacy system can be shut down, the last temp store gets migrated and the new system is turned on.
 This approach helps to migrate a productive system without downtime.
-Another pro is, that the process can be canceled at any time by rolling back the temp-stores. It is also possible to do tests of the parallel
+Another pro is, that the process can be canceled at any time by rolling back the temp stores. It is also possible to execute tests of the parallel
 development with actual data.
-A problem can be the amount of hardware that is needed to keep all the temp-stores if you have a mass of data.
+A problem can be the amount of hardware that is needed to keep all the temp stores if you have a massive amount of data.
 Also it can be very expensive to implement the DAA.</p>
 </div>
 <div class="imageblock">
@@ -6503,7 +6488,7 @@ Also it can be very expensive to implement the DAA.</p>
 <h5 id="_risks_2"><a class="anchor" href="#_risks_2"></a>Risks</h5>
 <div class="paragraph">
 <p>If the Butterfly Method will be successful depends on the factor v / u,
-where u is the speed of the Chrysalizer and v the speed of the DAA to setup new temp-stores.
+where u is the speed of the Chrysalizer and v the speed of the DAA to setup new temp stores.
 If v = 0 this approach is similar to the <a href="#Big-Bang Strategy">[Big-Bang Strategy]</a>, if v &gt; u the migration will never end.</p>
 </div>
 </div>
@@ -6516,7 +6501,7 @@ If v = 0 this approach is similar to the <a href="#Big-Bang Strategy">[Big-Bang 
 <div class="sect4">
 <h5 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>Consequences</h5>
 <div class="paragraph">
-<p>Enables zero-downtime migrations by working with temporary data stores.
+<p>Enables zero downtime migrations by working with temporary data stores.
 If the amount of data is huge, there is a need for a lot of hardware.</p>
 </div>
 <div class="paragraph">
@@ -6525,16 +6510,16 @@ If the amount of data is huge, there is a need for a lot of hardware.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>a very good unterstanding of the old and new system</p>
+<p>a very good understanding of the old and new system</p>
 </li>
 <li>
-<p>a initial migration without errors / mistakes</p>
+<p>an initial migration without errors / mistakes</p>
 </li>
 <li>
 <p>a fast Chrysalizer</p>
 </li>
 <li>
-<p>a efficient Data-Access-Allocator</p>
+<p>a efficient Data Access Allocator</p>
 </li>
 </ul>
 </div>
@@ -6568,7 +6553,7 @@ If the amount of data is huge, there is a need for a lot of hardware.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strangler-approach"><a class="anchor" href="#strangler-approach"></a>4.4.7. <span class="pattern">Strangler Approach</span></h4>
+<h4 id="strangler-approach"><a class="anchor" href="#strangler-approach"></a>4.4.6. <span class="pattern">Strangler Approach</span></h4>
 <div class="sect4">
 <h5 id="_intent_36"><a class="anchor" href="#_intent_36"></a>Intent</h5>
 
@@ -6576,7 +6561,7 @@ If the amount of data is huge, there is a need for a lot of hardware.</p>
 <div class="sect4">
 <h5 id="_description_35"><a class="anchor" href="#_description_35"></a>Description</h5>
 <div class="paragraph">
-<p>Rewriting an old system "big bang" is a risky endeavour. It is harder than you think (see "Big Bang Approach in aim42").</p>
+<p>Rewriting an old system "big bang" is a risky endeavour. It is harder than you think (see "Big Bang Approach" in aim42).</p>
 </div>
 <div class="paragraph">
 <p>An alternative route is to gradually create a new system around the edges of the old, letting it grow slowly over
@@ -7636,11 +7621,11 @@ Sending an SNMP-Trap might not be feasible in the environment.<br></p>
 <div class="paragraph">
 <p>This is a classical situation that calls for trade-off decisions, but since this
 piece of code should never be called anyway things like sending an e-mail or
-calling some webservices are not so far out of the question.</p>
+calling some web services are not so far out of the question.</p>
 </div>
 <div class="paragraph">
 <p>If a huge number of deployments is possible without problems it can also be
-feasible to de-escalate slowly and use more and more intrusive ways to handle
+feasible to deescalate slowly and use more and more intrusive ways to handle
 the failed invariant&#8201;&#8212;&#8201;write a log entry in the first two weeks, send an SNMP
 trap in the next four weeks and after that send an e-mail (although it doesn&#8217;t
 hurt to keep the logging turned on).</p>
@@ -8114,7 +8099,7 @@ Your results will amaze or astonish some people. Although they would never have 
 </li>
 <li>
 <p><strong>Doubt</strong>:
-You will hear or read "Can&#8217;t be, impossible!"or similar expressions
+You will hear or read "Can&#8217;t be, impossible!" or similar expressions
 from some people. If these stakeholders can explain the reasons for their doubts, you might find ways to improve your explanation (maybe your issues were simply ill-formulated) or you have to look for additional and better ways to explain. Doubt can lead you to errors or ommissions in your own argumentation or conclusions.</p>
 <div class="paragraph">
 <p>Some doubtful stakeholders will be emotional - and therefore not open for rational or objective arguments. That&#8217;s a serious and difficult communication problem - beyond the scope of this guide.</p>
@@ -8134,7 +8119,7 @@ Findings are opposed, either actively or passively.</p>
 <li>
 <p><strong>Hostility</strong>, or "<em>Shoot the messenger</em>". Always remain calm and polite - but hard in your argumentation and facts. Hostile stakeholders can rarely be convinced of something, but need to be handled with diplomacy, politics and organizational skills (none of which we can cover here).</p>
 <div class="paragraph">
-<p>Be prepared for <em>hostile actions</em>, though: In case of critical issues, always keep details documentation of their origin. Be prepared to <em>proof</em> those issues, remove even minor omissions or formal weaknesses in your argumentation. Your issues and <a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a> has to be flawless and backed by meticulous research and management support. Ensure <a href="#Traceability"><span class="pattern">Traceability</span></a> of your chain of reasoning! Keep written records of <a href="#Stakeholder-Interviews">[Stakeholder-Interviews]</a> and of suspicious pieces of source code, or documentation.</p>
+<p>Be prepared for <em>hostile actions</em>, though: In case of critical issues, always keep details documentation of their origin. Be prepared to <em>proof</em> those issues, remove even minor omissions or formal weaknesses in your argumentation. Your issues and <a href="#Root-Cause-Analysis"><span class="pattern">Root Cause Analysis</span></a> has to be flawless and backed by meticulous research and management support. Ensure <a href="#Traceability"><span class="pattern">Traceability</span></a> of your chain of reasoning! Keep written records of <a href="#Stakeholder-Interviews">[Stakeholder-Interviews]</a> and of suspicious pieces of source code or documentation.</p>
 </div>
 </li>
 </ol>
@@ -8146,10 +8131,10 @@ Findings are opposed, either actively or passively.</p>
 <div class="sect3">
 <h4 id="_experiences_22"><a class="anchor" href="#_experiences_22"></a>5.6.3. Experiences</h4>
 <div class="paragraph">
-<p>In one audit of a European Logistic Company (&gt;40.000 employees) we found serious issues within their development processes, in addition to some issues in their source code. The process problems caused massive (&gt; 3month) delays in delivery of working software to production, whereas the pure software bugs were relatively minor in their consequences. When we presented these issues, all process-related issues were minimized or doubted by senior management of the IT-department.</p>
+<p>In one audit of a European Logistic Company (&gt; 40.000 employees) we found serious issues within their development processes, in addition to some issues in their source code. The process problems caused massive (&gt; 3 months) delays in delivery of working software to production, whereas the pure software bugs were relatively minor in their consequences. When we presented these issues, all process-related issues were minimized or doubted by senior management of the IT department.</p>
 </div>
 <div class="paragraph">
-<p>With the help of the CIO, we identified those minimizers to be the root-cause of most process-issues, as they had themselves introduced inefficient, formal and bloated processes.</p>
+<p>With the help of the CIO, we identified those minimizers to be the root cause of most process issues, as they had themselves introduced inefficient, formal and bloated processes.</p>
 </div>
 </div>
 <div class="sect3">
@@ -8382,8 +8367,8 @@ as easy as possible to link issues to improvements and vice versa.</p>
 <h4 id="_representation_and_tools_2"><a class="anchor" href="#_representation_and_tools_2"></a>5.12.3. Representation and Tools</h4>
 <div class="paragraph">
 <p>It&#8217;s difficult to decide how much formalism to apply in collecting issues and problems:
-Sometimes a wiki-page might suffice, for other systems a full-blown
-issue-tracker can be useful.</p>
+Sometimes a wiki page might suffice, for other systems a full-blown
+issue tracker can be useful.</p>
 </div>
 <div class="paragraph">
 <p>As always: documentation is only valuable if it can be found easily, which makes electronic approaches more viable.</p>
@@ -8564,15 +8549,15 @@ might use in preparing such documents.</p>
 <p>As a formal document (Word, PDF, etc.)</p>
 </li>
 <li>
-<p>As a collection of slides (Powerpoint, Keynote, etc.) and a presentation</p>
+<p>As a collection of slides (PowerPoint, Keynote, etc.) and a presentation</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>In general it is recommended to write the review results down in a well structured document. This form is suitable to contain a lot of details and background information, so that it is easy e.g. to trace back a recommendation to a stakeholder interview. A written document can (and should) contain all information needed to understand the review starting position, targets, approach and findings, without spoken words and additional explanations. If the results shall supplementary be presented to some audiences it is easy to create purposeful slides from this document.</p>
+<p>In general it is recommended to write the review results down in a well-structured document. This form is suitable to contain a lot of details and background information, so that it is easy e.g. to trace back a recommendation to a stakeholder interview. A written document can (and should) contain all information needed to understand the review starting position, targets, approach and findings, without spoken words and additional explanations. If the results shall supplementary be presented to some audiences it is easy to create purposeful slides from this document.</p>
 </div>
 <div class="paragraph">
-<p>A set of Powerpoint slides as only result is adequate if the customer has been closely involved in the review process and is mainly interested in the outcome and if there will definitely be a presentation given to all relevant stakeholders. In this case the creation of slides with the most important bullet points might be quicker than the writing of detailed, well formulated text.</p>
+<p>A set of PowerPoint slides as only result is adequate if the customer has been closely involved in the review process and is mainly interested in the outcome and if there will definitely be a presentation given to all relevant stakeholders. In this case the creation of slides with the most important bullet points might be quicker than the writing of detailed, well formulated text.</p>
 </div>
 </div>
 <div class="sect3">
@@ -8581,7 +8566,7 @@ might use in preparing such documents.</p>
 <p>In a review for a financial broker we agreed initially to deliver a detailed document with the results. When we were later asked to present the outcomes to two different audiences (engineers and management) it was quite easy to create specific slides for both of them from the ~ 40 pages of documentation.</p>
 </div>
 <div class="paragraph">
-<p>In another case we planned to present out review finding in one big meeting and so we wrapped all findings into briefly and concise slides. Later some executives who missed the meeting complained that they  needed some spoken explanations to understand the presentation document. We spent much more time in subsequently writing out the background information as if we had worked on a result document from beginning on.</p>
+<p>In another case we planned to present out review finding in one big meeting and so we wrapped all findings into briefly and concise slides. Later some executives who missed the meeting complained that they needed some spoken explanations to understand the presentation document. We spent much more time in subsequently writing out the background information as if we had worked on a result document from beginning on.</p>
 </div>
 </div>
 <div class="sect3">
@@ -8606,8 +8591,8 @@ might use in preparing such documents.</p>
 <div class="sect3">
 <h4 id="_intent_51"><a class="anchor" href="#_intent_51"></a>5.17.1. Intent</h4>
 <div class="paragraph">
-<p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the orgins or original sources of major
-findings keeps eventual critics in check.</p>
+<p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial"><span class="pattern">Expect Denial</span></a>). Keeping thorough references to the origins or original sources of major
+findings keep eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
@@ -8619,11 +8604,11 @@ findings keeps eventual critics in check.</p>
 <div class="sect3">
 <h4 id="_experiences_24"><a class="anchor" href="#_experiences_24"></a>5.17.3. Experiences</h4>
 <div class="paragraph">
-<p>Some anti-experiences that happened when we neglected traceability:</p>
+<p>Some contrary experiences happened when we neglected traceability:</p>
 </div>
 <div class="paragraph">
 <p>Stakeholder questioned some of our findings - we could not immediately trace those findings
-back to an original source (i.e. an interview protocoll, a particular file/version of source code). These stakeholders immediately suspected <em>all</em> our findings, not only the one or two in question.</p>
+back to an original source (i.e. an interview protocol, a particular file/version of source code). These stakeholders immediately suspected <em>all</em> our findings, not only the one or two in question.</p>
 </div>
 <div class="paragraph">
 <p>Please keep in mind that a lack of traceability, especially for disputed findings or problems,
@@ -10307,7 +10292,7 @@ The result is rendered nicely.
 </div>
 </div>
 <div class="paragraph">
-<p>will insert the last modification data (here: 2016-12-05)</p>
+<p>will insert the last modification data (here: 2016-12-22)</p>
 </div>
 </div>
 <div class="sect2">
@@ -10390,7 +10375,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-05 19:20:04 +00:00
+Last updated 2016-12-22 04:48:56 +00:00
 </div>
 </div>
 </body>
