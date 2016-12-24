@@ -2106,7 +2106,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#Crosscutting">5. Cross-Cutting Practices and Patterns</a>
 <ul class="sectlevel2">
 <li><a href="#_how_it_works_2">5.1. How it works</a></li>
-<li><a href="#_crosscutting_practices">5.2. Crosscutting Practices</a></li>
+<li><a href="#_cross_cutting_practices">5.2. Cross-Cutting Practices</a></li>
 <li><a href="#Architectural-Understanding">5.3. <span class="pattern">Architectural-Understanding</span></a>
 <ul class="sectlevel3">
 <li><a href="#_description_44">5.3.1. Description</a></li>
@@ -2266,7 +2266,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="http://img.shields.io/badge/Version-0.7.0-green.svg" alt="0.7.0"></span>
-<span class="image"><img src="http://img.shields.io/badge/Date-Dec 22. 2016-green.svg" alt="/Dec 22. 2016"></span>
+<span class="image"><img src="http://img.shields.io/badge/Date-Dec 24. 2016-green.svg" alt="/Dec 24. 2016"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
@@ -2401,7 +2401,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 <p>overly <em>complex internal structure</em>, either of source code or data</p>
 </li>
 <li>
-<p>overly <em>complex concepts</em> (crosscutting solutions for fine-grained problems)</p>
+<p>overly <em>complex concepts</em> (cross-cutting solutions for fine-grained problems)</p>
 </li>
 <li>
 <p>overly complex or inappropriate internal processes</p>
@@ -3783,7 +3783,7 @@ must be found for each scenario.</p>
 </div>
 <div class="paragraph">
 <p>While tools like AspectJ provide easy ways to instrument Java code and Ruby’s
-metaprogramming model allows for easy introduction of crosscutting functionality
+metaprogramming model allows for easy introduction of cross-cutting functionality
 the same gets harder to do with other languages. In some languages it may be
 necessary to modify a dynamically linked library with central operations to
 introduce instrumentation without modifying the original system.</p>
@@ -7227,7 +7227,7 @@ found it.&#8221; for the software development world in an article in Kevlin Henn
 <div class="sect4">
 <h5 id="_intent_40"><a class="anchor" href="#_intent_40"></a>Intent</h5>
 <div class="paragraph">
-<p>Enable crosscutting architectural improvement even if it is not feasible to change the whole codebase.</p>
+<p>Enable cross-cutting architectural improvement even if it is not feasible to change the whole codebase.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -7870,7 +7870,7 @@ facilitates identification of additional issues and improvements.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_crosscutting_practices"><a class="anchor" href="#_crosscutting_practices"></a>5.2. Crosscutting Practices</h3>
+<h3 id="_cross_cutting_practices"><a class="anchor" href="#_cross_cutting_practices"></a>5.2. Cross-Cutting Practices</h3>
 <div class="paragraph">
 <p>(given in alphabetical order)</p>
 </div>
@@ -7979,7 +7979,7 @@ learned from <a href="#Runtime-Analysis"><span class="pattern">Runtime-Analysis<
 <p>Infrastructure and deployment, often derived from <a href="#Infrastructure-Analysis"><span class="pattern">Infrastructure-Analysis</span></a>.</p>
 </li>
 <li>
-<p>Crosscutting and technical concepts, like domain models, persistence,
+<p>Cross-cutting and technical concepts, like domain models, persistence,
 user-interface and other concepts.</p>
 </li>
 <li>
@@ -9389,9 +9389,14 @@ Category: <a href="#Analyze">Analyze</a></p>
 </li>
 <li>
 <p><a id="Systematic-Decisions"></a></p>
-<div class="paragraph">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><span class="pattern">Systematic Decisions</span></dt>
+<dd>
 <p>Systematically prepare and take decisions by finding appropriate options, check assumptions, overcome emotion and prepare to be wrong. See <a href="#heath-decisive">Decisive (by C+D Heath)</a>.
 Category: <a href="#Crosscutting">Cross-Cutting Practices and Patterns</a></p>
+</dd>
+</dl>
 </div>
 </li>
 <li>
@@ -9740,7 +9745,7 @@ the flexible, multi-language code-analysis toolkit.</p>
 <p><a id="Freemann"></a>[Freemann] Steve Freeman, Nat Pryce: Growing Object Oriented Software By Tests. Addison-Wesley, 2010.</p>
 </li>
 <li>
-<p><a id="heath-decisive"></a>[heath-decisive] Chip and Dan Heath: Decisive: How to make better choices in life and work. Crown Publishing / Random House Books, 2013. A practical and pragmatic guide to decision making (both preparing and taking them) - not specific to software. They describe four pillars of systematic decision making, which we adopted for our crosscutting practice <a href="#systematic-decisions">Systematic-Decisions</a>.</p>
+<p><a id="heath-decisive"></a>[heath-decisive] Chip and Dan Heath: Decisive: How to make better choices in life and work. Crown Publishing / Random House Books, 2013. A practical and pragmatic guide to decision making (both preparing and taking them) - not specific to software. They describe four pillars of systematic decision making, which we adopted for our cross-cutting practice <a href="#Systematic-Decisions">Systematic-Decisions</a>.</p>
 </li>
 <li>
 <p><a id="Henney"></a>[Henney] Kevlin Henney: 97 Things Every Programmer Should Know. O&#8217;Reilly Media, 2010, ISBN 0596809484, also <a href="http://programmer.97things.oreilly.com/wiki/index.php/97_Things_Every_Programmer_Should_Know">available online</a></p>
@@ -10292,7 +10297,7 @@ The result is rendered nicely.
 </div>
 </div>
 <div class="paragraph">
-<p>will insert the last modification data (here: 2016-12-22)</p>
+<p>will insert the last modification data (here: 2016-12-24)</p>
 </div>
 </div>
 <div class="sect2">
@@ -10375,7 +10380,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-22 04:48:56 +00:00
+Last updated 2016-12-24 15:59:57 +00:00
 </div>
 </div>
 </body>
