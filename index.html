@@ -2267,7 +2267,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="http://img.shields.io/badge/Version-0.7.0-green.svg" alt="0.7.0"></span>
-<span class="image"><img src="http://img.shields.io/badge/Date-Mar 10. 2017-green.svg" alt="/Mar 10. 2017"></span>
+<span class="image"><img src="http://img.shields.io/badge/Date-Apr 1. 2017-green.svg" alt="/Apr 1. 2017"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
@@ -6188,6 +6188,9 @@ of the others.</p>
 that every user group needs in a common way. In our E-commerce example,
 those might be pdf-generation, user/role management or the like. Factor out those
 commons into a separate module/subsystem, which is used by (likely all) other split systems.</p>
+<div class="paragraph">
+<p>Make part of the whole development team responsible for the commons.</p>
+</div>
 <div id="figure-split-commons" class="imageblock">
 <div class="content">
 <img src="images/improvement-approaches/cbs-3-factored-commons.png" alt="CBS, commons">
@@ -6200,6 +6203,10 @@ commons into a separate module/subsystem, which is used by (likely all) other sp
 is now centralized, that task might become somewhat simpler than within
 the original legacy system. At the same time, remove all commons-code from the split
 systems - reducing them in size.</p>
+<div class="paragraph">
+<p>Split the rest of the whole development team according the split systems. Make
+one developer group responsible for one split system.</p>
+</div>
 <div id="figure-split-reduced-commons" class="imageblock">
 <div class="content">
 <img src="images/improvement-approaches/cbs-4-reduced-commons.png" alt="CBS, reduced commons">
@@ -6218,8 +6225,18 @@ This step might be performed parallel to optimizing the commons.</p>
 </div>
 <div class="title">Figure 21. Change-by-split, all split systems reduced/optimized</div>
 </div>
+<div class="paragraph">
+<p>This final step might need extensive preparation, e.g. by creating user-category
+specific unit-/integration-/acceptance tests. Reducing unneeded code
+can be quite difficult, if the original code has (extremely) high cyclomatic complexity
+or is very difficult to understand for other reasons (configurability, strange
+  technologies, using strange/outdated/proprietary frameworks etc.).</p>
+</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>Steps 4 and 5 might be interchanged or done in parallel.</p>
 </div>
 </div>
 <div class="sect4">
@@ -6260,7 +6277,22 @@ several business domains, rendering this approach useless.</p>
 as a currently productive (albeit large) team has to be disrupted.</p>
 </li>
 <li>
-<p>The various user groups</p>
+<p>It might be difficult to define appropriate interfaces for the
+factored-out <em>commons</em>. If these commons are overly scattered
+throughout the legacy code, this extraction might be impossible,
+making the resulting split systems more complicated than they should be.</p>
+</li>
+<li>
+<p>If business code is overly tangled, having very high cyclomatic
+complexity, it can be arbitrarily difficult to remove those parts
+that are not required for a single user type/category. Analyzing such
+code segments should be performed my members of several split-teams.</p>
+</li>
+<li>
+<p>Associated processes (like requirements, test, documentation and operations) of
+the split systems might become more difficult to manage in the first
+phases of a split. Due to the reduced sizes of split systems, it might
+be likely such processes will become simpler over time.</p>
 </li>
 </ul>
 </div>
@@ -6279,7 +6311,27 @@ merely create duplicate functionality.</p>
 </div>
 <div class="sect4">
 <h5 id="_consequences_7"><a class="anchor" href="#_consequences_7"></a>Consequences</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Instead of having to manage one single (but large) system,
+you will have to manage (develop, change, operate) several (smaller) systems.
+This might be especially relevant for operations effort.</p>
+</li>
+<li>
+<p>Instead of having to manage one single development team,
+you will have to manage several.</p>
+</li>
+<li>
+<p>All "things" you are dealing with (code, data-structures, data,
+processes) will become smaller, reducing complexity of these "things".</p>
+</li>
+<li>
+<p>"Time-to-market" of your split systems will be lower (as development
+will be faster) - maybe coordination and management effort might increase.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_proposed_practices"><a class="anchor" href="#_proposed_practices"></a>Proposed practices</h5>
@@ -6292,6 +6344,18 @@ this approach.</p>
 <li>
 <p>Involve the affected user groups as early as possible to
 facilitate possible required changes on their side.</p>
+</li>
+<li>
+<p>Try to to identify potential <em>neuralgic sections</em> within the code,
+that do not belong into the factored-out commons and will likely affect
+several of the split systems. Try to minimize the effort required
+to analyze and untangle such sections by gathering people from various
+split-teams.</p>
+</li>
+<li>
+<p>Don&#8217;t try everything at once: Spread out step 5 (optimize splits) over
+several, possibly many, development iterations or releases. Let the split
+teams become comfortable with their reduced split systems.</p>
 </li>
 </ul>
 </div>
@@ -10463,7 +10527,7 @@ The result is rendered nicely.
 </div>
 </div>
 <div class="paragraph">
-<p>will insert the last modification data (here: 2017-03-10)</p>
+<p>will insert the last modification data (here: 2017-04-01)</p>
 </div>
 </div>
 <div class="sect2">
@@ -10546,7 +10610,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-03-10 11:19:34 +00:00
+Last updated 2017-04-01 12:35:25 +00:00
 </div>
 </div>
 </body>
