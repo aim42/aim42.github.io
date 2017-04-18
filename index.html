@@ -2267,7 +2267,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="http://img.shields.io/badge/Version-0.7.0-green.svg" alt="0.7.0"></span>
-<span class="image"><img src="http://img.shields.io/badge/Date-Apr 1. 2017-green.svg" alt="/Apr 1. 2017"></span>
+<span class="image"><img src="http://img.shields.io/badge/Date-Apr 18. 2017-green.svg" alt="/Apr 18. 2017"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
@@ -10280,7 +10280,25 @@ limitations under the License.</p>
 </div>
 <div class="sect2">
 <h3 id="_headings"><a class="anchor" href="#_headings"></a>Headings</h3>
-
+<div class="paragraph">
+<p>Headings are just headings as described in the AsciiDoctor&#8217;s Manual entry on
+<strong><a href="http://asciidoctor.org/docs/user-manual/#sections"> sections</a></strong>. The important
+thing to keep in mind is the fact that AsciiDoctor actually treats headings
+<em>semantically</em>. This means that a level 2 section should come within a section 1
+section and be followed by a level three section, <em>not</em> by a level four section.</p>
+</div>
+<div class="paragraph">
+<p>Otherwise there should be a compile warning in the gradle build like this</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>:asciidoctor
+asciidoctor: WARNING: appendices/asciidoc-help.adoc: line 18: section title out of sequence: expected level 2, got level 3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and we try to avoid these.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_cross_references"><a class="anchor" href="#_cross_references"></a>Cross-References</h3>
@@ -10527,7 +10545,7 @@ The result is rendered nicely.
 </div>
 </div>
 <div class="paragraph">
-<p>will insert the last modification data (here: 2017-04-01)</p>
+<p>will insert the last modification data (here: 2017-04-18)</p>
 </div>
 </div>
 <div class="sect2">
@@ -10610,7 +10628,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-04-01 13:55:59 +00:00
+Last updated 2017-04-18 14:53:07 +00:00
 </div>
 </div>
 </body>
