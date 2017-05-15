@@ -2003,20 +2003,21 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_about_aim42">About aim42</a></li>
 <li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#_why_is_software_being_changed">1.1. Why is software being changed?</a></li>
-<li><a href="#_why_does_software_need_improvement">1.2. Why does software need improvement?</a>
+<li><a href="#_overview">1.1. Overview</a></li>
+<li><a href="#_why_is_software_being_changed">1.2. Why is software being changed?</a></li>
+<li><a href="#_why_does_software_need_improvement">1.3. Why does software need improvement?</a>
 <ul class="sectlevel3">
-<li><a href="#_long_term_goal">1.2.1. Long-term Goal</a></li>
+<li><a href="#_long_term_goal">1.3.1. Long-term Goal</a></li>
 </ul>
 </li>
-<li><a href="#_how_does_aim42_work">1.3. How does aim42 work?</a>
+<li><a href="#_how_does_aim42_work">1.4. How does aim42 work?</a>
 <ul class="sectlevel3">
-<li><a href="#_three_simple_phases">1.3.1. Three Simple Phases</a></li>
-<li><a href="#_common_terminology">1.3.2. Common Terminology</a></li>
-<li><a href="#Iterative-Approach">1.3.3. Iterative Approach</a></li>
+<li><a href="#_three_simple_phases">1.4.1. Three Simple Phases</a></li>
+<li><a href="#_common_terminology">1.4.2. Common Terminology</a></li>
+<li><a href="#Iterative-Approach">1.4.3. Iterative Approach</a></li>
 </ul>
 </li>
-<li><a href="#_patterns_and_practices_provide_no_guarantee">1.4. Patterns and Practices Provide No Guarantee</a></li>
+<li><a href="#_patterns_and_practices_provide_no_guarantee">1.5. Patterns and Practices Provide No Guarantee</a></li>
 </ul>
 </li>
 <li><a href="#Analyze">2. Analyze</a>
@@ -2266,12 +2267,13 @@ table.CodeRay td.code>pre{padding:0}
 <p>Authored by the aim42 community, lead by Dr. Gernot Starke &lt;<a href="mailto:gernot.starke@innoq.com">gernot.starke@innoq.com</a>&gt;</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="http://img.shields.io/badge/Version-0.7.0-green.svg" alt="0.7.0"></span>
-<span class="image"><img src="http://img.shields.io/badge/Date-May 15. 2017-green.svg" alt="/May 15. 2017"></span>
-<span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="http://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
-<span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="http://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
-<span class="image"><a class="image" href="https://github.com/aim42/aim42/issues?label=bug" target="_blank"><img src="https://badge.waffle.io/aim42/aim42.png?label=bug&amp;title=bugs" alt="nr-of-bugs:unknown"></a></span>
-<span class="image"><a class="image" href="https://github.com/aim42/aim42" target="_blank"><img src="https://img.shields.io/github/stars/aim42/aim42.svg" alt="aim42-github-stars"></a></span></p>
+<p><span class="image"><img src="https://img.shields.io/badge/Version-0.7.2-green.svg" alt="0.7.2"></span>
+<span class="image"><img src="https://img.shields.io/badge/Date-May 15. 2017-green.svg" alt="/May 15. 2017"></span>
+<span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="https://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
+<span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="https://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
+<span class="image"><a class="image" href="https://github.com/aim42/aim42" target="_blank"><img src="https://img.shields.io/github/stars/aim42/aim42.svg" alt="github-stars"></a></span>
+<span class="image"><a class="image" href="https://github.com/aim42/aim42" target="_blank"><img src="https://img.shields.io/github/contributors/aim42/aim42.svg" alt="github-contributors"></a></span>
+<span class="image"><a class="image" href="https://twitter.com/gernotstarke" target="_blank"><img src="https://img.shields.io/twitter/follow/gernotstarke.svg?style=social&amp;label=Followers" alt=""></a></span></p>
 </div>
 </div>
 </div>
@@ -2279,7 +2281,65 @@ table.CodeRay td.code>pre{padding:0}
 <h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_why_is_software_being_changed"><a class="anchor" href="#_why_is_software_being_changed"></a>1.1. Why is software being changed?</h3>
+<h3 id="_overview"><a class="anchor" href="#_overview"></a>1.1. Overview</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #d55e00;"><p class="tableblock"><strong>Analyze</strong> <br>
+Identify problems and improvement options</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #f0e442;"><p class="tableblock"><strong>Evaluate</strong><br>
+Estimate cost or value of issues and improvements</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #009e73;"><p class="tableblock"><strong>Improve</strong><br>
+Apply or perform selected improvements</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #EFC4A2;"><p class="tableblock">Understand the system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #F8F2A9;"><p class="tableblock">Estimate issue cost:
+How grave is this problem?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"><p class="tableblock">Improve processes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #EFC4A2;"><p class="tableblock">Interview stakeholders</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #F8F2A9;"><p class="tableblock">Estimate improvement cost:
+How expensive is this change?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"><p class="tableblock">Improve architecture and code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #EFC4A2;"><p class="tableblock">Context analysis</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #F8F2A9;"><p class="tableblock">Usually "evaluation" means <em>estimation</em>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"><p class="tableblock">Improve technology</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #EFC4A2;"><p class="tableblock">Architectural analysis</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #F8F2A9;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"><p class="tableblock">Improve organization</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #0072b2;"><p class="tableblock"><strong>Crosscutting</strong><br>
+Manage issues, improvementand their relationships.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #A2CBE3;"><p class="tableblock">Manage issues (risks, problems, symptoms, root-causes).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #A2CBE3;"><p class="tableblock">Manage (potential) improvements, options or opportunities to get rid of certain issues.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #A2CBE3;"><p class="tableblock">Manage the (m:n) relationships between issues and improvements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #A2CBE3;"><p class="tableblock">Plan improvements, interleaved with to day-to-day activities</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_why_is_software_being_changed"><a class="anchor" href="#_why_is_software_being_changed"></a>1.2. Why is software being changed?</h3>
 <div class="paragraph">
 <p>Software systems, at least most of those that are practically used, are changed all the
 time. Features are added, modified or removed, user interaction is streamlined,
@@ -2371,7 +2431,7 @@ The reasons for changing a system can be grouped into four categories (see <a hr
 </div>
 </div>
 <div class="sect2">
-<h3 id="_why_does_software_need_improvement"><a class="anchor" href="#_why_does_software_need_improvement"></a>1.2. Why does software need improvement?</h3>
+<h3 id="_why_does_software_need_improvement"><a class="anchor" href="#_why_does_software_need_improvement"></a>1.3. Why does software need improvement?</h3>
 <div class="paragraph">
 <p>The most important reason is depicted in the following diagram: The cost-of-change
 of most software increases heavily over time&#8230;&#8203; making those people really unhappy that
@@ -2416,7 +2476,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 </ol>
 </div>
 <div class="sect3">
-<h4 id="_long_term_goal"><a class="anchor" href="#_long_term_goal"></a>1.2.1. Long-term Goal</h4>
+<h4 id="_long_term_goal"><a class="anchor" href="#_long_term_goal"></a>1.3.1. Long-term Goal</h4>
 <div class="paragraph">
 <p>In the beginning, though, everything was fine: nice coupling and cohesion, appropriate technologies, well written code, understandable structures and concepts (see figure <a href="#figure-target-situation">Goal: Maintainable Software</a>)</p>
 </div>
@@ -2435,9 +2495,9 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 </div>
 </div>
 <div class="sect2">
-<h3 id="_how_does_aim42_work"><a class="anchor" href="#_how_does_aim42_work"></a>1.3. How does aim42 work?</h3>
+<h3 id="_how_does_aim42_work"><a class="anchor" href="#_how_does_aim42_work"></a>1.4. How does aim42 work?</h3>
 <div class="sect3">
-<h4 id="_three_simple_phases"><a class="anchor" href="#_three_simple_phases"></a>1.3.1. Three Simple Phases</h4>
+<h4 id="_three_simple_phases"><a class="anchor" href="#_three_simple_phases"></a>1.4.1. Three Simple Phases</h4>
 <div class="paragraph">
 <p>aim42 works in a phased iterative manner:</p>
 </div>
@@ -2467,7 +2527,7 @@ or long- and short-term planning activities.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_common_terminology"><a class="anchor" href="#_common_terminology"></a>1.3.2. Common Terminology</h4>
+<h4 id="_common_terminology"><a class="anchor" href="#_common_terminology"></a>1.4.2. Common Terminology</h4>
 <div class="paragraph">
 <p>aim42 relies on a common terminology, a small set of fundamental concepts.</p>
 </div>
@@ -2484,29 +2544,29 @@ or long- and short-term planning activities.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Issue</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Any problem, error, fault, risk, suboptimal situation or their causes within the
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Issue</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Any problem, error, fault, risk, suboptimal situation or their causes within the
 <a href="#System">[System]</a> or processes related to it (e.g. management, operational, development, administrative or organizational activities).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cause</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fundamental reason for one or several issues.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Cause</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Fundamental reason for one or several issues.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Improvement</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Solution, remedy or cure for one or several issues.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Improvement</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Solution, remedy or cure for one or several issues.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of issue)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The cost (in any unit appropriate for business, e.g. money, effort or such) of the issue, related to a frequency or period of time. For example – cost of every occurrence of the issue or recurring cost per week.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Cost (of issue)</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">The cost (in any unit appropriate for business, e.g. money, effort or such) of the issue, related to a frequency or period of time. For example – cost of every occurrence of the issue or recurring cost per week.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cost (of improvement)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The cost (in monetary units) of the improvement, remedy, tactic or strategy.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Cost (of improvement)</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">The cost (in monetary units) of the improvement, remedy, tactic or strategy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Risk</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Potential</em> problem. Improvements can change associated risks for the better or the worse, even create new risks.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Risk</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>Potential</em> problem. Improvements can change associated risks for the better or the worse, even create new risks.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2515,7 +2575,7 @@ or long- and short-term planning activities.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Iterative-Approach"><a class="anchor" href="#Iterative-Approach"></a>1.3.3. Iterative Approach</h4>
+<h4 id="Iterative-Approach"><a class="anchor" href="#Iterative-Approach"></a>1.4.3. Iterative Approach</h4>
 <div class="paragraph">
 <p>In compliance with modern agile development methodologies, aim42 fundamentally depends on iteration and feedback between the phases.</p>
 </div>
@@ -2544,7 +2604,7 @@ or long- and short-term planning activities.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_patterns_and_practices_provide_no_guarantee"><a class="anchor" href="#_patterns_and_practices_provide_no_guarantee"></a>1.4. Patterns and Practices Provide No Guarantee</h3>
+<h3 id="_patterns_and_practices_provide_no_guarantee"><a class="anchor" href="#_patterns_and_practices_provide_no_guarantee"></a>1.5. Patterns and Practices Provide No Guarantee</h3>
 <div class="paragraph">
 <p>We are <strong>very</strong> sure that aim42 can work for your system or your organization.
 But (yes, there&#8217;s always a but) we cannot guarantee: Maybe your software is so
@@ -3208,32 +3268,32 @@ importance of this topic, aim42 devotes an <a href="#User-Analysis">own section<
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Neighbor</th>
-<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Neighbor</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">documents software with toolchain that generates HTML. Wants to ensure that
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">documents software with toolchain that generates HTML. Wants to ensure that
 links within this HTML are valid.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">build system</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">build system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">local HTML files</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HtmlSC reads and parses local HTML files and
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">local HTML files</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">HtmlSC reads and parses local HTML files and
 performs sanity checks within those.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">local image files</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HtmlSC checks if linked images exist as (local) files.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">local image files</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">HtmlSC checks if linked images exist as (local) files.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">external web resources</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HtmlSC can be configured to optionally check for the existence
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">external web resources</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">HtmlSC can be configured to optionally check for the existence
 of external web resources. Due to the nature of web systems, this check might need a significant
 amount of time and might yield invalid results due to network and latency issues.</p></td>
 </tr>
@@ -3922,36 +3982,36 @@ in a Harvard Business School <a href="http://www.hbs.edu/faculty/Publication%20F
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top">Tightly-Coupled</th>
-<th class="tableblock halign-left valign-top">Loosely-Coupled</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Tightly-Coupled</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Loosely-Coupled</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Goals</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Shared, Explicit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Diverse, Implicit</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Goals</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Shared, Explicit</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Diverse, Implicit</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Membership</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Closed, Contracted</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Open, Voluntary</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Membership</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Closed, Contracted</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Open, Voluntary</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Authority</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Formal, Hierarchy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informal, Meritocracy</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Authority</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Formal, Hierarchy</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Informal, Meritocracy</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Location</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Centralized, Collocated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Decentralized, Distributed</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Location</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Centralized, Collocated</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Decentralized, Distributed</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Behavior</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Planned, Coordinated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Emergent, Independent</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Behavior</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Planned, Coordinated</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Emergent, Independent</p></td>
 </tr>
 </tbody>
 </table>
@@ -4815,20 +4875,20 @@ configuration-manager, release-manager, maintenance-team, external service provi
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Role/Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Intention</th>
-<th class="tableblock halign-left valign-top">Contribution</th>
-<th class="tableblock halign-left valign-top">Contact</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Role/Name</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Description</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Intention</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Contribution</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Contact</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name of person or role</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">responsibility for System</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">intention for/with/against System</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">what can/will/need they contribute to improvement of System, optionally or required</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">how to contact. For roles, name a primary contact person.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">name of person or role</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">responsibility for System</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">intention for/with/against System</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">what can/will/need they contribute to improvement of System, optionally or required</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">how to contact. For roles, name a primary contact person.</p></td>
 </tr>
 </tbody>
 </table>
@@ -5431,32 +5491,32 @@ or observe the evaluation subject and produce <em>hard facts</em>.</p>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Domain concept</th>
-<th class="tableblock halign-left valign-top">Explanation</th>
-<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Domain concept</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Explanation</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Estimation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">an <em>approximation</em> of any subject
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Estimation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">an <em>approximation</em> of any subject
   (here: issues,problems or remedies), which is needed because
 	facts or real observations are not available or possible.</p></td>
-<td class="tableblock halign-left valign-top"><div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Subject</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Subject</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><div><div class="paragraph">
 <p>a recurring problem in the <a href="#System">[System]</a> or
 associated processes</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">an important element or foundation of the
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">an important element or foundation of the
 estimation.</p></td>
-<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><div><div class="ulist">
 <ul>
 <li>
 <p>number of developers on the system</p>
@@ -5468,24 +5528,24 @@ estimation.</p></td>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Assumption</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">a fixed setting for any parameter.
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Assumption</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">a fixed setting for any parameter.
   See <a href="#Explicit-Assumption"><span class="pattern">Explicit Assumption</span></a></p></td>
-<td class="tableblock halign-left valign-top"><div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Observation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">measure, count, calculate gather real data
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Observation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">measure, count, calculate gather real data
 for parameters</p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><div><div class="paragraph">
 <p>if every developer is
 concerned by the problem, we count their number.</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Interval</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see <a href="#Estimate-In-Interval"><span class="pattern">Estimate in Interval</span></a></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Interval</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">see <a href="#Estimate-In-Interval"><span class="pattern">Estimate in Interval</span></a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><div><div class="paragraph">
 <p>between 15 and 25%</p>
 </div></div></td>
 </tr>
@@ -8517,22 +8577,22 @@ might have. Identify the resultant effects on system development and operations.
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">ID</th>
-<th class="tableblock halign-left valign-top">Improvement</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">min Cost</th>
-<th class="tableblock halign-left valign-top">max Cost</th>
-<th class="tableblock halign-left valign-top">Related Issues</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">ID</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Improvement</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Description</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">min Cost</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">max Cost</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Related Issues</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">short description of this improvement or remedy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">minimal estimated cost or effort</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">maximal cost or effort</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">links to related issues</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">identifier</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">short description of this improvement or remedy</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">minimal estimated cost or effort</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">maximal cost or effort</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">links to related issues</p></td>
 </tr>
 </tbody>
 </table>
@@ -8571,24 +8631,24 @@ as easy as possible to link issues to improvements and vice versa.</p>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">ID</th>
-<th class="tableblock halign-left valign-top">Issue</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Frequency</th>
-<th class="tableblock halign-left valign-top">min Value</th>
-<th class="tableblock halign-left valign-top">max Value</th>
-<th class="tableblock halign-left valign-top">Improvements</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">ID</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Issue</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Description</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Frequency</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">min Value</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">max Value</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Improvements</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">a short description of the issue</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">how often does the issue occur, once, daily, weekly, with every new feature?</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">minimal value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">maximal value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">links to improvements</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">identifier</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">a short description of the issue</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">how often does the issue occur, once, daily, weekly, with every new feature?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">minimal value</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">maximal value</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">links to improvements</p></td>
 </tr>
 </tbody>
 </table>
@@ -8643,57 +8703,57 @@ might use in preparing such documents.</p>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Chapter</th>
-<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Chapter</th>
+<th class="tableblock halign-left valign-top" style="background-color: #A2CBE3;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Formalities</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">formal stuff, like disclaimer, references to
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Formalities</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">formal stuff, like disclaimer, references to
                  contractual documents, table of contents,
                  licence, change history etc.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Management Summary</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1, at most 2 page summary</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Management Summary</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">1, at most 2 page summary</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Goals</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">describe the goals of the review/audit.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Goals</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">describe the goals of the review/audit.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Review Approach</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">brief description how the review was conducted,
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Review Approach</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">brief description how the review was conducted,
                     outline the activities or actions performed.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Stakeholders</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">outline which stakeholders participated,
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Stakeholders</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">outline which stakeholders participated,
                      in what form, at that time</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Findings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in order of importance or priority, list
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Findings</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">in order of importance or priority, list
                      and explain your findings</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Proposed Actions</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Proposed Actions</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Conclusion</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Conclusion</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Appendix: Sources</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">list your sources and references, e.g. documents,
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Appendix: Sources</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">list your sources and references, e.g. documents,
                          source-code, interview protocols,
                          issue-trackers, websites etc.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Appendix: The Team</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">briefly introduce the review team and explain
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Appendix: The Team</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">briefly introduce the review team and explain
                        their role in the review.</p></td>
 </tr>
 </tbody>
@@ -9741,164 +9801,164 @@ typical kinds of information, <strong>entities</strong>.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Cause</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Root cause of an Issue, in contrast to a symptom.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Cause</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Root cause of an Issue, in contrast to a symptom.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>is-a</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(inherits from) Issue</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>is-a</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">(inherits from) Issue</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>is real source of</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">one or many Issues.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>is real source of</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">one or many Issues.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Configuration</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Configuration</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Constraints</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Technical or organizational constraints, restraining management, design, implementation or operation of the System.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Constraints</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Technical or organizational constraints, restraining management, design, implementation or operation of the System.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>restrict</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">the System, associated Processes or Organization.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>restrict</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">the System, associated Processes or Organization.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Documentation</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Any (hopefully written) information about
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Documentation</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Any (hopefully written) information about
 the systems, its goals, requirements, architecture, implementation, operation or management.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Goals</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">What does the Organization or Stakeholder expect from
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Goals</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">What does the Organization or Stakeholder expect from
 the System, why does the System exist anyway.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Hardware</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Structure and kind of hardware required to develop, test and operate the System.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Hardware</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Structure and kind of hardware required to develop, test and operate the System.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Improvement</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Any remedy, opportunity, tactic or strategy to improve the System by resolving one or several Issues.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Improvement</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Any remedy, opportunity, tactic or strategy to improve the System by resolving one or several Issues.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>modifies</em> or <em>creates</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Risk</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>modifies</em> or <em>creates</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Risk</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>is remedy for</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">the System.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>is remedy for</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">the System.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>resolves</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(partially or complete) one or several Issues</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>resolves</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">(partially or complete) one or several Issues</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Issue</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Any problem, error, fault, risk, suboptimal situation or their causes within the
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Issue</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Any problem, error, fault, risk, suboptimal situation or their causes within the
 System, Processes or Organization related to it (e.g. management, operational, development, administrative or organizational activities).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Frequency:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">how often does the Issue occur?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Frequency:</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">how often does the Issue occur?</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>resolved by</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">one or several Improvements.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>resolved by</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">one or several Improvements.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Organization</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The organization or entity responsible or owning the System.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Organization</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">The organization or entity responsible or owning the System.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>source of</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Issues.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>source of</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Issues.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Process</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Processes, conventions or activities for developing, maintaining, operating or managing the System.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Process</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Processes, conventions or activities for developing, maintaining, operating or managing the System.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>source of</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Issues.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>source of</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Issues.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Risk</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Risk</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EarlyWarning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Indicator that the Risk is occuring and turning into a problem.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">EarlyWarning</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Indicator that the Risk is occuring and turning into a problem.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>is an</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(inherits from) Issue, but not occurred yet.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>is an</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">(inherits from) Issue, but not occurred yet.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Software</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All source code and configuration that make up the System under improvement. Hopefully stored in version-control.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Software</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">All source code and configuration that make up the System under improvement. Hopefully stored in version-control.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>is an</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Issue, but not occurred yet.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>is an</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Issue, but not occurred yet.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>Stakeholder</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">People or roles interested or participating in the System or any of its associated Processes.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>Stakeholder</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">People or roles interested or participating in the System or any of its associated Processes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>belong to</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">the Organization responsible or owning the System.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>belong to</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">the Organization responsible or owning the System.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>knows / informs about</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Issues and/or Improvements. Stakeholders often
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>knows / informs about</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Issues and/or Improvements. Stakeholders often
   know about existing problems and opportunities for improvements.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><strong>System</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The system under improvement, consisting of Software, Hardware and Documentation.</p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #A2CBE3;"><p class="tableblock"><strong>System</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">The system under improvement, consisting of Software, Hardware and Documentation.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>managed and affected by</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Processes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>managed and affected by</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Processes</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>remedy</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">the System or aspects of it by Improvements</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>remedy</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">the System or aspects of it by Improvements</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>suffers from</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Issue</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>suffers from</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Issue</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>complies with</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">one or several Goals.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>complies with</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">one or several Goals.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>consists of</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Software, Configuration, Hardware and Documentation.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock"><em>consists of</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2CBE3;"><p class="tableblock">Software, Configuration, Hardware and Documentation.</p></td>
 </tr>
 </tbody>
 </table>
@@ -10628,7 +10688,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-05-15 16:27:55 +00:00
+Last updated 2017-05-15 21:01:23 +00:00
 </div>
 </div>
 </body>
