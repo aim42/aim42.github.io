@@ -2232,32 +2232,30 @@ table.CodeRay td.code>pre{padding:0}
 </td>
 <td class="content">
 <div class="paragraph">
-<p><a href="http://aim42.org">aim42</a> is a collection of practices and patterns to support software evolution, modernization, maintenance, migration and improvement of software systems:</p>
-</div>
-<div class="paragraph">
-<p>aim42:</p>
+<p><a href="http://aim42.org">aim42</a> is a collection of practices and patterns to support software evolution, modernization, maintenance, migration and
+improvement of software systems:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>helps you optimize your software and reduce maintenance cost</p>
+<p>helps to optimize your software and reduce maintenance cost</p>
 </li>
 <li>
-<p>helps you to identify critical issues, technical debt and risks</p>
+<p>helps to identify critical issues, technical debt and risks</p>
 </li>
 <li>
 <p>supports both business and technical stakeholders</p>
 </li>
 <li>
-<p>organizes patterns and practices in three phases (<a href="#Analyze">Analyze</a>, <a href="#Evaluate">Evaluate</a> and <a href="#Improve">Improve</a>)</p>
+<p>grounded in practice , proven approaches, backed by serious research</p>
 </li>
 <li>
-<p>Free and open-source, <a href="#contributions">contributions</a> welcome.</p>
-</li>
-<li>
-<p>Grounded in practice , proven approaches, backed by serious research.</p>
+<p>free and open-source, <a href="#contributions">contributions</a> welcome.</p>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>aim42 seamlessly integrates with your day-to-day development work.</p>
 </div>
 </td>
 </tr>
@@ -2282,6 +2280,17 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_overview"><a class="anchor" href="#_overview"></a>1.1. Overview</h3>
+<div class="paragraph">
+<p>aim42 organizes software improvement in three major
+phases (<a href="#Analyze">Analyze</a>, <a href="#Evaluate">Evaluate</a> and <a href="#Improve">Improve</a>),
+build around some <a href="#Crosscutting">crosscutting</a> activities.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/aim42-phases.png" alt="aim42 phases" width="50%">
+</div>
+<div class="title">Figure 1. Three Phases of aim42</div>
+</div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 33%;">
@@ -2290,50 +2299,63 @@ table.CodeRay td.code>pre{padding:0}
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #d55e00;"><p class="tableblock"><strong>Analyze</strong> <br>
+<td class="tableblock halign-center valign-top" style="background-color: #fd0023;"><p class="tableblock"><strong>Analyze</strong> <br>
 Identify problems and improvement options</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #f0e442;"><p class="tableblock"><strong>Evaluate</strong><br>
+<td class="tableblock halign-center valign-top" style="background-color: #4ca9fc;"><p class="tableblock"><strong>Evaluate</strong><br>
 Estimate cost or value of issues and improvements</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #009e73;"><p class="tableblock"><strong>Improve</strong><br>
+<td class="tableblock halign-center valign-top" style="background-color: #45db86;"><p class="tableblock"><strong>Improve</strong><br>
 Apply or perform selected improvements</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #EFC4A2;"><p class="tableblock">Understand the system</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #F8F2A9;"><p class="tableblock">Estimate issue cost:
+<td class="tableblock halign-left valign-top" style="background-color: #fd7387;"><p class="tableblock">Understand the system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #8dc8fd;"><p class="tableblock">Estimate issue cost:
 How grave is this problem?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"><p class="tableblock">Improve processes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #EFC4A2;"><p class="tableblock">Interview stakeholders</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #F8F2A9;"><p class="tableblock">Estimate improvement cost:
-How expensive is this change?</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"><p class="tableblock">Improve architecture and code</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #EFC4A2;"><p class="tableblock">Context analysis</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #F8F2A9;"><p class="tableblock">Usually "evaluation" means <em>estimation</em>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #fd7387;"><p class="tableblock">Find issues and risks</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #8dc8fd;"><p class="tableblock">Estimate improvement cost:
+How expensive is this change?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"><p class="tableblock">Improve processes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #fd7387;"><p class="tableblock">Collect improvement options</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #8dc8fd;"><p class="tableblock">Usually "evaluation" means <em>estimation</em></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"><p class="tableblock">Improve technology</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #EFC4A2;"><p class="tableblock">Architectural analysis</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #F8F2A9;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"><p class="tableblock">Improve organization</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #fd7387;"><p class="tableblock">Interview stakehoders</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #8dc8fd;"><p class="tableblock">Estimate in intervalls</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"><p class="tableblock">Improve (technical) concepts</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" colspan="3" style="background-color: #2E8BC0;"><p class="tableblock"><strong>Crosscutting</strong><br>
-Manage issues, improvementand their relationships.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #fd7387;"><p class="tableblock">Analyze context</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #8dc8fd;"><p class="tableblock">Evaluate tradeoffs</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #A2CBE3;"><p class="tableblock">Manage issues (risks, problems, symptoms, root-causes).</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #fd7387;"><p class="tableblock">Analyze architecture and code</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #8dc8fd;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #A2DBCC;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #A2CBE3;"><p class="tableblock">Manage (potential) improvements, options or opportunities to get rid of certain issues.</p></td>
+<td class="tableblock halign-center valign-top" colspan="3" style="background-color: #b5b6b4;"><p class="tableblock"><strong>Crosscutting</strong><br>
+Manage issues, improvementand their relationships</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #A2CBE3;"><p class="tableblock">Manage the (m:n) relationships between issues and improvements.</p></td>
+<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #ececec;"><p class="tableblock">Manage issues (risks, problems, symptoms, root-causes)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #A2CBE3;"><p class="tableblock">Plan improvements, interleaved with to day-to-day activities</p></td>
+<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #ececec;"><p class="tableblock">Manage improvements</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #ececec;"><p class="tableblock">Manage the (m:n) relationships between issues and improvements</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #ececec;"><p class="tableblock">Plan improvements, interleaved with to day-to-day activities</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #ececec;"><p class="tableblock">Verify improvements (check if improvements resolved appropriate issues)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="3"></td>
@@ -2448,7 +2470,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 <div class="content">
 <img src="images/cost-of-change.jpg" alt="target situation" width="50%">
 </div>
-<div class="title">Figure 1. Reality: Maintaining software is too expensive</div>
+<div class="title">Figure 2. Reality: Maintaining software is too expensive</div>
 </div>
 <div class="paragraph">
 <p>These negative effects share a few common root causes:</p>
@@ -2493,7 +2515,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 <div class="content">
 <img src="images/target-situation.jpg" alt="target situation" width="50%">
 </div>
-<div class="title">Figure 2. Goal: Maintainable Software</div>
+<div class="title">Figure 3. Goal: Maintainable Software</div>
 </div>
 </div>
 </div>
@@ -2508,7 +2530,7 @@ have to pay for these changes (called maintenance, evolution, new-features or el
 <div class="content">
 <img src="images/aim42-phases.png" alt="aim42 phases">
 </div>
-<div class="title">Figure 3. Three Phases of aim42</div>
+<div class="title">Figure 4. Three Phases of aim42</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2538,7 +2560,7 @@ or long- and short-term planning activities.</p>
 <div class="content">
 <img src="images/aim42-concept-map.png" alt="aim42 concept map">
 </div>
-<div class="title">Figure 4. aim42 domain terminology</div>
+<div class="title">Figure 5. aim42 domain terminology</div>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
 <colgroup>
@@ -2589,7 +2611,7 @@ or long- and short-term planning activities.</p>
 <div class="content">
 <img src="images/collect-issues-improvements.png" alt="collect issues improvements">
 </div>
-<div class="title">Figure 5. Iterate and Collect</div>
+<div class="title">Figure 6. Iterate and Collect</div>
 </div>
 <div class="paragraph">
 <p>Issues and improvements need to be</p>
@@ -2632,7 +2654,7 @@ responsible for any results of applying aim42.</p>
 <div class="content">
 <img src="images/analyze.jpg" alt="analyze-phase">
 </div>
-<div class="title">Figure 6. Analyze-Phase</div>
+<div class="title">Figure 7. Analyze-Phase</div>
 </div>
 <div class="sect2">
 <h3 id="_goals"><a class="anchor" href="#_goals"></a>2.1. Goals</h3>
@@ -2800,7 +2822,7 @@ compliance with quality goals.</p>
 <div class="content">
 <img src="images/approach-of-atam.png" alt="Approach of ATAM">
 </div>
-<div class="title">Figure 7. Approach of ATAM</div>
+<div class="title">Figure 8. Approach of ATAM</div>
 </div>
 <div class="paragraph">
 <p>The phases are:</p>
@@ -3061,7 +3083,7 @@ Let them write <em>quality scenarios</em> to describe their specific quality req
 <div class="content">
 <img src="images/quality-scenario.png" alt="quality scenario">
 </div>
-<div class="title">Figure 8. Structure of Quality Scenarios</div>
+<div class="title">Figure 9. Structure of Quality Scenarios</div>
 </div>
 <div class="paragraph">
 <p>Although this definition is concise, it needs some explanation to become understandable. See figure <a href="#quality-scenario-diagram">Structure of Quality Scenarios</a>:</p>
@@ -3261,7 +3283,7 @@ importance of this topic, aim42 devotes an <a href="#User-Analysis">own section<
 <div class="content">
 <img src="images/context-view-example.png" alt="Example of Context View">
 </div>
-<div class="title">Figure 9. Example of Context View</div>
+<div class="title">Figure 10. Example of Context View</div>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 1. Business Context</caption>
@@ -3602,7 +3624,7 @@ Many software developers we met violated the basic rules of debugging. They work
 <div class="content">
 <img src="images/debugging-divide-and-conquer.jpg" alt="Divide and conquer">
 </div>
-<div class="title">Figure 10. Divide and conquer debugging tactics</div>
+<div class="title">Figure 11. Divide and conquer debugging tactics</div>
 </div>
 </li>
 <li>
@@ -5302,7 +5324,7 @@ architectural views, especially the building-block view.</p>
 <div class="content">
 <img src="images/view-based-understanding.jpg" alt="View based understanding">
 </div>
-<div class="title">Figure 11. Three main views (building block, runtime and deployment view)</div>
+<div class="title">Figure 12. Three main views (building block, runtime and deployment view)</div>
 </div>
 </div>
 <div class="sect4">
@@ -5453,7 +5475,7 @@ protect it.</p>
 <div class="content">
 <img src="images/evaluate.jpg" alt="evaluate-phase">
 </div>
-<div class="title">Figure 12. Evaluate-Phase</div>
+<div class="title">Figure 13. Evaluate-Phase</div>
 </div>
 <div class="sect2">
 <h3 id="_goals_2"><a class="anchor" href="#_goals_2"></a>3.1. Goals</h3>
@@ -5483,7 +5505,7 @@ or observe the evaluation subject and produce <em>hard facts</em>.</p>
 <div class="content">
 <img src="images/evaluate-domain-conceptmap.png" alt="evaluate domain conceptmap">
 </div>
-<div class="title">Figure 13. Evaluation Concepts Domain Model</div>
+<div class="title">Figure 14. Evaluation Concepts Domain Model</div>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
 <caption class="title">Table 3. Evaluation Domain Concepts</caption>
@@ -5717,7 +5739,7 @@ uncertainty and propability involved.</p>
 <div class="content">
 <img src="images/improve.jpg" alt="improve-phase">
 </div>
-<div class="title">Figure 14. Improve-Phase</div>
+<div class="title">Figure 15. Improve-Phase</div>
 </div>
 <div class="sect2">
 <h3 id="_goals_3"><a class="anchor" href="#_goals_3"></a>4.1. Goals</h3>
@@ -5799,7 +5821,7 @@ depicted in figure <a href="#improve-fundamentals">Improvement Fundamentals</a>.
 <div class="content">
 <img src="images/improve-fundamentals.png" alt="improve fundamentals">
 </div>
-<div class="title">Figure 15. Improvement Fundamentals</div>
+<div class="title">Figure 16. Improvement Fundamentals</div>
 </div>
 <div class="paragraph">
 <p>These fundamental principles surely belong to software engineering good practices - but we consider them indispendsable for improvement projects.</p>
@@ -5882,7 +5904,7 @@ to similar entities and potential synergies are utilized.</p>
 <div class="content">
 <img src="images/improve-approaches.png" alt="improve approaches">
 </div>
-<div class="title">Figure 16. Improvement Approaches</div>
+<div class="title">Figure 17. Improvement Approaches</div>
 </div>
 <div class="paragraph">
 <p>TODO: Describe Approaches</p>
@@ -6255,7 +6277,7 @@ online E-commerce system, such groups might be private and corporate customers.<
 <div class="content">
 <img src="images/improvement-approaches/cbs-1-initial.png" alt="CBS, initial">
 </div>
-<div class="title">Figure 17. Change-by-split, initial situation</div>
+<div class="title">Figure 18. Change-by-split, initial situation</div>
 </div>
 </li>
 <li>
@@ -6267,7 +6289,7 @@ of the others.</p>
 <div class="content">
 <img src="images/improvement-approaches/cbs-2-copied.png" alt="CBS, copied">
 </div>
-<div class="title">Figure 18. Change-by-split, system copied for every user type/category</div>
+<div class="title">Figure 19. Change-by-split, system copied for every user type/category</div>
 </div>
 </li>
 <li>
@@ -6282,7 +6304,7 @@ commons into a separate module/subsystem, which is used by (likely all) other sp
 <div class="content">
 <img src="images/improvement-approaches/cbs-3-factored-commons.png" alt="CBS, commons">
 </div>
-<div class="title">Figure 19. Change-by-split, factored out commons</div>
+<div class="title">Figure 20. Change-by-split, factored out commons</div>
 </div>
 </li>
 <li>
@@ -6298,7 +6320,7 @@ one developer group responsible for one split system.</p>
 <div class="content">
 <img src="images/improvement-approaches/cbs-4-reduced-commons.png" alt="CBS, reduced commons">
 </div>
-<div class="title">Figure 20. Change-by-split, reduced splits, optimized commons</div>
+<div class="title">Figure 21. Change-by-split, reduced splits, optimized commons</div>
 </div>
 </li>
 <li>
@@ -6310,7 +6332,7 @@ This step might be performed parallel to optimizing the commons.</p>
 <div class="content">
 <img src="images/improvement-approaches/cbs-5-final.png" alt="CBS, final">
 </div>
-<div class="title">Figure 21. Change-by-split, all split systems reduced/optimized</div>
+<div class="title">Figure 22. Change-by-split, all split systems reduced/optimized</div>
 </div>
 <div class="paragraph">
 <p>This final step might need extensive preparation, e.g. by creating user-category
@@ -6483,7 +6505,7 @@ by the new database service are similarly translated for used by legacy applicat
 <div class="content">
 <img src="images/improvement-approaches/databaseFirst.png" alt="Database-First-Approach">
 </div>
-<div class="title">Figure 22. Database-First-Approach</div>
+<div class="title">Figure 23. Database-First-Approach</div>
 </div>
 <div class="paragraph">
 <p>The main advantage of this approach is that once the legacy data has been migrated, the latest programming
@@ -6589,7 +6611,7 @@ service, as shown in Fig. 1.</p>
 <div class="content">
 <img src="images/improvement-approaches/databaseLast.png" alt="Database-Last-Approach">
 </div>
-<div class="title">Figure 23. Database-Last-Approach</div>
+<div class="title">Figure 24. Database-Last-Approach</div>
 </div>
 <div class="paragraph">
 <p>If the legacy database service is to be migrated to a
@@ -6677,7 +6699,7 @@ legacy system and the old legacy system can be retired.</p>
 <div class="content">
 <img src="images/improvement-approaches/composite.png" alt="Composite-Database-Approach">
 </div>
-<div class="title">Figure 24. Composite-Database Approach</div>
+<div class="title">Figure 25. Composite-Database Approach</div>
 </div>
 <div class="paragraph">
 <p>During the migration, the old legacy system and its
@@ -6788,7 +6810,7 @@ Also it can be very expensive to implement the DAA.</p>
 <div class="content">
 <img src="images/improvement-approaches/butterfly.png" alt="Butterfly-Methodology">
 </div>
-<div class="title">Figure 25. Butterfly-Methodology</div>
+<div class="title">Figure 26. Butterfly-Methodology</div>
 </div>
 </div>
 <div class="sect4">
@@ -6883,7 +6905,7 @@ cut-over rewrite is reduced risk (it might cost more to do a strangler, but that
 <div class="content">
 <img src="images/strangulation.jpg" alt="strangulation">
 </div>
-<div class="title">Figure 26. Strangler Applications (Paul Hammant)</div>
+<div class="title">Figure 27. Strangler Applications (Paul Hammant)</div>
 </div>
 <div class="paragraph">
 <p>He discusses two ways of achieving the goal of moving from the (red) old system to the (blue) new system:
@@ -7074,7 +7096,7 @@ these practices are more a <em>tactical</em> nature.</p>
 <div class="content">
 <img src="images/improve-practice-categories.png" alt="improve practice categories">
 </div>
-<div class="title">Figure 27. Categories of Improvement Practices</div>
+<div class="title">Figure 28. Categories of Improvement Practices</div>
 </div>
 <div class="ulist">
 <ul>
@@ -7100,7 +7122,7 @@ engineering, delivery, operations and management.</p>
 <div class="content">
 <img src="images/improve-processes.png" alt="Practices for Improve Processes" width="400">
 </div>
-<div class="title">Figure 28. Practices to improve processes</div>
+<div class="title">Figure 29. Practices to improve processes</div>
 </div>
 </div>
 <div class="sect2">
@@ -7121,7 +7143,7 @@ This category contains a fairly large number of practices.
 <div class="content">
 <img src="images/improve-architecture.png" alt="Practices to Improve Architecture" width="600">
 </div>
-<div class="title">Figure 29. Practices to improve architecture and code structure</div>
+<div class="title">Figure 30. Practices to improve architecture and code structure</div>
 </div>
 <div class="sect3">
 <h4 id="_architecture_and_code_practices_in_detail"><a class="anchor" href="#_architecture_and_code_practices_in_detail"></a>4.7.1. Architecture and Code Practices in Detail</h4>
@@ -8129,7 +8151,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="content">
 <img src="images/improve-technical-infrastructure.png" alt="Practices to Improve Technical Infrastructure" width="400">
 </div>
-<div class="title">Figure 30. Practices to improve technical infrastructure</div>
+<div class="title">Figure 31. Practices to improve technical infrastructure</div>
 </div>
 </div>
 <div class="sect2">
@@ -8138,7 +8160,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="content">
 <img src="images/improve-analyzability.png" alt="Practices for Improve Analyzability" width="400">
 </div>
-<div class="title">Figure 31. Practices to improve analyzability</div>
+<div class="title">Figure 32. Practices to improve analyzability</div>
 </div>
 </div>
 </div>
@@ -8183,7 +8205,7 @@ facilitates identification of additional issues and improvements.</p>
 <div class="content">
 <img src="images/issues-and-improvements.png" alt="issues and improvements">
 </div>
-<div class="title">Figure 32. Collect issues and improvements</div>
+<div class="title">Figure 33. Collect issues and improvements</div>
 </div>
 </div>
 <div class="sect2">
@@ -8342,7 +8364,7 @@ tactics and strategies in all of the aim42-phases.</p>
 <div class="content">
 <img src="images/collect-remedies.png" alt="collect remedies">
 </div>
-<div class="title">Figure 33. Collect Remedies in All Phases</div>
+<div class="title">Figure 34. Collect Remedies in All Phases</div>
 </div>
 </div>
 <div class="sect2">
@@ -8386,7 +8408,7 @@ during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Int
 <div class="content">
 <img src="images/expect-denial-reaction-levels.png" alt="Reaction levels">
 </div>
-<div class="title">Figure 34. Levels of Reaction when presented with problems</div>
+<div class="title">Figure 35. Levels of Reaction when presented with problems</div>
 </div>
 <div class="paragraph">
 <p>From enthusiasm to neutrality things will be easy, but from here on it gets interesting or difficult, however you might call it.</p>
@@ -8582,7 +8604,7 @@ might have. Identify the resultant effects on system development and operations.
 <div class="content">
 <img src="images/improvement-backlog.jpg" alt="improvement backlog">
 </div>
-<div class="title">Figure 35. Improvement Backlog</div>
+<div class="title">Figure 36. Improvement Backlog</div>
 </div>
 <div class="sect3">
 <h4 id="_intent_48"><a class="anchor" href="#_intent_48"></a>5.11.1. Intent</h4>
@@ -9818,7 +9840,7 @@ typical kinds of information, <strong>entities</strong>.</p>
 <div class="content">
 <img src="images/aim42-domain-model.png" alt="aim42 domain model">
 </div>
-<div class="title">Figure 36. aim42 domain terminology - detailed</div>
+<div class="title">Figure 37. aim42 domain terminology - detailed</div>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
 <colgroup>
@@ -10463,7 +10485,7 @@ image::aim42-logo.png["alternate-text", title="caption-example"]</pre>
 <div class="content">
 <img src="images/aim42-logo.png" alt="alternate-text">
 </div>
-<div class="title">Figure 37. caption-example</div>
+<div class="title">Figure 38. caption-example</div>
 </div>
 <div class="paragraph">
 <p>You can even reference these images, like see figure <a href="#caption-example">caption-example</a>:</p>
@@ -10715,7 +10737,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-05-21 16:03:29 +00:00
+Last updated 2017-05-21 16:08:58 +00:00
 </div>
 </div>
 </body>
