@@ -2202,22 +2202,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#contributions">Contribute to aim42.org <span class="icon"><i class="fa fa-smile-o"></i></span></a></li>
 </ul>
 </li>
-<li><a href="#_asciidoc_help">Appendix E: Asciidoc Help</a>
-<ul class="sectlevel2">
-<li><a href="#_headings">Headings</a></li>
-<li><a href="#_cross_references">Cross-References</a></li>
-<li><a href="#__external_links">(external) Links</a></li>
-<li><a href="#_anchor">Anchor</a></li>
-<li><a href="#_images_and_diagrams">Images and Diagrams</a></li>
-<li><a href="#_lists">Lists</a></li>
-<li><a href="#_admonitions">Admonitions</a></li>
-<li><a href="#_files_and_directories">Files and Directories</a></li>
-<li><a href="#_attributes">Attributes</a></li>
-<li><a href="#_footnotes">Footnotes</a></li>
-<li><a href="#_typesetting">Typesetting</a></li>
-</ul>
-</li>
-<li><a href="#_how_to_add_a_new_pattern_or_practice">Appendix F: How to add a new pattern or practice</a></li>
+<li><a href="#_how_to_add_a_new_pattern_or_practice">Appendix E: How to add a new pattern or practice</a></li>
 </ul>
 </div>
 </div>
@@ -2270,7 +2255,7 @@ improvement of software systems:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="https://img.shields.io/badge/Version-0.7.5-green.svg" alt="0.7.5"></span>
-<span class="image"><img src="https://img.shields.io/badge/Date-Sep 25. 2017-green.svg" alt="/Sep 25. 2017"></span>
+<span class="image"><img src="https://img.shields.io/badge/Date-Sep 26. 2017-green.svg" alt="/Sep 26. 2017"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="https://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="https://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42" target="_blank"><img src="https://img.shields.io/github/stars/aim42/aim42.svg" alt="github-stars"></a></span>
@@ -10096,13 +10081,16 @@ true work on things that tend to go wrong in software development and other
 projects.</p>
 </li>
 <li>
-<p><a id="arc42"></a>[arc42] arc42 - Resources for Software Architects. Practical template, liberal licence.
+<p><a id="arc42"></a> arc42: Resources for Software Architects. Practical template, liberal licence.
 Available in a variety of formats, see <a href="http://arc42.de">German website</a> or <a href="http://arc42.org">English website</a>.</p>
 </li>
 <li>
-<p><a id="Agans-Debugging"></a>[Agans-Debugging] David J. Agans: Debugging: The 9 Indispensable Rules for Finding Even the Mose
+<p><a id="Agans-Debugging"></a> David J. Agans: Debugging: The 9 Indispensable Rules for Finding Even the Mose
 Elusive Software and Hardware Problems. Amacom Press, 2002. Although most developers take "debugging skills" for granted,
 they sometimes spend too much time tracking too little bugs.</p>
+</li>
+<li>
+<p><a id="Ambler"></a> Scott Ambler on Database Refactoring: <a href="http://agiledata.org/essays/databaseRefactoring.html" class="bare">http://agiledata.org/essays/databaseRefactoring.html</a></p>
 </li>
 <li>
 <p><a id="Annett-Legacy"></a>[Annett-Legacy] Robert Annett: Working with Legacy Systems: A practical guide to the real systems we inherit.  <a href="http://leanpub.com/WorkingWithLegacySystems">Leanpub Publishing</a>.</p>
@@ -10217,6 +10205,10 @@ A pattern-based approach to re-engineer object-oriented legacy systems. It conta
 <li>
 <p><a id="Quality-Requirements"></a>[Quality-Requirements]
 <a href="https://bitbucket.org/arc42/quality-requirements">(Free) Examples of Practical Software Quality Requirements</a>.</p>
+</li>
+<li>
+<p><a id="Sadalage"></a> Sadalage, P.: Refactoring Databases: Evolutionary Database Design. Collection of patterns
+for database refactoring. Online: <a href="http://databaserefactoring.com/" class="bare">http://databaserefactoring.com/</a></p>
 </li>
 <li>
 <p><a id="SERIOUS"></a>[SERIOUS] Software Evolution, Refactoring, Improvement of Operational &amp; Usable Systems.
@@ -10435,340 +10427,7 @@ limitations under the License.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_asciidoc_help"><a class="anchor" href="#_asciidoc_help"></a>Appendix E: Asciidoc Help</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To facilitate contributions we summarize the AsciiDoc (respectively AsciiDoctor) features used within this guide.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>We found the following information especially helpful for learning and writing AsciiDoc</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://asciidoctor.org/docs/asciidoc-writers-guide">AsciiDoctor Writers Guide</a></p>
-</li>
-<li>
-<p>Chrome-Add-In for <a href="http://asciidoctor.org/news/2013/09/18/introducing-asciidoctor-js-live-preview/">Live-preview</a></p>
-</li>
-<li>
-<p><a href="https://atom.io/packages/asciidoc-preview">AsciiDoc Preview</a> for Atom editor
-*</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_headings"><a class="anchor" href="#_headings"></a>Headings</h3>
-<div class="paragraph">
-<p>Headings are just headings as described in the AsciiDoctor&#8217;s Manual entry on
-<strong><a href="http://asciidoctor.org/docs/user-manual/#sections"> sections</a></strong>. The important
-thing to keep in mind is the fact that AsciiDoctor actually treats headings
-<em>semantically</em>. This means that a level 2 section should come within a section 1
-section and be followed by a level three section, <em>not</em> by a level four section.</p>
-</div>
-<div class="paragraph">
-<p>Otherwise there should be a compile warning in the gradle build like this</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>:asciidoctor
-asciidoctor: WARNING: appendices/asciidoc-help.adoc: line 18: section title out of sequence: expected level 2, got level 3</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>and we try to avoid these.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_cross_references"><a class="anchor" href="#_cross_references"></a>Cross-References</h3>
-<div class="paragraph">
-<p><a href="#some-anchor">explanation</a> creates a link to the explanation of some-anchor:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&lt;some-anchor,explanation&gt;&gt; creates a link to the explanation of some-anchor.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can use the cross-reference in a list, but not with labelled-list:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><a href="#some-anchor">pattern name</a>  labeled-list with cross-reference does not work</p>
-</li>
-<li>
-<p><strong><a href="#some-anchor">cross-references</a></strong> need to be boldface-formatted manually</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="__external_links"><a class="anchor" href="#__external_links"></a>(external) Links</h3>
-<div class="listingblock">
-<div class="content">
-<pre>https://github.com/aim42/aim42/issues/20[an external resource]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/aim42/aim42/issues/20">an external resource</a></p>
-</div>
-<div class="paragraph">
-<p>Link to files / artifacts in new browser window/tab:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>link:./docs/readme-directory.md[readme]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><a href="./docs/readme-directory.md">readme</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_anchor"><a class="anchor" href="#_anchor"></a>Anchor</h3>
-<div id="some-anchor" class="paragraph">
-<p>here we explain 'some-anchor' topic&#8230;&#8203;</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&lt;some-anchor,explanation&gt;&gt; creates a link to the explanation of some-anchor.
-
-can use the cross-reference in a list, but not with labelled-list:
-
-. &lt;&lt;some-anchor, pattern name&gt;&gt;  labelled-list with cross-reference does not work
-. *&lt;&lt;some-anchor, cross-references&gt;&gt;* need to be boldface-formatted manualy
-
-
-[[some-anchor]]
-here we explain 'some-anchor' topic...</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_images_and_diagrams"><a class="anchor" href="#_images_and_diagrams"></a>Images and Diagrams</h3>
-<div class="paragraph">
-<p>Including images is quite easy:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>[[caption-example]]
-image::aim42-logo.png["alternate-text", title="caption-example"]</pre>
-</div>
-</div>
-<div id="caption-example" class="imageblock">
-<div class="content">
-<img src="images/aim42-logo.png" alt="alternate-text">
-</div>
-<div class="title">Figure 39. caption-example</div>
-</div>
-<div class="paragraph">
-<p>You can even reference these images, like see figure <a href="#caption-example">caption-example</a>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>...see figure &lt;&lt;caption-example&gt;&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>I currently have no clue how to reference figure-numbers (their counter), though&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_lists"><a class="anchor" href="#_lists"></a>Lists</h3>
-<div class="listingblock">
-<div class="content">
-<pre>* first entry
-* one more</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>first entry</p>
-</li>
-<li>
-<p>one more</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_admonitions"><a class="anchor" href="#_admonitions"></a>Admonitions</h3>
-<div class="paragraph">
-<p>Special annotations rendering nicely:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>NOTE: Admonition paragraphs call attention to special words of advice
-
-WARNING: a warning
-
-CAUTION: be careful
-
-IMPORTANT: must be really worth reading
-
-TIP: maybe some practice report</pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Admonition paragraphs call attention to special words of advice
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-a warning
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-be careful
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-must be really worth reading
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-maybe some practice report
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>[TIP]
---
-Multi-line admonitions blocks need special treatment:
-
-they need a block-masquerading (e.g. by "--" at the beginning and end.
-
-The result is rendered nicely.
---</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>renders as follows:</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Multi-line admonitions blocks need special treatment:</p>
-</div>
-<div class="paragraph">
-<p>they need a block-masquerading (e.g. by "--" at the beginning and end.</p>
-</div>
-<div class="paragraph">
-<p>The result is rendered nicely.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_files_and_directories"><a class="anchor" href="#_files_and_directories"></a>Files and Directories</h3>
-<div class="paragraph">
-<p>Files are included with the "include" directive:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>  include::asciidoc-help.adoc[]</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_attributes"><a class="anchor" href="#_attributes"></a>Attributes</h3>
-<div class="paragraph">
-<p>Some attributes are useful, e.g.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>{docdate}</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>will insert the last modification data (here: 2017-09-25)</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_footnotes"><a class="anchor" href="#_footnotes"></a>Footnotes</h3>
-<div class="paragraph">
-<p>In case you need a footnote - that&#8217;s easy too:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>A statement.footnote:[the text of this footnote, usually rendered at the end of the document.]</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_typesetting"><a class="anchor" href="#_typesetting"></a>Typesetting</h3>
-<div class="paragraph">
-<p>Sometimes it can be useful to write <span class="small">smaller text</span>.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>... useful to write [small]#smaller text#.</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_how_to_add_a_new_pattern_or_practice"><a class="anchor" href="#_how_to_add_a_new_pattern_or_practice"></a>Appendix F: How to add a new pattern or practice</h2>
+<h2 id="_how_to_add_a_new_pattern_or_practice"><a class="anchor" href="#_how_to_add_a_new_pattern_or_practice"></a>Appendix E: How to add a new pattern or practice</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -10823,7 +10482,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-09-25 21:45:33 +00:00
+Last updated 2017-09-26 05:37:35 +00:00
 </div>
 </div>
 </body>
