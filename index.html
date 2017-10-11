@@ -2136,7 +2136,11 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_description_47">5.9.1. Description</a></li>
 </ul>
 </li>
-<li><a href="#Fail-Fast">5.10. <span class="pattern">Fail Fast</span></a></li>
+<li><a href="#Fail-Fast">5.10. <span class="pattern">Fail Fast</span></a>
+<ul class="sectlevel3">
+<li><a href="#_takeaways">5.10.1. Takeaways</a></li>
+</ul>
+</li>
 <li><a href="#Fast-Feedback">5.11. <span class="pattern">Fast Feedback</span></a></li>
 <li><a href="#Impact-Analysis">5.12. <span class="pattern">Impact Analysis</span></a>
 <ul class="sectlevel3">
@@ -8584,9 +8588,36 @@ In case of numerical estimation, it helps to apply
 <div class="sect2">
 <h3 id="Fail-Fast"><a class="anchor" href="#Fail-Fast"></a>5.10. <span class="pattern">Fail Fast</span></h3>
 <div class="paragraph">
-<p>The later a lack of quality is identified the higher are the costs to fix it.
-Continuously evaluate the quality of work artifacts and immediately take
-countermeasures or pull the plug as early as possible. Similar to <a href="#Fast-Feedback"><span class="pattern">Fast Feedback</span></a>.</p>
+<p>"fail fast" is actually a reference to an architecture principle describing a runtime behaviour of a system. I.e. if the application already knows that a remote system is not reachable, it should not try to send other/ more requests to this system so that this system can recover. Instead the application should immediately return either an error message or - even better - a functional fallback value.</p>
+</div>
+<div class="paragraph">
+<p>Transferring this to software improvements, a fail-fast approach would be to immediately report when an improvement can not be applied. Don&#8217;t wait e.g. until the end of the sprint to communicate the failure. Instead this early feedback provides the opportunity to reflect and pivot on the improvement before the next sprint is started.</p>
+</div>
+<div class="sect3">
+<h4 id="_takeaways"><a class="anchor" href="#_takeaways"></a>5.10.1. Takeaways</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>fail-fast is actually an architecture principle for software runtime behaviour</p>
+</li>
+<li>
+<p>report failures as early as possible</p>
+</li>
+<li>
+<p>use failures as opportunities to pivot</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Fast-Feedback"><a class="anchor" href="#Fast-Feedback"></a>5.11. <span class="pattern">Fast Feedback</span></h3>
+<div class="paragraph">
+<p>Fast Feedback is a well-known term which was e.g. coined in Bruce Tulgan&#8217;s book with the same name. Usually it&#8217;s about "frequent, accurate, specific and timely, and FAST feedback" in evaluation of different topics e.g. performance evaluation. Fast Feedback means that we don&#8217;t want to wait for six to twelve months until we get results or answers on a specific question. Instead we keep participants in a constant feedback loop so they immediately exchange information once they receive it.</p>
+</div>
+<div class="paragraph">
+<p>The intention behind this is, the later a lack of quality is identified the higher the costs to fix it. Continuously evaluate the quality of work artifacts and immediately take
+countermeasures or pull the plug as early as possible. Similar to <a href="#Fail-Fast"><span class="pattern">Fail Fast</span></a>.</p>
 </div>
 <div class="paragraph">
 <p>Suitable methods to identify such situations are:</p>
@@ -8606,12 +8637,6 @@ countermeasures or pull the plug as early as possible. Similar to <a href="#Fast
 <p>Testing in early stages</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="Fast-Feedback"><a class="anchor" href="#Fast-Feedback"></a>5.11. <span class="pattern">Fast Feedback</span></h3>
-<div class="paragraph">
-<p>TODO</p>
 </div>
 <div class="paragraph">
 <p>See also <a href="#Fail-Fast"><span class="pattern">Fail Fast</span></a>.</p>
@@ -10482,7 +10507,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-11 15:15:07 +00:00
+Last updated 2017-10-11 16:23:35 +00:00
 </div>
 </div>
 </body>
