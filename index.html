@@ -2136,11 +2136,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_description_47">5.9.1. Description</a></li>
 </ul>
 </li>
-<li><a href="#Fail-Fast">5.10. <span class="pattern">Fail Fast</span></a>
-<ul class="sectlevel3">
-<li><a href="#_takeaways">5.10.1. Takeaways</a></li>
-</ul>
-</li>
+<li><a href="#Fail-Fast">5.10. <span class="pattern">Fail Fast</span></a></li>
 <li><a href="#Fast-Feedback">5.11. <span class="pattern">Fast Feedback</span></a></li>
 <li><a href="#Impact-Analysis">5.12. <span class="pattern">Impact Analysis</span></a>
 <ul class="sectlevel3">
@@ -2259,7 +2255,7 @@ improvement of software systems:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="https://img.shields.io/badge/Version-0.7.5-green.svg" alt="0.7.5"></span>
-<span class="image"><img src="https://img.shields.io/badge/Date-Oct 11. 2017-green.svg" alt="/Oct 11. 2017"></span>
+<span class="image"><img src="https://img.shields.io/badge/Date-Oct 16. 2017-green.svg" alt="/Oct 16. 2017"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank"><img src="https://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank"><img src="https://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42" target="_blank"><img src="https://img.shields.io/github/stars/aim42/aim42.svg" alt="github-stars"></a></span>
@@ -4265,7 +4261,29 @@ Look for:</p>
 <div class="sect4">
 <h5 id="_experiences_5"><a class="anchor" href="#_experiences_5"></a>Experiences</h5>
 <div class="paragraph">
-<p><em>Still to be done.</em></p>
+<p>As previously mentioned, we found three recurrent series of circumstances in which architecture decisions and the process of architecting reportedly generated social debt.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>* Lonesome Architecting: * we observed this pattern manifesting when non-architects are forced to make decisions while actual architects are <code>too few and far apart". One of the software architects reporting this condition in industry also complained that he and his colleagues had [&#8230;&#8203;] not enough time to dedicate to decision-making (and related changes) as well as properly disseminating architecture decisions. Some of the most common consequences we found resulting from this
+pattern are: (a) decision unawareness; (b) misalignment between
+product version and architecture; (c) lack of awareness on the
+product&#8217;s needs; (d) overly fast decision-making to </code>patch-up". The
+debt in this case is associated to delays needed to find out about
+decisions and apply the necessary modifications, possibly rewriting
+code with considerable waste. Also, from a social point of view, this
+circumstance results in loss of project vision (i.e., frequent quotes
+were ``what are we doing? what does the product need for its
+improvement?") with resulting frustration and mistrust.</p>
+</li>
+<li>
+<p>* Obfuscated Architecting: * Obfuscated architecting takes place when multiple sub-groups emerge in a development network without a harmonised organisational and socio-technical vision necessary to operate in the network. We observed this pattern manifesting when new or changed architecture decisions imply implementation changes that necessitate new people to be included in the development network (e.g., different skills are needed). we observed this pattern in presence of multiple products (both legacy and new) being operated together but in the process of being integrated. New people to be included in the development network lacked the frame of mind and vision needed to understand and cope with the legacy product. This obfuscates the communication of architecture decisions. Some of the most common consequences we found resulting from this pattern are: (a) single communication points for architecture decisions - many developers eventually felt left out of the development network when it came to software architecture, since they could not reach architects properly, this led to time waste and resulting  developers' frustration; (b) circumstances indicating socio-technical code-churn.</p>
+</li>
+<li>
+<p>* Architecting by Osmosis: * In layman&#8217;s terms, osmosis refers to the process of permeating a solvent through a semi-permeable (series of) membrane(s). By comparison, architecting by osmosis means making architecture decisions using knowledge that is filtered through many semi-permeable communication links. we observed architecting by osmosis manifesting when the following sequence of events occurs: (1) the effects of certain decisions reach clients and product operators but result in inoperable software; (2) operators, pushed by clients, share malcontent with developers and suggest technical changes; (3) developers evaluate (and sometimes partially implement) possible technical changes and suggest change to architecture decisions; (4) architects make necessary changes in decisions with knowledge that was partially filtered by all communication layers in the development network.</p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect4">
@@ -4274,7 +4292,9 @@ Look for:</p>
 </div>
 <div class="sect4">
 <h5 id="_related_patterns_6"><a class="anchor" href="#_related_patterns_6"></a>Related Patterns</h5>
-
+<div class="paragraph">
+<p>All Cross-cutting patterns relate to the circumstances defined above.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_references_2"><a class="anchor" href="#_references_2"></a>References</h5>
@@ -4282,6 +4302,9 @@ Look for:</p>
 <ul>
 <li>
 <p>Damian Tamburri, Philippe Kruchten, Patricia Lago, Hans van Vliet: What is social debt in software engineering? In: Cooperative and Human Aspects of Software Engineering (CHASE), p. 93–96, 2013, Washington, DC. <a href="https://jisajournal.springeropen.com/articles/10.1186/s13174-015-0024-6" class="bare">https://jisajournal.springeropen.com/articles/10.1186/s13174-015-0024-6</a></p>
+</li>
+<li>
+<p>Tamburri, D. A. &amp; Nitto, E. D. (2015), When Software Architecture Leads to Social Debt., in Len Bass; Patricia Lago &amp; Philippe Kruchten, ed., 'WICSA' , IEEE Computer Society, , pp. 61-64 .</p>
 </li>
 </ul>
 </div>
@@ -8588,36 +8611,9 @@ In case of numerical estimation, it helps to apply
 <div class="sect2">
 <h3 id="Fail-Fast"><a class="anchor" href="#Fail-Fast"></a>5.10. <span class="pattern">Fail Fast</span></h3>
 <div class="paragraph">
-<p>"fail fast" is actually a reference to an architecture principle describing a runtime behaviour of a system. I.e. if the application already knows that a remote system is not reachable, it should not try to send other/ more requests to this system so that this system can recover. Instead the application should immediately return either an error message or - even better - a functional fallback value.</p>
-</div>
-<div class="paragraph">
-<p>Transferring this to software improvements, a fail-fast approach would be to immediately report when an improvement can not be applied. Don&#8217;t wait e.g. until the end of the sprint to communicate the failure. Instead this early feedback provides the opportunity to reflect and pivot on the improvement before the next sprint is started.</p>
-</div>
-<div class="sect3">
-<h4 id="_takeaways"><a class="anchor" href="#_takeaways"></a>5.10.1. Takeaways</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>fail-fast is actually an architecture principle for software runtime behaviour</p>
-</li>
-<li>
-<p>report failures as early as possible</p>
-</li>
-<li>
-<p>use failures as opportunities to pivot</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="Fast-Feedback"><a class="anchor" href="#Fast-Feedback"></a>5.11. <span class="pattern">Fast Feedback</span></h3>
-<div class="paragraph">
-<p>Fast Feedback is a well-known term which was e.g. coined in Bruce Tulgan&#8217;s book with the same name. Usually it&#8217;s about "frequent, accurate, specific and timely, and FAST feedback" in evaluation of different topics e.g. performance evaluation. Fast Feedback means that we don&#8217;t want to wait for six to twelve months until we get results or answers on a specific question. Instead we keep participants in a constant feedback loop so they immediately exchange information once they receive it.</p>
-</div>
-<div class="paragraph">
-<p>The intention behind this is, the later a lack of quality is identified the higher the costs to fix it. Continuously evaluate the quality of work artifacts and immediately take
-countermeasures or pull the plug as early as possible. Similar to <a href="#Fail-Fast"><span class="pattern">Fail Fast</span></a>.</p>
+<p>The later a lack of quality is identified the higher are the costs to fix it.
+Continuously evaluate the quality of work artifacts and immediately take
+countermeasures or pull the plug as early as possible. Similar to <a href="#Fast-Feedback"><span class="pattern">Fast Feedback</span></a>.</p>
 </div>
 <div class="paragraph">
 <p>Suitable methods to identify such situations are:</p>
@@ -8637,6 +8633,12 @@ countermeasures or pull the plug as early as possible. Similar to <a href="#Fail
 <p>Testing in early stages</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Fast-Feedback"><a class="anchor" href="#Fast-Feedback"></a>5.11. <span class="pattern">Fast Feedback</span></h3>
+<div class="paragraph">
+<p>TODO</p>
 </div>
 <div class="paragraph">
 <p>See also <a href="#Fail-Fast"><span class="pattern">Fail Fast</span></a>.</p>
@@ -10507,7 +10509,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-11 16:23:35 +00:00
+Last updated 2017-10-16 13:57:48 +00:00
 </div>
 </div>
 </body>
