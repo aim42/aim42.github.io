@@ -2080,7 +2080,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_goals_3">4.1. Goals</a></li>
 <li><a href="#_structure_of_the_improvement_phase">4.2. Structure of the Improvement Phase</a></li>
 <li><a href="#_fundamentals">4.3. Fundamentals</a></li>
-<li><a href="#improvement-approaches">4.4. (Long-Term) Improvement Approaches</a>
+<li><a href="#improve-approaches">4.4. (Long-Term) Improvement Approaches</a>
 <ul class="sectlevel3">
 <li><a href="#big-bang-approach">4.4.1. <span class="pattern">Big Bang Approach</span></a></li>
 <li><a href="#change-by-split-approach">4.4.2. <span class="pattern">Change-by-Split Approach</span></a></li>
@@ -2092,7 +2092,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#strangler-approach">4.4.8. <span class="pattern">Strangler Approach</span></a></li>
 </ul>
 </li>
-<li><a href="#improvement-practices">4.5. (Short-Term) Improvement Practices</a></li>
+<li><a href="#improve-practices">4.5. (Short-Term) Improvement Practices</a></li>
 <li><a href="#improve-processes">4.6. Practices to Improve Processes</a></li>
 <li><a href="#improve-architecture">4.7. Improve Architecture and Code Structure</a>
 <ul class="sectlevel3">
@@ -2259,7 +2259,7 @@ improvement of software systems:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="https://img.shields.io/badge/Version-0.7.7-green.svg" alt="0.7.7"></span>
-<span class="image"><img src="https://img.shields.io/badge/Date-Feb%2025.%202018-green.svg" alt="/Feb 25. 2018"></span>
+<span class="image"><img src="https://img.shields.io/badge/Date-Feb%2026.%202018-green.svg" alt="/Feb 26. 2018"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank" rel="noopener"><img src="https://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank" rel="noopener"><img src="https://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/aim42/aim42.svg" alt="github-stars"></a></span>
@@ -5774,7 +5774,7 @@ uncertainty and propability involved.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Execute and coordinate the improvement activities to eliminate problems and issues found during <a href="#Analyze">analysis</a>. There is a whole <a href="#improve-practices">bunch of practices</a> devoted to this step, and we described the different  <a href="#improvement-approaches">approaches</a> you can take to run the improvements.</p>
+<p>Execute and coordinate the improvement activities to eliminate problems and issues found during <a href="#Analyze">analysis</a>. There is a whole <a href="#improve-practices">bunch of practices</a> devoted to this step, and we described the different  <a href="#improve-approaches">approaches</a> you can take to run the improvements.</p>
 </li>
 <li>
 <p>Apply selected opportunities for improvement</p>
@@ -5804,17 +5804,17 @@ uncertainty and propability involved.</p>
 <div class="sect2">
 <h3 id="_structure_of_the_improvement_phase"><a class="anchor" href="#_structure_of_the_improvement_phase"></a>4.2. Structure of the Improvement Phase</h3>
 <map name="ImproveConceptsOverview">
-<area shape=rect coords="71,50,260,112" href="#improve-practices">
-	<area shape=poly coords="71,54,260,54,260,11,11,11,11,54,11,112,71,112,71,54" href="#improvement-approaches">
-	<area shape=rect coords="11,112,260,158" href="#improve-fundamentals">
+<area shape=rect coords="43,39,204,96" href="#improve-practices">
+<area shape=rect coords="0,0,249,106" href="#improve-approaches">
+<area shape=rect coords="0,107,249,153" href="#improve-fundamentals">
 </map>
-<img border=0 src="images/improve-concepts-overview.jpg" usemap="#ImproveConceptsOverview">
+<img border=0 src="images/improve-fundamentals-approaches-practices.png" usemap="#ImproveConceptsOverview">
 <div class="hdlist">
 <div class="title">Concepts For Improvement</div>
 <table>
 <tr>
 <td class="hdlist1">
-<a href="#_fundamentals">Fundamentals</a>
+<a href="#improve-fundamentals">Fundamentals</a>
 </td>
 <td class="hdlist2">
 <p>Some principles which you should consider whatever steps you take on your road to improvement.</p>
@@ -5822,7 +5822,7 @@ uncertainty and propability involved.</p>
 </tr>
 <tr>
 <td class="hdlist1">
-<a href="#improvement-approaches">Approaches</a>
+<a href="#improve-approaches">Approaches</a>
 </td>
 <td class="hdlist2">
 <p>Overall (strategic, long-term) decisions how to tackle improvement. Examples include <strong>Big-Bang</strong>, <strong>Strangulate-Bad-Parts</strong>, <strong>Change-Via-Split</strong>.</p>
@@ -5852,7 +5852,7 @@ depicted in figure <a href="#improve-fundamentals">Improvement Fundamentals</a>.
 <div class="title">Figure 16. Improvement Fundamentals</div>
 </div>
 <div class="paragraph">
-<p>These fundamental principles surely belong to software engineering good practices - but we consider them indispendsable for improvement projects.</p>
+<p>These fundamental principles surely belong to software engineering good practices - but we consider them indispensable for improvement projects.</p>
 </div>
 <div class="hdlist">
 <table>
@@ -5871,7 +5871,7 @@ depicted in figure <a href="#improve-fundamentals">Improvement Fundamentals</a>.
 <td class="hdlist2">
 <p>Improve in (potentially small) iterations and/or increments, so
 that change does not disturb or negatively affect the system, its associated
-processes and organisation. Iterations are the prerequiste for our whole <em>phased improvement</em>.</p>
+processes and organization. Iterations are the prerequisite for our whole <em>phased improvement</em>.</p>
 </td>
 </tr>
 <tr>
@@ -5900,7 +5900,7 @@ up several <a href="http://secretsofconsulting.blogspot.de/2015/01/some-very-exp
 <td class="hdlist2">
 <p>Simpler solutions are most often easier to comprehend,
 maintain and operate. Therefore always strive for simplicity and the reduction
-of accidental, unneccessary complexity.</p>
+of accidental, unnecessary complexity.</p>
 </td>
 </tr>
 <tr>
@@ -5924,11 +5924,11 @@ to similar entities and potential synergies are utilized.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="improvement-approaches"><a class="anchor" href="#improvement-approaches"></a>4.4. (Long-Term) Improvement Approaches</h3>
+<h3 id="improve-approaches"><a class="anchor" href="#improve-approaches"></a>4.4. (Long-Term) Improvement Approaches</h3>
 <div class="paragraph">
 <p>The central decision you should take is the improvement-approach, the overall, long-range or <strong>strategic</strong> decision how you want to tackle your improvement.</p>
 </div>
-<div id="fig-improvement-approaches" class="imageblock">
+<div id="fig-improve-approaches" class="imageblock">
 <div class="content">
 <img src="images/improve-approaches-overview.png" alt="improve approaches overview">
 </div>
@@ -6303,7 +6303,7 @@ more focussed.</p>
 online E-commerce system, such groups might be private and corporate customers.</p>
 <div id="figure-split-initial" class="imageblock">
 <div class="content">
-<img src="images/improvement-approaches/cbs-1-initial.png" alt="CBS, initial">
+<img src="images/improve-approaches/cbs-1-initial.png" alt="CBS, initial">
 </div>
 <div class="title">Figure 18. Change-by-split, initial situation</div>
 </div>
@@ -6315,7 +6315,7 @@ databases or other middleware. Every part should be completely independend
 of the others.</p>
 <div id="figure-split-copied" class="imageblock">
 <div class="content">
-<img src="images/improvement-approaches/cbs-2-copied.png" alt="CBS, copied">
+<img src="images/improve-approaches/cbs-2-copied.png" alt="CBS, copied">
 </div>
 <div class="title">Figure 19. Change-by-split, system copied for every user type/category</div>
 </div>
@@ -6330,7 +6330,7 @@ commons into a separate module/subsystem, which is used by (likely all) other sp
 </div>
 <div id="figure-split-commons" class="imageblock">
 <div class="content">
-<img src="images/improvement-approaches/cbs-3-factored-commons.png" alt="CBS, commons">
+<img src="images/improve-approaches/cbs-3-factored-commons.png" alt="CBS, commons">
 </div>
 <div class="title">Figure 20. Change-by-split, factored out commons</div>
 </div>
@@ -6346,7 +6346,7 @@ one developer group responsible for one split system.</p>
 </div>
 <div id="figure-split-reduced-commons" class="imageblock">
 <div class="content">
-<img src="images/improvement-approaches/cbs-4-reduced-commons.png" alt="CBS, reduced commons">
+<img src="images/improve-approaches/cbs-4-reduced-commons.png" alt="CBS, reduced commons">
 </div>
 <div class="title">Figure 21. Change-by-split, reduced splits, optimized commons</div>
 </div>
@@ -6358,7 +6358,7 @@ user group, remove all code that can also be handled by the Commons subsystem.
 This step might be performed parallel to optimizing the commons.</p>
 <div id="figure-split-final" class="imageblock">
 <div class="content">
-<img src="images/improvement-approaches/cbs-5-final.png" alt="CBS, final">
+<img src="images/improve-approaches/cbs-5-final.png" alt="CBS, final">
 </div>
 <div class="title">Figure 22. Change-by-split, all split systems reduced/optimized</div>
 </div>
@@ -6531,7 +6531,7 @@ by the new database service are similarly translated for used by legacy applicat
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/improvement-approaches/databaseFirst.png" alt="Database-First-Approach">
+<img src="images/improve-approaches/databaseFirst.png" alt="Database-First-Approach">
 </div>
 <div class="title">Figure 23. Database-First-Approach</div>
 </div>
@@ -6637,7 +6637,7 @@ service, as shown in Fig. 1.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/improvement-approaches/databaseLast.png" alt="Database-Last-Approach">
+<img src="images/improve-approaches/databaseLast.png" alt="Database-Last-Approach">
 </div>
 <div class="title">Figure 24. Database-Last-Approach</div>
 </div>
@@ -6725,7 +6725,7 @@ legacy system and the old legacy system can be retired.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/improvement-approaches/composite.png" alt="Composite-Database-Approach">
+<img src="images/improve-approaches/composite.png" alt="Composite-Database-Approach">
 </div>
 <div class="title">Figure 25. Composite-Database Approach</div>
 </div>
@@ -6838,7 +6838,7 @@ Also it can be very expensive to implement the DAA.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/improvement-approaches/butterfly.png" alt="Butterfly-Methodology">
+<img src="images/improve-approaches/butterfly.png" alt="Butterfly-Methodology">
 </div>
 <div class="title">Figure 26. Butterfly-Methodology</div>
 </div>
@@ -7116,7 +7116,7 @@ also miss. This is a risk for any “rewrite” though.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="improvement-practices"><a class="anchor" href="#improvement-practices"></a>4.5. (Short-Term) Improvement Practices</h3>
+<h3 id="improve-practices"><a class="anchor" href="#improve-practices"></a>4.5. (Short-Term) Improvement Practices</h3>
 <div class="paragraph">
 <p>We divide improvement practices into several categories (shown in
 the figure below). In contrast to the (more <em>strategic</em>) approaches
@@ -8802,7 +8802,7 @@ links to the corresponding improvements (remedies, tactics, strategies, changes)
 or align issues and improvements, considering existing goals and constraints.</p>
 </div>
 <div class="paragraph">
-<p>Consists of long-term decisions (concerning <a href="#improvement-approaches">(Long-Term) Improvement Approaches</a>) and
+<p>Consists of long-term decisions (concerning <a href="#improve-approaches">(Long-Term) Improvement Approaches</a>) and
 short-term planning.</p>
 </div>
 </div>
@@ -10509,7 +10509,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-02-25 20:23:00 UTC
+Last updated 2018-02-26 19:05:39 UTC
 </div>
 </div>
 </body>
