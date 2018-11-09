@@ -2267,7 +2267,7 @@ improvement of software systems:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="https://img.shields.io/badge/Version-0.7.7-green.svg" alt="0.7.7"></span>
-<span class="image"><img src="https://img.shields.io/badge/Date-Nov%208.%202018-green.svg" alt="/Nov 8. 2018"></span>
+<span class="image"><img src="https://img.shields.io/badge/Date-Nov%209.%202018-green.svg" alt="/Nov 9. 2018"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank" rel="noopener"><img src="https://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank" rel="noopener"><img src="https://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/aim42/aim42.svg" alt="github-stars"></a></span>
@@ -6438,7 +6438,7 @@ because the data model and the code operating on the data model is a huge mess.<
 <p>The system is small enough that it can be rewritten quickly within a few month</p>
 </li>
 <li>
-<p>You analyzed other approaches like <a href="http://www.martinfowler.com/bliki/StranglerApplication.html">Strangler</a> or
+<p>You analyzed other approaches like <a href="#Strangler Approach">[Strangler Approach]</a> or
 <a href="https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1478609966&amp;sr=1-1&amp;keywords=Working+Effectively+with+Legacy+Code">Seams</a>
 and they could not help you approaching the problem incrementally</p>
 </li>
@@ -7174,17 +7174,22 @@ If the amount of data is huge, there is a need for a lot of hardware.</p>
 <h4 id="strangler-approach"><a class="anchor" href="#strangler-approach"></a>4.7.8. <span class="pattern">Strangler Approach</span></h4>
 <div class="sect4">
 <h5 id="_intent_38"><a class="anchor" href="#_intent_38"></a>Intent</h5>
-
+<div class="paragraph">
+<p>Divide a legacy system into different functional domains and replace those step by step.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_description_37"><a class="anchor" href="#_description_37"></a>Description</h5>
 <div class="paragraph">
-<p>Rewriting an old system "big bang" is a risky endeavour. It is harder than you think (see "Big Bang Approach" in aim42).</p>
+<p>Rewriting an old system with the <a href="#Big Bang Approach">[Big Bang Approach]</a> is a risky endeavor. It is harder than you might think at the beginning.</p>
 </div>
 <div class="paragraph">
-<p>An alternative route is to gradually create a new system around the edges of the old, letting it grow slowly over
+<p>An alternative way is to gradually create a new system around the edges of the old, letting it grow slowly over
 several years until the old system is strangled. The most important reason to consider a strangler application over a
-cut-over rewrite is reduced risk (it might cost more to do a strangler, but that&#8217;s the price of risk reduction) [2].</p>
+cut-over rewrite is reduced risk (it might cost more to do a strangler, but that&#8217;s the price of risk reduction) [1].</p>
+</div>
+<div class="paragraph">
+<p>Paul Hammont depicts the strangler approach as follows [2]:</p>
 </div>
 <div id="figure-strangulation" class="imageblock">
 <div class="content">
@@ -7193,8 +7198,20 @@ cut-over rewrite is reduced risk (it might cost more to do a strangler, but that
 <div class="title">Figure 31. Strangler Applications (Paul Hammant)</div>
 </div>
 <div class="paragraph">
-<p>He discusses two ways of achieving the goal of moving from the (red) old system to the (blue) new system:
-1) with adding new features and 2) without adding new features. Deciding to go for the first strategy means that you can still keep your business happy, because you are still able to
+<p>He discusses two ways of achieving the goal of moving from the (red) old system to the (blue) new system:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>With adding new features</p>
+</li>
+<li>
+<p>Without adding new features</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Deciding to go for the first strategy means that you can still keep your business happy because you are still able to
 deliver new features. However, this approach will take longer than the second one.</p>
 </div>
 </div>
@@ -7203,7 +7220,7 @@ deliver new features. However, this approach will take longer than the second on
 <div class="ulist">
 <ul>
 <li>
-<p>Paul Hammont reports the following positive <a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">case studies</a></p>
+<p>Paul Hammont reports the following positive with his <a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">case studies</a>:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -7219,20 +7236,20 @@ so compelling that they wanted to. Google is (as I heard from a Googler) doing s
 systems, which are replaced by new systems all the time and you need to decide when to switch.</p>
 </li>
 <li>
-<p>National Supermarket’s internal planning system based on Swing and a major database is moving into a Rails und Java
+<p>National Supermarket&#8217;s internal planning system based on Swing and a major database is moving into a Rails and Java
 Microservices based web application. Since the two technologies are also very different, there is no smooth way of
 integrating the old and the new system, they have to exist in parallel (it is an internal system)</p>
 </li>
 <li>
-<p>Used consumer goods magazine’s web portal - a move from Oracle Endeca to Java/JavaScript. First, they changed the
+<p>Used consumer goods magazine&#8217;s web portal - a move from Oracle Endeca to Java/JavaScript. First, they changed the
 Oracle frontend that it looks like the new system. Then they integrated a little piece of new functionality from
-the new stack into the website. The first strangler release took 6 month, then the delivered regularly.</p>
+the new stack into the website. The first strangler release took 6 months, then the delivered regularly.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Nat Pryce reports failed projects and challenges using the Strangler-pattern:</p>
+<p>Nat Pryce reports failed projects and challenges using the strangler pattern [3]:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -7257,19 +7274,19 @@ to one or even both of these schemas."</p>
 <ul>
 <li>
 <p>You need to overcome the lack of will to actually finish the strangling (usually political will from
-non-technical stakeholders, manifested as lack of budget). If you don&#8217;t completely kill off the old system, you&#8217;ll
+non-technical stakeholders manifested as lack of budget). If you don&#8217;t completely kill off the old system, you&#8217;ll
 end up in a worse mess because your system now has two ways of doing everything with an awkward interface between the
 two. Later, another wave of developers will probably decide to strangle what&#8217;s there, writing yet another strangler
 application, and again a lack of will might leave the system in an even worse state, with three ways of doing things [1].</p>
 </li>
 <li>
 <p>You need to have consensus across the development team(s) on the future state of the architecture and how to get there.
-If everyone runs into another direction, then you end up with a new system, which is also hard to maintain.</p>
+If everyone runs in another direction, then you end up with a new system, which is also hard to maintain.</p>
 </li>
 <li>
 <p>If you&#8217;re introducing technologies that are new to the team or to support/maintenance staff (e.g. adding reliable async
 messaging to what is currently a synchronous three-tier client/server architecture) then you have to ensure that there
-are experienced technical leads on the project who know how to build systems with that technology, and support those
+are experienced technical leads on the project who know how to build systems with that technology and support those
 systems. And those tech leads have to stick with the project for some time after the old app has been fully strangled.
 Otherwise, the architecture will degrade as inexperienced developers modify it in ways they know but not in ways that
 fit with the new architecture [1].</p>
@@ -7300,19 +7317,19 @@ fit with the new architecture [1].</p>
 <div class="sect4">
 <h5 id="_proposed_practices_2"><a class="anchor" href="#_proposed_practices_2"></a>Proposed practices</h5>
 <div class="paragraph">
-<p>Paul Hammant recommends the following practices:</p>
+<p>Paul Hammant recommends the following practices [2]:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p>You really should phase the strangulation. Keep your larger application in a continually deployable state while working on it.
-The first go live after a month or so of work, then every two weeks after that at least or you’ll fail. That would
+The first go live after a month or so of work, then every two weeks after that at least or you&#8217;ll fail. That would
 probably via project cancellation by a checkbook-holding sponsor.</p>
 </li>
 <li>
-<p>Do enhancements or new “business value” work concurrently with strangulation, while getting all to agree that both are
+<p>Do enhancements or new "business value" work concurrently with strangulation, while getting all to agree that both are
 happening. As you work on the strangulation, a decent percentage of work should be enhancements too. This allows value
-to be associated with each release from the point of view of the people paying for it. ROI and all that, isn’t just
+to be associated with each release from the point of view of the people paying for it. ROI and all that isn&#8217;t just
 abandonment of costly end-of-life IT choices, it is about tangible changes for the better. From top to bottom, everyone
 needs to agree that both are happening.</p>
 </li>
@@ -7322,19 +7339,19 @@ old technology did not have unit test coverage. The functional tests will be abl
 to prevent surprises.</p>
 </li>
 <li>
-<p>Understand that Non-Functional Requirements (NFRs) that don’t directly cheapen the re-implementation may jeopardize the
-initiative. Jeopardize in the “courting cancellation” territory again. Various authority figures may have pet technologies
-to include, or things to exclude. The test is whether the dev team cranking stuff out agrees or not.</p>
+<p>Understand that Non-Functional Requirements (NFRs) that don&#8217;t directly cheapen the re-implementation may jeopardize the
+initiative. Jeopardize in the "courting cancellation" territory again. Various authority figures may have pet technologies
+to include or things to exclude. The test is whether the dev team cranking stuff out agrees or not.</p>
 </li>
 <li>
-<p>Agile methodologies optimize everything for maximized developer throughput, and phased deliveries to production. You
+<p>Agile methodologies optimize everything for maximized developer throughput and phased deliveries to production. You
 will not manage this with waterfall, unless you want glacially long intervals between production pushes.
 The <a href="http://cdn.pols.co.uk/papers/agile-approach-to-legacy-systems.pdf">Pols/Stevenson white paper</a> drills much further into the Agile aspects.</p>
 </li>
 <li>
 <p>Lastly, you should always be aware that there could be functionality and context hidden within the old application
 that people have forgotten about, and that a team of business analysts assigned to reverse engineering behaviors might
-also miss. This is a risk for any “rewrite” though.</p>
+also miss. This is a risk for any "rewrite" though.</p>
 </li>
 </ul>
 </div>
@@ -7354,16 +7371,16 @@ also miss. This is a risk for any “rewrite” though.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>[1] <a href="http://stackoverflow.com/questions/1118804/application-strangler-pattern-experiences-thoughts">Discussion</a> with Nat Pryce and Ira Baxter on StackOverflow</p>
+<p>[1] Martin Fowler <a href="http://www.martinfowler.com/bliki/StranglerApplication.html">about the Strangler Application</a></p>
 </li>
 <li>
-<p>[2] Martin Fowler <a href="http://www.martinfowler.com/bliki/StranglerApplication.html">about the Strangler Application</a></p>
+<p>[2] Paul Hammant&#8217;s <a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">blog post</a> with practices and case studies</p>
 </li>
 <li>
-<p>[3] Paul Hammant&#8217;s list of <a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">case studies</a></p>
+<p>[3] <a href="http://stackoverflow.com/questions/1118804/application-strangler-pattern-experiences-thoughts">Discussion on StackOverflow</a> with Nat Pryce and Ira Baxter</p>
 </li>
 <li>
-<p>[4] Michael Feathers <a href="http://www.hanselman.com/blog/HanselminutesPodcast165WorkingEffectivelyWithLegacyCodeWithMichaelFeathers.aspx">speaks</a> on Hanselminutes about the Strangler Application</p>
+<p>Michael Feathers speaks on <a href="http://www.hanselman.com/blog/HanselminutesPodcast165WorkingEffectivelyWithLegacyCodeWithMichaelFeathers.aspx">Hanselminutes</a> about the Strangler Application</p>
 </li>
 </ul>
 </div>
@@ -10805,7 +10822,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-11-08 15:15:08 UTC
+Last updated 2018-11-09 07:48:15 UTC
 </div>
 </div>
 </body>
