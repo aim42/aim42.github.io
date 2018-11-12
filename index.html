@@ -4942,7 +4942,7 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <div class="sect4">
 <h5 id="_intent_22"><a class="anchor" href="#_intent_22"></a>Intent</h5>
 <div class="paragraph">
-<p>Understand software by examining existing source code</p>
+<p>Understand software by examining existing source code.</p>
 </div>
 </div>
 <div class="sect4">
@@ -4956,18 +4956,34 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <p>Ensure you have access rights to all required systems, at least to version control, database, participating servers etc.</p>
 </li>
 <li>
-<p>Ensure you can build the system from scratch (compile, load all dependencies, link or whatever steps are neccessary)</p>
+<p>Ensure you can build the system from scratch (compile, load all dependencies, link or whatever steps are necessary).</p>
 </li>
 <li>
 <p>Practice <a href="#View-Based-Understanding">View-Based Understanding</a> by sketching notes or diagrams. Get an <em>aerial view</em>, a glimpse of the topmost, biggest structures in the code.</p>
 </li>
 <li>
-<p>Try to understand the <em>terminology</em> of the original authors by scanning code and searching for multiple occurances. Start creating a <em>glossary</em></p>
+<p>Try to understand the <em>terminology</em> of the original authors by scanning code and searching for multiple occurrences. Start creating a <em>glossary</em>.</p>
 </li>
 <li>
 <p>Introduce <em>tracing</em> or <em>logging</em> statements. Aspect-oriented tools (like AspectJ) might be helpful.</p>
 </li>
 </ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_experience_2"><a class="anchor" href="#_experience_2"></a>Experience</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>By examining the build scripts of the software project or the job definitions on a continuous integration server, you can build the software and the needed testing environment on your own.</p>
+</li>
+<li>
+<p>With simple tools like the <code>git shortlog -ns</code> command you can easily check parts of a software system for potential loss of knowledge based on the commits per developer.</p>
+</li>
+<li>
+<p>By using word clouds, you can quickly extract the most occurring terms in your source code and start creating a glossary for the most prominent words.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect4">
@@ -5013,7 +5029,13 @@ order by simply dragging fields/labels around the screen, users were perfectly h
 <p><a href="#Moyer-Archeology">[Moyer-Archeology]</a>, short report.</p>
 </li>
 <li>
-<p><a href="#OORP">[OORP]</a>, page 53, "Read all the Code in One Hour" suggest to read all source code in a short period of time to get a rough feeling about the software system.</p>
+<p><a href="#OORP">[OORP]</a>, page 53ff. , "Read all the Code in One Hour" suggest to read all source code in a short period of time to get a rough feeling about the software system.</p>
+</li>
+<li>
+<p><a href="#OORP">[OORP]</a>, page 97ff. , "Speculate about Design" suggest to create diagrams based on hypothesis and progressive refinement.</p>
+</li>
+<li>
+<p><a href="#Tornhill-XRay">[Tornhill-XRay]</a> shows many ways of using version control systems to recreate knowledge about software systems.</p>
 </li>
 </ul>
 </div>
@@ -5080,7 +5102,7 @@ configuration-manager, release-manager, maintenance-team, external service provi
 </table>
 </div>
 <div class="sect4">
-<h5 id="_experience_2"><a class="anchor" href="#_experience_2"></a>Experience</h5>
+<h5 id="_experience_3"><a class="anchor" href="#_experience_3"></a>Experience</h5>
 <div class="paragraph">
 <p>There are often more stakeholder roles involved than it is obvious. Especially those people not directly involved in project- or development work sometimes are forgotten, e.g. standard bodies, external organizations, competitors, press or media, legal department,
 employee organization.</p>
@@ -5201,7 +5223,7 @@ At the end of the interview, give a short feedback and summarize important resul
 </div>
 </div>
 <div class="sect4">
-<h5 id="_experience_3"><a class="anchor" href="#_experience_3"></a>Experience</h5>
+<h5 id="_experience_4"><a class="anchor" href="#_experience_4"></a>Experience</h5>
 <div class="paragraph">
 <p>Expect the usual difficulties in human communication: people will love or dislike your work, the interview or the intent of your endeavour.</p>
 </div>
@@ -10719,6 +10741,9 @@ Use forensic techniques to arrest defects, bottlenecks and bad design in your pr
 Pragmatic Programmers, 2015. Despite the seemingly funny title, this is one of the most practical books on analyzing source code from arbitrary languages.
 The <a href="http://www.adamtornhill.com/articles/crimescene/codeascrimescene.htm">author</a> has implemented several of the ideas as open-source tools.</p>
 </li>
+<li>
+<p><a id="Tornhill-XRay"></a>[Tornhill-XRay] Adam Tornhill: <a href="https://pragprog.com/book/atevol/software-design-x-rays">Software Design X-Rays: Fix Technical Debt with Behavioral Code Analysis</a>. Pragmatic Programmers, 2018. This book focuses on the social behavior of software developers. It shows how you can spot knowledge loss, hidden change dependencies and hot spots of bad code.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -10971,7 +10996,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-11-12 17:33:27 UTC
+Last updated 2018-11-12 17:35:30 UTC
 </div>
 </div>
 </body>
