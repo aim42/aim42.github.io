@@ -2115,7 +2115,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#improve-analyzability">4.12. Practices to Improve Analyzability and Evaluability</a>
 <ul class="sectlevel3">
 <li><a href="#_analyzability_and_evaluability_practices_in_detail">4.12.1. Analyzability and Evaluability Practices in Detail</a></li>
-<li><a href="#Doc-As-Code">4.12.2. <span class="pattern">Doc-As-Code</span></a></li>
+<li><a href="#Docs-As-Code">4.12.2. <span class="pattern">Docs-As-Code</span></a></li>
 </ul>
 </li>
 </ul>
@@ -2272,7 +2272,7 @@ improvement of software systems:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="https://img.shields.io/badge/Version-0.7.7-green.svg" alt="0.7.7"></span>
-<span class="image"><img src="https://img.shields.io/badge/Date-Nov%2010.%202018-green.svg" alt="/Nov 10. 2018"></span>
+<span class="image"><img src="https://img.shields.io/badge/Date-Nov%2012.%202018-green.svg" alt="/Nov 12. 2018"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank" rel="noopener"><img src="https://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank" rel="noopener"><img src="https://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/aim42/aim42.svg" alt="github-stars"></a></span>
@@ -5552,7 +5552,7 @@ and reason about the code structure</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Doc-As-Code">Section 4.12.2, &#8220;<span class="pattern">Doc-As-Code</span>&#8221;</a></p>
+<p><a href="#Doc-As-Code">[Doc-As-Code]</a></p>
 </li>
 <li>
 <p><a href="#Context-Analysis">Section 2.3.3, &#8220;<span class="pattern">Context-Analysis</span>&#8221;</a></p>
@@ -8533,29 +8533,32 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Doc-As-Code">Section 4.12.2, &#8220;<span class="pattern">Doc-As-Code</span>&#8221;</a></p>
+<p><a href="#Docs-As-Code">Section 4.12.2, &#8220;<span class="pattern">Docs-As-Code</span>&#8221;</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Doc-As-Code"><a class="anchor" href="#Doc-As-Code"></a>4.12.2. <span class="pattern">Doc-As-Code</span></h4>
+<h4 id="Docs-As-Code"><a class="anchor" href="#Docs-As-Code"></a>4.12.2. <span class="pattern">Docs-As-Code</span></h4>
 <div class="sect4">
 <h5 id="_intent_48"><a class="anchor" href="#_intent_48"></a>Intent</h5>
 <div class="paragraph">
-<p>Doc-As-Code is a documentation approach that raises developer-related documentation to the same importance as source code. The core idea of Doc-As-Code is to use the same tools and processes for creating documentation as for creating source code. This ensures that there are no high costs for context switches.</p>
+<p>Docs-As-Code is a documentation approach that raises developer-related documentation to the same importance as source code.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_description_47"><a class="anchor" href="#_description_47"></a>Description</h5>
 <div class="paragraph">
-<p>Developer-related documentation of software systems is often neglected. In many situations, it’s not the lack of ideas for meaningful content that prevents documentation but the way developers have to do it: Separate programs have to be started and other work processes have to be followed. These and many more other distractions lead to long context switch times.</p>
+<p>Developer-related documentation of software systems is often neglected. In many situations, it&#8217;s not the lack of ideas for meaningful content that prevents documentation but the way developers have to do it: Separate programs have to be started and other work processes have to be followed. These and many more other distractions lead to long context switch times.</p>
 </div>
 <div class="paragraph">
-<p>The additional effort could be a reason for a rather negative attitude towards documentation on the developer side. As a result, the developer’s documentation is neglected and becomes obsolete with the time until it can no longer be used for anything at all. Unfortunately, missing or outdated documentation has negative consequences for the understandability of the entire software system.</p>
+<p>The additional effort could be a reason for a rather negative attitude towards documentation on the developer side. As a result, the developer&#8217;s documentation is neglected and becomes obsolete with the time until it can no longer be used for anything at all. Unfortunately, missing or outdated documentation has negative consequences for the understandability of the entire software system.</p>
 </div>
 <div class="paragraph">
-<p>There are a few practices that ensure that the acceptance of documentation by software developers increases:</p>
+<p>The core idea of Docs-As-Code is to use the same tools and processes for creating documentation as for creating source code. This ensures that there are no high costs for context switches.</p>
+</div>
+<div class="paragraph">
+<p>There are a few practices that ensure that the acceptance of documentation increases in software development teams:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -8572,13 +8575,13 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 <p>Changes to the texts are comparable to standard diffing tools.</p>
 </li>
 <li>
-<p>The documentation is placed directly next to the source code in the same code repository and in the same version control system.</p>
+<p>The documentation is placed directly next to the source code in the same version control system.</p>
 </li>
 <li>
 <p>The creation of the documentation artifacts (such as PDFs or HTML pages) that should be delivered is completely automated.</p>
 </li>
 <li>
-<p>Automated tests check the structure and links within the document when creating documentation artifacts.</p>
+<p>Automated tests check the structure and links within the document when documentation artifacts are created.</p>
 </li>
 <li>
 <p>The same code review process and tooling is used for checking the documentation as well as for source code.</p>
@@ -8598,7 +8601,7 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 <div class="sect4">
 <h5 id="_experiences_23"><a class="anchor" href="#_experiences_23"></a>Experiences</h5>
 <div class="paragraph">
-<p>When documentation and source code are in the very same code repository, developers can be kind of forced to update the documentation when they write new features or update existing ones. With the help of pull requests and code review techniques, it can be very quickly checked if necessary documentation updates were made.</p>
+<p>When documentation and source code are in the very same code repository, developers can be kind of forced to update the documentation when they write new features or update existing ones. With the help of pull requests and code review techniques, it can be checked very quickly if necessary documentation updates were made.</p>
 </div>
 </div>
 <div class="sect4">
@@ -8613,7 +8616,7 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 <div class="sect4">
 <h5 id="_consequences_19"><a class="anchor" href="#_consequences_19"></a>Consequences</h5>
 <div class="paragraph">
-<p>Can lead to grumbling at the beginning (at the lastest when the first pull request is declined due to missing documentation)</p>
+<p>Can lead to grumbling at the beginning (at the latest when the first pull request is declined due to missing documentation).</p>
 </div>
 </div>
 <div class="sect4">
@@ -10968,7 +10971,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-11-10 11:20:00 UTC
+Last updated 2018-11-12 17:33:27 UTC
 </div>
 </div>
 </body>
