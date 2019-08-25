@@ -2088,12 +2088,13 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#improve-approaches-details">4.7. Improvement Approaches (Details)</a>
 <ul class="sectlevel3">
 <li><a href="#big-bang-approach">4.7.1. <span class="pattern">Big Bang Approach</span></a></li>
-<li><a href="#change-by-split-approach">4.7.2. <span class="pattern">Change-by-Split Approach</span></a></li>
+<li><a href="#Chicken-Little-Strategy">4.7.2. <span class="pattern">Chicken-Little Approach</span></a></li>
 <li><a href="#database-first-approach">4.7.3. <span class="pattern">Database First Approach</span></a></li>
 <li><a href="#database-last-approach">4.7.4. <span class="pattern">Database Last Approach</span></a></li>
 <li><a href="#composite-database-approach">4.7.5. <span class="pattern">Composite Database Approach</span></a></li>
 <li><a href="#_span_class_pattern_butterfly_methodology_span">4.7.6. <span class="pattern">Butterfly-Methodology</span></a></li>
-<li><a href="#strangler-approach">4.7.7. <span class="pattern">Strangler Approach</span></a></li>
+<li><a href="#change-by-split-approach">4.7.7. <span class="pattern">Change-by-Split Approach</span></a></li>
+<li><a href="#strangler-approach">4.7.8. <span class="pattern">Strangler Approach</span></a></li>
 </ul>
 </li>
 <li><a href="#improve-practices">4.8. Improvement Practices (Details)</a></li>
@@ -2129,7 +2130,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_cross_cutting_practices">5.4. Cross-Cutting Practices</a></li>
 <li><a href="#Architectural-Understanding">5.5. <span class="pattern">Architectural-Understanding</span></a>
 <ul class="sectlevel3">
-<li><a href="#_description_49">5.5.1. Description</a></li>
+<li><a href="#_description_50">5.5.1. Description</a></li>
 <li><a href="#_experiences_25">5.5.2. Experiences</a></li>
 <li><a href="#_related_practices_6">5.5.3. Related Practices</a></li>
 </ul>
@@ -2138,16 +2139,16 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#Collect-Issues">5.7. <span class="pattern">Collect Issues</span></a></li>
 <li><a href="#Expect-Denial">5.8. <span class="pattern">Expect Denial</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_50">5.8.1. Intent</a></li>
-<li><a href="#_description_50">5.8.2. Description</a></li>
+<li><a href="#_intent_51">5.8.1. Intent</a></li>
+<li><a href="#_description_51">5.8.2. Description</a></li>
 <li><a href="#_experiences_26">5.8.3. Experiences</a></li>
-<li><a href="#_consequences_21">5.8.4. Consequences</a></li>
-<li><a href="#_related_patterns_31">5.8.5. Related Patterns</a></li>
+<li><a href="#_consequences_22">5.8.4. Consequences</a></li>
+<li><a href="#_related_patterns_32">5.8.5. Related Patterns</a></li>
 </ul>
 </li>
 <li><a href="#Explicit-Assumption">5.9. <span class="pattern">Explicit Assumption</span></a>
 <ul class="sectlevel3">
-<li><a href="#_description_51">5.9.1. Description</a></li>
+<li><a href="#_description_52">5.9.1. Description</a></li>
 </ul>
 </li>
 <li><a href="#Fail-Fast">5.10. <span class="pattern">Fail Fast</span></a>
@@ -2158,28 +2159,28 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#Fast-Feedback">5.11. <span class="pattern">Fast Feedback</span></a></li>
 <li><a href="#Impact-Analysis">5.12. <span class="pattern">Impact Analysis</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_51">5.12.1. Intent</a></li>
+<li><a href="#_intent_52">5.12.1. Intent</a></li>
 <li><a href="#_related_practices_7">5.12.2. Related Practices</a></li>
 </ul>
 </li>
 <li><a href="#Goals-Constraints">5.13. <span class="pattern">Goals and Constraints</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_52">5.13.1. Intent</a></li>
-<li><a href="#_description_52">5.13.2. Description</a></li>
+<li><a href="#_intent_53">5.13.1. Intent</a></li>
+<li><a href="#_description_53">5.13.2. Description</a></li>
 <li><a href="#_representation">5.13.3. Representation</a></li>
-<li><a href="#_references_28">5.13.4. References</a></li>
+<li><a href="#_references_29">5.13.4. References</a></li>
 </ul>
 </li>
 <li><a href="#Improvement-Backlog">5.14. <span class="pattern">Improvement Backlog</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_53">5.14.1. Intent</a></li>
+<li><a href="#_intent_54">5.14.1. Intent</a></li>
 <li><a href="#_content">5.14.2. Content</a></li>
 <li><a href="#_representation_and_tools">5.14.3. Representation and Tools</a></li>
 </ul>
 </li>
 <li><a href="#Issue-List">5.15. <span class="pattern">Issue List</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_54">5.15.1. Intent</a></li>
+<li><a href="#_intent_55">5.15.1. Intent</a></li>
 <li><a href="#_content_2">5.15.2. Content</a></li>
 <li><a href="#_representation_and_tools_2">5.15.3. Representation and Tools</a></li>
 </ul>
@@ -2192,26 +2193,26 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#Separate-Cause-From-Effect">5.18. <span class="pattern">Separate-Cause-From-Effect</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_55">5.18.1. Intent</a></li>
-<li><a href="#_description_53">5.18.2. Description</a></li>
+<li><a href="#_intent_56">5.18.1. Intent</a></li>
+<li><a href="#_description_54">5.18.2. Description</a></li>
 <li><a href="#_related_practices_9">5.18.3. Related Practices</a></li>
 </ul>
 </li>
 <li><a href="#Slide-Or-Write">5.19. <span class="pattern">Slide or Write</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_56">5.19.1. Intent</a></li>
-<li><a href="#_description_54">5.19.2. Description</a></li>
+<li><a href="#_intent_57">5.19.1. Intent</a></li>
+<li><a href="#_description_55">5.19.2. Description</a></li>
 <li><a href="#_experiences_27">5.19.3. Experiences</a></li>
-<li><a href="#_related_patterns_32">5.19.4. Related Patterns</a></li>
+<li><a href="#_related_patterns_33">5.19.4. Related Patterns</a></li>
 </ul>
 </li>
 <li><a href="#Traceability">5.20. <span class="pattern">Traceability</span></a>
 <ul class="sectlevel3">
-<li><a href="#_intent_57">5.20.1. Intent</a></li>
-<li><a href="#_description_55">5.20.2. Description</a></li>
+<li><a href="#_intent_58">5.20.1. Intent</a></li>
+<li><a href="#_description_56">5.20.2. Description</a></li>
 <li><a href="#_experiences_28">5.20.3. Experiences</a></li>
-<li><a href="#_applicability_30">5.20.4. Applicability</a></li>
-<li><a href="#_related_patterns_33">5.20.5. Related Patterns</a></li>
+<li><a href="#_applicability_31">5.20.4. Applicability</a></li>
+<li><a href="#_related_patterns_34">5.20.5. Related Patterns</a></li>
 </ul>
 </li>
 <li><a href="#Widen-Your-Options">5.21. <span class="pattern">Widen Your Options</span></a></li>
@@ -2281,7 +2282,7 @@ improvement of software systems:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="https://img.shields.io/badge/Version-0.7.7-green.svg" alt="0.7.7"></span>
-<span class="image"><img src="https://img.shields.io/badge/Date-Jul%2030.%202019-green.svg" alt="/Jul 30. 2019"></span>
+<span class="image"><img src="https://img.shields.io/badge/Date-Aug%2025.%202019-green.svg" alt="/Aug 25. 2019"></span>
 <span class="image"><a class="image" href="https://travis-ci.org/aim42/aim42" target="_blank" rel="noopener"><img src="https://img.shields.io/travis/aim42/aim42/master.svg" alt="build-status:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42/issues" target="_blank" rel="noopener"><img src="https://img.shields.io/github/issues/aim42/aim42.svg" alt="nr-of-issues:unknown"></a></span>
 <span class="image"><a class="image" href="https://github.com/aim42/aim42" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/aim42/aim42.svg" alt="github-stars"></a></span>
@@ -6565,7 +6566,7 @@ because the data model and the code operating on the data model is a huge mess.<
 <p>The system is small enough that it can be rewritten quickly within a few month</p>
 </li>
 <li>
-<p>You analyzed other approaches like <a href="#strangler-approach">Section 4.7.7, &#8220;<span class="pattern">Strangler Approach</span>&#8221;</a> or
+<p>You analyzed other approaches like <a href="#strangler-approach">Section 4.7.8, &#8220;<span class="pattern">Strangler Approach</span>&#8221;</a> or
 <a href="https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1478609966&amp;sr=1-1&amp;keywords=Working+Effectively+with+Legacy+Code">Seams</a>
 and they could not help you approaching the problem incrementally</p>
 </li>
@@ -6627,7 +6628,7 @@ new technology. In any case, they will loose their strong expert position for so
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#strangler-approach">Section 4.7.7, &#8220;<span class="pattern">Strangler Approach</span>&#8221;</a></p>
+<p><a href="#strangler-approach">Section 4.7.8, &#8220;<span class="pattern">Strangler Approach</span>&#8221;</a></p>
 </li>
 </ul>
 </div>
@@ -6656,124 +6657,144 @@ new technology. In any case, they will loose their strong expert position for so
 </div>
 </div>
 <div class="sect3">
-<h4 id="change-by-split-approach"><a class="anchor" href="#change-by-split-approach"></a>4.7.2. <span class="pattern">Change-by-Split Approach</span></h4>
-<div class="sect4">
-<h5 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h5>
-<div class="paragraph">
-<p>The system has several distinct (usually nearly disjunct) user groups.
-For each of these groups, slightly different business rules, processes
-or other requirements hold.</p>
-</div>
-</div>
+<h4 id="Chicken-Little-Strategy"><a class="anchor" href="#Chicken-Little-Strategy"></a>4.7.2. <span class="pattern">Chicken-Little Approach</span></h4>
 <div class="sect4">
 <h5 id="_intent_34"><a class="anchor" href="#_intent_34"></a>Intent</h5>
 <div class="paragraph">
-<p>Maintain and evolve a few smaller systems, instead of one big monolith.
-Reduce time-to-market, work in smaller teams that individually become
-more focussed.</p>
+<p>Software-Migration with incremental steps to avoid or reduce the risks coming along with the Big Bang approach.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_description_33"><a class="anchor" href="#_description_33"></a>Description</h5>
+<div class="paragraph">
+<p>Chicken Little was already described back in the 1990s of the last century by Michael L. Brodie and Michael Stonebreaker and is explained in their great book 'Migrating Legacy Systems' [1].</p>
+</div>
+<div class="paragraph">
+<p>The name of this approach originates from a Walt Disney cartoon, where the protagonist Chicken Little is a very young hero who saves all with his cautious &amp; conservative character. These are also highly essential &amp; invaluable qualities in software migration.</p>
+</div>
+<div class="paragraph">
+<p>The name 'Cold Turkey' for a Big Bang migration was also introduced by Brodie and Stonebreaker, which is a synonym for cold detoxification and therefore clearly describes the dislike of the authors in this kind of migration.</p>
+</div>
+<div class="paragraph">
+<p>The central idea of Chicken Little is to create a composite system consisting of the legacy system and the new target system.
+Incrementally, components of the legacy system are replaced with components of the target system.
+The legacy system thereby shrinks and the target system grows.</p>
+</div>
+<div class="paragraph">
+<p>The composition is implemented through gateways.
+They transfer both reading and writing requests to the respectively other system.
+A gateway can be a forward or a reverse gateway.
+A forward gateway is integrated into the legacy system and routes requests to the target system.
+A reverse gateway is part of the target system routing to the legacy system.</p>
+</div>
+<div class="paragraph">
+<p>Brodie and Stonebreaker define Chicken Little as 11 steps.
+Each step is applied for every increment of the migration.
+An increment can be a use case or a bounded context.
+The execution of these 11 steps can be in any order and parallel; steps can be omitted.</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Identify different user groups, at best disjunct. An example: For an
-online E-commerce system, such groups might be private and corporate customers.</p>
-<div id="figure-split-initial" class="imageblock">
-<div class="content">
-<img src="images/improve-approaches/cbs-1-initial.png" alt="CBS, initial">
-</div>
-<div class="title">Figure 22. Change-by-split, initial situation</div>
+<p><strong>Incrementally analyze the legacy system</strong></p>
+<div class="paragraph">
+<p>First, it is necessary to understand the legacy system.
+Consequently reverse engineering is needed to find out the requirements, which in principle are valid for the legacy system as well as for the target system.
+Utilize documentation (if at all exists), but be aware that it is mostly outdated and incomplete.
+Reading legacy source code might be reasonable only in rare cases.
+Apart from that, interview the people who support, manage or use the legacy system.
+In doing so, consider the principle of need-to-know, otherwise, you can fall into analysis paralysis, which results in delayed development.</p>
 </div>
 </li>
 <li>
-<p>As a preparation, copy the whole system, with all sources and everything
-required to develop, build, test and run the system. This might include
-databases or other middleware. Every part should be completely independend
-of the others.</p>
-<div id="figure-split-copied" class="imageblock">
-<div class="content">
-<img src="images/improve-approaches/cbs-2-copied.png" alt="CBS, copied">
-</div>
-<div class="title">Figure 23. Change-by-split, system copied for every user type/category</div>
+<p><strong>Incrementally decompose the legacy system structure</strong></p>
+<div class="paragraph">
+<p>In this step, the legacy system is modified to achieve a decomposable structure (3-layer-architecture) or well-defined interfaces.
+This is required for optimally integrating a gateway (step 7).
+The cost of this procedure depends on the current structure of the legacy system and might even be unachievable.</p>
 </div>
 </li>
 <li>
-<p>Identify commonalities among these different user groups, crosscutting concerns
-that every user group needs in a common way. In our E-commerce example,
-those might be pdf-generation, user/role management or the like. Factor out those
-commons into a separate module/subsystem, which is used by (likely all) other split systems.</p>
+<p><strong>Incrementally design the target interface</strong></p>
 <div class="paragraph">
-<p>Make part of the whole development team responsible for the commons.</p>
-</div>
-<div id="figure-split-commons" class="imageblock">
-<div class="content">
-<img src="images/improve-approaches/cbs-3-factored-commons.png" alt="CBS, commons">
-</div>
-<div class="title">Figure 24. Change-by-split, factored out commons</div>
+<p>GUIs or APIs of the target system are designed and specified, including a general idea of the architecture of the target system.
+A decision is reached whether gateways should be built.</p>
 </div>
 </li>
 <li>
-<p>Now you can optimize and/or refactor the commons subsystem. As its code
-is now centralized, that task might become somewhat simpler than within
-the original legacy system. At the same time, remove all commons-code from the split
-systems - reducing them in size.</p>
+<p><strong>Incrementally design the target application</strong></p>
 <div class="paragraph">
-<p>Split the rest of the whole development team according the split systems. Make
-one developer group responsible for one split system.</p>
-</div>
-<div id="figure-split-reduced-commons" class="imageblock">
-<div class="content">
-<img src="images/improve-approaches/cbs-4-reduced-commons.png" alt="CBS, reduced commons">
-</div>
-<div class="title">Figure 25. Change-by-split, reduced splits, optimized commons</div>
+<p>Similar to the previous step, business logic and rules must be designed and specified.</p>
 </div>
 </li>
 <li>
-<p>Now for the core of this approach: Aggressively reduce every split system
-to its core: remove all code not required for the split-specific
-user group, remove all code that can also be handled by the Commons subsystem.
-This step might be performed parallel to optimizing the commons.</p>
-<div id="figure-split-final" class="imageblock">
-<div class="content">
-<img src="images/improve-approaches/cbs-5-final.png" alt="CBS, final">
-</div>
-<div class="title">Figure 26. Change-by-split, all split systems reduced/optimized</div>
-</div>
+<p><strong>Incrementally design the target database</strong></p>
 <div class="paragraph">
-<p>This final step might need extensive preparation, e.g. by creating user-category
-specific unit-/integration-/acceptance tests. Reducing unneeded code
-can be quite difficult, if the original code has (extremely) high cyclomatic complexity
-or is very difficult to understand for other reasons (configurability, strange
-  technologies, using strange/outdated/proprietary frameworks etc.).</p>
+<p>Finally, the database must be designed to meet data requirements. A prerequisite is understanding the legacy data store which might be complex, especially if it is not a relational database.</p>
 </div>
 </li>
-</ol>
-</div>
+<li>
+<p><strong>Incrementally install the target environment</strong></p>
 <div class="paragraph">
-<p>Steps 4 and 5 might be interchanged or done in parallel.</p>
+<p>First of all, the requirements for the target environment must be identified. Later on, hardware and server machines will have to be installed and tested, a deployment strategy is developed, and a concept regarding user management finalized.</p>
 </div>
+</li>
+<li>
+<p><strong>Incrementally create and install the necessary gateways</strong></p>
+<div class="paragraph">
+<p>Now one or more gateways have to be implemented.
+The best way a gateway works is for fully decomposable systems (3-layer-architecture). For that case either use:</p>
 </div>
-<div class="sect4">
-<h5 id="_experiences_13"><a class="anchor" href="#_experiences_13"></a>Experiences</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>An niche-market software supplier could reduce their
-2+Million LoC <em>moloch</em> to five <em>split</em> systems, each having
-approx 300kLoC plus one commons-system.</p>
-<div class="paragraph">
-<p>Time-to-market for feature requests was reduced from 12 weeks
-before the splits to 1 week afterwards. Team size of 50+ was
-reduced to 8+ people. A retrospective approx 9 month after
-the split showed significant higher customer satisfaction
-and (!) a significant increase in developer happiness
-(probably reducing know-how drain). The split-approach was
-regarded as a success by business, management and technical stakeholdes.</p>
-</div>
+<p>forward database gateway, see <a href="#database-first-approach">Section 4.7.3, &#8220;<span class="pattern">Database First Approach</span>&#8221;</a></p>
+</li>
+<li>
+<p>reverse database gateway, see <a href="#database-last-approach">Section 4.7.4, &#8220;<span class="pattern">Database Last Approach</span>&#8221;</a></p>
+</li>
+<li>
+<p>forward and reverse database gateway, see <a href="#composite-database-approach">Section 4.7.5, &#8220;<span class="pattern">Composite Database Approach</span>&#8221;</a></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>In not fully decomposable systems the gateway must be placed on a higher level, for example between presentation and logic tier.
+It might be possible to receive a 3-layer-architecture in the legacy system by refactoring (step 2).
+As the target system grows and the legacy system shrinks, a gateway is reduced accordingly.
+In the situation of having both a forward and a reverse gateway, this results probably in redundant data in the legacy and target database. Keeping consistency is challenging and distributed transaction (2-phase commit) might be necessary.</p>
+</div>
+</li>
+<li>
+<p><strong>Incrementally migrate the legacy database</strong></p>
+<div class="paragraph">
+<p>The target DBMS is installed, and the DB-schema resulting from step 5 is implemented. The data has to be migrated, and a gateway is utilized for legacy application calls.</p>
+</div>
+</li>
+<li>
+<p><strong>Incrementally migrate the legacy application</strong></p>
+<div class="paragraph">
+<p>Modules with business logic based on step 4 will have to be rewritten.
+The selection of these migrated modules is based on technical and organizational criteria.
+Take that one which is the simplest, most needed, or that one facing the highest risk.</p>
+</div>
+</li>
+<li>
+<p><strong>Incrementally migrate the legacy interface</strong></p>
+<div class="paragraph">
+<p>GUIs and APIs designed in step 3 are implemented.</p>
+</div>
+</li>
+<li>
+<p><strong>Incrementally cutover to the target system</strong></p>
+<div class="paragraph">
+<p>Cutover is the process of switching users and their operations from the legacy to the target system.
+Then legacy components can be discarded.
+The smaller these steps are, the lower the risk.
+If one step fails, only this step has to be repeated and not the whole project.</p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect4">
@@ -6781,34 +6802,23 @@ regarded as a success by business, management and technical stakeholdes.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Creating several copies of a large system plus infrastructure
-can be expensive and resource-intensive.</p>
+<p>Gateways can be highly complex.
+Implementing a forward gateway may not be possible due to the structure of the legacy system.</p>
 </li>
 <li>
-<p>Identifying really disjunct user groups might be impossible for
-several business domains, rendering this approach useless.</p>
+<p>It may be difficult to keep consistency between the legacy and the target database.</p>
 </li>
 <li>
-<p>The required team-split might pose organizational challenges,
-as a currently productive (albeit large) team has to be disrupted.</p>
+<p>A composite system is highly complex and not easy to comprehend for new team members. The loss of experienced developers and their know-how are even more
+severe.</p>
 </li>
 <li>
-<p>It might be difficult to define appropriate interfaces for the
-factored-out <em>commons</em>. If these commons are overly scattered
-throughout the legacy code, this extraction might be impossible,
-making the resulting split systems more complicated than they should be.</p>
+<p>Estimating time and budget is difficult.
+When the migration begins, it is challenging to estimate how long it will take and how much it will cost.</p>
 </li>
 <li>
-<p>If business code is overly tangled, having very high cyclomatic
-complexity, it can be arbitrarily difficult to remove those parts
-that are not required for a single user type/category. Analyzing such
-code segments should be performed my members of several split-teams.</p>
-</li>
-<li>
-<p>Associated processes (like requirements, test, documentation and operations) of
-the split systems might become more difficult to manage in the first
-phases of a split. Due to the reduced sizes of split systems, it might
-be likely such processes will become simpler over time.</p>
+<p>Also, reverse engineering is tricky.
+There is the danger of missing features, so early feedback of users is invaluable.</p>
 </li>
 </ul>
 </div>
@@ -6816,70 +6826,49 @@ be likely such processes will become simpler over time.</p>
 <div class="sect4">
 <h5 id="_applicability_16"><a class="anchor" href="#_applicability_16"></a>Applicability</h5>
 <div class="paragraph">
-<p>Whenever a legacy system servers more than one homogeneous user
-group, this split approach might be appropriate.</p>
-</div>
-<div class="paragraph">
-<p>The business processes for the various user groups need to be
-sufficiently different from one another - otherwise splits would
-merely create duplicate functionality.</p>
+<p>Use this approach (or the main ideas) when you need to migrate in a safe and incremental way. It is highly recommended for mission-critical systems.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_consequences_8"><a class="anchor" href="#_consequences_8"></a>Consequences</h5>
+<div class="paragraph">
+<p>Software migration is not easy, and one will need patience and endurance.
+Migration projects can last several years. For that, a strong team is required.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_also_known_as_10"><a class="anchor" href="#_also_known_as_10"></a>Also Known As</h5>
+<div class="paragraph">
+<p>Incremental migration</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Instead of having to manage one single (but large) system,
-you will have to manage (develop, change, operate) several (smaller) systems.
-This might be especially relevant for operations effort.</p>
+<p><a href="#database-first-approach">Section 4.7.3, &#8220;<span class="pattern">Database First Approach</span>&#8221;</a></p>
 </li>
 <li>
-<p>Instead of having to manage one single development team,
-you will have to manage several.</p>
+<p><a href="#database-last-approach">Section 4.7.4, &#8220;<span class="pattern">Database Last Approach</span>&#8221;</a></p>
 </li>
 <li>
-<p>All "things" you are dealing with (code, data-structures, data,
-processes) will become smaller, reducing complexity of these "things".</p>
-</li>
-<li>
-<p>"Time-to-market" of your split systems will be lower (as development
-will be faster) - maybe coordination and management effort might increase.</p>
+<p><a href="#composite-database-approach">Section 4.7.5, &#8220;<span class="pattern">Composite Database Approach</span>&#8221;</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_proposed_practices"><a class="anchor" href="#_proposed_practices"></a>Proposed practices</h5>
+<h5 id="_references_13"><a class="anchor" href="#_references_13"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Find a relatively small user-group and <em>pilot</em> (try-out)
-this approach.</p>
+<p>[1] <a href="#Brodie-Stonebraker">[Brodie-Stonebraker]</a></p>
 </li>
 <li>
-<p>Involve the affected user groups as early as possible to
-facilitate possible required changes on their side.</p>
-</li>
-<li>
-<p>Try to to identify potential <em>neuralgic sections</em> within the code,
-that do not belong into the factored-out commons and will likely affect
-several of the split systems. Try to minimize the effort required
-to analyze and untangle such sections by gathering people from various
-split-teams.</p>
-</li>
-<li>
-<p>Don&#8217;t try everything at once: Spread out step 5 (optimize splits) over
-several, possibly many, development iterations or releases. Let the split
-teams become comfortable with their reduced split systems.</p>
+<p>[2] Matthias Möser, Abschied nehmen vom Legacy-System, Java Magazin 3.18, <a href="https://entwickler.de/leseproben/legacy-systeme-agil-ersetzen-579827753.html" class="bare">https://entwickler.de/leseproben/legacy-systeme-agil-ersetzen-579827753.html</a></p>
 </li>
 </ul>
-</div>
-<div id="Chicken-Little-Strategy" class="paragraph">
-<p><strong>==== <span class="pattern">Chicken-Little Strategy</span></strong></p>
-</div>
-<div class="paragraph">
-<p>to be completed&#8230;&#8203;</p>
 </div>
 </div>
 </div>
@@ -6912,7 +6901,7 @@ by the new database service are similarly translated for used by legacy applicat
 <div class="content">
 <img src="images/improve-approaches/databaseFirst.png" alt="Database-First-Approach">
 </div>
-<div class="title">Figure 27. Database-First-Approach</div>
+<div class="title">Figure 22. Database-First-Approach</div>
 </div>
 <div class="paragraph">
 <p>The main advantage of this approach is that once the legacy data has been migrated, the latest programming
@@ -6966,17 +6955,17 @@ legacy system can be shut down.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_19"><a class="anchor" href="#_related_patterns_19"></a>Related Patterns</h5>
+<h5 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Chicken-Little-Strategy">[Chicken-Little-Strategy]</a></p>
+<p><a href="#Chicken-Little-Strategy">Section 4.7.2, &#8220;<span class="pattern">Chicken-Little Approach</span>&#8221;</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_13"><a class="anchor" href="#_references_13"></a>References</h5>
+<h5 id="_references_14"><a class="anchor" href="#_references_14"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7018,7 +7007,7 @@ service, as shown in Fig. 1.</p>
 <div class="content">
 <img src="images/improve-approaches/databaseLast.png" alt="Database-Last-Approach">
 </div>
-<div class="title">Figure 28. Database-Last-Approach</div>
+<div class="title">Figure 23. Database-Last-Approach</div>
 </div>
 <div class="paragraph">
 <p>If the legacy database service is to be migrated to a
@@ -7063,17 +7052,17 @@ may be unacceptable</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_20"><a class="anchor" href="#_related_patterns_20"></a>Related Patterns</h5>
+<h5 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Chicken-Little-Strategy">[Chicken-Little-Strategy]</a></p>
+<p><a href="#Chicken-Little-Strategy">Section 4.7.2, &#8220;<span class="pattern">Chicken-Little Approach</span>&#8221;</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_14"><a class="anchor" href="#_references_14"></a>References</h5>
+<h5 id="_references_15"><a class="anchor" href="#_references_15"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7106,7 +7095,7 @@ legacy system and the old legacy system can be retired.</p>
 <div class="content">
 <img src="images/improve-approaches/composite.png" alt="Composite-Database-Approach">
 </div>
-<div class="title">Figure 29. Composite-Database Approach</div>
+<div class="title">Figure 24. Composite-Database Approach</div>
 </div>
 <div class="paragraph">
 <p>During the migration, the old legacy system and its
@@ -7166,17 +7155,17 @@ Information System architecture.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_21"><a class="anchor" href="#_related_patterns_21"></a>Related Patterns</h5>
+<h5 id="_related_patterns_22"><a class="anchor" href="#_related_patterns_22"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Chicken-Little-Strategy">[Chicken-Little-Strategy]</a></p>
+<p><a href="#Chicken-Little-Strategy">Section 4.7.2, &#8220;<span class="pattern">Chicken-Little Approach</span>&#8221;</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_15"><a class="anchor" href="#_references_15"></a>References</h5>
+<h5 id="_references_16"><a class="anchor" href="#_references_16"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7222,11 +7211,11 @@ Also it can be very expensive to implement the DAA.</p>
 <div class="content">
 <img src="images/improve-approaches/butterfly.png" alt="Butterfly-Methodology">
 </div>
-<div class="title">Figure 30. Butterfly-Methodology</div>
+<div class="title">Figure 25. Butterfly-Methodology</div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>Experiences</h5>
+<h5 id="_experiences_13"><a class="anchor" href="#_experiences_13"></a>Experiences</h5>
 
 </div>
 <div class="sect4">
@@ -7270,21 +7259,21 @@ If the amount of data is huge, there is a need for a lot of hardware.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_10"><a class="anchor" href="#_also_known_as_10"></a>Also Known As</h5>
+<h5 id="_also_known_as_11"><a class="anchor" href="#_also_known_as_11"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_22"><a class="anchor" href="#_related_patterns_22"></a>Related Patterns</h5>
+<h5 id="_related_patterns_23"><a class="anchor" href="#_related_patterns_23"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Chicken-Little-Strategy">[Chicken-Little-Strategy]</a></p>
+<p><a href="#Chicken-Little-Strategy">Section 4.7.2, &#8220;<span class="pattern">Chicken-Little Approach</span>&#8221;</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_16"><a class="anchor" href="#_references_16"></a>References</h5>
+<h5 id="_references_17"><a class="anchor" href="#_references_17"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7298,15 +7287,237 @@ If the amount of data is huge, there is a need for a lot of hardware.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="strangler-approach"><a class="anchor" href="#strangler-approach"></a>4.7.7. <span class="pattern">Strangler Approach</span></h4>
+<h4 id="change-by-split-approach"><a class="anchor" href="#change-by-split-approach"></a>4.7.7. <span class="pattern">Change-by-Split Approach</span></h4>
+<div class="sect4">
+<h5 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h5>
+<div class="paragraph">
+<p>The system has several distinct (usually nearly disjunct) user groups.
+For each of these groups, slightly different business rules, processes
+or other requirements hold.</p>
+</div>
+</div>
 <div class="sect4">
 <h5 id="_intent_39"><a class="anchor" href="#_intent_39"></a>Intent</h5>
+<div class="paragraph">
+<p>Maintain and evolve a few smaller systems, instead of one big monolith.
+Reduce time-to-market, work in smaller teams that individually become
+more focussed.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_description_38"><a class="anchor" href="#_description_38"></a>Description</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Identify different user groups, at best disjunct. An example: For an
+online E-commerce system, such groups might be private and corporate customers.</p>
+<div id="figure-split-initial" class="imageblock">
+<div class="content">
+<img src="images/improve-approaches/cbs-1-initial.png" alt="CBS, initial">
+</div>
+<div class="title">Figure 26. Change-by-split, initial situation</div>
+</div>
+</li>
+<li>
+<p>As a preparation, copy the whole system, with all sources and everything
+required to develop, build, test and run the system. This might include
+databases or other middleware. Every part should be completely independend
+of the others.</p>
+<div id="figure-split-copied" class="imageblock">
+<div class="content">
+<img src="images/improve-approaches/cbs-2-copied.png" alt="CBS, copied">
+</div>
+<div class="title">Figure 27. Change-by-split, system copied for every user type/category</div>
+</div>
+</li>
+<li>
+<p>Identify commonalities among these different user groups, crosscutting concerns
+that every user group needs in a common way. In our E-commerce example,
+those might be pdf-generation, user/role management or the like. Factor out those
+commons into a separate module/subsystem, which is used by (likely all) other split systems.</p>
+<div class="paragraph">
+<p>Make part of the whole development team responsible for the commons.</p>
+</div>
+<div id="figure-split-commons" class="imageblock">
+<div class="content">
+<img src="images/improve-approaches/cbs-3-factored-commons.png" alt="CBS, commons">
+</div>
+<div class="title">Figure 28. Change-by-split, factored out commons</div>
+</div>
+</li>
+<li>
+<p>Now you can optimize and/or refactor the commons subsystem. As its code
+is now centralized, that task might become somewhat simpler than within
+the original legacy system. At the same time, remove all commons-code from the split
+systems - reducing them in size.</p>
+<div class="paragraph">
+<p>Split the rest of the whole development team according the split systems. Make
+one developer group responsible for one split system.</p>
+</div>
+<div id="figure-split-reduced-commons" class="imageblock">
+<div class="content">
+<img src="images/improve-approaches/cbs-4-reduced-commons.png" alt="CBS, reduced commons">
+</div>
+<div class="title">Figure 29. Change-by-split, reduced splits, optimized commons</div>
+</div>
+</li>
+<li>
+<p>Now for the core of this approach: Aggressively reduce every split system
+to its core: remove all code not required for the split-specific
+user group, remove all code that can also be handled by the Commons subsystem.
+This step might be performed parallel to optimizing the commons.</p>
+<div id="figure-split-final" class="imageblock">
+<div class="content">
+<img src="images/improve-approaches/cbs-5-final.png" alt="CBS, final">
+</div>
+<div class="title">Figure 30. Change-by-split, all split systems reduced/optimized</div>
+</div>
+<div class="paragraph">
+<p>This final step might need extensive preparation, e.g. by creating user-category
+specific unit-/integration-/acceptance tests. Reducing unneeded code
+can be quite difficult, if the original code has (extremely) high cyclomatic complexity
+or is very difficult to understand for other reasons (configurability, strange
+  technologies, using strange/outdated/proprietary frameworks etc.).</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Steps 4 and 5 might be interchanged or done in parallel.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_experiences_14"><a class="anchor" href="#_experiences_14"></a>Experiences</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>An niche-market software supplier could reduce their
+2+Million LoC <em>moloch</em> to five <em>split</em> systems, each having
+approx 300kLoC plus one commons-system.</p>
+<div class="paragraph">
+<p>Time-to-market for feature requests was reduced from 12 weeks
+before the splits to 1 week afterwards. Team size of 50+ was
+reduced to 8+ people. A retrospective approx 9 month after
+the split showed significant higher customer satisfaction
+and (!) a significant increase in developer happiness
+(probably reducing know-how drain). The split-approach was
+regarded as a success by business, management and technical stakeholdes.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_risks_4"><a class="anchor" href="#_risks_4"></a>Risks</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Creating several copies of a large system plus infrastructure
+can be expensive and resource-intensive.</p>
+</li>
+<li>
+<p>Identifying really disjunct user groups might be impossible for
+several business domains, rendering this approach useless.</p>
+</li>
+<li>
+<p>The required team-split might pose organizational challenges,
+as a currently productive (albeit large) team has to be disrupted.</p>
+</li>
+<li>
+<p>It might be difficult to define appropriate interfaces for the
+factored-out <em>commons</em>. If these commons are overly scattered
+throughout the legacy code, this extraction might be impossible,
+making the resulting split systems more complicated than they should be.</p>
+</li>
+<li>
+<p>If business code is overly tangled, having very high cyclomatic
+complexity, it can be arbitrarily difficult to remove those parts
+that are not required for a single user type/category. Analyzing such
+code segments should be performed my members of several split-teams.</p>
+</li>
+<li>
+<p>Associated processes (like requirements, test, documentation and operations) of
+the split systems might become more difficult to manage in the first
+phases of a split. Due to the reduced sizes of split systems, it might
+be likely such processes will become simpler over time.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>Applicability</h5>
+<div class="paragraph">
+<p>Whenever a legacy system servers more than one homogeneous user
+group, this split approach might be appropriate.</p>
+</div>
+<div class="paragraph">
+<p>The business processes for the various user groups need to be
+sufficiently different from one another - otherwise splits would
+merely create duplicate functionality.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_consequences_10"><a class="anchor" href="#_consequences_10"></a>Consequences</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Instead of having to manage one single (but large) system,
+you will have to manage (develop, change, operate) several (smaller) systems.
+This might be especially relevant for operations effort.</p>
+</li>
+<li>
+<p>Instead of having to manage one single development team,
+you will have to manage several.</p>
+</li>
+<li>
+<p>All "things" you are dealing with (code, data-structures, data,
+processes) will become smaller, reducing complexity of these "things".</p>
+</li>
+<li>
+<p>"Time-to-market" of your split systems will be lower (as development
+will be faster) - maybe coordination and management effort might increase.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_proposed_practices"><a class="anchor" href="#_proposed_practices"></a>Proposed practices</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Find a relatively small user-group and <em>pilot</em> (try-out)
+this approach.</p>
+</li>
+<li>
+<p>Involve the affected user groups as early as possible to
+facilitate possible required changes on their side.</p>
+</li>
+<li>
+<p>Try to to identify potential <em>neuralgic sections</em> within the code,
+that do not belong into the factored-out commons and will likely affect
+several of the split systems. Try to minimize the effort required
+to analyze and untangle such sections by gathering people from various
+split-teams.</p>
+</li>
+<li>
+<p>Don&#8217;t try everything at once: Spread out step 5 (optimize splits) over
+several, possibly many, development iterations or releases. Let the split
+teams become comfortable with their reduced split systems.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="strangler-approach"><a class="anchor" href="#strangler-approach"></a>4.7.8. <span class="pattern">Strangler Approach</span></h4>
+<div class="sect4">
+<h5 id="_intent_40"><a class="anchor" href="#_intent_40"></a>Intent</h5>
 <div class="paragraph">
 <p>Divide a legacy system into different functional domains and replace those step by step.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_38"><a class="anchor" href="#_description_38"></a>Description</h5>
+<h5 id="_description_39"><a class="anchor" href="#_description_39"></a>Description</h5>
 <div class="paragraph">
 <p>Rewriting an old system with the <a href="#big-bang-approach">Section 4.7.1, &#8220;<span class="pattern">Big Bang Approach</span>&#8221;</a> is a risky endeavor. It is harder than you might think at the beginning.</p>
 </div>
@@ -7396,7 +7607,7 @@ to one or even both of these schemas."</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_risks_4"><a class="anchor" href="#_risks_4"></a>Risks</h5>
+<h5 id="_risks_5"><a class="anchor" href="#_risks_5"></a>Risks</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7425,7 +7636,7 @@ fit with the new architecture [1].</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_19"><a class="anchor" href="#_applicability_19"></a>Applicability</h5>
+<h5 id="_applicability_20"><a class="anchor" href="#_applicability_20"></a>Applicability</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7438,7 +7649,7 @@ fit with the new architecture [1].</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_10"><a class="anchor" href="#_consequences_10"></a>Consequences</h5>
+<h5 id="_consequences_11"><a class="anchor" href="#_consequences_11"></a>Consequences</h5>
 
 </div>
 <div class="sect4">
@@ -7484,7 +7695,7 @@ also miss. This is a risk for any "rewrite" though.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_23"><a class="anchor" href="#_related_patterns_23"></a>Related Patterns</h5>
+<h5 id="_related_patterns_24"><a class="anchor" href="#_related_patterns_24"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7494,7 +7705,7 @@ also miss. This is a risk for any "rewrite" though.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_17"><a class="anchor" href="#_references_17"></a>References</h5>
+<h5 id="_references_18"><a class="anchor" href="#_references_18"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7682,13 +7893,13 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 <div class="sect3">
 <h4 id="Anticorruption-Layer"><a class="anchor" href="#Anticorruption-Layer"></a>4.10.2. <span class="pattern">Anticorruption Layer</span></h4>
 <div class="sect4">
-<h5 id="_intent_40"><a class="anchor" href="#_intent_40"></a>Intent</h5>
+<h5 id="_intent_41"><a class="anchor" href="#_intent_41"></a>Intent</h5>
 <div class="paragraph">
 <p>An anticorruption layer is a logical layer that provides a stable interface to (potentially) volatile software components. As long as this interface remains untouched developers can implement changes or even replace their own or third-party software without affecting the clients of this interface.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_39"><a class="anchor" href="#_description_39"></a>Description</h5>
+<h5 id="_description_40"><a class="anchor" href="#_description_40"></a>Description</h5>
 <div class="paragraph">
 <p>The original definition <a href="#Evans03">[Evans03, p. 365]</a>:</p>
 </div>
@@ -7718,13 +7929,13 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_20"><a class="anchor" href="#_applicability_20"></a>Applicability</h5>
+<h5 id="_applicability_21"><a class="anchor" href="#_applicability_21"></a>Applicability</h5>
 <div class="paragraph">
 <p>Apply this pattern when clients shall be protected from internal changes in a module or subsystem.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_11"><a class="anchor" href="#_consequences_11"></a>Consequences</h5>
+<h5 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7737,7 +7948,7 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_11"><a class="anchor" href="#_also_known_as_11"></a>Also Known As</h5>
+<h5 id="_also_known_as_12"><a class="anchor" href="#_also_known_as_12"></a>Also Known As</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7747,7 +7958,7 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_24"><a class="anchor" href="#_related_patterns_24"></a>Related Patterns</h5>
+<h5 id="_related_patterns_25"><a class="anchor" href="#_related_patterns_25"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7760,7 +7971,7 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_18"><a class="anchor" href="#_references_18"></a>References</h5>
+<h5 id="_references_19"><a class="anchor" href="#_references_19"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7781,13 +7992,13 @@ a standard tool or exchanging a logging library for another with incompatible in
 </div>
 </div>
 <div class="sect4">
-<h5 id="_intent_41"><a class="anchor" href="#_intent_41"></a>Intent</h5>
+<h5 id="_intent_42"><a class="anchor" href="#_intent_42"></a>Intent</h5>
 <div class="paragraph">
 <p>Incrementally replace part of the system with a new implementation.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_40"><a class="anchor" href="#_description_40"></a>Description</h5>
+<h5 id="_description_41"><a class="anchor" href="#_description_41"></a>Description</h5>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -7838,20 +8049,20 @@ immediately.</p>
 
 </div>
 <div class="sect4">
-<h5 id="_risks_5"><a class="anchor" href="#_risks_5"></a>Risks</h5>
+<h5 id="_risks_6"><a class="anchor" href="#_risks_6"></a>Risks</h5>
 <div class="paragraph">
 <p>Too many of these half-performed incremental refactorings will leave your code base in a mess.
 You still need to finish, what you start.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_21"><a class="anchor" href="#_applicability_21"></a>Applicability</h5>
+<h5 id="_applicability_22"><a class="anchor" href="#_applicability_22"></a>Applicability</h5>
 <div class="paragraph">
 <p>Your team is familiar with and embraces Trunk-Based development.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_12"><a class="anchor" href="#_consequences_12"></a>Consequences</h5>
+<h5 id="_consequences_13"><a class="anchor" href="#_consequences_13"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -7872,7 +8083,7 @@ or testing environments to make sure that the new implementation matches the old
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_19"><a class="anchor" href="#_references_19"></a>References</h5>
+<h5 id="_references_20"><a class="anchor" href="#_references_20"></a>References</h5>
 <div class="paragraph">
 <p><a href="http://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/" class="bare">http://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/</a><br>
 <a href="http://paulhammant.com/blog/branch_by_abstraction.html" class="bare">http://paulhammant.com/blog/branch_by_abstraction.html</a><br>
@@ -7886,7 +8097,7 @@ or testing environments to make sure that the new implementation matches the old
 <div class="sect3">
 <h4 id="Improve-Logging"><a class="anchor" href="#Improve-Logging"></a>4.10.4. <span class="pattern">Improve Logging</span></h4>
 <div class="sect4">
-<h5 id="_intent_42"><a class="anchor" href="#_intent_42"></a>Intent</h5>
+<h5 id="_intent_43"><a class="anchor" href="#_intent_43"></a>Intent</h5>
 <div class="paragraph">
 <p>Employ sophisticated logging mechanisms such as modern logging frameworks,
 distributed log collection and visualization tools in order to gain more
@@ -7895,7 +8106,7 @@ predictable performance impact.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_41"><a class="anchor" href="#_description_41"></a>Description</h5>
+<h5 id="_description_42"><a class="anchor" href="#_description_42"></a>Description</h5>
 <div class="paragraph">
 <p>While some time ago it was quite common to output log statements to standard out,
 people usually use logging frameworks nowadays that give more control about what should
@@ -7974,7 +8185,7 @@ log levels.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_risks_6"><a class="anchor" href="#_risks_6"></a>Risks</h5>
+<h5 id="_risks_7"><a class="anchor" href="#_risks_7"></a>Risks</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8004,13 +8215,13 @@ stream manageable.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_22"><a class="anchor" href="#_applicability_22"></a>Applicability</h5>
+<h5 id="_applicability_23"><a class="anchor" href="#_applicability_23"></a>Applicability</h5>
 <div class="paragraph">
 <p>This pattern should always be considered.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_13"><a class="anchor" href="#_consequences_13"></a>Consequences</h5>
+<h5 id="_consequences_14"><a class="anchor" href="#_consequences_14"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8025,11 +8236,11 @@ context information (in case MDCs are used).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_12"><a class="anchor" href="#_also_known_as_12"></a>Also Known As</h5>
+<h5 id="_also_known_as_13"><a class="anchor" href="#_also_known_as_13"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_25"><a class="anchor" href="#_related_patterns_25"></a>Related Patterns</h5>
+<h5 id="_related_patterns_26"><a class="anchor" href="#_related_patterns_26"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8044,20 +8255,20 @@ that cannot be isolated without modifying the code.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_20"><a class="anchor" href="#_references_20"></a>References</h5>
+<h5 id="_references_21"><a class="anchor" href="#_references_21"></a>References</h5>
 
 </div>
 </div>
 <div class="sect3">
 <h4 id="Interface-Segregation-Principle"><a class="anchor" href="#Interface-Segregation-Principle"></a>4.10.5. <span class="pattern">Interface Segregation Principle</span></h4>
 <div class="sect4">
-<h5 id="_intent_43"><a class="anchor" href="#_intent_43"></a>Intent</h5>
+<h5 id="_intent_44"><a class="anchor" href="#_intent_44"></a>Intent</h5>
 <div class="paragraph">
 <p>Reduce coupling between clients and service providers.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_42"><a class="anchor" href="#_description_42"></a>Description</h5>
+<h5 id="_description_43"><a class="anchor" href="#_description_43"></a>Description</h5>
 <div class="paragraph">
 <p>Service components may provide more functionality than required by one client.
 To remove the client&#8217;s dependency from functionality not required introduce interfaces that are tailored
@@ -8065,7 +8276,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_23"><a class="anchor" href="#_applicability_23"></a>Applicability</h5>
+<h5 id="_applicability_24"><a class="anchor" href="#_applicability_24"></a>Applicability</h5>
 <div class="paragraph">
 <p>Apply when</p>
 </div>
@@ -8081,7 +8292,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_14"><a class="anchor" href="#_consequences_14"></a>Consequences</h5>
+<h5 id="_consequences_15"><a class="anchor" href="#_consequences_15"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8097,7 +8308,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_13"><a class="anchor" href="#_also_known_as_13"></a>Also Known As</h5>
+<h5 id="_also_known_as_14"><a class="anchor" href="#_also_known_as_14"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
@@ -8121,7 +8332,7 @@ to the client&#8217;s needs.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_21"><a class="anchor" href="#_references_21"></a>References</h5>
+<h5 id="_references_22"><a class="anchor" href="#_references_22"></a>References</h5>
 
 </div>
 </div>
@@ -8145,7 +8356,7 @@ found it.&#8221; for the software development world in an article in Kevlin Henn
 &#8220;97 Things a Programmer Should Know&#8221; <a href="#Henney">[Henney]</a>.</p>
 </div>
 <div class="sect4">
-<h5 id="_intent_44"><a class="anchor" href="#_intent_44"></a>Intent</h5>
+<h5 id="_intent_45"><a class="anchor" href="#_intent_45"></a>Intent</h5>
 <div class="paragraph">
 <p>Enable cross-cutting architectural improvement even if it is not feasible to change the whole codebase.</p>
 </div>
@@ -8163,7 +8374,7 @@ Often the introduction of concepts like layering is deemed <em>“impossible”<
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_43"><a class="anchor" href="#_description_43"></a>Description</h5>
+<h5 id="_description_44"><a class="anchor" href="#_description_44"></a>Description</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8246,14 +8457,14 @@ goes" actually is the <em>explicit</em> payment of the technical debt interest r
 </div>
 </div>
 <div class="sect4">
-<h5 id="_risks_7"><a class="anchor" href="#_risks_7"></a>Risks</h5>
+<h5 id="_risks_8"><a class="anchor" href="#_risks_8"></a>Risks</h5>
 <div class="paragraph">
 <p>Sometimes the Boy Scout Rule can be taken as a means by itself. In
 these cases the higher goals tend to be forgotten and thus</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_24"><a class="anchor" href="#_applicability_24"></a>Applicability</h5>
+<h5 id="_applicability_25"><a class="anchor" href="#_applicability_25"></a>Applicability</h5>
 <div class="paragraph">
 <p>The pattern &#8220;Introduce Boy Scout Rule&#8221; can always be applied.<br>
 Some of the most effective uses are</p>
@@ -8271,7 +8482,7 @@ database inserts etc.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_15"><a class="anchor" href="#_consequences_15"></a>Consequences</h5>
+<h5 id="_consequences_16"><a class="anchor" href="#_consequences_16"></a>Consequences</h5>
 <div class="paragraph">
 <p>The introduction the Boy Scout Rule often proved to enable structural
 improvements as a prerequisite for higher level architectural
@@ -8286,11 +8497,11 @@ parts of the system other approaches have to be utilized.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_14"><a class="anchor" href="#_also_known_as_14"></a>Also Known As</h5>
+<h5 id="_also_known_as_15"><a class="anchor" href="#_also_known_as_15"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_26"><a class="anchor" href="#_related_patterns_26"></a>Related Patterns</h5>
+<h5 id="_related_patterns_27"><a class="anchor" href="#_related_patterns_27"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8310,7 +8521,7 @@ performed when applying the Boy Scout Rule</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_22"><a class="anchor" href="#_references_22"></a>References</h5>
+<h5 id="_references_23"><a class="anchor" href="#_references_23"></a>References</h5>
 <div class="paragraph">
 <p>The original description of the boy scout rule can be found online at <a href="#Boy-Scout-Rule-article">[Boy-Scout-Rule-article]</a>.</p>
 </div>
@@ -8319,13 +8530,13 @@ performed when applying the Boy Scout Rule</p>
 <div class="sect3">
 <h4 id="Manage-Complex-Client-Dependencies-With-Facade"><a class="anchor" href="#Manage-Complex-Client-Dependencies-With-Facade"></a>4.10.7. <span class="pattern">Manage Complex Client Dependencies With Facade</span></h4>
 <div class="sect4">
-<h5 id="_intent_45"><a class="anchor" href="#_intent_45"></a>Intent</h5>
+<h5 id="_intent_46"><a class="anchor" href="#_intent_46"></a>Intent</h5>
 <div class="paragraph">
 <p>Simplify the interaction of a client with a set of service components.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_44"><a class="anchor" href="#_description_44"></a>Description</h5>
+<h5 id="_description_45"><a class="anchor" href="#_description_45"></a>Description</h5>
 <div class="paragraph">
 <p>When clients use a set of components with repeating patterns these
 interaction patterns are implemented in a Facade component.</p>
@@ -8344,7 +8555,7 @@ e.g. legacy systems.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_25"><a class="anchor" href="#_applicability_25"></a>Applicability</h5>
+<h5 id="_applicability_26"><a class="anchor" href="#_applicability_26"></a>Applicability</h5>
 <div class="paragraph">
 <p>Apply this pattern when clients use a set of components in stereotypcial fashion.
 Things that can be handled by a facade:</p>
@@ -8374,7 +8585,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_16"><a class="anchor" href="#_consequences_16"></a>Consequences</h5>
+<h5 id="_consequences_17"><a class="anchor" href="#_consequences_17"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8387,11 +8598,11 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_15"><a class="anchor" href="#_also_known_as_15"></a>Also Known As</h5>
+<h5 id="_also_known_as_16"><a class="anchor" href="#_also_known_as_16"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_27"><a class="anchor" href="#_related_patterns_27"></a>Related Patterns</h5>
+<h5 id="_related_patterns_28"><a class="anchor" href="#_related_patterns_28"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8401,20 +8612,20 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_23"><a class="anchor" href="#_references_23"></a>References</h5>
+<h5 id="_references_24"><a class="anchor" href="#_references_24"></a>References</h5>
 
 </div>
 </div>
 <div class="sect3">
 <h4 id="Measure"><a class="anchor" href="#Measure"></a>4.10.8. <span class="pattern">Measure</span></h4>
 <div class="sect4">
-<h5 id="_intent_46"><a class="anchor" href="#_intent_46"></a>Intent</h5>
+<h5 id="_intent_47"><a class="anchor" href="#_intent_47"></a>Intent</h5>
 <div class="paragraph">
 <p>If you don’t measure it, you can’t optimize it.&#8201;&#8212;&#8201;Coda Hale</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_45"><a class="anchor" href="#_description_45"></a>Description</h5>
+<h5 id="_description_46"><a class="anchor" href="#_description_46"></a>Description</h5>
 <div class="paragraph">
 <p>TODO: explain different kind of metrics (static-code, runtime, organisational&#8230;&#8203;)</p>
 </div>
@@ -8424,23 +8635,23 @@ Things that can be handled by a facade:</p>
 
 </div>
 <div class="sect4">
-<h5 id="_risks_8"><a class="anchor" href="#_risks_8"></a>Risks</h5>
+<h5 id="_risks_9"><a class="anchor" href="#_risks_9"></a>Risks</h5>
 <div class="paragraph">
 <p>If you measure too many different parameters or attributes, you might get drown in numbers.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_26"><a class="anchor" href="#_applicability_26"></a>Applicability</h5>
+<h5 id="_applicability_27"><a class="anchor" href="#_applicability_27"></a>Applicability</h5>
 <div class="paragraph">
 <p>This pattern should always be considered.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_17"><a class="anchor" href="#_consequences_17"></a>Consequences</h5>
+<h5 id="_consequences_18"><a class="anchor" href="#_consequences_18"></a>Consequences</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_16"><a class="anchor" href="#_also_known_as_16"></a>Also Known As</h5>
+<h5 id="_also_known_as_17"><a class="anchor" href="#_also_known_as_17"></a>Also Known As</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8459,7 +8670,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_28"><a class="anchor" href="#_related_patterns_28"></a>Related Patterns</h5>
+<h5 id="_related_patterns_29"><a class="anchor" href="#_related_patterns_29"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8472,7 +8683,7 @@ Things that can be handled by a facade:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_24"><a class="anchor" href="#_references_24"></a>References</h5>
+<h5 id="_references_25"><a class="anchor" href="#_references_25"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8485,7 +8696,7 @@ Things that can be handled by a facade:</p>
 <div class="sect3">
 <h4 id="Use-Invariants-To-Kill-Zombies"><a class="anchor" href="#Use-Invariants-To-Kill-Zombies"></a>4.10.9. <span class="pattern">Use Invariants To Kill Zombies</span></h4>
 <div class="sect4">
-<h5 id="_intent_47"><a class="anchor" href="#_intent_47"></a>Intent</h5>
+<h5 id="_intent_48"><a class="anchor" href="#_intent_48"></a>Intent</h5>
 <div class="paragraph">
 <p>Provide a safe approach in situations where it seems to dangerous to delete
 code or whole modules from a huge system because <a href="#Static-Code-Analysis">Section 2.3.25, &#8220;<span class="pattern">Static Code Analysis</span>&#8221;</a> can&#8217;t
@@ -8493,7 +8704,7 @@ recognize whether the code is still in use or not.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_46"><a class="anchor" href="#_description_46"></a>Description</h5>
+<h5 id="_description_47"><a class="anchor" href="#_description_47"></a>Description</h5>
 <div class="paragraph">
 <p>Oftentimes old systems contain lots of code that probably is no longer in use
 but still has to be tended to. Such code puts a burden on every cross-cutting
@@ -8560,7 +8771,7 @@ hurt to keep the logging turned on).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_risks_9"><a class="anchor" href="#_risks_9"></a>Risks</h5>
+<h5 id="_risks_10"><a class="anchor" href="#_risks_10"></a>Risks</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8577,7 +8788,7 @@ side-effects that are close to a denial-of-service attack.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_27"><a class="anchor" href="#_applicability_27"></a>Applicability</h5>
+<h5 id="_applicability_28"><a class="anchor" href="#_applicability_28"></a>Applicability</h5>
 <div class="paragraph">
 <p>This pattern can be applied whenever the code-base has gotten too big and there
 are parts of the system that are perhaps unused (e.g. dead) but still add to the
@@ -8585,7 +8796,7 @@ weight of the system.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_18"><a class="anchor" href="#_consequences_18"></a>Consequences</h5>
+<h5 id="_consequences_19"><a class="anchor" href="#_consequences_19"></a>Consequences</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8595,11 +8806,11 @@ weight of the system.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_17"><a class="anchor" href="#_also_known_as_17"></a>Also Known As</h5>
+<h5 id="_also_known_as_18"><a class="anchor" href="#_also_known_as_18"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_29"><a class="anchor" href="#_related_patterns_29"></a>Related Patterns</h5>
+<h5 id="_related_patterns_30"><a class="anchor" href="#_related_patterns_30"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8617,7 +8828,7 @@ way to make <a href="#Explicit-Assumption">Section 5.9, &#8220;<span class="patt
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_25"><a class="anchor" href="#_references_25"></a>References</h5>
+<h5 id="_references_26"><a class="anchor" href="#_references_26"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8637,13 +8848,13 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 <div class="sect3">
 <h4 id="Improve-feedback-from-and-for-stakeholders"><a class="anchor" href="#Improve-feedback-from-and-for-stakeholders"></a>4.10.10. <span class="pattern">Improve Feedback From And For Stakeholders</span></h4>
 <div class="sect4">
-<h5 id="_intent_48"><a class="anchor" href="#_intent_48"></a>Intent</h5>
+<h5 id="_intent_49"><a class="anchor" href="#_intent_49"></a>Intent</h5>
 <div class="paragraph">
 <p>Effectively collect feedback from various stakeholders.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_47"><a class="anchor" href="#_description_47"></a>Description</h5>
+<h5 id="_description_48"><a class="anchor" href="#_description_48"></a>Description</h5>
 <div class="paragraph">
 <p>It is expensive to collect information (problems, opinions etc.) from stakeholders (customers, support staff, developers, backoffice etc.) via surveys, interviews or meetings (e.g. <a id="atam"></a>). There are possibilities to offer low-threshold services for involved people to give feedback. Possibilities e.g. are:</p>
 </div>
@@ -8675,29 +8886,29 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 
 </div>
 <div class="sect4">
-<h5 id="_risks_10"><a class="anchor" href="#_risks_10"></a>Risks</h5>
+<h5 id="_risks_11"><a class="anchor" href="#_risks_11"></a>Risks</h5>
 <div class="paragraph">
 <p>Since most improvements are based on voluntariness (all examples except a), the information might be biased.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_28"><a class="anchor" href="#_applicability_28"></a>Applicability</h5>
+<h5 id="_applicability_29"><a class="anchor" href="#_applicability_29"></a>Applicability</h5>
 <div class="paragraph">
 <p>Many of the tools supporting this use case are used for a group of stakeholders and can possibly be used for others as well (e.g. ticketing systems or Wikis for developers in open source projects).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_19"><a class="anchor" href="#_consequences_19"></a>Consequences</h5>
+<h5 id="_consequences_20"><a class="anchor" href="#_consequences_20"></a>Consequences</h5>
 <div class="paragraph">
 <p>Stakeholders give valuable information, their satisfaction with the system increases.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_also_known_as_18"><a class="anchor" href="#_also_known_as_18"></a>Also Known As</h5>
+<h5 id="_also_known_as_19"><a class="anchor" href="#_also_known_as_19"></a>Also Known As</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_related_patterns_30"><a class="anchor" href="#_related_patterns_30"></a>Related Patterns</h5>
+<h5 id="_related_patterns_31"><a class="anchor" href="#_related_patterns_31"></a>Related Patterns</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -8722,7 +8933,7 @@ in his seminal book <a href="#Object-Oriented-Software-Construction">[Object-Ori
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_26"><a class="anchor" href="#_references_26"></a>References</h5>
+<h5 id="_references_27"><a class="anchor" href="#_references_27"></a>References</h5>
 
 </div>
 </div>
@@ -8768,13 +8979,13 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 <div class="sect3">
 <h4 id="Docs-As-Code"><a class="anchor" href="#Docs-As-Code"></a>4.12.2. <span class="pattern">Docs-As-Code</span></h4>
 <div class="sect4">
-<h5 id="_intent_49"><a class="anchor" href="#_intent_49"></a>Intent</h5>
+<h5 id="_intent_50"><a class="anchor" href="#_intent_50"></a>Intent</h5>
 <div class="paragraph">
 <p>Docs-As-Code is a documentation approach that raises developer-related documentation to the same importance as source code.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_48"><a class="anchor" href="#_description_48"></a>Description</h5>
+<h5 id="_description_49"><a class="anchor" href="#_description_49"></a>Description</h5>
 <div class="paragraph">
 <p>Developer-related documentation of software systems is often neglected. In many situations, it&#8217;s not the lack of ideas for meaningful content that prevents documentation but the way developers have to do it: Separate programs have to be started and other work processes have to be followed. These and many more other distractions lead to long context switch times.</p>
 </div>
@@ -8832,7 +9043,7 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 </div>
 </div>
 <div class="sect4">
-<h5 id="_applicability_29"><a class="anchor" href="#_applicability_29"></a>Applicability</h5>
+<h5 id="_applicability_30"><a class="anchor" href="#_applicability_30"></a>Applicability</h5>
 <div class="paragraph">
 <p>Apply this pattern when there is a clear lack of documentation. Start by defining the minimum required scope of documentation for new features (e. g. take some parts of the arc42 documentation template as a guidance if developers complain that they don&#8217;t know what to document).</p>
 </div>
@@ -8841,13 +9052,13 @@ see <a href="#improve-practices-overview">Section 4.5, &#8220;Improvement Practi
 </div>
 </div>
 <div class="sect4">
-<h5 id="_consequences_20"><a class="anchor" href="#_consequences_20"></a>Consequences</h5>
+<h5 id="_consequences_21"><a class="anchor" href="#_consequences_21"></a>Consequences</h5>
 <div class="paragraph">
 <p>Can lead to grumbling at the beginning (at the latest when the first pull request is declined due to missing documentation).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_references_27"><a class="anchor" href="#_references_27"></a>References</h5>
+<h5 id="_references_28"><a class="anchor" href="#_references_28"></a>References</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -9006,7 +9217,7 @@ facilitates identification of additional issues and improvements.</p>
 <p>Develop and document an understanding of internal structures, concepts, architectural approaches  and important decisions of the <a href="#System">[System]</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_description_49"><a class="anchor" href="#_description_49"></a>5.5.1. Description</h4>
+<h4 id="_description_50"><a class="anchor" href="#_description_50"></a>5.5.1. Description</h4>
 <div class="paragraph">
 <p>Collect and organize architectural information about the <a href="#System">[System]</a>:
 Document structures, concepts, decisions, interfaces etc. of the <a href="#System">[System]</a>
@@ -9103,7 +9314,7 @@ during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Int
 <p>Some people will oppose your findings, will whitewash or sugarcoat issues, problems or <a href="#Root-Cause-Analysis">root causes</a>. Regardless on how careful you prepared your analysis, they will try to diminish, attack or dispute your findings.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_50"><a class="anchor" href="#_intent_50"></a>5.8.1. Intent</h4>
+<h4 id="_intent_51"><a class="anchor" href="#_intent_51"></a>5.8.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -9119,7 +9330,7 @@ during <a href="#Analyze">analysis</a> activities like <a href="#Stakeholder-Int
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_50"><a class="anchor" href="#_description_50"></a>5.8.2. Description</h4>
+<h4 id="_description_51"><a class="anchor" href="#_description_51"></a>5.8.2. Description</h4>
 <div id="figure-reaction-pyramid" class="imageblock">
 <div class="content">
 <img src="images/expect-denial-reaction-levels.png" alt="Reaction levels">
@@ -9193,13 +9404,13 @@ Findings are opposed, either actively or passively.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_consequences_21"><a class="anchor" href="#_consequences_21"></a>5.8.4. Consequences</h4>
+<h4 id="_consequences_22"><a class="anchor" href="#_consequences_22"></a>5.8.4. Consequences</h4>
 <div class="paragraph">
 <p>Especially when presenting results to (opposing) management stakeholders, you should be able to <strong>verify</strong> all your claims. In critical cases you should keep written protocols and note who-said-what in your <a href="#Stakeholder-Interview">stakeholder interviews</a>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_31"><a class="anchor" href="#_related_patterns_31"></a>5.8.5. Related Patterns</h4>
+<h4 id="_related_patterns_32"><a class="anchor" href="#_related_patterns_32"></a>5.8.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -9222,7 +9433,7 @@ Findings are opposed, either actively or passively.</p>
 opinions) by explicit (written) assumptions about those facts.</p>
 </div>
 <div class="sect3">
-<h4 id="_description_51"><a class="anchor" href="#_description_51"></a>5.9.1. Description</h4>
+<h4 id="_description_52"><a class="anchor" href="#_description_52"></a>5.9.1. Description</h4>
 <div class="paragraph">
 <p>Making assumptions <em>explicit</em> is fundamentally important to
 <a href="#Capture-Quality-Requirements">Section 2.3.2, &#8220;<span class="pattern">Capture Quality Requirements</span>&#8221;</a>, so that development teams don&#8217;t
@@ -9301,7 +9512,7 @@ countermeasures or pull the plug as early as possible. Similar to <a href="#Fail
 <div class="sect2">
 <h3 id="Impact-Analysis"><a class="anchor" href="#Impact-Analysis"></a>5.12. <span class="pattern">Impact Analysis</span></h3>
 <div class="sect3">
-<h4 id="_intent_51"><a class="anchor" href="#_intent_51"></a>5.12.1. Intent</h4>
+<h4 id="_intent_52"><a class="anchor" href="#_intent_52"></a>5.12.1. Intent</h4>
 <div class="paragraph">
 <p>Determine what impact (in code, concepts, data and the organization)
 a specific action or issue (e.g. refactoring, recurring problem) will or
@@ -9322,13 +9533,13 @@ might have. Identify the resultant effects on system development and operations.
 <div class="sect2">
 <h3 id="Goals-Constraints"><a class="anchor" href="#Goals-Constraints"></a>5.13. <span class="pattern">Goals and Constraints</span></h3>
 <div class="sect3">
-<h4 id="_intent_52"><a class="anchor" href="#_intent_52"></a>5.13.1. Intent</h4>
+<h4 id="_intent_53"><a class="anchor" href="#_intent_53"></a>5.13.1. Intent</h4>
 <div class="paragraph">
 <p>Make the overall goals and constraints of the improvement efforts understandable to every stakeholder.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_52"><a class="anchor" href="#_description_52"></a>5.13.2. Description</h4>
+<h4 id="_description_53"><a class="anchor" href="#_description_53"></a>5.13.2. Description</h4>
 <div class="paragraph">
 <p>It&#8217;s of the uttermost importance to clarify the expectations and assumption of all stakeholders of a software system.
 There may be conflicting interests or hidden doubts among the project&#8217;s participants that could let any improvement activity fail severely.
@@ -9364,7 +9575,7 @@ E. g. constraints could be certain finish dates, organizational or technical lim
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_28"><a class="anchor" href="#_references_28"></a>5.13.4. References</h4>
+<h4 id="_references_29"><a class="anchor" href="#_references_29"></a>5.13.4. References</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -9405,7 +9616,7 @@ E. g. constraints could be certain finish dates, organizational or technical lim
 <div class="title">Figure 40. Improvement Backlog</div>
 </div>
 <div class="sect3">
-<h4 id="_intent_53"><a class="anchor" href="#_intent_53"></a>5.14.1. Intent</h4>
+<h4 id="_intent_54"><a class="anchor" href="#_intent_54"></a>5.14.1. Intent</h4>
 <div class="paragraph">
 <p>Collect all known issues and problems within a system or its associated processes. Make the issues comparable by evaluating each one, usually using economical units like money or time. Align carefully with <a href="#Issue-List">Section 5.15, &#8220;<span class="pattern">Issue List</span>&#8221;</a>.</p>
 </div>
@@ -9458,7 +9669,7 @@ as easy as possible to link issues to improvements and vice versa.</p>
 <p>A collection of issues (problems, risks) found during <a href="#Collect-Issues">Section 5.7, &#8220;<span class="pattern">Collect Issues</span>&#8221;</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_54"><a class="anchor" href="#_intent_54"></a>5.15.1. Intent</h4>
+<h4 id="_intent_55"><a class="anchor" href="#_intent_55"></a>5.15.1. Intent</h4>
 <div class="paragraph">
 <p>Collect all known issues and problems within a system or its associated processes. Make the issues comparable by evaluating each one, usually using economical units like money or time.</p>
 </div>
@@ -9622,7 +9833,7 @@ might use in preparing such documents.</p>
 <div class="sect2">
 <h3 id="Separate-Cause-From-Effect"><a class="anchor" href="#Separate-Cause-From-Effect"></a>5.18. <span class="pattern">Separate-Cause-From-Effect</span></h3>
 <div class="sect3">
-<h4 id="_intent_55"><a class="anchor" href="#_intent_55"></a>5.18.1. Intent</h4>
+<h4 id="_intent_56"><a class="anchor" href="#_intent_56"></a>5.18.1. Intent</h4>
 <div class="paragraph">
 <p>Explicitly differentiate between symptom (<em>effect</em>) and cause:</p>
 </div>
@@ -9638,7 +9849,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_53"><a class="anchor" href="#_description_53"></a>5.18.2. Description</h4>
+<h4 id="_description_54"><a class="anchor" href="#_description_54"></a>5.18.2. Description</h4>
 <div class="paragraph">
 <p>Under discussion!</p>
 </div>
@@ -9660,7 +9871,7 @@ might use in preparing such documents.</p>
 <p>In every review you will face the question of how to deliver and present the results to the customer. Will you write a long and formal report document or is a set of presentation slides adequate and sufficient?</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_56"><a class="anchor" href="#_intent_56"></a>5.19.1. Intent</h4>
+<h4 id="_intent_57"><a class="anchor" href="#_intent_57"></a>5.19.1. Intent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -9676,7 +9887,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_54"><a class="anchor" href="#_description_54"></a>5.19.2. Description</h4>
+<h4 id="_description_55"><a class="anchor" href="#_description_55"></a>5.19.2. Description</h4>
 <div class="paragraph">
 <p>There are two common ways to deliver review results:</p>
 </div>
@@ -9707,7 +9918,7 @@ might use in preparing such documents.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_32"><a class="anchor" href="#_related_patterns_32"></a>5.19.4. Related Patterns</h4>
+<h4 id="_related_patterns_33"><a class="anchor" href="#_related_patterns_33"></a>5.19.4. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -9726,14 +9937,14 @@ might use in preparing such documents.</p>
 <p>Maintain references to the origin of problems or issues: Remember who told you about a problem, in which documents you found issues and in what version of the source you identified risks or faults.</p>
 </div>
 <div class="sect3">
-<h4 id="_intent_57"><a class="anchor" href="#_intent_57"></a>5.20.1. Intent</h4>
+<h4 id="_intent_58"><a class="anchor" href="#_intent_58"></a>5.20.1. Intent</h4>
 <div class="paragraph">
 <p>When discussing problems, some stakeholders will question or doubt your findings (see pattern <a href="#Expect-Denial">Section 5.8, &#8220;<span class="pattern">Expect Denial</span>&#8221;</a>). Keeping thorough references to the origins or original sources of major
 findings keep eventual critics in check.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_55"><a class="anchor" href="#_description_55"></a>5.20.2. Description</h4>
+<h4 id="_description_56"><a class="anchor" href="#_description_56"></a>5.20.2. Description</h4>
 <div class="paragraph">
 <p>(To be done)</p>
 </div>
@@ -9757,7 +9968,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_applicability_30"><a class="anchor" href="#_applicability_30"></a>5.20.4. Applicability</h4>
+<h4 id="_applicability_31"><a class="anchor" href="#_applicability_31"></a>5.20.4. Applicability</h4>
 <div class="paragraph">
 <p>Apply traceability whenever you identify problems or issues</p>
 </div>
@@ -9779,7 +9990,7 @@ hours with (rather trivial) bookkeeping activities, instead of identifying new a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_related_patterns_33"><a class="anchor" href="#_related_patterns_33"></a>5.20.5. Related Patterns</h4>
+<h4 id="_related_patterns_34"><a class="anchor" href="#_related_patterns_34"></a>5.20.5. Related Patterns</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -10531,7 +10742,7 @@ Category: <a href="#Analyze">Chapter 2, <em>Analyze</em></a></p>
 </div>
 </li>
 <li>
-<p><strong><a href="#strangler-approach">Section 4.7.7, &#8220;<span class="pattern">Strangler Approach</span>&#8221;</a></strong></p>
+<p><strong><a href="#strangler-approach">Section 4.7.8, &#8220;<span class="pattern">Strangler Approach</span>&#8221;</a></strong></p>
 <div class="paragraph">
 <p>Approach to gradually create a new system around the edges of the old, letting it grow slowly over several years until the old system is strangled.
 Category: <a href="#Improve">Chapter 4, <em>Improve</em></a></p>
@@ -11265,7 +11476,7 @@ evaluate.adoc or improve.adoc</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-07-30 20:02:37 UTC
+Last updated 2019-08-25 18:26:18 UTC
 </div>
 </div>
 </body>
