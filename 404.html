@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>aim42 has moved to aim42.org</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://aim42.org/">
+<meta http-equiv="refresh" content="3; url=https://aim42.org/">
+<script>
+// Deep links to images and downloads of the old method reference.
+var p = location.pathname, target = "/";
+var m = p.match(/^\/images\/(.+)$/);
+if (m) target = "/images/patterns/" + m[1];
+m = p.match(/^\/docs\/(.+\.(pdf|docx|xlsx))$/);
+if (m) target = "/assets/downloads/" + m[1];
+location.replace("https://aim42.org" + target);
+
+</script>
+</head>
+<body>
+<p>The aim42 method reference has moved to <a href="https://aim42.org/">aim42.org</a>.</p>
+</body>
+</html>
